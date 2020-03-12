@@ -1,4 +1,213 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-12T12:47:05+00:00</updated><id>http://localhost:4000/</id><title type="html">Base</title><subtitle>Knowledge base template for Jekyll.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Helligkeits- und UV-Sensor</title><link href="http://localhost:4000/sensoren/sensoren-helligkeit-uv/" rel="alternate" type="text/html" title="Helligkeits- und UV-Sensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-helligkeit-uv</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-helligkeit-uv/">&lt;p&gt;Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-12T21:09:47+00:00</updated><id>http://localhost:4000/</id><title type="html">Base</title><subtitle>Knowledge base template for Jekyll.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Umweltsensor</title><link href="http://localhost:4000/sensoren/sensoren-umweltsensor/" rel="alternate" type="text/html" title="Umweltsensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-umweltsensor</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-umweltsensor/">&lt;p&gt;Mit dem Sensor BME680 kannst du eine verschiedene Auswahl an Phänomenen messen. Lufttemperatur, relative Luftfeuchtigkeit, Luftdruck und Luftqualität können mit dem BME680 bestimmt werden. Er ist also ein echter Alleskönner.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/bme.png&quot; alt=&quot;Der BME680&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;technische-details&quot;&gt;Technische Details&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Schnelle Reaktionszeit von weniger als 10 Sekunden&lt;/li&gt;
+  &lt;li&gt;“Plug-in-and-Go” senseBox kompatibel&lt;/li&gt;
+  &lt;li&gt;Abweichung bei Gasmessungen von +-15%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;anschluss-und-programmierung&quot;&gt;Anschluss und Programmierung&lt;/h2&gt;
+
+&lt;p&gt;Mit dem mitgelieferten Verbindungskabel kannst du deinen Gassensor mit dem “I2C”-Port der senseBoxMCU verbinden. 
+Ist dies erledigt können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Achtung&lt;/strong&gt;Der BME Gassensor ist nicht mit dem BMP280 Luftdrucksensor kompatibel. Das heißt du kannst nur einen der beiden gleichzeitig anschließen und auslesen!&lt;/p&gt;
+
+&lt;p&gt;Als erstes muss die Bibliothek geladen und eine Instanz des Sensors erstellt werden.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-arduino&quot;&gt;#include &amp;lt;SenseBoxMCU.h&amp;gt;
+
+BME680_Class BME680;
+
+void setup(){
+    // Normalen seriellen Port initialisieren 
+    Serial.begin(9600);
+    while(!Serial);
+
+    // Starten des Sensors
+    BME680.begin(I2C_STANDARD_MODE);
+    delay(2000);
+
+    // Oversampling der Sensoren festlegen
+    BME680.setOversampling(TemperatureSensor, Oversample16);
+    BME680.setOversampling(HumiditySensor, Oversample16);
+    BME680.setOversampling(PressureSensor, Oversample16);
+    Serial.println(F(&quot;- Setting IIR filter to a value of 4 samples&quot;));
+    // IIR Filter auf 4 Werte setzen
+    BME680.setIIRFilter(IIR4);
+    BME680.setGas(320, 150);
+}
+
+void loop(){
+    // Variable um Messwerte zu speichern
+    static int32_t temperature, humidity, pressure, gas;
+
+    // Aktuelle Messwerte auslesen und speichern
+    BME680.getSensorData(temperature, humidity, pressure, gas); 
+    
+    // rel. Luftfeuchte in milli-prozent
+    Serial.print(humidity / 1000.0, 2);                      
+    Serial.print(F(&quot;%rel. Luftfeuchte &quot;));
+    
+    // Luftdruck in Hectopascals
+    Serial.print(pressure / 100.0, 2);                       
+    Serial.print(F(&quot;hPa &quot;));
+
+    // Luftqualität in mOhm
+    Serial.print(gas / 100.0, 2);                            
+    Serial.println(F(&quot;mOhm&quot;));
+    delay(5000);
+}
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Mit dem Sensor BME680 kannst du eine verschiedene Auswahl an Phänomenen messen. Lufttemperatur, relative Luftfeuchtigkeit, Luftdruck und Luftqualität können mit dem BME680 bestimmt werden. Er ist also ein echter Alleskönner.</summary></entry><entry><title type="html">Bodenfeuchte- und Temperatursensor</title><link href="http://localhost:4000/sensoren/sensoren-truebner/" rel="alternate" type="text/html" title="Bodenfeuchte- und Temperatursensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-truebner</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-truebner/">&lt;h1 id=&quot;head&quot;&gt;Bodentemperatur- &amp;amp; Feuchtigkeitssensor&lt;/h1&gt;
+
+&lt;p&gt;Der truebner SMT50 ist ein kapazitiver Bodentemperatur- und Feuchtigkeitssensor und eignet sich daher gut für diverse Anwendung im heimischen Garten. Kapazitive Bodenfeuchtesensoren erzeugen ein elektrisches Feld um ihre Messelektroden herum. Das Feld dringt in den umgebenden Boden ein. Die Messelektronik des Sensors ermittelt die resultierende elektrische Kapazität der Elektroden. Je höher der Wassergehalt im Boden ist,desto größer wird die Messkapazität des Sensors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/smt50_top.png&quot; alt=&quot;Bodentemperatur- &amp;amp; Feuchtigkeit&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;technische-details&quot;&gt;Technische Details&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Versorgungsspannung: 3.3 - 30 VDC (Gleichspannung)&lt;/li&gt;
+  &lt;li&gt;Stromaufnahme ca. 2.7 mA (gemessen bei 12VDC)&lt;/li&gt;
+  &lt;li&gt;Messbereich volumetrischer Wassergehalt: 0 – 50 % (bei +/- 3% Genauigkeit)&lt;/li&gt;
+  &lt;li&gt;Messbereich Temperatur: -20 bis +85 °C (bei +/- 1,0°C Genauigkeit)&lt;/li&gt;
+  &lt;li&gt;Messverfahren: FDR (Frequency Domain Response)&lt;/li&gt;
+  &lt;li&gt;Messsignal: symmetrisch, bipolar differentiell&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;maße&quot;&gt;Maße&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Abmessungen: ca. 13,5 cm x 2,15 cm&lt;/li&gt;
+  &lt;li&gt;Gewicht inkl. 10m Kabel: ca. 235 g&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;programmierung-arduino&quot;&gt;Programmierung (Arduino)&lt;/h2&gt;
+
+&lt;h2 id=&quot;programmierung-blockly&quot;&gt;Programmierung (Blockly)&lt;/h2&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Bodentemperatur- &amp;amp; Feuchtigkeitssensor</summary></entry><entry><title type="html">Temperatur- und Luftfeuchtigkeitssensor</title><link href="http://localhost:4000/sensoren/sensoren-temperatur-luftfeuchte/" rel="alternate" type="text/html" title="Temperatur- und Luftfeuchtigkeitssensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-temperatur-luftfeuchte</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-temperatur-luftfeuchte/">&lt;h1 id=&quot;head&quot;&gt;Temperatur- und Luftfeuchtesensor&lt;/h1&gt;
+&lt;p&gt;Der HDC1080 ist ein digitaler Feuchtigkeits- und Temperatursensor. Der Sensor hat eine hohe Genauigkeit und eine sehr geringe Stromaufnahme und passt dadurch ideal zur senseBox. Die Sensoren sind ab Werk kalibirert und können direkt eingesetzt werden.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/hds%20top.png&quot; alt=&quot;Temperatur und Luftfeuchtesensor&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;technische-information&quot;&gt;Technische Information&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Plug-in-and-Go” senseBox kompatibel&lt;/li&gt;
+  &lt;li&gt;Relative Luftfeuchte (RH) Betriebsbereich 0% bis 100%&lt;/li&gt;
+  &lt;li&gt;14 Bit Messauflösung&lt;/li&gt;
+  &lt;li&gt;Relative Luftfeuchte Genauigkeit ±4%&lt;/li&gt;
+  &lt;li&gt;Temperatur Genauigkeit ±0.2°C&lt;/li&gt;
+  &lt;li&gt;2100nA Stromzufuhr&lt;/li&gt;
+  &lt;li&gt;Betriebsspannung 2.7 V bis 5.5 V&lt;/li&gt;
+  &lt;li&gt;I2C Schnittstelle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;programmierung&quot;&gt;Programmierung&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-arduino&quot;&gt;#include &quot;SenseBoxMCU.h&quot;
+#include &amp;lt;Adafruit_HDC1000.h&amp;gt;
+#include &amp;lt;SPI.h&amp;gt;
+
+HDC1080 hdc;
+
+void setup(){
+    Serial.begin(9600);
+    hdc.begin();
+}
+
+void loop(){
+    Serial.print(&quot;Temperature: &quot;);
+    Serial.println(hdc.getTemperature());
+    Serial.print(&quot;Humidity: &quot;);
+    Serial.println(hdc.getHumidity());
+}
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Temperatur- und Luftfeuchtesensor Der HDC1080 ist ein digitaler Feuchtigkeits- und Temperatursensor. Der Sensor hat eine hohe Genauigkeit und eine sehr geringe Stromaufnahme und passt dadurch ideal zur senseBox. Die Sensoren sind ab Werk kalibirert und können direkt eingesetzt werden.</summary></entry><entry><title type="html">Luftdruck- und Temperatursensor</title><link href="http://localhost:4000/sensoren/sensoren-luftdruck-temperatur/" rel="alternate" type="text/html" title="Luftdruck- und Temperatursensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-luftdruck-temperatur</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-luftdruck-temperatur/">&lt;p&gt;Dieser Sensor misst den Luftdruck und die Temperatur und basiert auf dem BMP280 Sensor von Bosch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/bmp%20top.png&quot; alt=&quot;Der Luftdruck- und Temperatursensor&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;technische-informationen&quot;&gt;Technische Informationen&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Plug-in-and-Go” senseBox kompatibel&lt;/li&gt;
+  &lt;li&gt;Betriebsdruck 300 bis 1100 hPa&lt;/li&gt;
+  &lt;li&gt;Relative Präzision ±0.12 hPa&lt;/li&gt;
+  &lt;li&gt;Absolute Präzision ±1 hPa&lt;/li&gt;
+  &lt;li&gt;Betriebsversorgungsstrom 2.7μA bei 1 Hz Sampling Frequenz&lt;/li&gt;
+  &lt;li&gt;Maße: 25mm x 25mm x 9mm&lt;/li&gt;
+  &lt;li&gt;Gewicht: 2,4 g&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;programmierung&quot;&gt;Programmierung&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-arduino&quot;&gt;#include &quot;SenseBoxMCU.h&quot;
+#include &amp;lt;SPI.h&amp;gt;
+
+BMP280 bmp_sensor;
+
+void setup() {
+  Serial.begin(9600);
+  bmp_sensor.begin();
+}
+
+void loop() {
+    Serial.print(&quot;Pressure: &quot;);
+    Serial.println(bmp_sensor.getPressure());
+    Serial.print(&quot;Temperature: &quot;);
+    Serial.println(bmp_sensor.getTemperature());
+    Serial.print(&quot;Altitude: &quot;);
+    Serial.println(bmp_sensor.getAltitude(1000));
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;programmierung-blockly&quot;&gt;Programmierung (Blockly)&lt;/h2&gt;
+
+&lt;p&gt;In Blockly kann der Sensor über folgenden Block ausgelesen werden:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/bmp%20top.png&quot; alt=&quot;Der Luftdruck- und Temperatursensor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Im Block kannst du zwischen Luftdruck und Temperatur auswählen.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Dieser Sensor misst den Luftdruck und die Temperatur und basiert auf dem BMP280 Sensor von Bosch.</summary></entry><entry><title type="html">Umweltsensor</title><link href="http://localhost:4000/sensoren/sensoren-lautstaerke/" rel="alternate" type="text/html" title="Umweltsensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-lautstaerke</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-lautstaerke/">&lt;h1 id=&quot;head&quot;&gt;Lautstärkesensor&lt;/h1&gt;
+&lt;p&gt;Der DFRobot SEN0232 misst die Lautstärke und gibt die Messwerte in Dezibel aus.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/decibel_meter.jpg&quot; alt=&quot;Der Geräuschpegel-Sensor&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;technische-informationen&quot;&gt;Technische Informationen&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Maße: 60mm x 43mm x 9mm&lt;/li&gt;
+  &lt;li&gt;“Plug-in-and-Go” senseBox kompatibel&lt;/li&gt;
+  &lt;li&gt;Eingangsspannung: 3,3-5V&lt;/li&gt;
+  &lt;li&gt;Ausgangsspannung: 0,6-2,6V&lt;/li&gt;
+  &lt;li&gt;Messspanne: zwischen 30dBA und 130 dBA akkurat&lt;/li&gt;
+  &lt;li&gt;Messintervall: 125ms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/SoundLevelMeter.png&quot; alt=&quot;Anschluss des Sensors&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;programmierung-arduino&quot;&gt;Programmierung (Arduino)&lt;/h2&gt;
+
+&lt;p&gt;Im ersten Code-Snippet wird lediglich die Eingangsspannung ausgelesen und in Dezibel konvertiert. Der Wert wird auf der Konsole in Arduino angezeigt.
+Sind diese halbwegs nachvollziehbar - werden größer wenn man z.B. in der Nähe des Sensors klatscht und werden dementsprechend kleiner, wenn keine wahrnehmbare Geräuschkulisse vorliegt - dann ist der Sensor einsatzbereit.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-arduino&quot;&gt;#define SoundSensorPin A1  //this pin read the analog voltage from the sound level meter
+#define VREF  5.0  //voltage on AREF pin,default:operating voltage
+
+void setup()
+{
+    Serial.begin(115200);
+}
+
+void loop()
+{
+    float voltageValue,dbValue;
+    voltageValue = analogRead(SoundSensorPin) / 1024.0 * VREF;
+    dbValue = voltageValue * 50.0;  //convert voltage to decibel value
+    Serial.print(dbValue,1);
+    Serial.println(&quot; dBA&quot;);
+    delay(125);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;programmierung-blockly&quot;&gt;Programmierung (Blockly)&lt;/h2&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Lautstärkesensor Der DFRobot SEN0232 misst die Lautstärke und gibt die Messwerte in Dezibel aus.</summary></entry><entry><title type="html">Helligkeits- und UV-Sensor</title><link href="http://localhost:4000/sensoren/sensoren-helligkeit-uv/" rel="alternate" type="text/html" title="Helligkeits- und UV-Sensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-helligkeit-uv</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-helligkeit-uv/">&lt;p&gt;Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.&lt;/p&gt;
 
 &lt;p&gt;Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen. Dieser Sensor erkennt die Lichtverhältnissen ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.&lt;/p&gt;
 
@@ -52,337 +261,129 @@ void loop() {
     Serial.print(&quot;UV-Intensity: &quot;);
     Serial.println(veml.getUvIntesity());
 }
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.</summary></entry><entry><title type="html">Editoren für die senseBox</title><link href="http://localhost:4000/allgemein/sensebox-editoren/" rel="alternate" type="text/html" title="Editoren für die senseBox" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/allgemein/sensebox-editoren</id><content type="html" xml:base="http://localhost:4000/allgemein/sensebox-editoren/">&lt;h1 id=&quot;programmieren-der-sensebox-mcu-mit-den-verschiedenen-editoren&quot;&gt;Programmieren der senseBox MCU mit den verschiedenen Editoren&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.</summary></entry><entry><title type="html">GPS</title><link href="http://localhost:4000/sensoren/sensoren-gps/" rel="alternate" type="text/html" title="GPS" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-gps</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-gps/">&lt;p&gt;Das GPS-Modul empfängt die Position (Längengrad/Breitengrad/Höhe) der senseBox. Diese kann für mobile Anwendungen, z.B. die mobile Datenübertragung auf die openSenseMap, genutzt werden. Dieser Sensor ist kompatibel mit den gängingen GNS Systemen (GPS, QZSS, GLONASS, BeiDou, Galileo) und basiert auf dem u-blox CAM-M8Q Multi GNSS Modul.&lt;/p&gt;
 
-&lt;p&gt;Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/gps%20top.png&quot; alt=&quot;Der GPS-Sensor&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;blockly-für-sensebox&quot;&gt;Blockly für senseBox&lt;/h2&gt;
+&lt;p&gt;Der GPS Sensor wird an einen I2C-Port angeschlossen.&lt;/p&gt;
 
-&lt;p&gt;Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann&lt;/p&gt;
-
-&lt;h2 id=&quot;arduino-ide&quot;&gt;Arduino IDE&lt;/h2&gt;
-
-&lt;p&gt;Die Arduino IDE kannst du unter &lt;a href=&quot;https://arduino.cc/downloads&quot;&gt;kostenlos herunterladen&lt;/a&gt;. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.&lt;/p&gt;
-
-&lt;h2 id=&quot;openroberta&quot;&gt;openRoberta&lt;/h2&gt;
-
-&lt;p&gt;openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Programmieren der senseBox MCU mit den verschiedenen Editoren</summary></entry><entry><title type="html">senseBox:home Schritt 3</title><link href="http://localhost:4000/sensebox:home/home-schritt-3/" rel="alternate" type="text/html" title="senseBox:home Schritt 3" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensebox:home/home-schritt-3</id><content type="html" xml:base="http://localhost:4000/sensebox:home/home-schritt-3/">&lt;p&gt;Um die gemessenen Daten auf die openSenseMap zu übertragen, musst du dich dort zuerst registrieren und eine neue senseBox anlegen. Wie das geht, erfährst du im folgenden Abschnitt.&lt;/p&gt;
-
-&lt;p&gt;Die openSenseMap ist ein Projekt um Sensordaten zu speichern, zu vergleichen und zu visualisieren. Schau sie dir doch am besten mal an. Gehe auf &lt;a href=&quot;https://www.opensensemap.org&quot;&gt;www.opensensemap.org&lt;/a&gt; und entdecke einen riesigen Pool an Sensordaten aus der ganzen Welt. Nicht nur senseBoxen senden Daten an die openSenseMap, sondern auch andere Microcontroller mit Sensoren. Wie die einzelnen Funktionen der openSenseMap und ihre Schnittstellen funktionieren findest du &lt;a href=&quot;https://sensebox.github.io/books-v2/osem&quot;&gt;hier&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;1-nutzeraccount-registrierung&quot;&gt;1. Nutzeraccount Registrierung&lt;/h2&gt;
-&lt;p&gt;Gehe auf &lt;a href=&quot;https://www.opensensemap.org&quot;&gt;www.opensensemap.org&lt;/a&gt; und lege dir einen Account an. Dafür klickst du rechts oben in der Ecke auf “Login” und gehst dann auf “Sign up”. Du brauchst eine gültige E-Mail-Adresse zum Registrieren. Nach erfolgreicher Registrierung erhältst du eine E-Mail mit einem Bestätigungslink. Bitte klicke den Link um die Registrierung abzuschließen.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/Sing_up.PNG&quot; alt=&quot;Account anlegen&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-eine-neue-sensebox-anlegen&quot;&gt;2. Eine neue senseBox anlegen&lt;/h2&gt;
-&lt;p&gt;Nach der erfolgreichen Registrierung kannst du damit beginnen deine senseBox anzulegen. Dafür klicke auf “New senseBox / Neue senseBox” in deinem Menü und bestätige die Nutzungsbedingungen. Befolge danach die Anweisungen der Registrierung und gebe folgende Daten an:&lt;/p&gt;
-
+&lt;h2 id=&quot;technische-details&quot;&gt;Technische Details&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Einen frei wählbaren Namen der senseBox&lt;/li&gt;
-  &lt;li&gt;Die Umgebung (Exposure), in der du deine senseBox aufstellen möchtest&lt;/li&gt;
-  &lt;li&gt;Den Ort (Location), an dem du deine senseBox aufstellen möchtest (du kannst deinen Standort auch automatisch bestimmen lassen)&lt;/li&gt;
+  &lt;li&gt;“Plug-in-and-Go” senseBox kompatibel durch Breakout-Board mit JST-Anschluss&lt;/li&gt;
+  &lt;li&gt;Simultanempfang von GPS, QZSS, GLONASS, BeiDou&lt;/li&gt;
+  &lt;li&gt;Navigationsempfindlichkeit von –167 dBm&lt;/li&gt;
+  &lt;li&gt;Empfänger: 72-Kanal u-blox M8&lt;/li&gt;
+  &lt;li&gt;Update-Rate: Single GNSS - bis zu 18Hz, Dual GNSS bis zu 10Hz&lt;/li&gt;
+  &lt;li&gt;Stromaufnahme: 30mA im Dauerbetrieb bzw. 10mA Power Save Mode 1Hz bei 3V&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Da die openSenseMap offen für alle Arten von senseBoxen ist, wirst du nach der verwendeten Hardware gefragt. Wähle &lt;em&gt;senseBox:home V2&lt;/em&gt; und den Bee den du verwendest (WiFi, oder Ethernet)&lt;/p&gt;
+&lt;h2 id=&quot;programmierung&quot;&gt;Programmierung&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/202003-screen-registration.PNG&quot; alt=&quot;Auswahl von senseBox:home V2 MCU und WiFi Internetverbindung&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-arduino&quot;&gt;#include &amp;lt;senseBoxIO.h&amp;gt;
+#include &amp;lt;TinyGPS++.h&amp;gt;
+#include &amp;lt;SPI.h&amp;gt;
+#include &amp;lt;Wire.h&amp;gt;
 
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Du bist dir nicht sicher ob du ein Ethernet oder WiFi-Bee hast, oder kannst den Unterschied zwischen dem Luftdruck und Temperatursensor nicht erkennen? Im Kapitel &lt;a href=&quot;../komponenten/README.md&quot;&gt;Komponenten&lt;/a&gt; findest du Bilder und weitere Hinweise zu den einzelnen Bauteilen.
-&lt;/div&gt;
-
-&lt;p&gt;Möchtest du deine Daten über LoRa an die openSenseMap schicken wählst du bei “Verbindungsart” LoRa aus. Anschließend kannst du im Reiter “Erweitert” deine Lora Einstellungen angeben. Hier musst du die Application-ID und Device-ID angeben, welche du beim &lt;a href=&quot;www.thethingsnetwork.org&quot;&gt;TheThingsNetwork&lt;/a&gt; angegeben hast. 
-&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/LoRaOSEM.PNG&quot; alt=&quot;LoRa Konfigurationen&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jetzt hast du es fast geschafft! Noch schnell die Sensoren auswählen, welche du an deine senseBox anschließen wirst. Einfach anklicken und fertig. Bei einigen Sensoren musst du noch angeben an welchen Ports auf dem Mikrocontroller diese angeschlossen sind. Danach kannst du den Vorgang abschließen.&lt;/p&gt;
-
-&lt;h2 id=&quot;3-summary-der-registrierung-und-mail-erhalten&quot;&gt;3. Summary der Registrierung und Mail erhalten&lt;/h2&gt;
-&lt;p&gt;Wenn du die Registrierung abgeschlossen hast, musst du noch einmal der Veröffentlichung deiner Daten zustimmen. Danach erhälst du eine Summary deiner Registrierung. Dort wird dir deine senseBox ID, deine Sensoren-IDs und der Arduino Code angezeigt.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/202003-overview.PNG&quot; alt=&quot;Summary der Registrierung. Hier siehst du die IDs deiner senseBox und deiner Sensoren!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Die senseBox ID ist ein eindeutiger Identifikator deiner senseBox. Damit kannst du deine senseBox z.B. über die URL finden (opensensemap.org/explore/HIER-DEINE-SENSEBOX-ID-EINGEBEN) oder in Datensätzen aufspüren. Des Weiteren wird sie für verschiedene Applications und Funktionen rund um die senseBox und die openSenseMap verwendet.&lt;/p&gt;
-
-&lt;h2 id=&quot;online-kompilieren&quot;&gt;Online Kompilieren&lt;/h2&gt;
-&lt;p&gt;Der einfachste Weg deinen Code auf die senseBox zu bekommen ist unseren Online Compiler zu benutzen. Dafür musst du in der Maske einige Angaben machen. Wenn etwas nicht auf deinen individuellen Aufbau der senseBox passt, kannst du das Feld einfach frei lassen. Zum Abschluss drückst du auf “Kompilieren” und eine Datei im Format .bin wird von deinem Browser heruntergeladen. 
-&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/202003-online-compiling.PNG&quot; alt=&quot;Konfiguration um Online zu kompilieren&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;übertragen-auf-die-sensebox-mcu&quot;&gt;Übertragen auf die senseBox MCU&lt;/h3&gt;
-
-&lt;p&gt;Schließt du deine senseBox MCU an deinen Computer an und führst einen Doppelklick auf den roten Button aus wird diese als Wechseldatendräger erkannt. Mit einem Klick auf Code Kompilieren in der Weboberfläche wird dein Programmcode auf dem Server kompiliert und eine .BIN Datei wird dir zum Download angeboten. Je nachdem welches Betriebssystem du verwendest unterscheidet sich nun der Kopiervorgang.&lt;/p&gt;
-
-&lt;h4 id=&quot;kopieren-unter-windows&quot;&gt;Kopieren unter Windows&lt;/h4&gt;
-
-&lt;p&gt;Unter Windows kannst du die erstellte .BIN Datei einfach per Drag &amp;amp; Drop auf den Wechseldatenträger &lt;b&gt;SENSEBOX&lt;/b&gt; kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. 
-&lt;strong&gt;__&lt;/strong&gt;_____&lt;/p&gt;
-
-&lt;h4 id=&quot;kopieren-unter-macos&quot;&gt;Kopieren unter MacOS&lt;/h4&gt;
-
-&lt;p&gt;Unter MacOS funktioniert das kopieren der .BIN per Drag &amp;amp; Drop leider zurzeit noch nicht. Eine Möglichkeit ist die Datei im Terminal per dd-Befehl zu kopieren (nur erfahrenen Nutzern zu empfehlen!) oder einen alternativen Dateimanager wie zum Beispiel &lt;a href=&quot;http://www.mucommander.com/&quot;&gt;muCommander&lt;/a&gt; zu verwenden.
-&lt;strong&gt;__&lt;/strong&gt;_____&lt;/p&gt;
-
-&lt;h4 id=&quot;kopieren-unter-linux&quot;&gt;Kopieren unter Linux&lt;/h4&gt;
-
-&lt;p&gt;Unter Linux kannst du die erstellte .BIN Datei einfach per Drag &amp;amp; Drop auf den Wechseldatenträger &lt;b&gt;SENSEBOX&lt;/b&gt; kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. 
-&lt;strong&gt;__&lt;/strong&gt;_____&lt;/p&gt;
-
-&lt;h3 id=&quot;arduino-code-auf-die-sensebox-laden&quot;&gt;Arduino-Code auf die senseBox laden&lt;/h3&gt;
-&lt;p&gt;Nachdem du den &lt;code class=&quot;highlighter-rouge&quot;&gt;.ino&lt;/code&gt; Anhang der Email heruntergeladen hast (oder weiter Unten in der Übersicht kopiert hast), muss dieses Programm auf deine senseBox geladen werden. Dafür musst du natürlich die Arduino IDE (wie in Schritt 1 erklärt) auf deinem Computer heruntergeladen haben. In Kurzfassung kannst du danach folgende Schritte befolgen:&lt;/p&gt;
-
-&lt;h3 id=&quot;wifi-bee&quot;&gt;WiFi-Bee&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Arduino Anwendung öffnen&lt;/li&gt;
-  &lt;li&gt;In der Menüleiste &lt;code class=&quot;highlighter-rouge&quot;&gt;Datei&lt;/code&gt; → &lt;code class=&quot;highlighter-rouge&quot;&gt;Öffnen&lt;/code&gt; auswählen und die &lt;code class=&quot;highlighter-rouge&quot;&gt;sensebox.ino&lt;/code&gt; Datei auswählen&lt;/li&gt;
-  &lt;li&gt;Im Dialogfeld wird gefragt, ob die Datei verschoben werden darf. Dieses mit “Ja” oder “Ok” bestätigen.&lt;/li&gt;
-  &lt;li&gt;Jetzt musst du dein WiFi-Netzwerk und dein Passwort für das Netzwerk zwischen die &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; eingeben. Achte darauf, keine Leerzeichen zwischen den &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;&lt;/code&gt; und den Buchstaben deines Passworts zu haben.&lt;/li&gt;
-  &lt;li&gt;Jetzt kannst du as Programm über das Pfeil Icon auf den Mikrocontroller laden.&lt;/li&gt;
-  &lt;li&gt;Warten bis das Programm übertragen wurde
-&lt;strong&gt;__&lt;/strong&gt;&lt;em&gt;__&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ethernet-bee&quot;&gt;Ethernet-Bee&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Arduino Anwendung öffnen&lt;/li&gt;
-  &lt;li&gt;In der Menüleiste &lt;code class=&quot;highlighter-rouge&quot;&gt;Datei&lt;/code&gt; → &lt;code class=&quot;highlighter-rouge&quot;&gt;Öffnen&lt;/code&gt; auswählen und die &lt;code class=&quot;highlighter-rouge&quot;&gt;sensebox.ino&lt;/code&gt; Datei auswählen&lt;/li&gt;
-  &lt;li&gt;Im Dialogfeld wird gefragt ob die Datei verschoben werden darf. Dieses mit “Ja” oder “Ok” bestätigen.&lt;/li&gt;
-  &lt;li&gt;Jetzt kannst du as Programm über das Pfeil Icon auf den Mikrocontroller laden.&lt;/li&gt;
-  &lt;li&gt;Warten bis das Programm übertragen wurde
-&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;_&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;lora-bee&quot;&gt;LoRa-Bee&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Arduino Anwendung öffnen&lt;/li&gt;
-  &lt;li&gt;In der Menüleiste &lt;code class=&quot;highlighter-rouge&quot;&gt;Datei&lt;/code&gt; → &lt;code class=&quot;highlighter-rouge&quot;&gt;Öffnen&lt;/code&gt; auswählen und die &lt;code class=&quot;highlighter-rouge&quot;&gt;senseBox.ino&lt;/code&gt; Datei auswählen&lt;/li&gt;
-  &lt;li&gt;Im Dialogfeld wird gefragt ob die Datei verschoben werden darf. Dieses mit “Ja” oder “Ok” bestätigen.&lt;/li&gt;
-  &lt;li&gt;Jetzt kannst du as Programm über das Pfeil Icon auf den Mikrocontroller laden.&lt;/li&gt;
-  &lt;li&gt;Warten bis das Programm übertragen wurde
-&lt;strong&gt;__&lt;/strong&gt;_____&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Wenn alles richtig gelaufen ist, kannst du nun auf der openSenseMap deine Station auswählen und verfolgen, wie Messungen kontinuierlich übertragen werden!&lt;/p&gt;
-
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Du kannst dich nicht mehr daran erinnern, wie du den Code von Arduino auf die senseBox überträgst? Schau nochmal in &lt;a href=&quot;../erste-schritte/software-installation.html&quot;&gt;Schritt 1&lt;/a&gt; und &lt;a href=&quot;../erste-schritte/komponenten-testen.html&quot;&gt;Schritt 4&lt;/a&gt; nach, dort wird die Installation und die Übertragung der Tests erklärt. Falls du weitere Fragen hast, nutze unser &lt;a href=&quot;https://forum.sensebox.de/&quot;&gt;Forum&lt;/a&gt;, um dich zu informieren oder gegebenenfalls einen eigenen Beitrag zu erstellen. &lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Um die gemessenen Daten auf die openSenseMap zu übertragen, musst du dich dort zuerst registrieren und eine neue senseBox anlegen. Wie das geht, erfährst du im folgenden Abschnitt.</summary></entry><entry><title type="html">senseBox:home Schritt 2</title><link href="http://localhost:4000/sensebox:home/home-schritt-2/" rel="alternate" type="text/html" title="senseBox:home Schritt 2" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensebox:home/home-schritt-2</id><content type="html" xml:base="http://localhost:4000/sensebox:home/home-schritt-2/">&lt;h1 id=&quot;programmieren-der-sensebox-mcu-mit-den-verschiedenen-editoren&quot;&gt;Programmieren der senseBox MCU mit den verschiedenen Editoren&lt;/h1&gt;
-
-&lt;p&gt;Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.&lt;/p&gt;
-
-&lt;h2 id=&quot;blockly-für-sensebox&quot;&gt;Blockly für senseBox&lt;/h2&gt;
-
-&lt;p&gt;Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann&lt;/p&gt;
-
-&lt;h2 id=&quot;arduino-ide&quot;&gt;Arduino IDE&lt;/h2&gt;
-
-&lt;p&gt;Die Arduino IDE kannst du unter &lt;a href=&quot;https://arduino.cc/downloads&quot;&gt;kostenlos herunterladen&lt;/a&gt;. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.&lt;/p&gt;
-
-&lt;h2 id=&quot;openroberta&quot;&gt;openRoberta&lt;/h2&gt;
-
-&lt;p&gt;openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Programmieren der senseBox MCU mit den verschiedenen Editoren</summary></entry><entry><title type="html">senseBox:home Schritt 1</title><link href="http://localhost:4000/sensebox:home/home-schritt-1/" rel="alternate" type="text/html" title="senseBox:home Schritt 1" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensebox:home/home-schritt-1</id><content type="html" xml:base="http://localhost:4000/sensebox:home/home-schritt-1/">&lt;h1 id=&quot;programmieren-der-sensebox-mcu-mit-den-verschiedenen-editoren&quot;&gt;Programmieren der senseBox MCU mit den verschiedenen Editoren&lt;/h1&gt;
-
-&lt;p&gt;Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.&lt;/p&gt;
-
-&lt;h2 id=&quot;blockly-für-sensebox&quot;&gt;Blockly für senseBox&lt;/h2&gt;
-
-&lt;p&gt;Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann&lt;/p&gt;
-
-&lt;h2 id=&quot;arduino-ide&quot;&gt;Arduino IDE&lt;/h2&gt;
-
-&lt;p&gt;Die Arduino IDE kannst du unter &lt;a href=&quot;https://arduino.cc/downloads&quot;&gt;kostenlos herunterladen&lt;/a&gt;. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.&lt;/p&gt;
-
-&lt;h2 id=&quot;openroberta&quot;&gt;openRoberta&lt;/h2&gt;
-
-&lt;p&gt;openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Programmieren der senseBox MCU mit den verschiedenen Editoren</summary></entry><entry><title type="html">senseBox:home mit LoRa</title><link href="http://localhost:4000/sensebox:home/home-LoRa/" rel="alternate" type="text/html" title="senseBox:home mit LoRa" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensebox:home/home-LoRa</id><content type="html" xml:base="http://localhost:4000/sensebox:home/home-LoRa/">&lt;h1 id=&quot;programmieren-der-sensebox-mcu-mit-den-verschiedenen-editoren&quot;&gt;Programmieren der senseBox MCU mit den verschiedenen Editoren&lt;/h1&gt;
-
-&lt;p&gt;Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.&lt;/p&gt;
-
-&lt;h2 id=&quot;blockly-für-sensebox&quot;&gt;Blockly für senseBox&lt;/h2&gt;
-
-&lt;p&gt;Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann&lt;/p&gt;
-
-&lt;h2 id=&quot;arduino-ide&quot;&gt;Arduino IDE&lt;/h2&gt;
-
-&lt;p&gt;Die Arduino IDE kannst du unter &lt;a href=&quot;https://arduino.cc/downloads&quot;&gt;kostenlos herunterladen&lt;/a&gt;. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.&lt;/p&gt;
-
-&lt;h2 id=&quot;openroberta&quot;&gt;openRoberta&lt;/h2&gt;
-
-&lt;p&gt;openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Programmieren der senseBox MCU mit den verschiedenen Editoren</summary></entry><entry><title type="html">Installation des Board Support Package</title><link href="http://localhost:4000/allgemein/board-support-package-installieren/" rel="alternate" type="text/html" title="Installation des Board Support Package" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/allgemein/board-support-package-installieren</id><content type="html" xml:base="http://localhost:4000/allgemein/board-support-package-installieren/">&lt;h1 id=&quot;head&quot;&gt;Schritt 2: Board-Support-Package installieren&lt;/h1&gt;
-
-&lt;div class=&quot;description&quot;&gt;Damit die Arduino IDE deine &lt;a href=&quot;../komponenten/sensebox-mcu.md&quot;&gt;senseBox MCU&lt;/a&gt; unterstützt und du Programme auf diese übertragen kannst, musst du vor Beginn noch zwei Board-Support-Packages installieren. Diese beinhalten die nötigen Treiber und die notwendige Software, um mit deinem Prozessor zu kommunizieren. Das Board-Support-Package der senseBox enthält außerdem bereits unsere senseBox-Libraries. Damit stehen euch alle grundlegenden Methoden zur Programmierung der beiliegenden Sensoren zur Verfügung.&lt;/div&gt;
-&lt;div class=&quot;line&quot;&gt;
-    &lt;br /&gt;
-    &lt;br /&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;libraries&quot;&gt;Libraries&lt;/h2&gt;
-
-&lt;p&gt;Für die Programmierung der senseBox sollten zu Beginn unbedingt die senseBox-Libraries eingebunden werden. Diese Libraries haben wir für euch in das Board-Support-Package der senseBox integriert, um euch die Installation möglichst einfach zu gestalten.&lt;/p&gt;
-
-&lt;p&gt;Eine Library ist wie der Name schon sagt eine Sammlung von etwas - eine Sammlung von Methoden um genauer zu sein. Methoden sind in der Programmierung kleinere Abschnitte von Code, die auf ein Objekt angewendet werden können. 
-Bei der senseBox zum Beispiel kann eine Methode aufgerufen werden, um die LEDs auf dem MCU ein- und auszuschalten. Es gibt eine Menge solcher Standardmethoden, die von einer Vielzahl an Programmmen benutzt werden. Um diese Methoden nicht alle einzeln in den Programmcode übertragen zu müssen, können sie in Libraries abgelegt werden. 
-Eine Library ist also eine Datei, in der viele Methoden gespeichert werden. Man kann Libraries in seinen Code einbinden. Dafür reicht es, wenn sie im Arduino-Ordner für Libraries gespeichert sind und man sie dann mit einer einzigen Zeile zu Beginn des Programmcodes einbindet. Das sieht in Arduino für die Library mit dem Namen “senseBoxIO” wie folgt aus:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-arduino&quot;&gt;#include &amp;lt;senseBoxMCU.h&amp;gt;;
+Wire.requestFrom(0x42,10);
+while (Wire.available())
+    gps.encode(Wire.read());
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Ist die Library eingebunden, können alle in ihr enthaltenen Methoden im Code benutzt werden.&lt;/p&gt;
+&lt;h2 id=&quot;programmierung-blockly&quot;&gt;Programmierung (Blockly)&lt;/h2&gt;
 
-&lt;h2 id=&quot;anleitung-für-windows&quot;&gt;Anleitung für Windows&lt;/h2&gt;
-&lt;p&gt;Füge die folgende URL in deiner Arduino IDE unter &lt;em&gt;Datei -&amp;gt; Voreinstellungen&lt;/em&gt; in das Feld für &lt;em&gt;Zusätzliche Bordverwalter-URLs&lt;/em&gt; ein:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;In Blockly kann der Sensor über folgenden Block ausgelesen werden:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu1.png&quot; alt=&quot;Öffne die Voreinstellungen und füge die URL ein&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Im Block kannst du zwischen Luftdruck und Temperatur auswählen.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Das GPS-Modul empfängt die Position (Längengrad/Breitengrad/Höhe) der senseBox. Diese kann für mobile Anwendungen, z.B. die mobile Datenübertragung auf die openSenseMap, genutzt werden. Dieser Sensor ist kompatibel mit den gängingen GNS Systemen (GPS, QZSS, GLONASS, BeiDou, Galileo) und basiert auf dem u-blox CAM-M8Q Multi GNSS Modul.</summary></entry><entry><title type="html">Feinstaubsensor</title><link href="http://localhost:4000/sensoren/sensoren-feinstaub/" rel="alternate" type="text/html" title="Feinstaubsensor" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/sensoren/sensoren-feinstaub</id><content type="html" xml:base="http://localhost:4000/sensoren/sensoren-feinstaub/">&lt;p&gt;Mit diesem Sensor SDS011 ist es möglich die Feinstaubkonzentration in der Luft zu bestimmen. Der Sensor gibt zwei Werte aus: Die Konzentration von PM2.5 (Partikel &amp;lt; 2.5 um) und PM10 (Partikel &amp;lt; 10 um). Dieser Sensor ist mit einem kleinen Ventilator ausgestattet, um Luft anzusaugen. In seinem Inneren befindet sich ein Laser, der zusammen mit einer Photodiode die Anzahl der Partikel misst. Die Ergebnisse der Messungen werden in µg/m³ (Mikrogramm pro Kubikmeter) angegeben.&lt;/p&gt;
 
-&lt;p&gt;Öffne dann den &lt;em&gt;Boardverwalter&lt;/em&gt; unter &lt;em&gt;Werkzeuge -&amp;gt; Board:”…” -&amp;gt; Boardverwalter&lt;/em&gt; und installiere dort die zwei Board-Support-Packages mit den Namen &lt;strong&gt;Arduino SAMD Boards by Arduino&lt;/strong&gt; und &lt;strong&gt;senseBox SAMD Boards by senseBox&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/feinstaub_top.png&quot; alt=&quot;Feinstaubsensor für PM10 und PM2.5&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png&quot; alt=&quot;Öffne den Bordverwalter und installiere die beiden Packages&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;technische-details&quot;&gt;Technische Details&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Plug-in-and-Go” senseBox kompatibel&lt;/li&gt;
+  &lt;li&gt;Schnelle Reaktionszeit von weniger als 10 Sekunden&lt;/li&gt;
+  &lt;li&gt;Hohe Auflösung bis zu 0.3µg/m3&lt;/li&gt;
+  &lt;li&gt;Mehrfach wissenschaftliche Prüfung der Datengenauigkeit&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Gib &quot;SAMD&quot; oben in die Suchleiste ein um die Packages schneller zu finden
-&lt;/div&gt;
+&lt;h2 id=&quot;programmierung-arduino&quot;&gt;Programmierung (Arduino)&lt;/h2&gt;
 
-&lt;p&gt;Da wir das &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort, im Falle einer neuen Version, ein Update-Button. Klickt diesen, um die neuste Version zu installieren.&lt;/p&gt;
+&lt;p&gt;Ist dies erledigt können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png&quot; alt=&quot;Klicke auf 'Update', um das Board-Support-Package zu aktualisieren&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Als erstes muss eine Instanz des Sensors erstellt werden. Dazu erstellen wir noch 2 Variablen in denen wir unsere beiden Messwerte für PM10 und PM2.5 speichern.&lt;/p&gt;
 
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.
-&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-arduino&quot;&gt;#include &quot;SenseBoxMCU.h&quot;
+#include &amp;lt;SPI.h&amp;gt;
+#include &amp;lt;Wire.h&amp;gt;
 
-&lt;h2 id=&quot;anleitung-für-mac&quot;&gt;Anleitung für Mac&lt;/h2&gt;
-&lt;p&gt;Füge die folgende URL in deiner Arduino IDE unter &lt;em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Arduino -&amp;gt; Einstellungen...&lt;/code&gt;&lt;/em&gt; in das Feld für &lt;em&gt;Zusätzliche Bordverwalter-URLs&lt;/em&gt; ein:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+SDS011 my_sds(Serial1) // Serial1 gibt hier den Seriellen Port an, an dem du den Sensor angeschlossen hast
+float p10,p25
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu_mac.png&quot; alt=&quot;Öffne die Voreinstellungen und füge die URL ein&quot; /&gt;&lt;/p&gt;
+```arduino
+void setup(){
+    // Normalen seriellen Port initialisieren 
+    Serial.begin(9600);
+    while(!Serial);
+    // Seriellen Port an dem unsere Sensor angeschlossen ist initialisieren
+    Serial1.begin(9600);
+    delay(5000);
+}
 
-&lt;p&gt;Öffne dann den &lt;em&gt;Boardverwalter&lt;/em&gt; unter &lt;em&gt;Werkzeuge -&amp;gt; Board:”…” -&amp;gt; Boardverwalter&lt;/em&gt; und installiere dort die zwei Board-Support-Packages mit den Namen &lt;strong&gt;Arduino SAMD Boards by Arduino&lt;/strong&gt; und &lt;strong&gt;senseBox SAMD Boards by senseBox&lt;/strong&gt;.&lt;/p&gt;
+void loop(){
+    // Variablen den gemessenen Feinstaubwerte zuweisen
+    p10 = my_sds.getPm10();
+    p25 = my_sds.getPm25();
+    //Werte in der Konsole drucken
+    Serial.println(&quot;P2.5: &quot;+String(p25));
+    Serial.println(&quot;P10:  &quot;+String(p10));
+    delay(1000);
+}
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu3_mac.png&quot; alt=&quot;Öffne den Bordverwalter &quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;programmierung-blockly&quot;&gt;Programmierung (Blockly)&lt;/h2&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Mit diesem Sensor SDS011 ist es möglich die Feinstaubkonzentration in der Luft zu bestimmen. Der Sensor gibt zwei Werte aus: Die Konzentration von PM2.5 (Partikel &amp;lt; 2.5 um) und PM10 (Partikel &amp;lt; 10 um). Dieser Sensor ist mit einem kleinen Ventilator ausgestattet, um Luft anzusaugen. In seinem Inneren befindet sich ein Laser, der zusammen mit einer Photodiode die Anzahl der Partikel misst. Die Ergebnisse der Messungen werden in µg/m³ (Mikrogramm pro Kubikmeter) angegeben.</summary></entry><entry><title type="html">Editoren für die senseBox</title><link href="http://localhost:4000/allgemein/sensebox-editoren/" rel="alternate" type="text/html" title="Editoren für die senseBox" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/allgemein/sensebox-editoren</id><content type="html" xml:base="http://localhost:4000/allgemein/sensebox-editoren/">&lt;h1 id=&quot;programmieren-der-sensebox-mcu-mit-den-verschiedenen-editoren&quot;&gt;Programmieren der senseBox MCU mit den verschiedenen Editoren&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu2_mac.png&quot; alt=&quot;Installiere die beiden markierten Packages&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.&lt;/p&gt;
 
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Gib &quot;SAMD&quot; oben in die Suchleiste ein um die Packages schneller zu finden
-&lt;/div&gt;
+&lt;h2 id=&quot;blockly-für-sensebox&quot;&gt;Blockly für senseBox&lt;/h2&gt;
 
-&lt;p&gt;Da wir das &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort, im Falle einer neuen Version, ein Update-Button. Klickt diesen, um die neuste Version zu installieren.&lt;/p&gt;
+&lt;p&gt;Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu_update_mac.png&quot; alt=&quot;Klicke auf 'Update', um das Board-Support-Package zu aktualisieren&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2020-03-11-sensebox-editoren/blockly.png&quot; alt=&quot;Blockly&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.
-&lt;/div&gt;
+&lt;h2 id=&quot;arduino-ide&quot;&gt;Arduino IDE&lt;/h2&gt;
 
-&lt;h2 id=&quot;anleitung-für-linux&quot;&gt;Anleitung für Linux&lt;/h2&gt;
-&lt;p&gt;Füge die folgende URL in deiner Arduino IDE unter &lt;em&gt;Datei -&amp;gt; Voreinstellungen&lt;/em&gt; in das Feld für &lt;em&gt;Zusätzliche Bordverwalter-URLs&lt;/em&gt; ein:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Die Arduino IDE kannst du unter &lt;a href=&quot;https://arduino.cc/downloads&quot;&gt;kostenlos herunterladen&lt;/a&gt;. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu1.png&quot; alt=&quot;Öffne die Voreinstellungen und füge die URL ein&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2020-03-11-sensebox-editoren/arduino.png&quot; alt=&quot;Arduino-IDE&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Öffne dann den &lt;em&gt;Boardverwalter&lt;/em&gt; unter &lt;em&gt;Werkzeuge -&amp;gt; Board:”…” -&amp;gt; Boardverwalter&lt;/em&gt; und installiere dort die zwei Board-Support-Packages mit den Namen &lt;strong&gt;Arduino SAMD Boards by Arduino&lt;/strong&gt; und &lt;strong&gt;senseBox SAMD Boards by senseBox&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;openroberta&quot;&gt;openRoberta&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png&quot; alt=&quot;Öffne den Bordverwalter und installiere die beiden Packages&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox.&lt;/p&gt;
 
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Gib &quot;SAMD&quot; oben in die Suchleiste ein um die Packages schneller zu finden
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2020-03-11-sensebox-editoren/nepo.png&quot; alt=&quot;NEPO&quot; /&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Programmieren der senseBox MCU mit den verschiedenen Editoren</summary></entry><entry><title type="html">Registrieren einer neuen senseBox</title><link href="http://localhost:4000/opensensemap/opensensemap-register/" rel="alternate" type="text/html" title="Registrieren einer neuen senseBox" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/opensensemap/opensensemap-register</id><content type="html" xml:base="http://localhost:4000/opensensemap/opensensemap-register/">&lt;p&gt;Um eine neue senseBox auf der openSenseMap zu registrieren, muss zunächst unter &lt;em&gt;Anmelden&lt;/em&gt; ein Nutzer-Account erstellt werden.
+Anschließend ist unter dem User-Logo oben rechts das Dashboard zu finden, über welches senseBoxen hinzugefügt und &lt;a href=&quot;osem_manage-boxes.md&quot;&gt;verwaltet&lt;/a&gt; werden können.&lt;/p&gt;
 
-&lt;p&gt;Da wir das &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach &lt;strong&gt;senseBox SAMD Boards&lt;/strong&gt;. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort, im Falle einer neuen Version, ein Update-Button. Klickt diesen, um die neuste Version zu installieren.&lt;/p&gt;
+&lt;p&gt;Unter &lt;em&gt;Neue senseBox&lt;/em&gt; kann nun eine neue senseBox registriert werden. Die folgenden Angaben sind notwendig:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png&quot; alt=&quot;Klicke auf 'Update', um das Board-Support-Package zu aktualisieren&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Name der senseBox&lt;/strong&gt;: z.B. der Standort&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Aufstellungsort&lt;/strong&gt;: dient der Filterung von Boxen&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Standort&lt;/strong&gt;: kann über die Karte ausgewählt werden&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Modell&lt;/strong&gt;: bestimmt die Sensorkonfiguration&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;box_info&quot;&gt;
-    &lt;i class=&quot;fa fa-info fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #42acf3;&quot;&gt;&lt;/i&gt;
-  Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.
-&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Schritt 2: Board-Support-Package installieren</summary></entry><entry><title type="html">Installation der Arduino IDE</title><link href="http://localhost:4000/allgemein/arduino-ide-installieren/" rel="alternate" type="text/html" title="Installation der Arduino IDE" /><published>2020-03-11T00:00:00+00:00</published><updated>2020-03-11T00:00:00+00:00</updated><id>http://localhost:4000/allgemein/arduino-ide-installieren</id><content type="html" xml:base="http://localhost:4000/allgemein/arduino-ide-installieren/">&lt;h2 id=&quot;arduino-ide-installieren&quot;&gt;Arduino IDE installieren&lt;/h2&gt;
+&lt;p&gt;Es gibt eine Vorauswahl für verschiedene Modelle.
+Falls eine nicht vorhandene Sensorkonfiguration vorliegt, können einzelne Sensoren unter &lt;em&gt;Manuelle Konfiguration&lt;/em&gt; von Hand hinzugefügt werden.
+Wie dies im Detail funktioniert ist unter &lt;a href=&quot;osem_custom_sensor.md&quot;&gt;Andere Plattformen&lt;/a&gt; beschrieben.&lt;/p&gt;
 
-&lt;p&gt;Bevor die senseBox aktiviert werden kann, musst du Treiber sowie eine Software auf deinem Computer installieren. Außerdem ist es vor Inbetriebnahme der senseBox ratsam einen Testlauf durchzuführen, um zu überprüfen ob die Sensoren korrekt funktionieren und die Kommunikation mit dem Internet reibungslos läuft.&lt;/p&gt;
+&lt;p&gt;Nachdem die Registrierung abgeschlossen wurde, wird ein Arduino-Sketch angezeigt, welcher die angegebenen Sensoren ausliest und deren Daten regelmäßig zur openSenseMap überträgt.
+Um diesen auf die senseBox zu übertragen, wird die &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot;&gt;Arduino IDE&lt;/a&gt; benötigt, eine exemplarische Installations-Anleitung für die &lt;em&gt;senseBox:home&lt;/em&gt; ist &lt;a href=&quot;https://home.books.sensebox.de/de/software_installation.html&quot;&gt;hier&lt;/a&gt; zu finden.&lt;/p&gt;
 
-&lt;p&gt;Schau dir die Anleitung für dein Betriebsystem an und folge den angegebenen Schritten.&lt;/p&gt;
+&lt;h2 id=&quot;erweiterte-konfiguration&quot;&gt;Erweiterte Konfiguration&lt;/h2&gt;
+&lt;p&gt;Es besteht die Möglichkeit neben der &lt;a href=&quot;osem_api.md&quot;&gt;HTTP REST API&lt;/a&gt; auch andere Schnittstellen zur Datenübertragung zu nutzen.
+Einstellungen hierfür müssen unter dem entsprechenden Reiter im Abschnitt &lt;em&gt;Erweitert&lt;/em&gt; vorgenommen werden.
+Detaillierte Anleitungen dazu sind hier zu finden:&lt;/p&gt;
 
-&lt;h3 id=&quot;arduino-software-für-windows-herunterladen&quot;&gt;Arduino Software für Windows herunterladen&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung &lt;em&gt;Arduino IDE&lt;/em&gt; programmiert. Lade die Version 1.8.7 von der &lt;a href=&quot;https://www.arduino.cc/en/Main/OldSoftwareReleases#previous&quot;&gt;Arduino Homepage&lt;/a&gt; herunter:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/software-install/arduino-view.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Arduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; das kannst du überspringen, indem du auf &lt;code class=&quot;highlighter-rouge&quot;&gt;JUST DOWNLOAD&lt;/code&gt; klickst.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/software-install/arduino-install-view.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;box_warning&quot;&gt;
- 	&lt;i class=&quot;fa fa-exclamation-circle fa-fw&quot; aria-hidden=&quot;true&quot; style=&quot;color: #f0ad4e&quot;&gt;&lt;/i&gt;
- 	Lade bitte die ZIP Datei herunter und &lt;b&gt; nicht &lt;/b&gt; den Windows-Installer um mögliche Probleme 
-     zu vermeiden !
-&lt;/div&gt;
-
-&lt;p&gt;Lege auf deiner Festplatte einen neuen Ordner an und entpacke darin die zip-Datei. Durch das Starten der Datei &lt;code class=&quot;highlighter-rouge&quot;&gt;arduino.exe&lt;/code&gt; kann die IDE gestartet werden.&lt;/p&gt;
-
-&lt;h3 id=&quot;arduino-software-für-macosx-herunterladen&quot;&gt;Arduino Software für Mac(OSX) herunterladen&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung &lt;em&gt;Arduino IDE&lt;/em&gt; programmiert.  Lade die Version 1.8.7 von der &lt;a href=&quot;https://www.arduino.cc/en/Main/OldSoftwareReleases#previous&quot;&gt;Arduino Homepage&lt;/a&gt; herunter:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/software-install/arduino-view.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Arduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; das kannst du überspringen, indem du auf &lt;code class=&quot;highlighter-rouge&quot;&gt;JUST DOWNLOAD&lt;/code&gt; klickst.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/software-install/arduino-install-view.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In deinem Downloads-Ordner sollte eine Arduino.app Datei erscheinen. Verschiebe diese Datei in deinen “Programme”-Ordner. Durch starten der Datei &lt;code class=&quot;highlighter-rouge&quot;&gt;Arduino.app&lt;/code&gt; kann die IDE gestartet werden.&lt;/p&gt;
-
-&lt;h3 id=&quot;arduino-software-für-linux-herunterladen&quot;&gt;Arduino Software für Linux herunterladen&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung &lt;em&gt;Arduino IDE&lt;/em&gt; programmiert.  Lade die Version 1.8.7 von der &lt;a href=&quot;https://www.arduino.cc/en/Main/OldSoftwareReleases#previous&quot;&gt;Arduino Homepage&lt;/a&gt; herunter:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/software-install/arduino-view.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Arduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; das kannst du überspringen, indem du auf &lt;code class=&quot;highlighter-rouge&quot;&gt;JUST DOWNLOAD&lt;/code&gt; klickst.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sensebox/resources/raw/master/gitbook_pictures/software-install/arduino-install-view.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;installation-der-ide-unter-linux&quot;&gt;Installation der IDE unter Linux&lt;/h3&gt;
-
-&lt;p&gt;Linux-Nutzer können die Linuxvariante herunterladen und entpacken. Das enthaltene &lt;code class=&quot;highlighter-rouge&quot;&gt;install.sh&lt;/code&gt;-Skript legt automatisch eine Desktopverknüpfung an. Am schnellsten geht dies über den Terminal. Öffne dazu den Terminal in dem du die Tasten &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Alt + T&lt;/code&gt; drückst und gib dort die folgenden Befehle ein:&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sollte die heruntergeladene Datei nicht im Downloads-Ordner abgespeichert sein, ersetze &quot;Downloads&quot; durch den Pfad zum entsprechenden Ordner
-cd Downloads 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# entpacke die Datei mit folgendem Befehl und installiere Arduino
-tar -xvf arduino-1.8.7-linux64.tar.xz
-cd arduino-1.8.7
-./install.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Um den Arduino programmieren zu können, sind unter Ubuntu 14 &amp;amp; 16 zusätzliche Rechte notwendig. Diese können für den aktuellen Nutzer mit den folgenden Befehlen eingerichtet werden (benötigt Admin-Rechte):&lt;/p&gt;
-
-&lt;p&gt;Führe &lt;code class=&quot;highlighter-rouge&quot;&gt;udevadm monitor --udev&lt;/code&gt; aus und schließe den Arduino per USB an, um die Device-ID zu bestimmen. Der angegebene Bezeichnung am Ende der Ausgabe (zB. &lt;code class=&quot;highlighter-rouge&quot;&gt;ttyUSB0&lt;/code&gt;) ist die Device-ID. Beende &lt;code class=&quot;highlighter-rouge&quot;&gt;udevadm&lt;/code&gt; per &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+C&lt;/code&gt;, und führe noch die folgenden Befehle aus, wobei die herausgefundene Device-ID eingesetzt werden muss:&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo usermod -a -G dialout $(whoami)
-sudo chmod a+rw /dev/&amp;lt;device-id&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Nach einem Logout und erneutem Login sollte der Arduino aus der Arduino IDE programmierbar sein!&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Arduino IDE installieren</summary></entry><entry><title type="html">Was ist die senseBox?</title><link href="http://localhost:4000/t%C3%BCftelakademie/tueftelakademie-was-ist-die-sensebox/" rel="alternate" type="text/html" title="Was ist die senseBox?" /><published>2017-01-15T00:00:00+00:00</published><updated>2017-01-15T00:00:00+00:00</updated><id>http://localhost:4000/t%C3%BCftelakademie/tueftelakademie-was-ist-die-sensebox</id><content type="html" xml:base="http://localhost:4000/t%C3%BCftelakademie/tueftelakademie-was-ist-die-sensebox/"></content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry><entry><title type="html">senseBox - So funktioniert’s</title><link href="http://localhost:4000/t%C3%BCftelakademie/tueftelakademie-so-funktionierts/" rel="alternate" type="text/html" title="senseBox - So funktioniert's" /><published>2017-01-15T00:00:00+00:00</published><updated>2017-01-15T00:00:00+00:00</updated><id>http://localhost:4000/t%C3%BCftelakademie/tueftelakademie-so-funktionierts</id><content type="html" xml:base="http://localhost:4000/t%C3%BCftelakademie/tueftelakademie-so-funktionierts/"></content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry></feed>
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;mqtt_client.md&quot;&gt;MQTT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;ttn_integration.md&quot;&gt;TheThingsNetwork&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Um eine neue senseBox auf der openSenseMap zu registrieren, muss zunächst unter Anmelden ein Nutzer-Account erstellt werden. Anschließend ist unter dem User-Logo oben rechts das Dashboard zu finden, über welches senseBoxen hinzugefügt und verwaltet werden können.</summary></entry></feed>

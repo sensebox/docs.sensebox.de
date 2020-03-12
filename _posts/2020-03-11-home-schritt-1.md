@@ -8,20 +8,31 @@ set: aufbau-sensebox-home
 set_order: 1
 ---
 
-Programmieren der senseBox MCU mit den verschiedenen Editoren
-============
 
-Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren. 
+Durch das I2C Stecksystem ist der Anschluss der Sensoren und Komponenten an die senseBox MCU sehr einfach. Hier siehst du noch einmal eine grobe Übersicht über die einzelnen Komponenten.
 
-## Blockly für senseBox
+## Anschluss von Bees
 
-Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann
+Der Anschluss der Bees ist ganz einfach. Durch das Stecksystem reicht es, das Bee direkt auf den Microcontroller aufzusetzen. Dabei gibt es nur zwei Dinge zu beachten: 
+1. Die Ausrichtung auf dem Board 
+2. Der richtige Portanschluss auf dem Microcontroller. 
 
-## Arduino IDE
+### WiFi-Bee, Ethernet-Bee und LoRa-Bee
+Diese Bees werden alle auf den Port 1 aufgesteckt. Den richtigen Port erkennst du an der Beschriftung: ``XBEE1``. Die richtige Richtung beim Aufstecken erkennst du an der 7-eckigen Kennzeichnung auf dem Board und der Bee.
 
-Die Arduino IDE kannst du unter <a href="https://arduino.cc/downloads">kostenlos herunterladen</a>. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.
+![Exemplarischer Anschluss der WiFi-Bee an die MCU (XBEE1)](https://github.com/sensebox/resources/raw/master/gitbook_pictures/plug-in-components/wifi-anschluss.png)
 
-## openRoberta
+### mSD-Bee
+Die SD-Bee wird an Port 2 aufgesteckt, welcher standardmäßig dafür freigeschalten ist. Den richtigen Port erkennst du an der Beschriftung: ``XBEE2``. Die richtige Richtung beim Aufstecken erkennst du an der 7-eckigen Kennzeichnung auf dem Board und der Bee.
 
-openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox.
+![Anschluss der mSD-Bee an die MCU (XBEE1)](https://github.com/sensebox/resources/raw/master/gitbook_pictures/plug-in-components/sd-anschluss.png)
 
+## Anschluss von einfachen Sensoren
+Die Sensoren, welche mit der senseBox gekauft werden können, sind mit den beiliegenden "I2C to I2C" Kabeln sehr einfach anzuschließen. Dafür musst du die Steckplätze auf dem Board verwenden die mit ``I2C/Wire`` gekennzeichnet sind.
+
+![Anschluss einfacher Sensoren](https://github.com/sensebox/resources/raw/master/gitbook_pictures/plug-in-components/sensor-anschluss.jpg)
+
+## Anschluss vom Feinstaubsensor
+Der Feinstaubsensor, der mit der senseBox gekauft werden kann, hat ein beiliegendes passendes Kabel, welches den Sensor mit dem Board verbinden kann. Hierfür musst du die Steckplätze auf dem Board verwenden die mit ``UART/Serial`` gekennzeichnet sind. Weitere Infos zum Anschluss des Feinstaubsensors findest du übrigens [hier](../komponenten/sensoren/feinstaub.md).
+
+![Anschluss Feinstaubsensor](https://github.com/sensebox/resources/raw/master/gitbook_pictures/plug-in-components/feinstaub-anschluss.jpg)
