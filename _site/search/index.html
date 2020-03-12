@@ -6,10 +6,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="/de/css/screen.css">
-	<link rel="apple-touch-icon" href="/de/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/de/touch-icon.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="/de/images/favicon.png">
+	<link rel="stylesheet" href="/css/screen.css">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/images/favicon.png">
 	<link rel="stylesheet"
 		href="//fonts.googleapis.com/css?family=Merriweather:400italic,400,300italic,300,700,700italic|Open+Sans:400italic,600italic,700italic,700,600,400|Inconsolata:400,700">
 
@@ -22,14 +22,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Knowledge base template for Jekyll." />
 <meta property="og:description" content="Knowledge base template for Jekyll." />
-<link rel="canonical" href="http://localhost:4000/de/search/" />
-<meta property="og:url" content="http://localhost:4000/de/search/" />
+<link rel="canonical" href="http://localhost:4000/search/" />
+<meta property="og:url" content="http://localhost:4000/search/" />
 <meta property="og:site_name" content="Base" />
 <script type="application/ld+json">
-{"description":"Knowledge base template for Jekyll.","@type":"WebPage","url":"http://localhost:4000/de/search/","headline":"Search","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/de/images/sensebox_logo.svg"}},"@context":"http://schema.org"}</script>
+{"description":"Knowledge base template for Jekyll.","headline":"Search","@type":"WebPage","url":"http://localhost:4000/search/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/sensebox_logo.svg"}},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/de/feed.xml" title="Base" />
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Base" />
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
@@ -40,7 +40,7 @@
 	<header>
 		<div class="wrapper">
 			<section class="top-bar">
-				<div class="logo"><a href="/de/"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+				<div class="logo"><a href="/"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
@@ -130,17 +130,17 @@
 	
 
 	
-	<a href="/de/" class="">Tutorials</a>
+	<a href="/" class="">Tutorials</a>
 	
 	
 
 	
-	<a href="/de/videos/" class="">Videos</a>
+	<a href="/videos/" class="">Videos</a>
 	
 	
 
 	
-	<a href="/de/faq/" class="">FAQ</a>
+	<a href="/faq/" class="">FAQ</a>
 	
 </nav>
 			</section>
@@ -149,7 +149,7 @@
 				<p>Alles was du für deine senseBox benötigst</p>
 				
 
-<form action="/de/search/" method="get">
+<form action="/search/" method="get">
 	<input type="search" name="q"  placeholder="Wonach möchtest du suchen?"
 		autofocus>
 	<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -174,12 +174,117 @@
 				
 					
 					
+					"sensoren-sensoren-helligkeit-uv": {
+						"id": "sensoren-sensoren-helligkeit-uv",
+						"title": "Helligkeits- und UV-Sensor",
+						"categories": "Sensoren",
+						"url": " /sensoren/sensoren-helligkeit-uv/",
+						"content": "Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.\n\nDie Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen. Dieser Sensor erkennt die Lichtverhältnissen ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.\n\nDer zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Dieser wandelt die Intensität des UV-Lichts der Sonne in digitale Daten um. Der Sensor hat eine hervorragende UV-Empfindlichkeit und Linearität über Filtron™-Technologie. Er hat eine gute UV-Strahlungsmessung auch bei langer Sonnen-UV-Belastung und kann exzellenter Temperaturschwankungen ausgleichen.\n\n\n\nTechnische Details\n\nBelichtungssensor\n\n\n  3,3V - 5V tolerantes I2C/TWI Interface\n  Eingangsspannungsbereich: 3,3V - 5V\n  on-board 2,5V Spannungsregler\n  on-board Pegelwandler\n\n\nUV-Sensor\n\n\n  Betriebsspannung: 2,7V - 5,5V I2C Interface\n  Unterstützt Quittierungsfunktion (Active Acknowledge-Funktion)\n  Temperaturkompensation: -40°C bis +85°C\n  Software-Abschaltregelung für Immunität bei flackernden Leuchtstofflampen\n\n\nMaße\n\n  25mm x 25mm x 9mm\n  Gewicht: 2,5 g\n\n\nProgrammierung\n\n#include \"SenseBoxMCU.h\"\n#include &lt;SPI.h&gt;\n\nTSL45315 tsl;\nVEML6070 veml;\n\nvoid setup() {\n    Serial.begin(9600);\n    tsl.begin();\n    veml.begin();\n}\n\nvoid loop() {\n    Serial.print(\"Illuminance: \");\n    Serial.println(tsl.getIlluminance());\n    Serial.print(\"UV-Intensity: \");\n    Serial.println(veml.getUvIntesity());\n}"
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
 					"allgemein-sensebox-editoren": {
 						"id": "allgemein-sensebox-editoren",
 						"title": "Editoren für die senseBox",
 						"categories": "Allgemein",
 						"url": " /allgemein/sensebox-editoren/",
-						"content": ""
+						"content": "Programmieren der senseBox MCU mit den verschiedenen Editoren\n\nDu kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.\n\nBlockly für senseBox\n\nMit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann\n\nArduino IDE\n\nDie Arduino IDE kannst du unter kostenlos herunterladen. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.\n\nopenRoberta\n\nopenRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"sensebox-home-home-schritt-3": {
+						"id": "sensebox-home-home-schritt-3",
+						"title": "senseBox:home Schritt 3",
+						"categories": "senseBox:home",
+						"url": " /sensebox:home/home-schritt-3/",
+						"content": "Um die gemessenen Daten auf die openSenseMap zu übertragen, musst du dich dort zuerst registrieren und eine neue senseBox anlegen. Wie das geht, erfährst du im folgenden Abschnitt.\n\nDie openSenseMap ist ein Projekt um Sensordaten zu speichern, zu vergleichen und zu visualisieren. Schau sie dir doch am besten mal an. Gehe auf www.opensensemap.org und entdecke einen riesigen Pool an Sensordaten aus der ganzen Welt. Nicht nur senseBoxen senden Daten an die openSenseMap, sondern auch andere Microcontroller mit Sensoren. Wie die einzelnen Funktionen der openSenseMap und ihre Schnittstellen funktionieren findest du hier.\n\n1. Nutzeraccount Registrierung\nGehe auf www.opensensemap.org und lege dir einen Account an. Dafür klickst du rechts oben in der Ecke auf “Login” und gehst dann auf “Sign up”. Du brauchst eine gültige E-Mail-Adresse zum Registrieren. Nach erfolgreicher Registrierung erhältst du eine E-Mail mit einem Bestätigungslink. Bitte klicke den Link um die Registrierung abzuschließen.\n\n\n\n2. Eine neue senseBox anlegen\nNach der erfolgreichen Registrierung kannst du damit beginnen deine senseBox anzulegen. Dafür klicke auf “New senseBox / Neue senseBox” in deinem Menü und bestätige die Nutzungsbedingungen. Befolge danach die Anweisungen der Registrierung und gebe folgende Daten an:\n\n\n  Einen frei wählbaren Namen der senseBox\n  Die Umgebung (Exposure), in der du deine senseBox aufstellen möchtest\n  Den Ort (Location), an dem du deine senseBox aufstellen möchtest (du kannst deinen Standort auch automatisch bestimmen lassen)\n\n\nDa die openSenseMap offen für alle Arten von senseBoxen ist, wirst du nach der verwendeten Hardware gefragt. Wähle senseBox:home V2 und den Bee den du verwendest (WiFi, oder Ethernet)\n\n\n\n\n    \n  Du bist dir nicht sicher ob du ein Ethernet oder WiFi-Bee hast, oder kannst den Unterschied zwischen dem Luftdruck und Temperatursensor nicht erkennen? Im Kapitel Komponenten findest du Bilder und weitere Hinweise zu den einzelnen Bauteilen.\n\n\nMöchtest du deine Daten über LoRa an die openSenseMap schicken wählst du bei “Verbindungsart” LoRa aus. Anschließend kannst du im Reiter “Erweitert” deine Lora Einstellungen angeben. Hier musst du die Application-ID und Device-ID angeben, welche du beim TheThingsNetwork angegeben hast. \n\n\nJetzt hast du es fast geschafft! Noch schnell die Sensoren auswählen, welche du an deine senseBox anschließen wirst. Einfach anklicken und fertig. Bei einigen Sensoren musst du noch angeben an welchen Ports auf dem Mikrocontroller diese angeschlossen sind. Danach kannst du den Vorgang abschließen.\n\n3. Summary der Registrierung und Mail erhalten\nWenn du die Registrierung abgeschlossen hast, musst du noch einmal der Veröffentlichung deiner Daten zustimmen. Danach erhälst du eine Summary deiner Registrierung. Dort wird dir deine senseBox ID, deine Sensoren-IDs und der Arduino Code angezeigt.\n\n\n\nDie senseBox ID ist ein eindeutiger Identifikator deiner senseBox. Damit kannst du deine senseBox z.B. über die URL finden (opensensemap.org/explore/HIER-DEINE-SENSEBOX-ID-EINGEBEN) oder in Datensätzen aufspüren. Des Weiteren wird sie für verschiedene Applications und Funktionen rund um die senseBox und die openSenseMap verwendet.\n\nOnline Kompilieren\nDer einfachste Weg deinen Code auf die senseBox zu bekommen ist unseren Online Compiler zu benutzen. Dafür musst du in der Maske einige Angaben machen. Wenn etwas nicht auf deinen individuellen Aufbau der senseBox passt, kannst du das Feld einfach frei lassen. Zum Abschluss drückst du auf “Kompilieren” und eine Datei im Format .bin wird von deinem Browser heruntergeladen. \n\n\nÜbertragen auf die senseBox MCU\n\nSchließt du deine senseBox MCU an deinen Computer an und führst einen Doppelklick auf den roten Button aus wird diese als Wechseldatendräger erkannt. Mit einem Klick auf Code Kompilieren in der Weboberfläche wird dein Programmcode auf dem Server kompiliert und eine .BIN Datei wird dir zum Download angeboten. Je nachdem welches Betriebssystem du verwendest unterscheidet sich nun der Kopiervorgang.\n\nKopieren unter Windows\n\nUnter Windows kannst du die erstellte .BIN Datei einfach per Drag &amp; Drop auf den Wechseldatenträger SENSEBOX kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. \n_______\n\nKopieren unter MacOS\n\nUnter MacOS funktioniert das kopieren der .BIN per Drag &amp; Drop leider zurzeit noch nicht. Eine Möglichkeit ist die Datei im Terminal per dd-Befehl zu kopieren (nur erfahrenen Nutzern zu empfehlen!) oder einen alternativen Dateimanager wie zum Beispiel muCommander zu verwenden.\n_______\n\nKopieren unter Linux\n\nUnter Linux kannst du die erstellte .BIN Datei einfach per Drag &amp; Drop auf den Wechseldatenträger SENSEBOX kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. \n_______\n\nArduino-Code auf die senseBox laden\nNachdem du den .ino Anhang der Email heruntergeladen hast (oder weiter Unten in der Übersicht kopiert hast), muss dieses Programm auf deine senseBox geladen werden. Dafür musst du natürlich die Arduino IDE (wie in Schritt 1 erklärt) auf deinem Computer heruntergeladen haben. In Kurzfassung kannst du danach folgende Schritte befolgen:\n\nWiFi-Bee\n\n\n  Arduino Anwendung öffnen\n  In der Menüleiste Datei → Öffnen auswählen und die sensebox.ino Datei auswählen\n  Im Dialogfeld wird gefragt, ob die Datei verschoben werden darf. Dieses mit “Ja” oder “Ok” bestätigen.\n  Jetzt musst du dein WiFi-Netzwerk und dein Passwort für das Netzwerk zwischen die \"\" eingeben. Achte darauf, keine Leerzeichen zwischen den \" und den Buchstaben deines Passworts zu haben.\n  Jetzt kannst du as Programm über das Pfeil Icon auf den Mikrocontroller laden.\n  Warten bis das Programm übertragen wurde\n____\n\n\nEthernet-Bee\n\n\n  Arduino Anwendung öffnen\n  In der Menüleiste Datei → Öffnen auswählen und die sensebox.ino Datei auswählen\n  Im Dialogfeld wird gefragt ob die Datei verschoben werden darf. Dieses mit “Ja” oder “Ok” bestätigen.\n  Jetzt kannst du as Programm über das Pfeil Icon auf den Mikrocontroller laden.\n  Warten bis das Programm übertragen wurde\n_______\n\n\nLoRa-Bee\n\n\n  Arduino Anwendung öffnen\n  In der Menüleiste Datei → Öffnen auswählen und die senseBox.ino Datei auswählen\n  Im Dialogfeld wird gefragt ob die Datei verschoben werden darf. Dieses mit “Ja” oder “Ok” bestätigen.\n  Jetzt kannst du as Programm über das Pfeil Icon auf den Mikrocontroller laden.\n  Warten bis das Programm übertragen wurde\n_______\n\n\nWenn alles richtig gelaufen ist, kannst du nun auf der openSenseMap deine Station auswählen und verfolgen, wie Messungen kontinuierlich übertragen werden!\n\n\n    \n  Du kannst dich nicht mehr daran erinnern, wie du den Code von Arduino auf die senseBox überträgst? Schau nochmal in Schritt 1 und Schritt 4 nach, dort wird die Installation und die Übertragung der Tests erklärt. Falls du weitere Fragen hast, nutze unser Forum, um dich zu informieren oder gegebenenfalls einen eigenen Beitrag zu erstellen."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"sensebox-home-home-schritt-2": {
+						"id": "sensebox-home-home-schritt-2",
+						"title": "senseBox:home Schritt 2",
+						"categories": "senseBox:home",
+						"url": " /sensebox:home/home-schritt-2/",
+						"content": "Programmieren der senseBox MCU mit den verschiedenen Editoren\n\nDu kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.\n\nBlockly für senseBox\n\nMit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann\n\nArduino IDE\n\nDie Arduino IDE kannst du unter kostenlos herunterladen. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.\n\nopenRoberta\n\nopenRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"sensebox-home-home-schritt-1": {
+						"id": "sensebox-home-home-schritt-1",
+						"title": "senseBox:home Schritt 1",
+						"categories": "senseBox:home",
+						"url": " /sensebox:home/home-schritt-1/",
+						"content": "Programmieren der senseBox MCU mit den verschiedenen Editoren\n\nDu kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.\n\nBlockly für senseBox\n\nMit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann\n\nArduino IDE\n\nDie Arduino IDE kannst du unter kostenlos herunterladen. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.\n\nopenRoberta\n\nopenRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"sensebox-home-home-lora": {
+						"id": "sensebox-home-home-lora",
+						"title": "senseBox:home mit LoRa",
+						"categories": "senseBox:home",
+						"url": " /sensebox:home/home-LoRa/",
+						"content": "Programmieren der senseBox MCU mit den verschiedenen Editoren\n\nDu kannst die senseBox MCU mithilfe von drei verschiedenen Editoren Programmieren.\n\nBlockly für senseBox\n\nMit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche Programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox Programmiert werden kann\n\nArduino IDE\n\nDie Arduino IDE kannst du unter kostenlos herunterladen. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder openRoberta, enthalten sind programmieren. Die Arduino IDE muss auf dem Computer installiert werden und zusätzlich muss ein Board Support Package für die senseBox MCU installiert werden. Wie genau das funktioniert erfährst.\n\nopenRoberta\n\nopenRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"allgemein-board-support-package-installieren": {
+						"id": "allgemein-board-support-package-installieren",
+						"title": "Installation des Board Support Package",
+						"categories": "Allgemein",
+						"url": " /allgemein/board-support-package-installieren/",
+						"content": "Schritt 2: Board-Support-Package installieren\n\nDamit die Arduino IDE deine senseBox MCU unterstützt und du Programme auf diese übertragen kannst, musst du vor Beginn noch zwei Board-Support-Packages installieren. Diese beinhalten die nötigen Treiber und die notwendige Software, um mit deinem Prozessor zu kommunizieren. Das Board-Support-Package der senseBox enthält außerdem bereits unsere senseBox-Libraries. Damit stehen euch alle grundlegenden Methoden zur Programmierung der beiliegenden Sensoren zur Verfügung.\n\n    \n    \n\n\nLibraries\n\nFür die Programmierung der senseBox sollten zu Beginn unbedingt die senseBox-Libraries eingebunden werden. Diese Libraries haben wir für euch in das Board-Support-Package der senseBox integriert, um euch die Installation möglichst einfach zu gestalten.\n\nEine Library ist wie der Name schon sagt eine Sammlung von etwas - eine Sammlung von Methoden um genauer zu sein. Methoden sind in der Programmierung kleinere Abschnitte von Code, die auf ein Objekt angewendet werden können. \nBei der senseBox zum Beispiel kann eine Methode aufgerufen werden, um die LEDs auf dem MCU ein- und auszuschalten. Es gibt eine Menge solcher Standardmethoden, die von einer Vielzahl an Programmmen benutzt werden. Um diese Methoden nicht alle einzeln in den Programmcode übertragen zu müssen, können sie in Libraries abgelegt werden. \nEine Library ist also eine Datei, in der viele Methoden gespeichert werden. Man kann Libraries in seinen Code einbinden. Dafür reicht es, wenn sie im Arduino-Ordner für Libraries gespeichert sind und man sie dann mit einer einzigen Zeile zu Beginn des Programmcodes einbindet. Das sieht in Arduino für die Library mit dem Namen “senseBoxIO” wie folgt aus:\n\n#include &lt;senseBoxMCU.h&gt;;\n\n\nIst die Library eingebunden, können alle in ihr enthaltenen Methoden im Code benutzt werden.\n\nAnleitung für Windows\nFüge die folgende URL in deiner Arduino IDE unter Datei -&gt; Voreinstellungen in das Feld für Zusätzliche Bordverwalter-URLs ein:\nhttps://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json\n\n\n\n\nÖffne dann den Boardverwalter unter Werkzeuge -&gt; Board:”…” -&gt; Boardverwalter und installiere dort die zwei Board-Support-Packages mit den Namen Arduino SAMD Boards by Arduino und senseBox SAMD Boards by senseBox.\n\n\n\n\n    \n  Gib \"SAMD\" oben in die Suchleiste ein um die Packages schneller zu finden\n\n\nDa wir das senseBox SAMD Boards-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das senseBox SAMD Boards-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach senseBox SAMD Boards. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort, im Falle einer neuen Version, ein Update-Button. Klickt diesen, um die neuste Version zu installieren.\n\n\n\n\n    \n  Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.\n\n\nAnleitung für Mac\nFüge die folgende URL in deiner Arduino IDE unter Arduino -&gt; Einstellungen... in das Feld für Zusätzliche Bordverwalter-URLs ein:\nhttps://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json\n\n\n\n\nÖffne dann den Boardverwalter unter Werkzeuge -&gt; Board:”…” -&gt; Boardverwalter und installiere dort die zwei Board-Support-Packages mit den Namen Arduino SAMD Boards by Arduino und senseBox SAMD Boards by senseBox.\n\n\n\n\n\n\n    \n  Gib \"SAMD\" oben in die Suchleiste ein um die Packages schneller zu finden\n\n\nDa wir das senseBox SAMD Boards-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das senseBox SAMD Boards-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach senseBox SAMD Boards. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort, im Falle einer neuen Version, ein Update-Button. Klickt diesen, um die neuste Version zu installieren.\n\n\n\n\n    \n  Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.\n\n\nAnleitung für Linux\nFüge die folgende URL in deiner Arduino IDE unter Datei -&gt; Voreinstellungen in das Feld für Zusätzliche Bordverwalter-URLs ein:\nhttps://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json\n\n\n\n\nÖffne dann den Boardverwalter unter Werkzeuge -&gt; Board:”…” -&gt; Boardverwalter und installiere dort die zwei Board-Support-Packages mit den Namen Arduino SAMD Boards by Arduino und senseBox SAMD Boards by senseBox.\n\n\n\n\n    \n  Gib \"SAMD\" oben in die Suchleiste ein um die Packages schneller zu finden\n\n\nDa wir das senseBox SAMD Boards-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das senseBox SAMD Boards-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach senseBox SAMD Boards. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort, im Falle einer neuen Version, ein Update-Button. Klickt diesen, um die neuste Version zu installieren.\n\n\n\n\n    \n  Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"allgemein-arduino-ide-installieren": {
+						"id": "allgemein-arduino-ide-installieren",
+						"title": "Installation der Arduino IDE",
+						"categories": "Allgemein",
+						"url": " /allgemein/arduino-ide-installieren/",
+						"content": "Arduino IDE installieren\n\nBevor die senseBox aktiviert werden kann, musst du Treiber sowie eine Software auf deinem Computer installieren. Außerdem ist es vor Inbetriebnahme der senseBox ratsam einen Testlauf durchzuführen, um zu überprüfen ob die Sensoren korrekt funktionieren und die Kommunikation mit dem Internet reibungslos läuft.\n\nSchau dir die Anleitung für dein Betriebsystem an und folge den angegebenen Schritten.\n\nArduino Software für Windows herunterladen\n\n\n  Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.\n\n\nDie senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung Arduino IDE programmiert. Lade die Version 1.8.7 von der Arduino Homepage herunter:\n\n\n\nArduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; das kannst du überspringen, indem du auf JUST DOWNLOAD klickst.\n\n\n\n\n \t\n \tLade bitte die ZIP Datei herunter und  nicht  den Windows-Installer um mögliche Probleme \n     zu vermeiden !\n\n\nLege auf deiner Festplatte einen neuen Ordner an und entpacke darin die zip-Datei. Durch das Starten der Datei arduino.exe kann die IDE gestartet werden.\n\nArduino Software für Mac(OSX) herunterladen\n\n\n  Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.\n\n\nDie senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung Arduino IDE programmiert.  Lade die Version 1.8.7 von der Arduino Homepage herunter:\n\n\n\nArduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; das kannst du überspringen, indem du auf JUST DOWNLOAD klickst.\n\n\n\nIn deinem Downloads-Ordner sollte eine Arduino.app Datei erscheinen. Verschiebe diese Datei in deinen “Programme”-Ordner. Durch starten der Datei Arduino.app kann die IDE gestartet werden.\n\nArduino Software für Linux herunterladen\n\n\n  Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.\n\n\nDie senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung Arduino IDE programmiert.  Lade die Version 1.8.7 von der Arduino Homepage herunter:\n\n\n\nArduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; das kannst du überspringen, indem du auf JUST DOWNLOAD klickst.\n\n\nInstallation der IDE unter Linux\n\nLinux-Nutzer können die Linuxvariante herunterladen und entpacken. Das enthaltene install.sh-Skript legt automatisch eine Desktopverknüpfung an. Am schnellsten geht dies über den Terminal. Öffne dazu den Terminal in dem du die Tasten Ctrl + Alt + T drückst und gib dort die folgenden Befehle ein:\n\n# sollte die heruntergeladene Datei nicht im Downloads-Ordner abgespeichert sein, ersetze \"Downloads\" durch den Pfad zum entsprechenden Ordner\ncd Downloads \n\n\n# entpacke die Datei mit folgendem Befehl und installiere Arduino\ntar -xvf arduino-1.8.7-linux64.tar.xz\ncd arduino-1.8.7\n./install.sh\n\nUm den Arduino programmieren zu können, sind unter Ubuntu 14 &amp; 16 zusätzliche Rechte notwendig. Diese können für den aktuellen Nutzer mit den folgenden Befehlen eingerichtet werden (benötigt Admin-Rechte):\n\nFühre udevadm monitor --udev aus und schließe den Arduino per USB an, um die Device-ID zu bestimmen. Der angegebene Bezeichnung am Ende der Ausgabe (zB. ttyUSB0) ist die Device-ID. Beende udevadm per ctrl+C, und führe noch die folgenden Befehle aus, wobei die herausgefundene Device-ID eingesetzt werden muss:\n\nsudo usermod -a -G dialout $(whoami)\nsudo chmod a+rw /dev/&lt;device-id&gt;\n\n\nNach einem Logout und erneutem Login sollte der Arduino aus der Arduino IDE programmierbar sein!"
 					}
 					
 				
@@ -217,8 +322,8 @@
 		
 	};
 </script>
-<script src="/de/js/lunr.min.js"></script>
-<script src="/de/js/search.js"></script>
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search.js"></script>
 		</div>
 	</section>
 

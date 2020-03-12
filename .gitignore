@@ -1,0 +1,10 @@
+_site
+.sass-cache
+.bundle
+
+news
+
+Gemfile.lock
+.DS_Store
+
+.jekyll-cache

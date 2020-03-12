@@ -1,9 +1,11 @@
 ---
 date: 2020-03-11
-title: Editoren für die senseBox
-categories: Allgemein
-description: Übersicht über die verschiedenen Editoren der senseBox
+title: senseBox:home Schritt 2
+categories: senseBox:home
+description: Schritt 2 zum Aufbau der senseBox:home
 type: Document
+set: aufbau-sensebox-home
+set_order: 2
 ---
 
 Programmieren der senseBox MCU mit den verschiedenen Editoren
