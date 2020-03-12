@@ -3,7 +3,7 @@
 
 title: Base
 url: "https://docs.sensebox.de/"
-baseurl: /de
+baseurl: 
 google_analytics_key:
 disqus_shortname:
 newsletter_action:
