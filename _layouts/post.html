@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+{% assign t = site.data.translations %}
 <section class="tutorial">
 	<section class="sidebar sticky">
 		<ul>
@@ -16,6 +16,7 @@ layout: default
 
 		{% if page.type == "Video" %}
 		{% include youtube.html video_id=page.video_id %}
+
 		{% endif %}
 
 		<div class="tutorial-main">
@@ -48,7 +49,7 @@ layout: default
 {% assign related_posts_size = related_posts | size %}
 {% if related_posts_size > 0 %}
 <div class="related">
-	<h3>Related tutorials</h3>
+	<h3>{{ t.related }}</h3>
 
 	{% include listings.html listings=site.related_posts %}
 </div>

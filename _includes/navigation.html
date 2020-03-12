@@ -1,6 +1,6 @@
 <a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
 <nav>
-	{% for link in site.data.[page.lang].navigation %}
+	{% for link in site.data.navigation %}
 	{% assign class = "" %}
 
 	{% if link.link == page.url %}

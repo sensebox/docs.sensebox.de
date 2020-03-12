@@ -1,16 +1,16 @@
 # ----
 # Site
 
-title: 
+title: Base
 url: "https://docs.sensebox.de/"
-baseurl:
+baseurl: /de
 google_analytics_key:
 disqus_shortname:
 newsletter_action:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /images/sensebox_logo.svg
-description: Knowledge Base for senseBox
+logo: images/sensebox_logo.svg
+description: Knowledge base template for Jekyll.
 author:
   name:
   email:
@@ -25,7 +25,7 @@ social:
 
 timezone: Etc/UTC
 
-permalink: /page.lang/:categories/:title/
+permalink: /:categories/:title/
 
 plugins:
   - jekyll-extract-element

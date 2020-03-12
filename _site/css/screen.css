@@ -623,14 +623,6 @@ header {
     padding: 15px;
     font-size: 1.1em; }
 
-.logo {
-  -webkit-filter: brightness(0) invert(1);
-  filter: brightness(0) invert(1); }
-
-.logo:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%); }
-
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
