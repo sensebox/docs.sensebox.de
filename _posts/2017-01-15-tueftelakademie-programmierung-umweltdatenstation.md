@@ -1,6 +1,6 @@
 ---
 date: 2017-01-15
-title: senseBox - Programmierung Umweltdatenstation
+title: Tüftelakademie - Programmierung Umweltdatenstation
 video_id: gAdqYmwmUEc
 description: Wir möchten die Lautstärke der Autos in einem gewissen Messintervall messen - wie das mit Blockly programmiert wird, siehst du hier!
 categories:

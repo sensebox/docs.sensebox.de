@@ -42,6 +42,7 @@ exclude:
 
 collections:
   sets:
+  descriptions:
 
 
 jekyll-archives:
