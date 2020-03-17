@@ -10,7 +10,15 @@
 
 header {
 	padding: 16px 0 10px 0;
-	background: $header-color;
+	background-image: url("docs.png");
+	  /* Set a specific height */
+	  height: 40%;
+	  /* Position and center the image to scale nicely on all screens */
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: relative;
+	//background: $header-color;
 	color: #fff;
 
 	form {

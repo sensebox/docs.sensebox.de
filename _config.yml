@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Base
+title: senseBox
 url: "https://docs.sensebox.de/"
 baseurl: 
 google_analytics_key:
@@ -12,9 +12,9 @@ newsletter_action:
 logo: images/sensebox_logo.svg
 description: Knowledge base template for Jekyll.
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+  name: senseBox
+  email: info@sensebox.de
+  twitter: sensebox_de
 social:
   name: Base Template
   links:
