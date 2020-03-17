@@ -1,10 +1,12 @@
 ---
 date: 2020-03-11
-title: Blockly für senseBox
-categories: Allgemein
+title: Erste Schritte
+categories: Blockly
 description: Verwendung von Blockly für die senseBox
 type: Document
 video_id: jzlOJ7Zuqqw
+sets: blockly
+set_order: 1
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
