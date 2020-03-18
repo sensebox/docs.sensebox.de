@@ -29,4 +29,4 @@ Falls eine senseBox nicht mehr verwendet wird oder die Messungen dieser Box von 
 Dazu muss im Bearbeitungsmodus (s.o.) im Reiter *Allgemein* unter dem Feld "senseBox löschen" der Wert `DELETE` eingetragen werden.
 Anschließend erscheint unter dem Feld ein Button, durch welchen die senseBox und ihre Messungen gelöscht werden.
 
-> ***Achtung:*** *Hierdurch werden neben der senseBox alle hinterlegten Sensordaten unwiderruflich entfernt! Da die Messungen auch für eine nachträgliche Datenauswertung wertvoll sein können, sollte abgewägt werden, ob die senseBox gelöscht werden sollte.*
+> ***Achtung:*** *Hierdurch werden neben der senseBox alle hinterlegten Sensordaten unwiderruflich entfernt! Da die Messungen auch für eine nachträgliche Datenauswertung wertvoll sein können, muss abgewägt werden, ob die senseBox gelöscht werden sollte.*
