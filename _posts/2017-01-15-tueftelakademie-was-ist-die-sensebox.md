@@ -1,8 +1,8 @@
 ---
 date: 2017-01-15
-title: Tüftelakademie - Was ist die senseBox?
+title: Tüftelakademie - Was ist die senseBox eigentlich?
 video_id: KhpE4xQsXRw
-description: Björn, aus dem senseBox-Team, erklärt was die senseBox ist
+description: Unser senseBox Tutorial gibt dir eine Einführung in die Erhebung von Umweltdaten. Du lernst den Do-it-yourself-Bausatz senseBox kennen und Björn aus unserem senseBox-Team erklärt dir, was du mit der senseBox alles machen kannst.
 categories:
   - Tüftelakademie
 type: Video
