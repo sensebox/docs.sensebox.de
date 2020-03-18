@@ -6,7 +6,7 @@ description: Registrieren einer neuen senseBox auf der openSenseMap
 type: Document
 ---
 
-Es besteht die Möglichkeit die gemessenen Daten der hackAIR home Sensoren (Version 2) auch an die openSenseMap zu senden.
+Es besteht die Möglichkeit, die gemessenen Daten der hackAIR home Sensoren (Version 2) auch an die openSenseMap zu senden.
 
 Dazu musst du zuerst dein hackAIR Sensor, wie folgt [zusammenbauen](http://www.hackair.eu/hackair-home-v2/) und den [hackair-v2-advanced](https://github.com/mkraats/hackair-v2-advanced) aufspielen.
 
