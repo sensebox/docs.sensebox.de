@@ -4,6 +4,7 @@ title: Editoren für die senseBox
 categories: Allgemein
 description: Übersicht über die verschiedenen Editoren der senseBox
 type: Document
+
 ---
 
 Programmieren der senseBox MCU mit den verschiedenen Editoren
