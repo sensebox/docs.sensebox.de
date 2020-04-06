@@ -8,12 +8,24 @@
 	}
 }
 
+.hero-image{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("docs.png");
+	  /* Set a specific height */
+	  height: 40%;
+	  /* Position and center the image to scale nicely on all screens */
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: relative;
+	//background: $header-color;
+}
+
 header {
-	padding: 16px 0 10px 0;
-	background: $header-color;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), $header-color;
+	//padding: 16px 0 10px 0;
 	color: #fff;
 
-	form {
+	form { 
 		position: relative;
 
 		input[type=search] {

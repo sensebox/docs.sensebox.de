@@ -4,7 +4,8 @@ title: Editoren für die senseBox
 categories: Allgemein
 description: Übersicht über die verschiedenen Editoren der senseBox
 type: Document
-
+set: editoren
+set_order: 1
 ---
 
 Programmieren der senseBox MCU mit den verschiedenen Editoren
@@ -28,7 +29,8 @@ Die Arduino IDE kannst du unter <a href="https://arduino.cc/downloads">kostenlos
 
 ## Open Roberta
 
-Open Roberta ist eine weitere Möglichkeit, um die senseBox zu programmieren. Das Open Roberta Lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox.
+
+openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox. Eine kurze Einführung in die Verwendung der senseBox in openRoberta findest du [hier](/allgemein/einfuehrung-openrobera/)
 
 ![NEPO](/images/2020-03-11-sensebox-editoren/nepo.png)
 
