@@ -24,7 +24,7 @@ resources:
 
 ## Powerboost
 
-Der [Adafruit Powerboost 1000C](https://www.adafruit.com/product/2465) sorgt durch integrierten Lade-Kreislauf dafür, dass die Solarzelle den Akku auflädt und der Akku seinerseits dann die senseBox betreibt.
+Der [Adafruit Powerboost 1000C](https://www.adafruit.com/product/2465) sorgt durch einen integrierten Lade-Kreislauf dafür, dass die Solarzelle den Akku auflädt und der Akku seinerseits dann die senseBox betreibt.
 
 ![Powerboost 1000C](https://github.com/sensebox/resources/raw/master/gitbook_pictures/powerboost-top.png)
 
@@ -42,6 +42,6 @@ Um die senseBox mit einer Solarzelle zu benutzen, bedarf es lediglich einem Powe
 ![Powerboost Aufbau](https://github.com/sensebox/resources/raw/master/gitbook_pictures/solar_powerboost.jpg)
 
 > Wichtig 
-  Der LiPo-Akku und der Powerboost sollten am besten vor Nässe geschützt aufgebaut werden, wenn ihr die Station draußen betreibt. Das passende Gehäuse gibt es im Set dazu, ist aber auch das Gleiche wie z.B. beim Feinstaubsensor.Beachte, dass niedrige Temperaturen die Leistung des Akkus stark beeinträchtigen kann.
+  Der LiPo-Akku und der Powerboost sollten am besten vor Nässe geschützt aufgebaut werden, wenn ihr die Station draußen betreibt. Das passende Gehäuse gibt es im Set dazu, ist aber auch das Gleiche wie z.B. beim Feinstaubsensor. Beachte, dass niedrige Temperaturen die Leistung des Akkus stark beeinträchtigen können.
 
 
