@@ -14,7 +14,7 @@
 		</h3>
 
 		<ul>
-			{% assign tutorials = posts | sort: "title" %}
+			{% assign tutorials = posts | sort: "title_order" %}
 			{% for tutorial in tutorials limit: 4 %}
 			<li><a
 					href="{{ site.baseurl }}{{ tutorial.url }}">{% include document-icon.html icon=tutorial.type %}{{ tutorial.title }}</a>

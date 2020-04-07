@@ -1,13 +1,12 @@
 ---
-date: 2020-03-11
-title: Erste Schritte
-title_order: 1
+date: 2020-04-07
+title: Sensoren
+title_order: 4
 categories: Blockly
-description: Verwendung von Blockly für die senseBox
+description: Verwendung der verschiedenen Sensoren der senseBox in Blockly
 type: Document
-video_id: jzlOJ7Zuqqw
 sets: blockly-erste-schritte
-set_order: 1
+set_order: 3
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
