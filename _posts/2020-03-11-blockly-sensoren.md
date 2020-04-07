@@ -1,6 +1,7 @@
 ---
 date: 2020-04-07
 title: Sensoren
+title_order: 4
 categories: Blockly
 description: Verwendung der verschiedenen Sensoren der senseBox in Blockly
 type: Document
