@@ -1,12 +1,12 @@
 ---
 date: 2020-03-11
 title: Arbeiten mit Variablen
-title_order: 2
+title_order: 6
 categories: Blockly
 description: Arbeiten mit Variablen in Blockly
 type: Document
 set: blockly-erste-schritte
-set_order: 3
+set_order: 6
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
