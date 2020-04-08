@@ -11,6 +11,8 @@ set_order: 1
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
+image1: /images/2020-03-11-blockly-erste-schritte/block_export.svg
+image2: /images/bloques (3).svg
 ---
 
 
@@ -19,10 +21,14 @@ resources:
 Um die senseBox Programmieren zu können, benötigst du das mitgelieferte USB-Kabel, einen Computer und Zugang zum Internet. 
 Öffne in deinem Internetbrowser nun die Website [Blockly für senseBox](https://blockly.sensebox.de/) und wähle deine Box aus. Nun kannst du dein eigenes Programm ohne Softwareinstallation schreiben. Ist dein Programm fertig kannst du es mit einem Klick auf den orangenen "Kompilieren"-Button oben rechts herunterladen. Standardmäßig wird es als .BIN-Datei im "Downloads" Ordner gespeichert.
 
+{% include image.html image=page.image1 %}
+
 ### An der senseBox MCU
 Verbinde zuerst die MCU mit Hilfe des USB-Kabels mit deinem Computer.
 Die senseBox MCU hat zwei verschiedene Modi: Den Programm- und den Lern-Modus. Standardmäßig befindet sich die MCU im Programm-Modus. In diesem führt sie das zuletzt übertragende Programm aus. Du erkennst den Program-Modus daran, dass die LEDs auf der MCU grün leuchten.
 Bevor nun ein neues Programm übertragen weren kann, muss die MCU in den Lern-Modus versetzt werden. Dies geschieht durch einen Doppelklick auf den roten "Reset"-Button auf der MCU. 
+
+{% include image.html image=page.image2 %}
 
 {% include youtube.html video_id=page.video_id %}
 
