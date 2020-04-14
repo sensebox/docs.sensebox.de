@@ -13,8 +13,7 @@
 		<h3>
 			{% for item in descriptions %}
 			{% if item.categories contains name %}
-			{% assign name = item.head %}
-			<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ name | replace: "-", " " }}</a>
+			<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ item.head | replace: "-", " " }}</a>
 			{% endif %}
 			{% endfor %}
 		</h3>
