@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: MQTT Integration
-categories: openSenseMap
+categories: opensensemap
 description: MQTT Integration für die openSenseMap
 type: Document
 ---

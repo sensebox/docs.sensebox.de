@@ -29,8 +29,7 @@
 </head>
 
 {% assign t = site.data.translations %}
-{% assign categories = site.descriptions %}
-{% assign page_category = page.categories %}
+{% assign descriptions = site.descriptions %}
 
 <body class="show_hero_search">
 	<header>
@@ -41,8 +40,8 @@
 					{% include navigation.html %}
 				</section>
 				<section class="hero_search">
-					{% for item in categories %}
-					{% if item.categories == page.categories %}
+					{% for item in descriptions %}
+					{% if item.categories contains page.title %}
 					<h1>{{ item.head }}</h1>
 					<p>{{ item.description }}</p>
 					{% endif %}

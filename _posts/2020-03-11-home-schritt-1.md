@@ -1,11 +1,13 @@
 ---
 date: 2020-03-11
-title: senseBox:home Schritt 1
-categories: senseBox:home
-description: Schritt 1 zum Aufbau der senseBox:home. Einsetzten des Mikrokontroller in das Gehäuse
+title: 'Schritt 1: Aufbau der Hardware'
+title_order: 1
+categories: aufbau-sensebox-home
+description: Schritt 1 zum Aufbau der senseBox:home.
 type: Document
 set: aufbau-sensebox-home
 set_order: 1
+next: /sdjklsdf/
 image1: /images/sensebox-home/sensebox-home-1.jpg
 image2: /images/sensebox-home/sensebox-home-2.jpg
 image3: /images/sensebox-home/sensebox-home-3.jpg
@@ -144,3 +146,5 @@ Als letztes wird der Deckel mit den Schrauben versehen und ein Silikagelbeutel z
 Nun werden noch die Schnellverschlussschrauben eingedreht und damit die senseBox verschlossen. 
 Ich hoffe du hattest Spaß beim Zusammenbau. Nun musst du nur noch deinen Code auf die senseBox laden und diese auf der openSenseMap registrieren. Weitere Informationen zum Aufbau der senseBox findest du auf sensebox.de/go oder im senseBox Forum. Vielen Dank das du dir das Video angeschaut hast und willkommen in der senseBox Community. 
 
+<hr>
+<a href="/aufbau-sensebox:home/home-schritt-2/" class="button" style="float: right;">Weiter mit Schritt 2</a>

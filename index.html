@@ -4,13 +4,19 @@
 
 <section class="categories">
 	{% assign categories = site.categories | sort %}
+	{% assign descriptions = site.descriptions %}
 	{% for category in categories %}
 	{% assign name = category[0] %}
 	{% assign posts = category[1] %}
 	{% assign size = posts | size %}
 	<section class="category">
 		<h3>
+			{% for item in descriptions %}
+			{% if item.categories contains name %}
+			{% assign name = item.head %}
 			<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ name | replace: "-", " " }}</a>
+			{% endif %}
+			{% endfor %}
 		</h3>
 
 		<ul>

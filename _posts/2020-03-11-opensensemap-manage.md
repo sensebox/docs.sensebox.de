@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Verwalten von Boxen 
-categories: openSenseMap
+categories: opensensemap
 description: Verwalten von senseBoxen
 type: Document
 ---

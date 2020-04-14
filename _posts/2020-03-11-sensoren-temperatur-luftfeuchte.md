@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Temperatur- und Luftfeuchtigkeitssensor
-categories: Sensoren
+categories: sensoren
 description: Temperatur- und Luftfeuchtigkeitssensor (HDC1080)
 type: Document
 resources:
