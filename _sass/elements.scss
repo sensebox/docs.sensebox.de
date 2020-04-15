@@ -8,6 +8,9 @@ body {
 	min-height: 100vh;
 	color: $dark-grey;
 	-webkit-font-smoothing: antialiased;
+	display: flex;
+	flex-direction: column;
+
 }
 
 h2, h2 a {
