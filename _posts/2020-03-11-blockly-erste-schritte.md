@@ -12,7 +12,8 @@ resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
 image1: /images/2020-03-11-blockly-erste-schritte/block_export.svg
-image2: /images/bloques (3).svg
+image2: /images/2020-03-11-blockly-erste-schritte/bloques (3).svg
+image3: /images/2020-03-11-blockly-erste-schritte/block_export (3).svg
 ---
 
 
@@ -38,3 +39,5 @@ Du erkennst den Lern-Modus daran, dass nur eine LED direkt neben der "Reset"-Kno
 Befindet sich deine senseBox MCU im Lern-Modus kannst du deinen Sketch aus dem "Download"-Ordner einfach auf den Wechseldatenträger "SENSEBOX" kopieren.
 
 ![Ein Programm auf den senseBox kopieren](https://raw.githubusercontent.com/sensebox/sensebox.github.io/Projects_basics/images/projects/BASICS/copy_to_mcu.gif)
+
+{% include image.html image=page.image3 %}

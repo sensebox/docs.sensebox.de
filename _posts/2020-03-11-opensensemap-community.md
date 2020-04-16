@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Community Anwendungen
-categories: openSenseMap
+categories: opensensemap
 description: Eine Übersicht über die verschiedenen Tools und Anwendungen zur openSenseMap aus der Community.
 type: Document
 ---

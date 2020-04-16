@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Bodenfeuchte- und Temperatursensor
-categories: Sensoren
+categories: sensoren
 description: Bodenfeuchte- und Temperatursensor Truebner SMT50
 type: Document
 resources:

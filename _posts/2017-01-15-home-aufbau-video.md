@@ -3,8 +3,7 @@ date: 2017-01-15
 title: senseBox:home Aufbauvideo
 video_id: dUuRfZI39U8
 description: Aufbau der senseBox:home im Video
-categories:
-  - senseBox:home
+categories: aufbau-sensebox-home
 type: Video
 set: aufbau-sensebox-home
 set_order: 4

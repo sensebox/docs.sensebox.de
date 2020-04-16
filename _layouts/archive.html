@@ -1,15 +1,15 @@
 ---
-layout: simple
+layout: archive_overview
 ---
 {% assign posts = page.posts | sort: "title_order" %}
 <h2 style="text-transform:capitalize;">{{ page.title | replace: "-", " " }} <span
-        class="count">({{ posts | size }})</span></h2>
+                class="count">({{ posts | size }})</span></h2>
 
-{% assign categories = site.descriptions %}
+<!--{% assign categories = site.descriptions %}
 {% for item in categories %}
 {% if item.title == page.title %}
 <p>{{ item.description }}</p>
 {% endif %}
-{% endfor %}
+{% endfor %}-->
 
 {% include listings.html listings=posts %}

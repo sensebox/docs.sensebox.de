@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Luftdruck- und Temperatursensor
-categories: Sensoren
+categories: sensoren
 description: Luftdruck- und Temperatursensor (BMP280)
 type: Document
 resources:
