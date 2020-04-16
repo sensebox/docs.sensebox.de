@@ -7,11 +7,15 @@ description: Schritt 3 zum Aufbau der senseBox:home
 type: Document
 set: aufbau-sensebox-home
 set_order: 3
+image1: /images/sensebox-home/compile.png
 ---
+
+Nach der Registrierung muss der Programmcode auf die senseBox kopiert werden. Wenn du eine senseBox mit WiFi-Bee oder Lan-Bee hast kannst du den Programmcode einfach und schnell online kompilieren und per Drag-and-Drop übertragen. Dazu brauchst du keine Software auf dem Computer installieren
 
 ## Online kompilieren
 Der einfachste Weg deinen Code auf die senseBox zu bekommen ist unseren Online Compiler zu benutzen. Dafür musst du in der Maske einige Angaben machen. Wenn etwas nicht auf deinen individuellen Aufbau der senseBox passt, kannst du das Feld einfach frei lassen. Zum Abschluss drückst du auf "Kompilieren" und eine Datei im Format .BIN wird von deinem Browser heruntergeladen. 
-![Konfiguration um Online zu kompilieren](https://github.com/sensebox/resources/raw/master/gitbook_pictures/202003-online-compiling.PNG)
+
+{% include image.html image=page.image1 %}
 
 ### Übertragen auf die senseBox MCU
 
@@ -20,19 +24,15 @@ Schließt du deine senseBox MCU an deinen Computer an und führst einen Doppelkl
 #### Kopieren unter Windows 
 
 Unter Windows kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den Wechseldatenträger <b>SENSEBOX</b> kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. 
-___________
 
 #### Kopieren unter MacOS
 
 Unter MacOS funktioniert das Kopieren der .BIN per Drag & Drop leider zurzeit noch nicht. Eine Möglichkeit ist die Datei im Terminal per dd-Befehl zu kopieren (nur erfahrenen Nutzern zu empfehlen!) oder einen alternativen Dateimanager wie zum Beispiel [muCommander](http://www.mucommander.com/) zu verwenden.
-___________
-
 
 #### Kopieren unter Linux 
 
 Unter Linux kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den Wechseldatenträger <b>SENSEBOX</b> kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. 
-___________
 
 <hr>
 
-<a href="/aufbau-sensebox:home/home-schritt-2/" class="button">Zurück zu Schritt 2</a>
+<a href="/aufbau-sensebox-home/home-schritt-2/" class="button">Zurück zu Schritt 2</a>

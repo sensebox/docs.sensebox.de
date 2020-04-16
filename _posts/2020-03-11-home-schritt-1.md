@@ -147,4 +147,4 @@ Nun werden noch die Schnellverschlussschrauben eingedreht und damit die senseBox
 Ich hoffe du hattest Spaß beim Zusammenbau. Nun musst du nur noch deinen Code auf die senseBox laden und diese auf der openSenseMap registrieren. Weitere Informationen zum Aufbau der senseBox findest du auf sensebox.de/go oder im senseBox Forum. Vielen Dank das du dir das Video angeschaut hast und willkommen in der senseBox Community. 
 
 <hr>
-<a href="/aufbau-sensebox:home/home-schritt-2/" class="button" style="float: right;">Weiter mit Schritt 2</a>
+<a href="/aufbau-sensebox-home/home-schritt-2/" class="button" style="float: right;">Weiter mit Schritt 2</a>
