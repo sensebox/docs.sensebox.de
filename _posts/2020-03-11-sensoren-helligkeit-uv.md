@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Helligkeits- und UV-Sensor
-categories: Sensoren
+categories: sensoren
 description: Helligkeits- und UV-Sensor
 type: Document
 resources:

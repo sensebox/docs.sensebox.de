@@ -29,21 +29,27 @@
 </head>
 
 {% assign t = site.data.translations %}
+{% assign categories = site.descriptions %}
+{% assign page_category = page.categories %}
 
-<body class="{{ page.body_class }}">
+<body class="show_hero_search">
 	<header>
-		<div class="wrapper">
-			<section class="top-bar">
-				<div class="logo"><a href="{{ site.baseurl }}/">{% include logo.html %}</a></div>
-				{% include navigation.html %}
-			</section>
-			<section class="hero_search">
-				<h1>{{ t.headline }}</h1>
-				<p>{{ t.description }}</p>
-				{% include search.html %}
-			</section>
+		<div class="hero-image">
+			<div class="wrapper">
+				<section class="top-bar">
+					<div class="logo"><a href="{{ site.baseurl }}/">{% include logo.html %}</a></div>
+					{% include navigation.html %}
+				</section>
+				<section class="hero_search">
+					{% for item in categories %}
+					{% if item.categories == page.categories %}
+					<h1>{{ item.head }}</h1>
+					<p>{{ item.description }}</p>
+					{% endif %}
+					{% endfor %}
+				</section>
+			</div>
 		</div>
-
 	</header>
 	<section class="content">
 		<div class="wrapper">

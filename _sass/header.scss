@@ -11,7 +11,7 @@
 .hero-image{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("docs-header.png");
 	  /* Set a specific height */
-	  height: 40%;
+	  //height: 40%;
 	  /* Position and center the image to scale nicely on all screens */
 	  background-position: center;
 	  background-repeat: no-repeat;
@@ -48,8 +48,9 @@ header {
 			svg {
 				fill: #fff;
 				width: 100%;
-				height: 46px;
+				height: 41px;
 				min-width: 100px;
+				margin-top: 5px;
 			}
 		}
 

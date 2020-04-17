@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Datendownload 
-categories: openSenseMap
+categories: opensensemap
 description: Datendownload über die openSenseMap
 type: Document
 ---

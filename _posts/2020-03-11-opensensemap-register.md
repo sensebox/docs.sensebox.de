@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Registrieren einer neuen senseBox
-categories: openSenseMap
+categories: opensensemap
 description: Registrieren einer neuen senseBox auf der openSenseMap
 type: Document
 ---
