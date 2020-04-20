@@ -53,4 +53,4 @@ Die senseBox ID ist ein eindeutiger Identifikator deiner senseBox. Damit kannst 
 
 <hr>
 <a href="/aufbau-sensebox-home/home-schritt-1/" class="button">Zurück zu Schritt 1</a>
-<a href="/aufbau-sensebox-home/home-schritt-3/" class="button">Weiter mit Schritt 3</a>
+<a href="/aufbau-sensebox-home/home-schritt-3/" style="float: right;" class="button">Weiter mit Schritt 3</a>

@@ -58,3 +58,7 @@ void loop(){
 
 ## Programmierung (Blockly)
 
+In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+
+
+Wähle den Port, an dem du den Sensor angeschlossen hast und den Messwert über das Dropdown Menü aus. 

@@ -21,7 +21,7 @@ image8: /images/2020-04-07-blockly-display/blockly-display-7.svg
 ---
 ## Allgemeines
 In der senseBox ist ein OLED-Display enthalten. Dieses kann benutzt werden um z.B. Text, Messwerte oder Graphen anzeigen zu lassen.
-Das Display hat eine Auflösung von 128x64 Pixeln. Das heißt 128 Pixel in horizontaler Ebene (x-Achse) und 64 Pixel in vertikaler Ebene (y-Achse). 
+Das Display hat eine Auflösung von 128x64 Pixeln. Das heißt 128 Pixel in horizontaler Richtung (x-Achse) und 64 Pixel in vertikaler Richtung (y-Achse). 
 
 {% include image.html image=page.image1 %}
 
