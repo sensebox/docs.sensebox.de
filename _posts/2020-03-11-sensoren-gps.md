@@ -9,6 +9,7 @@ resources:
     link: https://sensebox.kaufen/product/gps
   - name: "CAM M8Q"
     link: https://sensebox.kaufen/assets/datenblatt/senseBox-CAM-M8Q_v20.pdf
+block: /images/2020-03-11-sensoren-gps/block_gps.svg
 ---
 
 Das GPS-Modul empfängt die Position (Längengrad/Breitengrad/Höhe) der senseBox. Diese kann für mobile Anwendungen, z.B. die mobile Datenübertragung auf die openSenseMap, genutzt werden. Dieser Sensor ist kompatibel mit den gängingen GNS Systemen (GPS, QZSS, GLONASS, BeiDou, Galileo) und basiert auf dem u-blox CAM-M8Q Multi GNSS Modul.
@@ -29,14 +30,44 @@ Der GPS Sensor wird an einen I2C-Port angeschlossen.
 ## Programmierung 
 
 ```arduino
-#include <senseBoxIO.h>
-#include <TinyGPS++.h>
-#include <SPI.h>
-#include <Wire.h>
+#include <SenseBoxMCU.h>
 
-Wire.requestFrom(0x42,10);
-while (Wire.available())
-    gps.encode(Wire.read());
+GPS gps;
+float lat; //Geografische Breite
+float lng; //Geografische Länge
+float alt; //Höhe über Meeresspiegel in Metern
+float speed;
+float date;
+float time;
+
+void setup()
+{
+  gps.begin();
+}
+
+void loop()
+{
+  gps.getGPS();
+  lat = gps.getLatitude();
+  lng = gps.getLongitude();
+  alt = gps.getAltitude();
+  speed = gps.getSpeed();
+  date = gps.getDate();
+  time = gps.getTime();
+
+  Serial.print(lat, 6);
+  Serial.print(F(","));
+  Serial.print(lng, 6);
+  Serial.print(F(","));
+  Serial.println(alt, 1);
+  Serial.print(F(","));
+  Serial.println(speed, 4);
+  Serial.print(F(","));
+  Serial.println(date);
+  Serial.print(F(","));
+  Serial.println(time);
+  delay(100);
+}
 ```
 
 
@@ -44,6 +75,13 @@ while (Wire.available())
 
 In Blockly kann der Sensor über folgenden Block ausgelesen werden:
 
+{% include image.html image=page.block %}
 
-
-Im Block kannst du zwischen Luftdruck und Temperatur auswählen.
+Im Block kannst du zwischen den verschiedenen Parametern des GPS Modules auswählen:
+- Längengrad
+- Breitengrad
+- Höhe
+- Zeitstempel (RFC3339)
+- Geschwindigkeit
+- Datum
+- Zeit

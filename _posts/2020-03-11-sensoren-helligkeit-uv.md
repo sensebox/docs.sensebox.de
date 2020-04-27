@@ -9,6 +9,8 @@ resources:
     link: https://sensebox.kaufen/assets/datenblatt/senseBox-VEML-TSL_v20.pdf
   - name: "Datenblatt Vishay VEML6070"
     link: https://www.vishay.com/docs/84277/veml6070.pdf
+image: /images/2020-03-11-sensoren-helligkeit-uv/sensor_helligkeit_uv.png
+block: /images/2020-03-11-sensoren-helligkeit-uv/block_helligkeit_uv.svg
 ---
 
 
@@ -18,7 +20,7 @@ Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen. Dieser 
 
 Der zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Dieser wandelt die Intensität des UV-Lichts der Sonne in digitale Daten um. Der Sensor hat eine hervorragende UV-Empfindlichkeit und Linearität über Filtron™-Technologie. Er hat eine gute UV-Strahlungsmessung auch bei langer Sonnen-UV-Belastung und kann exzellenter Temperaturschwankungen ausgleichen.
 
-![Beleuchtungsstärke und UV-Stahlung](https://github.com/sensebox/resources/raw/master/gitbook_pictures/tsl top.png)
+{% include image.html image=page.image %}
 
 ## Technische Details
 
@@ -63,4 +65,14 @@ void loop() {
 }
 ```
 
+## Programmierung (Blockly)
+
+In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+
+{% include image.html image=page.block %}
+
+Im Block kannst du zwischen den verschiedenen Parametern des Helligkeit/UV-Sensor auswählen:
+
+- Helligkeit in LUX
+- UV-Belastung in µW/m^2
 
