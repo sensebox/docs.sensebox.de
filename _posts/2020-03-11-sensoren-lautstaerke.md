@@ -1,8 +1,8 @@
 ---
 date: 2020-03-11
-title: Umweltsensor
+title: Lautstärkesensor
 categories: sensoren
-description: Luftdruck- und Temperatursensor (BME680)
+description: DFRobot SEN0232 Gravity
 type: Document
 resources:
   - name: "Shop"
@@ -29,8 +29,7 @@ Der DFRobot SEN0232 misst die Lautstärke und gibt die Messwerte in Dezibel aus.
 
 ## Programmierung (Arduino)
 
-Im ersten Code-Snippet wird lediglich die Eingangsspannung ausgelesen und in Dezibel konvertiert. Der Wert wird auf der Konsole in Arduino angezeigt.
-Sind diese halbwegs nachvollziehbar - werden größer wenn man z.B. in der Nähe des Sensors klatscht und werden dementsprechend kleiner, wenn keine wahrnehmbare Geräuschkulisse vorliegt - dann ist der Sensor einsatzbereit.
+
 ```arduino
 #define SoundSensorPin A1  //this pin read the analog voltage from the sound level meter
 #define VREF  5.0  //voltage on AREF pin,default:operating voltage
@@ -51,4 +50,5 @@ void loop()
 }
 ```
 
-## Programmierung (Blockly)
+
+

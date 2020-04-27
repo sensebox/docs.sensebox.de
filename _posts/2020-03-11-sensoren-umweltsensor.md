@@ -9,6 +9,8 @@ resources:
     link: https://sensebox.kaufen/product/sensebox-mini
   - name: Bosh BME680
     link: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf
+image: /images/2020-03-11-sensoren-umweltsensor/sensoren_umweltsensor.png
+block: /images/2020-03-11-sensoren-umweltsensor/block_umweltsensor.svg
 ---
 
 Mit dem Sensor BME680 kannst du eine verschiedene Auswahl an Phänomenen messen. Lufttemperatur, relative Luftfeuchtigkeit, Luftdruck und Luftqualität können mit dem BME680 bestimmt werden. Er ist also ein echter Alleskönner. 
@@ -25,55 +27,32 @@ Mit dem Sensor BME680 kannst du eine verschiedene Auswahl an Phänomenen messen.
 Mit dem mitgelieferten Verbindungskabel kannst du deinen Gassensor mit dem "I2C"-Port der senseBoxMCU verbinden. 
 Ist dies erledigt können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.
 
-**Achtung**Der BME Gassensor ist nicht mit dem BMP280 Luftdrucksensor kompatibel. Das heißt du kannst nur einen der beiden gleichzeitig anschließen und auslesen!
+**Achtung** Der BME Gassensor ist nicht mit dem BMP280 Luftdrucksensor kompatibel. Das heißt du kannst nur einen der beiden gleichzeitig anschließen und auslesen!
 
 
+## Programmierung (Blockly)
 
-Als erstes muss die Bibliothek geladen und eine Instanz des Sensors erstellt werden.
+In Blockly kann der Sensor über folgenden Block ausgelesen werden:
 
-```arduino 
-#include <SenseBoxMCU.h>
+{% include image.html image=page.block %}
 
-BME680_Class BME680;
+Im Block kannst du zwischen den verschiedenen Parametern des Umweltsensor auswählen:
 
-void setup(){
-    // Normalen seriellen Port initialisieren 
-    Serial.begin(9600);
-    while(!Serial);
+- Temperatur in Grad Celsius (°C)
+- Luftfeuchtigkeit in %
+- Luftdruck in Pa
+- Innenraumluftqualität (IAQ)
+- Kalibrierungswert
+- CO2 Äquivalent
+- Atemluft VOC Äquivalent
 
-    // Starten des Sensors
-    BME680.begin(I2C_STANDARD_MODE);
-    delay(2000);
+## Kalibrierungswert
 
-    // Oversampling der Sensoren festlegen
-    BME680.setOversampling(TemperatureSensor, Oversample16);
-    BME680.setOversampling(HumiditySensor, Oversample16);
-    BME680.setOversampling(PressureSensor, Oversample16);
-    Serial.println(F("- Setting IIR filter to a value of 4 samples"));
-    // IIR Filter auf 4 Werte setzen
-    BME680.setIIRFilter(IIR4);
-    BME680.setGas(320, 150);
-}
+Den Status der Kalibrierung kann über den Wert IAQ Accuracy abgelesen werden. Er ist entweder 0, 1, 2 oder 3 und sagt folgendes aus:
 
-void loop(){
-    // Variable um Messwerte zu speichern
-    static int32_t temperature, humidity, pressure, gas;
+- IAQ Accuracy = 0 heißt Sensor wird stabilisiert (dauert ca. 25 Minuten) oder dass es eine Zeitüberschreitung gab (which should be indicated by a warning/error flag by BSEC ← Muss in Blockly abgefangen werden),
+- IAQ Accuracy = 1 heißt Wert ist ungenau,
+- IAQ Accuracy = 2 heißt Sensor wird kalibriert,
+- IAQ Accuracy = 3 heißt Sensor erfolgreich kalibriert.
 
-    // Aktuelle Messwerte auslesen und speichern
-    BME680.getSensorData(temperature, humidity, pressure, gas); 
-    
-    // rel. Luftfeuchte in milli-prozent
-    Serial.print(humidity / 1000.0, 2);                      
-    Serial.print(F("%rel. Luftfeuchte "));
-    
-    // Luftdruck in Hectopascals
-    Serial.print(pressure / 100.0, 2);                       
-    Serial.print(F("hPa "));
-
-    // Luftqualität in mOhm
-    Serial.print(gas / 100.0, 2);                            
-    Serial.println(F("mOhm"));
-    delay(5000);
-}
-```
-
+Der IAQ Index ist also nur aussagekräftig bei IAQ Accuracy = 3. Neben dem Wert für IAQ stellt uns BSEC noch K und VOC äquivalente Werte bereit. 

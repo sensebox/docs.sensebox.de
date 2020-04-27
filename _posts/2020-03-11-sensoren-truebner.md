@@ -7,15 +7,17 @@ type: Document
 resources:
   - name: "Shop"
     link: https://sensebox.kaufen/product/bodenfeuchte-temperatursensor-smt50
-  - name: "CAM M8Q"
-    link: https://sensebox.kaufen/assets/datenblatt/senseBox-CAM-M8Q_v20.pdf
+  - name: "Truebner SMT50"
+    link: http://www.truebner.de/sites/default/files/Anleitung_SMT50_V1.1.pdf
+image: /images/2020-03-11-sensoren-truebner/sensoren_bodenfeuchte_temperatur.png
+block: /images/2020-03-11-sensoren-truebner/block_bodenfeuchte_temperatur.svg
 ---
 
 # Bodentemperatur- & Feuchtigkeitssensor {#head}
 
 Der truebner SMT50 ist ein kapazitiver Bodentemperatur- und Feuchtigkeitssensor und eignet sich daher gut für diverse Anwendung im heimischen Garten. Kapazitive Bodenfeuchtesensoren erzeugen ein elektrisches Feld um ihre Messelektroden herum. Das Feld dringt in den umgebenden Boden ein. Die Messelektronik des Sensors ermittelt die resultierende elektrische Kapazität der Elektroden. Je höher der Wassergehalt im Boden ist,desto größer wird die Messkapazität des Sensors.
 
-![Bodentemperatur- & Feuchtigkeit](https://github.com/sensebox/resources/raw/master/gitbook_pictures/smt50_top.png)
+{% include image.html image=page.image %}
 
 ## Technische Details
 - Versorgungsspannung: 3.3 - 30 VDC (Gleichspannung)
@@ -35,4 +37,11 @@ Der truebner SMT50 ist ein kapazitiver Bodentemperatur- und Feuchtigkeitssensor 
 
 ## Programmierung (Blockly)
 
+In Blockly kann der Sensor über folgenden Block ausgelesen werden:
 
+{% include image.html image=page.block %}
+
+Im Block kannst du zwischen den verschiedenen Parametern des Bodenfeuchte- und Temperatursensor auswählen:
+
+- Bodentemperatur in Grad Celsius (°C)
+- Bodenfeuchte
