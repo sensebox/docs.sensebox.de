@@ -9,12 +9,15 @@ resources:
     link: https://sensebox.kaufen/product/temperatur-luftfeuchte
   - name: "TI HDC1080 Datenblatt"
     link: http://www.ti.com/lit/ds/symlink/hdc1080.pdf
+image: /images/2020-03-11-sensoren-temperatur-luftfeuchte/sensor_temperatur_luftfeuchte.png
+block: /images/2020-03-11-sensoren-temperatur-luftfeuchte/block_temperatur_luftfeuchte.svg
 ---
 
 # Temperatur- und Luftfeuchtesensor {#head}
 Der HDC1080 ist ein digitaler Feuchtigkeits- und Temperatursensor. Der Sensor hat eine hohe Genauigkeit und eine sehr geringe Stromaufnahme und passt dadurch ideal zur senseBox. Die Sensoren sind ab Werk kalibirert und können direkt eingesetzt werden. 
 
-![Temperatur und Luftfeuchtesensor](https://github.com/sensebox/resources/raw/master/gitbook_pictures/hds%20top.png)
+
+{% include image.html image=page.image %}
 
 ## Technische Information
 
@@ -49,3 +52,15 @@ void loop(){
     Serial.println(hdc.getHumidity());
 }
 ```
+
+
+## Programmierung (Blockly)
+
+In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+
+{% include image.html image=page.block %}
+
+Im Block kannst du zwischen den verschiedenen Parametern des Temperatur und Luftfeuchtigkeitsensor auswählen:
+
+- Temperatur in Grad Celsius (°C)
+- Luftfeuchtigkeit in Prozent (%)
