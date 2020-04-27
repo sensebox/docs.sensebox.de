@@ -1,15 +1,19 @@
 ---
 date: 2020-04-07
 title: Dein erster Sketch
-title_order: 2 # Indicates the order of apperance on the overview pages
+title_order: 1 # Indicates the order of apperance on the overview pages
 categories: Blockly
 description: Schreibe dein erstes Programm für die senseBox
 type: Document
 set: blockly-erste-schritte
-set_order: 2
+set_order: 1
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
+image1: /images/2020-04-08-blockly-erste-schritte/blockly-es-1.svg
+image2: /images/2020-04-08-blockly-erste-schritte/blockly-es-2.svg
+image3: /images/2020-04-08-blockly-erste-schritte/blockly-es-3.svg
+
 ---
 
 Um Blockly etwas kennenzulernen schreibst du ein einfaches Programm, welches die eingebaute LED auf der senseBox blinken lässt.
@@ -21,22 +25,22 @@ Um Blockly etwas kennenzulernen schreibst du ein einfaches Programm, welches die
 Dieser Block wird direkt beim Starten der Oberfläche geladen und sollte immer verwendet werden. Die zwei Basisfunktionen `Setup()` und `Endlosschleife()` werden immer benötigt, um ein funtkionsfähiges Programm zu schreiben.
 Alle Blöcke, die innerhalb der `Setup()`-Funktion stehen, werden nur zu Beginn des Programmes einmal ausgeführt. In dieser Funktion wird zum Beispiel das Display initialsiert oder die WLAN Verbindung hergestellt. Alle Blöcke, die innerhalb der `Endlosschleife()` stehen, werden fortlaufend ausgeführt. Der Mikrocontroller führt hierbei alle Blöcke immer wieder von oben nach unten hin aus. In der `Endlosschleife()` werden zum Beispiel die Sensoren ausgelesen oder auch die Messwerte auf SD-Karte gespeichert oder ins Internet übertragen.
 
-![Basisblock](https://raw.githubusercontent.com/sensebox/sensebox.github.io/Projects_basics/images/projects/ES_ersterSketch/setup_loop.png)
+{% include image.html image=page.image1 %}
 
 ### Schritt 2: Die eingebaute LED einschalten
 
 Um die eingebaute LED anzuschalten, musst du den `LED an digital`-Block in die Endlosschleife ziehen. Anschließend wählst du unter PIN "BUILTIN_1" und unter Status "Ein" aus.
 
-![Eingebaute LED einschalten](https://raw.githubusercontent.com/sensebox/sensebox.github.io/Projects_basics/images/projects/ES_ersterSketch/builtin1_on.png)
+{% include image.html image=page.image2 %}
 
-Die eingebaute LED findest du über dem roten Reset-Knopf auf der senseBox MCU.
+>Die eingebaute LED findest du über dem roten Reset-Knopf auf der senseBox MCU.
 
 
 ### Schritt 3: Die eingebaute LED blinken lassen
 
 Um die eingebaute LED blinken zu lassen, ist es nötig, sie mit einem weiteren `LED an digital` Block wieder auszuschalten. Zusätzlich muss nach dem An- sowie Ausschalten eine Pause eingefügt werden, damit das Blinken überhaupt sichtbar ist. Den `Warte` Block findest du in der Kategorie `Zeit`.
 
-![Eingebaute LED blinken lassen](https://raw.githubusercontent.com/sensebox/sensebox.github.io/Projects_basics/images/projects/ES_ersterSketch/builtin1_blink.png)
+{% include image.html image=page.image3 %}
 
 <div class="panel panel-info">
   <div class="panel-heading">

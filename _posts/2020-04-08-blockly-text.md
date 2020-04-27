@@ -1,12 +1,12 @@
 ---
 date: 2020-04-07
 title: Text
-title_order: 11
+title_order: 10
 categories: Blockly
 description: Grundlagen zur Kategorie Text
 type: Document
 set: blockly-erste-schritte
-set_order: 11
+set_order: 10
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

@@ -1,12 +1,12 @@
 ---
 date: 2020-04-07
 title: Logik
-title_order: 5
+title_order: 7
 categories: Blockly
 description: Erste Schritte Logik
 type: Document
 set: blockly-erste-schritte
-set_order: 5
+set_order: 7
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

@@ -1,12 +1,12 @@
 ---
 date: 2020-04-07
 title: SD-Karte
-title_order: 8
+title_order: 6
 categories: Blockly
 description: Erste Schritte mit der SD-Karte
 type: Document
 set: blockly-erste-schritte
-set_order: 8
+set_order: 6
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

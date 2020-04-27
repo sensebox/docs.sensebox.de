@@ -1,12 +1,12 @@
 ---
 date: 2020-04-07
 title: Mathematik
-title_order: 6
+title_order: 9
 categories: Blockly
 description: Erste Schritte Mathematik
 type: Document
 set: blockly-erste-schritte
-set_order: 6
+set_order: 9
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

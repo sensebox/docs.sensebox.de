@@ -1,12 +1,12 @@
 ---
 date: 2020-04-07
-title: senseBox Umweltsensoren
-title_order: 4
+title: Sensoren
+title_order: 2
 categories: Blockly
-description: Verwendung der verschiedenen Umweltsensoren der senseBox
+description: Grundlagen zur Kategorie Sensoren
 type: Document
 set: blockly-erste-schritte
-set_order: 4
+set_order: 2
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
@@ -18,6 +18,10 @@ image4: /images/2020-04-08-blockly-sensoren/blockly-sensoren-4.svg
 image5: /images/2020-04-08-blockly-sensoren/blockly-sensoren-5.svg
 image6: /images/2020-04-08-blockly-sensoren/blockly-sensoren-6.svg
 image7: /images/2020-04-08-blockly-sensoren/blockly-sensoren-7.svg
+image8: /images/2020-04-08-blockly-sensoren/blockly-sensoren-8.svg
+image9: /images/2020-04-08-blockly-sensoren/blockly-sensoren-9.svg
+image10: /images/2020-04-08-blockly-sensoren/blockly-sensoren-10.svg
+
 ---
 
 ## Allgemeines
@@ -31,6 +35,16 @@ Der Beschleunigungssensor ist bereits auf der senseBox MCU verbaut. Er kann dir 
 {% include image.html image=page.image0 %}
 
 >  Die mittlere Erdbeschleunigung wird in *g* angegeben und beträgt abgerundet 9,81 m/s<sup>2</sup>
+
+## Button
+Ein Button ist bereits auf der senseBox MCU verbaut. Zusätzliche Buttons können über die drei Digital Ports angeschlossen werden. Im Dropdown Menü können verschiedene Modi für den Button ausgewählt werden:
+
+- __ist gedrückt__: Mit diesem Modus kannst du abfragen ob der Block gerade gedrückt wird. Du erhältst entweder den Wert TRUE oder FALSE.
+- __wurde gedrückt__: Mit diesem Modus kannst du abfragen ob der Block gedrückt wurde. Erst wenn der Knopf gedrückt und wieder losgelassen wurde erhältst du TRUE zurück
+- __als Schalter__: Wenn du diesen Modus verwendest kannst du den Knopf wie ein Lichtschalter verwenden. Der Status wird gespeichert bis der Button erneut gedrückt wird
+
+
+{% include image.html image=page.image10 %}
 
 ## Temperatur- und Luftfeuchtigkeitssensor (HDC1080)
 Der Temperatur- und Luftfeuchtigkeitssensor wird an einen der fünf I2C/Wire Ports gesteckt. Er kann dir die Temperatur in °C und die relative Luftfeuchtigkeit in % angeben.
@@ -94,7 +108,7 @@ Der Feinstaubsensor wird an einem der zwei UART/Serial Ports angeschlossen und i
 {% include image.html image=page.image4 %}
 
 ## Bodentemperatur- und Bodenfeuchtesensor (SMT50)
-Der Bodentemperatur-  und Bodenfeuchtesensor wird ein einen der drei Digital Ports angeschlossen und im Block der jeweilge Ports ausgewählt. Er kann dir die Bodentemperatur in °C und den volumetrischen Wassergehalt des Bodens in %.
+Der Bodentemperatur-  und Bodenfeuchtesensor wird ein einen der drei Digital Ports angeschlossen und im Block der jeweilge Port ausgewählt. Er kann dir die Bodentemperatur in °C und den volumetrischen Wassergehalt des Bodens in %.
 
 {% include image.html image=page.image5 %}
 
@@ -102,3 +116,14 @@ Der Bodentemperatur-  und Bodenfeuchtesensor wird ein einen der drei Digital Por
 Das GPS-Modul wird an einen der fünf I2C/Wire Ports angeschlossen. Es kann dir den Breitengrad, den Längengrad, die Höhe über NN in m, die aktuelle Geschwindigkeit, einen Zeitstempel, die Uhrzeit und das Datum angeben.
 
 {% include image.html image=page.image6 %}
+
+## Ultraschall Abstandssensor
+Der Ultraschall-Distanzsensor wird an einen der drei Digital Ports angeschlossen und im Block der jeweilige Port ausgewählt. Er kann dir die Entfernung in cm angeben.
+
+{% include image.html image=page.image8 %}
+
+## Mikrofon
+Das Mikrofon wird an einen der drei Digital Ports angeschlossen und im Block der jeweilige Port ausgewählt. Er kann dir die Lautstärke als Pegel zwischen 0 und 5V ausgeben.
+
+{% include image.html image=page.image9 %}
+
