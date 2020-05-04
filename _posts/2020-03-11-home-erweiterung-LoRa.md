@@ -21,15 +21,19 @@ image11: /images/2020-03-11-home-erweiterung-lora/home-lora-11.png
 image12: /images/2020-03-11-home-erweiterung-lora/home-lora-12.png
 image13: /images/2020-03-11-home-erweiterung-lora/home-lora-13.png
 image14: /images/2020-03-11-home-erweiterung-lora/home-lora-14.png
+image15: /images/2020-03-11-home-erweiterung-lora/home-lora-15.png
+image16: /images/2020-03-11-home-erweiterung-lora/home-lora-16.png
 ---
 
 ## LoRa und TheThingsNetwork
 
-Die Daten werden über das TheThingsNetwork versendet, daher wird im ersten Schritt ei
+Die Daten werden über das [TheThingsNetwork](https://www.thethingsnetwork.org/) (TTN) versendet, daher muss im ersten Schritt dort ein Gerät angelegt und eine weiterleitung der Daten zur openSenseMap eingerichtet werden. 
 
 ## Registrieren im TheThingsNetwork
 
 Viele Gateways, die von verschiedenen Gruppen, Vereinen oder auch Unternemhmen aufgestellt wurden, verwendet das TheThingsNetwork, um die Daten zu empfangen und zu versenden. Damit Daten innerhalb des Netzes empfangen und verabeitet werden können muss zuerst ein Account erstellt werden und die Geräte registriert werden.
+
+Eine Übersicht über die Abdeckung findest du auf [ttnmapper.org](https://ttnmapper.org/). Beachte hierbei jedoch, dass die Abdeckung evlt. nicht der Realität entspricht.
 
 ### Anlegen
 
@@ -84,4 +88,22 @@ Nach der Registrierung kannst du deinen Programmcode für die senseBox direkt ü
 
 Kopiere die Device EUI, die Application EUI und den Application Key aus der Device Übersicht in die entsprechenden Felder und drücke Kompilieren.
 
+### Kopieren auf die senseBox
+
+Bringe die senseBox durch einen doppelklick auf den roten Resetbutton in den Lernmodus. Die senseBox taucht nun als Wechseldatenträger auf und du kannst das zuvor heruntergeladene Programm auf die senseBox kopieren. Anschließend startet die senseBox automatisch neu und die Daten werden übertragen.
+
+## Probleme
+
+Sollten deine Daten nicht auf der openSenseMap angezeigt werden solltest du als erstes Überprüfen ob die Daten im TheThingsNetwork ankommen. Klicke dazu in deinem **Device Overview** auf Data und schaue ob dort Daten ankommen. Zum einen solltest du eine Aktivierungsnachricht sehen, die mit einem Blitz gekenntzeichnet ist. Die ankommenden Daten werden mit Payload gekennzeichnet.
+
+{% include image.html image=page.image14 %}
+
+Sollten Daten in der Console auftauchen diese allerdings nicht an die openSenseMap weitergeleitet werden überprüfe ob alle Parameter für die Integration von TTN auf der openSenseMap richtig kopiert worden sind. Die Paremter findes im Dasboard der openSenseMap.
+
+
+{% include image.html image=page.image15 %}
+
+Klicke auf bei deiner senseBox auf Editieren und wähle anschließend im Seitenmenü TheThingsNetwork aus. 
+
+{% include image.html image=page.image16 %}
 
