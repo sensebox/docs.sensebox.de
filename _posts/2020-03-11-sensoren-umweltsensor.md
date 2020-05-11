@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Umweltsensor
-categories: sensoren
+categories: hardware
 description: Luftdruck- und Temperatursensor (BME680)
 type: Document
 resources:

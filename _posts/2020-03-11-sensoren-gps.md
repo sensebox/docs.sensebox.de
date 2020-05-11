@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: GPS
-categories: sensoren
+categories: hardware
 description: GPS u-blox CAM-M8Q Multi GNSS Modul
 type: Document
 resources:

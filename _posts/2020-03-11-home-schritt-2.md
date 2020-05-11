@@ -20,6 +20,7 @@ Die openSenseMap ist eine Plattform um Sensordaten zu speichern, zu vergleichen 
 
 {% include image.html image=page.image1 %}
 
+
 ## 1. Nutzeraccount Registrierung
 Gehe auf [www.opensensemap.org](https://www.opensensemap.org) und lege dir einen Account an. Dafür klickst du rechts oben in der Ecke auf "Login" und gehst dann auf "Sign up". Du brauchst zum Registrieren eine gültige E-Mail-Adresse. Nach erfolgreicher Registrierung erhältst du eine E-Mail mit einem Bestätigungslink. Bitte klicke den Link, um die Registrierung abzuschließen. 
 
@@ -37,7 +38,7 @@ Nach der erfolgreichen Registrierung kannst du damit beginnen deine senseBox anz
 
 {% include image.html image=page.image3 %}
 
-Da die openSenseMap offen für alle Arten von senseBoxen ist, wirst du nach der verwendeten Hardware gefragt. Wähle *senseBox:home V2* und das Datenübertragungsmodul, das du verwendest. Möchtest du deine Daten über LoRa an die openSenseMap schicken, wählst du bei "Verbindungsart" LoRa aus. Anschließend kannst du im Reiter "Erweitert" deine Lora Einstellungen angeben. Hier musst du die Application-ID und Device-ID angeben, welche du beim <a href="www.thethingsnetwork.org">TheThingsNetwork</a> angegeben hast. Mehr Informationen dazu findest du hier [hier]()
+Da die openSenseMap offen für alle Arten von senseBoxen ist, wirst du nach der verwendeten Hardware gefragt. Wähle *senseBox:home V2* und das Datenübertragungsmodul, das du verwendest. Möchtest du deine Daten über LoRa an die openSenseMap schicken, wählst du bei "Verbindungsart" LoRa aus. Anschließend kannst du im Reiter "Erweitert" deine Lora Einstellungen angeben. Hier musst du die Application-ID und Device-ID angeben, welche du beim <a href="www.thethingsnetwork.org">TheThingsNetwork</a> angegeben hast. Mehr Informationen dazu findest du hier [hier](/sensebox-home-erweiterungen/home-erweiterung-lora/)
 
 {% include image.html image=page.image4 %}
 
