@@ -11,6 +11,9 @@
 	{% assign size = posts | size %}
 	{% assign tutorials = posts | sort: "title_order" %}
 	<section class="category">
+		<img src="{{ item.image }}" alt="Avatar"
+							style="float: left; width: fit-content; margin: 10px; max-width: 15%;">
+							
 		<ul>
 			<li>
 				<div class="card">
