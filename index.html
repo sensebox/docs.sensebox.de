@@ -11,15 +11,14 @@
 	{% assign size = posts | size %}
 	{% assign tutorials = posts | sort: "title_order" %}
 	<section class="category">
-		<img src="{{ item.image }}" alt="Avatar"
-							style="float: left; width: fit-content; margin: 10px; max-width: 15%;">
-							
 		<ul>
 			<li>
 				<div class="card">
 					<div class="container">
 						{% for item in descriptions %}
 						{% if item.categories contains name %}
+						<img src="{{ item.image }}" alt="Avatar"
+							style="float: left; width: fit-content; margin: 10px; max-width: 15%;">
 						<h4>
 							<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ item.head | replace: "-", " " }}
 								-
