@@ -20,21 +20,21 @@
 }
 
 .category {
-
-
-	flex: 0 0 100%;
+	margin: 0 0 20px 20px!important;
+    height: 100%;
+	flex: 1 1 400px;
 
 	/*h3 {
 		text-transform:capitalize;
 	}*/
 
-	@media #{$mid-point} {
+	/*@media #{$mid-point} {
 		flex: 0 0 50%;
 	}
 
 	@media #{$desktop} {
-		flex: 0 0 33%;
-	}
+		flex: 0 0 40%;
+	}*/
 	margin: 0px 0px 30px 0;
 
 	ul {
@@ -44,7 +44,6 @@
 	}
 
 	li {
-		margin-right: 15px;
 		a {
 			padding: 2px 0;
 			display: flex;
