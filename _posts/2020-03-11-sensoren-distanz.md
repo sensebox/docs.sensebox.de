@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Ultraschall Distanzsensor
-categories: sensoren
+categories: hardware
 description: HC-SR04
 type: Document
 resources:

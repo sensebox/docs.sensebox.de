@@ -1,7 +1,7 @@
 ---
 date: 2020-05-06
 title:  I2C-Multiplexer
-categories: zubehoer
+categories: hardware
 description: senseBox I2C-Multiplexer
 type: Document
 resources:

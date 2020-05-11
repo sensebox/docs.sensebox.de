@@ -12,11 +12,11 @@
 	{% assign tutorials = posts | sort: "title_order" %}
 	<section class="category">
 		<ul>
-			{% for item in descriptions %}
-			{% if item.categories contains name %}
 			<li>
 				<div class="card">
 					<div class="container">
+						{% for item in descriptions %}
+						{% if item.categories contains name %}
 						<h4>
 							<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ item.head | replace: "-", " " }}
 								-
@@ -30,8 +30,8 @@
 				</div>
 	</section>
 	</li>
-	{% endfor %}
 	</ul>
+	{% endfor %}
 </section>
 <!--<ul>
 						{% assign tutorials = posts | sort: "title_order" %}

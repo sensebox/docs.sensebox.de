@@ -2,7 +2,7 @@
 date: 2020-03-11
 title: "Schritt 2: Registrieren auf der openSenseMap"
 title_order: 2
-categories: aufbau-sensebox-home
+categories: sensebox-home
 description: Schritt 2 zum Aufbau der senseBox:home
 type: Document
 set: aufbau-sensebox-home

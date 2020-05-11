@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: senseBox:home mit LoRa
-categories: sensebox-home-erweiterungen
+categories: sensebox-home
 description: Daten der senseBox:home über LoRa verschicken
 type: Document
 set: sensebox-home-general

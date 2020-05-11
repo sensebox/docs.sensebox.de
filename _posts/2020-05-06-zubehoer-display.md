@@ -1,7 +1,7 @@
 ---
 date: 2020-05-06
 title:  OLED Display 
-categories: zubehoer
+categories: hardware
 description: senseBox OLED Display
 type: Document
 resources:
