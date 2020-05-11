@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Lautstärkesensor
-categories: sensoren
+categories: hardware
 description: DFRobot SEN0232 Gravity
 type: Document
 resources:
