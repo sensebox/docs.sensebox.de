@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title:  Mikrofon 
-categories: sensoren
+categories: hardware
 description: Kondensator Mikrofon
 type: Document
 resources:

@@ -1,7 +1,7 @@
 ---
 date: 2020-05-06
 title:  Expander
-categories: zubehoer
+categories: hardware
 description: senseBox Expander
 type: Document
 resources:

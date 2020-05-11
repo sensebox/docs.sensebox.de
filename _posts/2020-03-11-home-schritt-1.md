@@ -2,7 +2,7 @@
 date: 2020-03-11
 title: 'Schritt 1: Aufbau der Hardware'
 title_order: 1
-categories: aufbau-sensebox-home
+categories: sensebox-home
 description: Schritt 1 zum Aufbau der senseBox:home.
 type: Document
 set: aufbau-sensebox-home

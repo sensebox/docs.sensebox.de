@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Solar Erweiterung
-categories: sensebox-home-erweiterungen
+categories: sensebox-home
 description: Erweitere deine senseBox:home um ein Solarpanel
 type: Document
 resources:

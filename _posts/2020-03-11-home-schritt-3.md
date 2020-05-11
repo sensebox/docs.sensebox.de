@@ -2,7 +2,7 @@
 date: 2020-03-11
 title: "Schritt 3: Programmcode übertragen"
 title_order: 3
-categories: aufbau-sensebox-home
+categories: sensebox-home
 description: Schritt 3 zum Aufbau der senseBox:home
 type: Document
 set: aufbau-sensebox-home
