@@ -1,5 +1,6 @@
 ---
 categories: Allgemein
 head: Allgemeine Dokumente
-description: Informationen zu Programmierumgebungen, Inbetriebnahme, Board-Support-Package, u.a.
+description: Erste Schritte mit Blockly für die senseBox
+image:  /images/category-icons/allgemein.png
 ---

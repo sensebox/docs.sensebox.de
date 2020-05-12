@@ -1,5 +1,6 @@
 ---
 categories: hardware
 head: Hardware
-description: Informationen zu Sensoren, Bees, Zubehör, u.a.
+description: Beschreibung der verschiedenen Sensoren für die senseBox
+image: /images/category-icons/hardware.png
 ---
