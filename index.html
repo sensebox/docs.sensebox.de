@@ -10,30 +10,23 @@
 	{% assign posts = category[1] %}
 	{% assign size = posts | size %}
 	{% assign tutorials = posts | sort: "title_order" %}
-	<section class="category">
-		<ul>
-			<li>
-				<div class="card">
-					<div class="container">
-						{% for item in descriptions %}
-						{% if item.categories contains name %}
-						<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">
-							<img src="{{ item.image }}" alt="Avatar" align="left"
-								style="padding-right: 10px; max-width: 10%;">
-							<h4>{{ item.head | replace: "-", " " }} - ({{ tutorials.size }})
-							</h4>
-							<p>{{ item.description }}
-							</p>
-						</a>
-						{% endif %}
-						{% endfor %}
-
-
+	<div class="category">
+		{% for item in descriptions %}
+			{% if item.categories contains name %}
+				<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">
+					<div class="card">
+						<div class="container">
+							<div class="top">
+								<img src="{{ item.image }}" alt="Avatar" align="left" style="padding-right: 10px; max-width: 10%;">
+								<h4>{{ item.head | replace: "-", " " }}</h4>
+							</div>
+							<p>{{ item.description }}</p>
+						</div>
 					</div>
-				</div>
-	</section>
-	</li>
-	</ul>
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>
 	{% endfor %}
 </section>
 <!--<ul>
