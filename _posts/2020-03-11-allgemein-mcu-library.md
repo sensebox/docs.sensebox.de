@@ -11,37 +11,40 @@ resources:
     link: https://github.com/sensebox/SenseBoxMCU-Lib
 ---
 # senseBox MCU Library
+Die senseBox MCU Library bietet dir Zugriff auf die folgenden Funktionen/Sensoren:
 
-Die senseBox MCU [senseBox with MCU](https://sensebox.kaufen/product/sensebox-edu). The Library gives easy access to the following features/sensors:
+- Temperatur- und Luftfeuchtigkeitsensor [Sensor HDC1080](https://sensebox.kaufen/product/temperatur-luftfeuchte)
+- Luftdruck- und Temperatursensor [BMP280](https://sensebox.kaufen/product/luftdruck-temperatur)
+- Helligkeit- und UV-Sensor [TSL45315 and VEML6070](https://sensebox.kaufen/product/licht-sensor)
+- Ultraschall Distanzsensor [HC SR04]
+- Feinstaubsensor [SDS011](https://sensebox.kaufen/product/feinstaub-sds011)
+- senseBox GPS [CAM-M8Q](https://sensebox.kaufen/product/gps) --> benötigt [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus)
+- Wifi-Verbindung über das WifiBee [WINC1500](https://sensebox.kaufen/product/wifi-bee) 
+- Senden von Daten an die [openSenseMap](https://opensensemap.org)
 
-- Temperature and Humidity [Sensor HDC1080](https://sensebox.kaufen/product/temperatur-luftfeuchte)
-- Airpressure and Temperature Sensor [BMP280](https://sensebox.kaufen/product/luftdruck-temperatur)
-- Light Visible + UV [TSL45315 and VEML6070](https://sensebox.kaufen/product/licht-sensor)
-- Ultrasonic Sensor [HC SR04]
-- SDS011 Fine Particular Sensor [SDS011](https://sensebox.kaufen/product/feinstaub-sds011)
-- senseBox GPS connected via I2C [CAM-M8Q](https://sensebox.kaufen/product/gps) --> need [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus)
-- Wifi Connection via WifiBee [WINC1500](https://sensebox.kaufen/product/wifi-bee) 
-- send Data to [openSenseMap](https://opensensemap.org)
+## Verwendung
+Die senseBoxMCU Library ist Bestandteil des Board-Support-Package und wird automatisch installiert. 
 
-## Usage
+Die senseBoxMCU Library lässt sich einzeln über folgenden Befehl einbinden:
 
-Install via Arduino Library Manager or copy it to your Arduino Library folder. Include to your Arduino Programm via ```#include "senseBoxMCU.h"```
+```arduino
+include <senseBoxMCU.h>
+```
 
-
-
-## Classes and Functions
-The Library provides to following classes and functions. Create a new instance of the different classes to use the Functions, for example:
+## Klassen und Funktionen
+Die Library enthält die folgenden Klassen und Funktionen. Erstelle eine neue Instanz einer Klasse um auf ihre Funktionen zugreifen zu können, z.B. bietet dir die Klasse 
 
 ```Arduino
 #include "senseBoxMCU.h"
 
 HDC1080 hdc;
 ```
-
-Now you have acces to the functions:
+ 
+Zugriff auf die folgenden Funktionen:
 
 ```Arduino
 hdc.getTemperature();
+hdc.getHumidity();
 ```
 
 ### Bee
