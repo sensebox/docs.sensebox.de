@@ -1,9 +1,12 @@
 ---
 date: 2020-03-11
 title: Installation des Board-Support-Packages
-categories: Allgemein
+title_order: 4
+categories: erste-schritte-arduino
 description: Installation des Board-Support-Packages für die senseBox MCU
 type: Document
+set: erste-schritte-arduino
+set_order: 4
 ---
 
 

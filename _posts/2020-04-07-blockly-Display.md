@@ -5,8 +5,6 @@ title_order: 3
 categories: Blockly
 description: Verwendung des Displays der senseBox
 type: Document
-set: blockly-erste-schritte
-set_order: 3
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

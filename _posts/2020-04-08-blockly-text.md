@@ -5,8 +5,7 @@ title_order: 10
 categories: Blockly
 description: Grundlagen zur Kategorie Text
 type: Document
-set: blockly-erste-schritte
-set_order: 10
+
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

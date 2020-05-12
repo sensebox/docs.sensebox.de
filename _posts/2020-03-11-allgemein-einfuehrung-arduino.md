@@ -1,11 +1,12 @@
 ---
 date: 2020-03-11
-title: Arduino IDE
-categories: Allgemein
+title: Erste Schritte mit der Arduino IDE
+title_order: 4
+categories: erste-schritte-arduino
 description: Programmierung der senseBox in der Arduino IDE
 type: Document
-set: editoren
-set_order: 2
+set: erste-schritte-arduino
+set_order: 5
 ---
 
 Bevor du loslegen kannst dein erstes eigenes Programm zu schreiben, musst du dir die Arduino IDE (engl. für Entwicklungsumgebung) - anschauen.

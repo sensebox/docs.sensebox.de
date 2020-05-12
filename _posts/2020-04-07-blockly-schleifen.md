@@ -5,8 +5,7 @@ title_order: 8
 categories: Blockly
 description: Verwendung von Schleifen in Blockly
 type: Document
-set: blockly-erste-schritte
-set_order: 8
+
 image1: /images/2020-04-08-blockly-schleifen/blockly-schleifen-1.svg
 image2: /images/2020-04-08-blockly-schleifen/blockly-schleifen-2.svg
 image3: /images/2020-04-08-blockly-schleifen/blockly-schleifen-3.svg

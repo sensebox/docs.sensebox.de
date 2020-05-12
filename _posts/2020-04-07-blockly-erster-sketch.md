@@ -2,11 +2,12 @@
 date: 2020-04-07
 title: Dein erster Sketch
 title_order: 1 # Indicates the order of apperance on the overview pages
-categories: Blockly
+categories: erste-schritte-blockly
 description: Schreibe dein erstes Programm für die senseBox
 type: Document
 set: blockly-erste-schritte
-set_order: 1
+set_order: 3
+
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
