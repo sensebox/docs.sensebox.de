@@ -76,6 +76,7 @@ Die Registrierung im TheThingsNetwork ist nun abgeschlossen.
 ## Registrieren auf der openSenseMap
 
 Die Registrierung auf der openSenseMap erfolgt wie hier beschrieben. Wähle unter Verbindsart LoRa aus und füge die Sensoren hinzu, die du im ersten Schritt an deine senseBox angeschlossen hast. 
+{% include image.html image=page.image10 %}
 
 Damit die Verbindung zwischen dem TheThingsNetwork und der openSenseMap korrekt erfolgt muss im nächsten Schritt noch **senseBox:home** als Dekodierungs-Profil ausgeäwhlt werden. Füge noch deine TTN Application-ID und deine TTN Device-ID ein. Klicke auf weiter, um die Registrierung abzuschließen.
 
