@@ -27,17 +27,18 @@ image16: /images/2020-03-11-home-erweiterung-lora/home-lora-16.png
 
 ## LoRa und TheThingsNetwork
 
-Die Daten werden über das [TheThingsNetwork](https://www.thethingsnetwork.org/) (TTN) versendet, daher muss im ersten Schritt dort ein Gerät angelegt und eine weiterleitung der Daten zur openSenseMap eingerichtet werden. 
+Die Daten werden über das [TheThingsNetwork](https://www.thethingsnetwork.org/) (TTN) versendet, daher muss im ersten Schritt ein **Device** angelegt und eine weiterleitung (**Integration**) der Daten zur openSenseMap eingerichtet werden. Grundsätzlich können alle Sensoren, die direkt über die openSenseMap auszuwählen sind, verwendet werden. Das Decodieren findet direkt auf der openSenseMap statt und muss **nicht** mehr über die TTN Console eingestellt werden. 
 
 ## Registrieren im TheThingsNetwork
 
-Viele Gateways, die von verschiedenen Gruppen, Vereinen oder auch Unternemhmen aufgestellt wurden, verwendet das TheThingsNetwork, um die Daten zu empfangen und zu versenden. Damit Daten innerhalb des Netzes empfangen und verabeitet werden können muss zuerst ein Account erstellt werden und die Geräte registriert werden.
+Viele Gateways, die von verschiedenen Gruppen, Vereinen oder auch Unternemhmen aufgestellt wurden, verwendet das TheThingsNetwork, um die Daten zu empfangen und zu versenden. Damit Daten innerhalb des Netzes empfangen und verabeitet werden können muss zuerst ein Account erstellt und die **Devices** registriert werden.
 
-Eine Übersicht über die Abdeckung findest du auf [ttnmapper.org](https://ttnmapper.org/). Beachte hierbei jedoch, dass die Abdeckung evlt. nicht der Realität entspricht.
+In sehr vielen Städten ist schon eine gute Abdeckung des Netzwerkes vorhanden. Eine Übersicht über die Abdeckung findest du auf [ttnmapper.org](https://ttnmapper.org/). 
+> Beachte hierbei jedoch, dass die Abdeckung evlt. nicht der Realität entspricht und die Daten veraltet sein könnten.
 
-### Anlegen
+### Anlegen der Application und erstellen eines Devices
 
-Erstelle dir einen neuen Account unter [https://www.thethingsnetwork.org/](https://www.thethingsnetwork.org/). Anschließe klicke auf Console und klicke auf Applications.
+Erstelle dir einen neuen Account unter [https://www.thethingsnetwork.org/](https://www.thethingsnetwork.org/). Anschließe klicke auf Console und wähle **Applications**.
 
 {% include image.html image=page.image00 %}
 
@@ -80,17 +81,18 @@ Damit die Verbindung zwischen dem TheThingsNetwork und der openSenseMap korrekt 
 
 ## Kompilieren und übertragen
 
-Nach der Registrierung kannst du deinen Programmcode für die senseBox direkt über die openSenseMap kompilieren. Du musst daher keine Software auf dem Computer installieren. 
+Nach der Registrierung kannst du deinen Programmcode für die senseBox auf der openSenseMap kompilieren. Du musst daher keine Software auf dem Computer installieren. 
 
 {% include image.html image=page.image12 %}
 {% include image.html image=page.image13 %}
 
-
-Kopiere die Device EUI, die Application EUI und den Application Key aus der Device Übersicht in die entsprechenden Felder und drücke Kompilieren.
+Kopiere die Device EUI, die Application EUI und den Application Key aus der Device Übersicht und füge diese in die entsprechenden Felder ein und drücke anschließend auf Kompilieren.
 
 ### Kopieren auf die senseBox
 
-Bringe die senseBox durch einen doppelklick auf den roten Resetbutton in den Lernmodus. Die senseBox taucht nun als Wechseldatenträger auf und du kannst das zuvor heruntergeladene Programm auf die senseBox kopieren. Anschließend startet die senseBox automatisch neu und die Daten werden übertragen.
+Bringe die senseBox durch einen Doppelklick auf den roten Resetbutton in den Lernmodus. Die senseBox taucht nun als Wechseldatenträger auf und du kannst das zuvor heruntergeladene Programm auf die senseBox kopieren. Anschließend startet die senseBox automatisch neu und die Daten werden übertragen. 
+
+>Beachte: Unter MacOS funktioniert das Kopieren der .BIN per Drag & Drop leider nicht. Am einfachsten funktioniert es mit unserem senseBox-Sketch Uploader. Einfach die Zip Datei entpacken und das Programm starten. Das Programm kannst du [hier](https://sensebox.de/docs/senseBox_Sketch_Uploader_DE.zip) direkt herunterladen. Alternativ kannst du die Datei auch über [MuCommander](https://www.mucommander.com/) oder über das Terminal mittels `dd` kopieren (empfehlen wir allerdings nur Erfahrenen Nutzer\*innen).
 
 ## Probleme
 
@@ -98,8 +100,7 @@ Sollten deine Daten nicht auf der openSenseMap angezeigt werden solltest du als 
 
 {% include image.html image=page.image14 %}
 
-Sollten Daten in der Console auftauchen diese allerdings nicht an die openSenseMap weitergeleitet werden überprüfe ob alle Parameter für die Integration von TTN auf der openSenseMap richtig kopiert worden sind. Die Paremter findes im Dasboard der openSenseMap.
-
+Sollten Daten in der Console auftauchen diese allerdings nicht an die openSenseMap weitergeleitet werden überprüfe ob alle Parameter für die Integration von TTN auf der openSenseMap richtig kopiert worden sind. Die Paremter findest im Dasboard der openSenseMap.
 
 {% include image.html image=page.image15 %}
 
