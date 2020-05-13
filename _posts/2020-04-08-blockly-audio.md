@@ -5,8 +5,7 @@ title_order: 12
 categories: Blockly
 description: Grundlagen zur Kategorie Audio
 type: Document
-set: blockly-erste-schritte
-set_order: 12
+
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

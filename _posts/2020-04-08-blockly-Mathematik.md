@@ -5,8 +5,7 @@ title_order: 9
 categories: Blockly
 description: Erste Schritte Mathematik
 type: Document
-set: blockly-erste-schritte
-set_order: 9
+
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

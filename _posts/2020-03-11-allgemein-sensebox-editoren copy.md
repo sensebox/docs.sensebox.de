@@ -2,10 +2,10 @@
 date: 2020-03-11
 title: Editoren für die senseBox
 title_order: 2
-categories:  erste-schritte-arduino
+categories: erste-schritte-blockly 
 description: Übersicht über die verschiedenen Editoren der senseBox
 type: Document
-set: erste-schritte-arduino
+set: blockly-erste-schritte
 set_order: 2
 ---
 

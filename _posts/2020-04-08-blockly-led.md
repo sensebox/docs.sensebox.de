@@ -5,8 +5,7 @@ title_order: 4
 categories: Blockly
 description: Erste Schritte LED
 type: Document
-set: blockly-erste-schritte
-set_order: 4
+
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
