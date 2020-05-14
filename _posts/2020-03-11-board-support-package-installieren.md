@@ -19,30 +19,13 @@ Füge die folgende URL in deiner Arduino IDE unter *Datei -> Voreinstellungen* i
 https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json
 ```
 <br>
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
 
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu1.png" class="click-zoom">
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu1.png">
 
 
 Öffne dann den *Boardverwalter* unter *Werkzeuge -> Board:"..." -> Boardverwalter* und installiere dort die zwei Board-Support-Packages mit den Namen **Arduino SAMD Boards by Arduino** und **senseBox SAMD Boards by senseBox**.
 
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png" class="click-zoom">
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png">
 
 
   Gib "SAMD" oben in die Suchleiste ein um die Packages schneller zu finden.
@@ -51,15 +34,7 @@ img.click-zoom:active {
 Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neuste Version zu installieren. 
 
 
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png" class="click-zoom">
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png">
 
   Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.
 
@@ -70,39 +45,17 @@ Füge die folgende URL in deiner Arduino IDE unter *`Arduino -> Einstellungen...
 ```
 https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json
 ```
-<br>
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu_mac.png" class="click-zoom">
+
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu_mac.png">
 
 
 Öffne dann den *Boardverwalter* unter *Werkzeuge -> Board:"..." -> Boardverwalter* und installiere dort die zwei Board-Support-Packages mit den Namen **Arduino SAMD Boards by Arduino** und **senseBox SAMD Boards by senseBox**.
 
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu3_mac.png" class="click-zoom">
 
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu2_mac.png" class="click-zoom">
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu3_mac.png">
+
+
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu2_mac.png">
 
 
 
@@ -111,15 +64,8 @@ img.click-zoom:active {
 
 Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neuste Version zu installieren. 
 
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu_update_mac.png" class="click-zoom">
+
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu_update_mac.png">
 
 
   Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.
@@ -131,45 +77,18 @@ Füge die folgende URL in deiner Arduino IDE unter *Datei -> Voreinstellungen* i
 ```
 https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.json
 ```
-<br>
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu1.png" class="click-zoom">
+
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu1.png">
 
 Öffne dann den *Boardverwalter* unter *Werkzeuge -> Board:"..." -> Boardverwalter* und installiere dort die zwei Board-Support-Packages mit den Namen **Arduino SAMD Boards by Arduino** und **senseBox SAMD Boards by senseBox**.
 
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png" class="click-zoom">
-
-
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png">
 
 Gib "SAMD" oben in die Suchleiste ein um die Packages schneller zu finden.
-<br>
-
 Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neuste Version zu installieren. 
 
-<style>
-img.click-zoom {
- transition: transform 0.2s;
-}
-img.click-zoom:active {
- transform: scale(2.0, 2.0);
-}
-</style>
-<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png" class="click-zoom">
+
+<img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png">
 
 Wichtig ist, zuerst auf den Eintrag zu klicken. Ansonsten wird der Update-Button nicht angezeigt, auch wenn es bereits eine neue Version gibt.
 
