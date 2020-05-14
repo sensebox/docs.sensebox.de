@@ -9,6 +9,10 @@ set: erste-schritte-arduino
 set_order: 3
 
 resources:
+  - name: "Arduino"
+    link: https://www.arduino.cc
+  - name: "Arduino Old Releases"
+    link: https://www.arduino.cc/en/Main/OldSoftwareReleases#previous
 image1: /images/2020-03-11-allgemein-arduino-ide-installieren/arduino-download.png
 image2: /images/2020-03-11-allgemein-arduino-ide-installieren/arduino-donate.png
 ---

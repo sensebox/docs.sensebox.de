@@ -7,6 +7,10 @@ description: Programmierung der senseBox in der Arduino IDE
 type: Document
 set: erste-schritte-arduino
 set_order: 5
+
+resources:
+image1: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-1.png
+image2: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-2.png
 ---
 
 Bevor du loslegen kannst, musst du die Arduino IDE installieren. Wie dies funktioniert findest du [hier](/allgemein/allgemein-arduino-ide-installieren//)
@@ -18,12 +22,12 @@ Im schwarzen Bereich darunter werden dir Status- und Fehlermeldungen angezeigt. 
 
 Zuletzt solltest du dir noch die kleinen Schaltflächen über dem weißen Bereich anschauen.
 
-![auf Schreibfehler überprüfen - Programm an senseBox MCU übertragen](https://github.com/sensebox/resources/raw/master/gitbook_pictures/grundlagen/arduino-ide_schaltflaechen1.png)
+{% include image.html image=page.image1 %}
 
 Das Häkchen und der Pfeil sind die beiden wichtigsten Symbole für dich:
 Mit dem Häkchen kannst du dein Programm auf Schreibfehler überprüfen lassen, und mit den Pfeil überträgst du dein Programm an die senseBox MCU.
 
-![neues Programm erstellen - gespeichertes Programm öffnen - Programm speichern](https://github.com/sensebox/resources/raw/master/gitbook_pictures/grundlagen/arduino-ide_schaltflaechen2.png)
+{% include image.html image=page.image2 %}
 
 Die anderen drei Symbole - angefangen mit dem kleinen Blatt ganz links - stehen dafür ein neues Programm zu erstellen, ein gespeichertes zu öffnen und dein geschriebenes Programm zu speichern.
 
