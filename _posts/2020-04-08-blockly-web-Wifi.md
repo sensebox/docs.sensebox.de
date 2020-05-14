@@ -5,8 +5,7 @@ title_order: 5
 categories: Blockly
 description: Erste Schritte Web
 type: Document
-set: blockly-erste-schritte
-set_order: 5
+
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

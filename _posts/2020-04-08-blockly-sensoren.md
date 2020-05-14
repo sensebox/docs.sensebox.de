@@ -5,8 +5,7 @@ title_order: 2
 categories: Blockly
 description: Grundlagen zur Kategorie Sensoren
 type: Document
-set: blockly-erste-schritte
-set_order: 2
+
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de

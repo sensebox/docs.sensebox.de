@@ -1,9 +1,12 @@
 ---
 date: 2020-03-11
 title: Installation des Board-Support-Packages
-categories: Allgemein
+title_order: 4
+categories: erste-schritte-arduino
 description: Installation des Board-Support-Packages für die senseBox MCU
 type: Document
+set: erste-schritte-arduino
+set_order: 4
 ---
 
 <div class="description">Damit die Arduino IDE deine senseBox MCU unterstützt und du Programme auf diese übertragen kannst, musst du vor Beginn noch zwei Board-Support-Packages installieren. Diese beinhalten die nötigen Treiber und die notwendige Software, um mit dem Prozessor der senseBox zu kommunizieren. Das Board-Support-Package der senseBox enthält außerdem bereits unsere senseBox-Libraries. Damit stehen euch alle grundlegenden Methoden zur Programmierung der beiliegenden Sensoren zur Verfügung.</div>

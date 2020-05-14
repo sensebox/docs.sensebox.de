@@ -6,9 +6,6 @@ description: senseBox OLED Display
 type: Document
 resources:
 bild: /images/2020-05-06-zubehoer-display/display.png
-
-
-
 ---
 Mit dem senseBox OLED Display lassen sich auf 128x64 Pixeln Messwerte, Statusmeldungen und vieles mehr anzeigen.
 

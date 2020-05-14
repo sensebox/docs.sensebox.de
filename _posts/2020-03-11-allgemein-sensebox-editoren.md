@@ -1,11 +1,12 @@
 ---
 date: 2020-03-11
 title: Editoren für die senseBox
-categories: Allgemein
+title_order: 2
+categories:  erste-schritte-arduino
 description: Übersicht über die verschiedenen Editoren der senseBox
 type: Document
-set: editoren
-set_order: 1
+set: erste-schritte-arduino
+set_order: 2
 ---
 
 Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren programmieren. 

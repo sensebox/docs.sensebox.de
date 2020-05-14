@@ -1,9 +1,12 @@
 ---
 date: 2020-03-11
 title: Installation der Arduino IDE
-categories: Allgemein
+title_order: 2
+categories: erste-schritte-arduino
 description: Installation der Arduino IDE
 type: Document
+set: erste-schritte-arduino
+set_order: 3
 ---
 
 
