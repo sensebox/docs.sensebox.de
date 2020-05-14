@@ -26,6 +26,7 @@
 	{% feed_meta %}
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 </head>
 
 {% assign t = site.data.translations %}
@@ -71,6 +72,12 @@
 		document.getElementById("open-nav").addEventListener("click", function (event) {
 			event.preventDefault();
 			document.body.classList.toggle("nav-open");
+		});
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function (event) {
+			mediumZoom('[data-zoomable]')
 		});
 	</script>
 </body>

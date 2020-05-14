@@ -9,12 +9,12 @@ set: erste-schritte-arduino
 set_order: 5
 ---
 
-Bevor du loslegen kannst dein erstes eigenes Programm zu schreiben, musst du dir die Arduino IDE (engl. für Entwicklungsumgebung) - anschauen.
+Bevor du loslegen kannst, musst du die Arduino IDE installieren. Wie dies funktioniert findest du [hier](/allgemein/allgemein-arduino-ide-installieren//)
 
 ## Grundlagen
 
 Wenn du die IDE öffnest, siehst du direkt einen großen weißen Bereich, in welchem du dein Programm schreiben wirst.
-Im schwarzen Bereich darunter werden dir Status- und Fehlermeldungen angezeigt. Es lohnt sich also immer einen Blick auf die Meldungen zu werfen.
+Im schwarzen Bereich darunter werden dir Status- und Fehlermeldungen angezeigt. Es lohnt sich immer bei Fehlern einen Blick auf diese Meldungen zu werfen.
 
 Zuletzt solltest du dir noch die kleinen Schaltflächen über dem weißen Bereich anschauen.
 

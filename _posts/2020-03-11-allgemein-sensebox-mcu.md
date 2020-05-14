@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: Die senseBoxMCU
-categories: Allgemein
+categories: hardware
 description: Die senseBox MCU
 type: Document
 resources:
