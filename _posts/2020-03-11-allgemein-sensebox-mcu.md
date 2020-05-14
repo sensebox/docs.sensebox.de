@@ -7,13 +7,14 @@ type: Document
 resources:
   - name: "Shop"
     link: https://sensebox.kaufen/product/sensebox-mini
+image1: /images/2020-03-11-allgemein-sensebox-mcu/mcu_one_top.png
 ---
 
 Der senseBox-Microcontroller ist speziell für die Bedürfnisse der senseBox entwickelt. Deshalb hat der Microcontroller insbesondere drei Eigenschaften: er ist schnell, energiesparend und hat einen großen Programmspeicher.
 
 Auch ohne Vorkenntnisse kann der Microcontroller ganz einfach mit der Übertragung eines vorgefertigten Sketches in 10 Minuten "programmiert" werden. Für fortgeschrittene Programmierer kann wie gewohnt die Arduino IDE eingesetzt werden, um neue und individuelle Projekte durchzuführen.
 
-![Die senseBox MCU](https://github.com/sensebox/resources/raw/master/gitbook_pictures/mcu_one_top.png)
+{% include image.html image=page.image1 %}
 
 ## Technische Spezifikationen
 
