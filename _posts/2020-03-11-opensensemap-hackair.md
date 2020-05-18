@@ -2,7 +2,7 @@
 date: 2020-03-11
 title: hackAIR
 categories: opensensemap
-description: Registrieren einer neuen senseBox auf der openSenseMap
+description: Anleitung eines hackAira
 type: Document
 ---
 
@@ -10,13 +10,13 @@ Es besteht die Möglichkeit, die gemessenen Daten der hackAIR home Sensoren (Ver
 
 Dazu musst du zuerst dein hackAIR Sensor, wie folgt [zusammenbauen](http://www.hackair.eu/hackair-home-v2/) und den [hackair-v2-advanced](https://github.com/mkraats/hackair-v2-advanced) aufspielen.
 
-Danach steht dir die openSenseMap Konfiguration im Webinterface zur Verfügung. ([Abb. 1](#abbildung-1-webinterface-feinstaubsensor))
+Danach steht dir die openSenseMap Konfiguration im Webinterface zur Verfügung. <img src="https://github.com/sensebox/resources/raw/master/images/hackair/02_Sensor_Konfiguration.png"/>
 
 Danach muss eine senseBox auf der openSenseMap mit der korrekten Hardware registriert werden.
 
 ## 1. Neue senseBox [registrieren](https://opensensemap.org/register)
 - User, Standort, Aufstellungsort und Namen ausfüllen. Gruppenkennzeichnung könnte z.B.: hackAIR sein.
-- Unter dem Punkt **"Hardware"** im Schritt **"meine senseBox"** das Feld **"hackAIR"** ausklappen und die passende Sensorkonfiguration auswählen. ([Abb. 2](#abbildung-2-registrierung-opensensemap))
+- Unter dem Punkt **"Hardware"** im Schritt **"meine senseBox"** das Feld **"hackAIR"** ausklappen und die passende Sensorkonfiguration auswählen. <img src="https://github.com/sensebox/resources/raw/master/images/hackair/01_openSenseMap_Konfiguration.png"/>
 - Registrierung abschließen.
 - **Wichtig:** `senseBox ID` kopieren. Dies ist eine 24 Zeichen lange Zeichenkette die ungefähr so aussieht: *58a88c6b650831d8a3625e01*
 - **Wichtig:** `access token` kopieren. Dies ist eine 64 Zeichen lange Zeichenkette.
@@ -34,8 +34,3 @@ Danach sollte ein offenes Netzwerk mit dem Namen `ESP-wemos` verfügbar sein. Da
 ## Fertig
 Der `hackAIR home v2` Sensor sollte nun die Daten an die openSenseMap senden.
 
-## Abbildung 1: Webinterface Feinstaubsensor
-<img src="https://github.com/sensebox/resources/raw/master/images/hackair/02_Sensor_Konfiguration.png"/>
-
-## Abbildung 2: Registrierung openSenseMap
-<img src="https://github.com/sensebox/resources/raw/master/images/hackair/01_openSenseMap_Konfiguration.png"/>
