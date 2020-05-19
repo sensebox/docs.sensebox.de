@@ -9,13 +9,13 @@ resources:
     link: https://sensebox.kaufen/product/sensebox-mini
   - name: Bosh BME680
     link: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf
-image: /images/2020-03-11-sensoren-umweltsensor/sensoren_umweltsensor.png
+image: /images/2020-03-11-sensoren-umweltsensor/bme.png
 block: /images/2020-03-11-sensoren-umweltsensor/block_umweltsensor.svg
 ---
 
 Mit dem Sensor BME680 kannst du eine verschiedene Auswahl an Phänomenen messen. Lufttemperatur, relative Luftfeuchtigkeit, Luftdruck und Luftqualität können mit dem BME680 bestimmt werden. Er ist also ein echter Alleskönner. 
 
-![Der BME680](https://github.com/sensebox/resources/raw/master/gitbook_pictures/bme.png)
+{% include image.html image=page.image %}
 
 ## Technische Details
 * Schnelle Reaktionszeit von weniger als 10 Sekunden

@@ -9,11 +9,14 @@ resources:
     link: https://sensebox.kaufen/product/lautstarkesensor
   - name: DFRobot SEN0232 Gravity
     link: https://www.mouser.de/pdfdocs/SEN0232_Web.pdf
+
+image1: /images/2020-03-11-sensoren-sound/sound.png   
+image2: /images/2020-03-11-sensoren-sound/sound-anschluss.png   
 ---
-# Lautstärkesensor {#head}
+
 Der DFRobot SEN0232 misst die Lautstärke und gibt die Messwerte in Dezibel aus.
 
-![Der Geräuschpegel-Sensor](https://github.com/sensebox/resources/raw/master/gitbook_pictures/decibel_meter.jpg)
+{% include image.html image=page.image1 %}
 
 ## Technische Informationen
 
@@ -24,7 +27,7 @@ Der DFRobot SEN0232 misst die Lautstärke und gibt die Messwerte in Dezibel aus.
 * Messspanne: zwischen 30dBA und 130 dBA akkurat
 * Messintervall: 125ms
 
-![Anschluss des Sensors](https://github.com/sensebox/resources/raw/master/gitbook_pictures/SoundLevelMeter.png)
+{% include image.html image=page.image2 %}
 
 
 ## Programmierung (Arduino)

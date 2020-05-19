@@ -4,6 +4,9 @@ title: Datendownload
 categories: opensensemap
 description: Datendownload über die openSenseMap
 type: Document
+resources:
+image1: /images/2020-03-11-opensensemap-download/1-filter.png
+image2: /images/2020-03-11-opensensemap-download/1-download.png
 ---
 
 Es bestehen mehrere Möglichkeiten Sensordaten von der openSenseMap herunterzuladen.
@@ -21,8 +24,7 @@ Durch einen Klick auf den Reiter "Filter" in der openSenseMap kannst du dir zun�
 Solltest du nach einem Namen filtern, kannst du auch die Werte einer einzelnen senseBox herunterladen.
 Das der Filter aktiv ist, erkennst du an einem roten Dreick unter dem "Reiter" Namen
 
-<img src="https://raw.githubusercontent.com/sensebox/resources/master/images/filter.png" align="center" width="900"/>
-
+{% include image.html image=page.image1 %}
 
 ## Grapische Darstellung von Daten  
 
@@ -33,7 +35,7 @@ kannst, die du angezeigt bekommen möchtest.
 
 Wenn du auf der Seite der openSenseMap den Reiter "Datendownload" auswählst, kannst du eine Reihe von räumlichen und zeitlichen Filtern auf die bereits von den senseBoxen gemessenen Werte anwenden.
 
-<img src="https://raw.githubusercontent.com/sensebox/resources/master/images/downl.png" align="center" width="900"/>
+{% include image.html image=page.image2 %}
 
 
 ### Zeitraum auswählen
