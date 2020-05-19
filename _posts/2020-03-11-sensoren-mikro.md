@@ -5,13 +5,15 @@ categories: hardware
 description: Kondensator Mikrofon
 type: Document
 resources:
+image: /images/2020-03-11-sensoren-mikro/mic.png
 aufbau: /images/2020-03-11-sensoren-mikro/mikro-aufbau.png
 block: /images/2020-03-11-sensoren-mikro/mikro-block.svg
 
 ---
 Das Kondesatormikrofon von Watterott Electronics ist mit einem Verstärker ausgestattet und kann Geräusche zwischen 58 und 110 dB wahrnehmen.
 Es gibt die gemessenen Geräusche in einem Pegel von 0-5V aus.
-![Das Mikrofon](https://sensebox.kaufen/api/public/uploads/1526543847683-Mic_03.png)
+
+{% include image.html image=page.image %}
 
 ## Technische Informationen
 

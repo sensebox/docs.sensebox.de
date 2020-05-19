@@ -5,13 +5,15 @@ categories: hardware
 description: HC-SR04
 type: Document
 resources:
+image1: /images/2020-03-11-sensoren-distanz/US-Sensor.png
 aufbau: /images/2020-03-11-sensoren-distanz/Aufbau-Ultraschall.png
 block: /images/2020-03-11-sensoren-distanz/ultraschall-block.svg
 
 ---
 Der HC-SR04 misst Distanzen mit Hilfe von Ultraschall und gibt diese in Zentimetern (cm) aus.
 
-![Der Ultraschall Distanzsensor](https://sensebox.kaufen/api/public/uploads/1526397840835-Sonar_03.png)
+{% include image.html image=page.image1 %}
+
 
 ## Technische Informationen
 
