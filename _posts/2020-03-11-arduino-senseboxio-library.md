@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: senseBoxIO Library
-categories: Allgemein
+categories: arduino
 description: Verwendung der senseboxIO Library
 type: Document
 resources:

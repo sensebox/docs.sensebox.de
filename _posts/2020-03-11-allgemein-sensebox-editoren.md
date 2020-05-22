@@ -2,12 +2,11 @@
 date: 2020-03-11
 title: Editoren für die senseBox
 title_order: 2
-categories:  erste-schritte-arduino
+categories:  arduino
 description: Übersicht über die verschiedenen Editoren der senseBox
 type: Document
 set: erste-schritte-arduino
 set_order: 2
-
 resources:
 image1: /images/2020-03-11-sensebox-editoren/blockly.png
 image2: /images/2020-03-11-sensebox-editoren/arduino.png

@@ -2,7 +2,7 @@
 date: 2020-04-07
 title: Die senseBox in Betrieb nehmen
 title_order: 1
-categories: erste-schritte-arduino
+categories: arduino
 description: Inbetriebnahme der senseBox MCU
 type: Document
 set: erste-schritte-arduino
