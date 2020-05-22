@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: senseBoxMCU Library
-categories: Allgemein
+categories: arduino
 description: Verwendung der senseBoxMCU Library
 type: Document
 resources:

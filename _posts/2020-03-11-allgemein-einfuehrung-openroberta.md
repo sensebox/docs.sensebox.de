@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: openRoberta
-categories: Allgemein
+categories: Blockly
 description: Programmierung der senseBox in openRoberta
 type: Document
 set: editoren
