@@ -2,7 +2,7 @@
 date: 2020-03-11
 title: hackAIR
 categories: opensensemap
-description: Anleitung eines hackAira
+description: Anleitung eines hackAIR
 type: Document
 ---
 
