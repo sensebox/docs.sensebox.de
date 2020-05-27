@@ -35,4 +35,4 @@ Unter Linux kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den W
 
 <hr>
 
-<a href="/aufbau-sensebox-home/home-schritt-2/" class="button">Zurück zu Schritt 2</a>
+<a href="/sensebox-home/home-schritt-2/" class="button">Zurück zu Schritt 2</a>
