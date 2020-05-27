@@ -1,6 +1,7 @@
 ---
 date: 2017-01-15
 title: "Tutorial 2a: Messwerte auf dem Display anzeigen"
+title_order: 2
 video_id: ZEdxzyDnzF4
 description: 🎬 In diesem Video zeigt dir Björn wie du die Messwerte eines Umweltsensors auf dem Display anzeigen lassen kannst.
 categories: sensebox-tutorials

@@ -1,6 +1,7 @@
 ---
 date: 2017-01-15
 title: "Tutorial 2c: Mehrere Messwerte auf dem Display"
+title_order: 4
 video_id: rkhnJq19l2A
 description: 🎬 In diesem Video zeigt dir Björn wie du mehrer Messwerte gleichzeitig auf dem Display anzeigen lassen kannst.
 categories: sensebox-tutorials

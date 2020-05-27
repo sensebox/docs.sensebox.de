@@ -1,6 +1,7 @@
 ---
 date: 2017-01-15
 title: "Tutorial 2b: Messwerte auf dem Display beschriften"
+title_order: 3
 video_id: dYiqcBYGwAQ
 description: 🎬 In diesem Video zeigt dir Björn wie du Messwerte auf dem Display beschriften kannst.
 categories: sensebox-tutorials

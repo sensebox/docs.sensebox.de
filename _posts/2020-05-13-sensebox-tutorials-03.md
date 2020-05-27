@@ -1,6 +1,7 @@
 ---
 date: 2017-01-15
 title: "Tutorial 3: IoT Umweltmessstation"
+title_order: 5
 video_id: Gz9RzoVp_NI
 description: 🎬 In diesem Video zeigt dir Björn wie du deine senseBox Messstation mit dem Internet verbindest und deine Messwerte auf die openSenseMap überträgst. So kannst du deine Messwerte von überall anschauen.
 categories: sensebox-tutorials
