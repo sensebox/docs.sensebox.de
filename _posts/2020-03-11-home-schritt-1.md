@@ -144,7 +144,7 @@ Als letztes wird der Deckel mit den Schrauben versehen und ein Silikagelbeutel z
 {% include image.html image=page.image22 %} 
 {% include image.html image=page.image23 %} 
 Nun werden noch die Schnellverschlussschrauben eingedreht und damit die senseBox verschlossen. 
-Ich hoffe du hattest Spaß beim Zusammenbau. Nun musst du nur noch deinen Code auf die senseBox laden und diese auf der openSenseMap registrieren. Weitere Informationen zum Aufbau der senseBox findest du auf sensebox.de/go oder im senseBox Forum. Vielen Dank das du dir das Video angeschaut hast und willkommen in der senseBox Community. 
+
 
 <hr>
 <a href="/sensebox-home/home-schritt-2/" class="button" style="float: right;">Weiter mit Schritt 2</a>
