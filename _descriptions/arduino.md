@@ -1,6 +1,6 @@
 ---
 categories: arduino
-head: Arbeiten mit der Arduino IDE
-description: Erste Schritte mit deiner senseBox und der Arduino IDE
+head: The Arduino IDE
+description: First steps with your senseBox and the Arduino IDE
 image: /images/category-icons/arduino.png
 ---

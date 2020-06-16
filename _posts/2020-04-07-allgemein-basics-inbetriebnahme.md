@@ -5,7 +5,7 @@ title_order: 1
 categories: arduino
 description: Inbetriebnahme der senseBox MCU
 type: Document
-set: erste-schritte-arduino
+set: first-steps-arduino
 set_order: 1
 resources:
 image1: /images/2020-04-07-allgemein-basics-inbetriebnahme/1.png

@@ -5,7 +5,7 @@ title_order: 4
 categories: arduino
 description: Installation des Board-Support-Packages für die senseBox MCU
 type: Document
-set: erste-schritte-arduino
+set: first-steps-arduino
 set_order: 4
 ---
 

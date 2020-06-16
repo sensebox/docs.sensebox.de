@@ -1,6 +1,6 @@
 ---
 categories: Blockly
-head: Blockly für senseBox
-description: Informationen zur visuellen Programmierumgebung Blockly für senseBox.
+head: Blockly for senseBox
+description: Informations for the visual programming environment Blockly for senseBox.
 image: /images/category-icons/blockly.png
 ---

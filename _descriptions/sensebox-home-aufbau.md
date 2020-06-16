@@ -1,6 +1,6 @@
 ---
 categories: sensebox-home
 head: senseBox:home
-description: Informationen zum Aufbau & Erweiterungen
+description: Information on the setup & extensions
 image: /images/category-icons/home.png
 ---

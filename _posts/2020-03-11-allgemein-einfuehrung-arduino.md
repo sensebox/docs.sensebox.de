@@ -5,7 +5,7 @@ title_order: 4
 categories: arduino
 description: Programmierung der senseBox in der Arduino IDE
 type: Document
-set: erste-schritte-arduino
+set: first-steps-arduino
 set_order: 5
 
 resources:
