@@ -1,20 +1,26 @@
 ---
 date: 2017-01-15
-title: senseBox:home Aufbauvideo
+title: senseBox:home assembly video
 video_id: dUuRfZI39U8
-description: Aufbau der senseBox:home im Video
+description: Assembly of the senseBox:home in german language
 categories: sensebox-home
 type: Video
 set: aufbau-sensebox-home
 set_order: 4
 ---
-Dieses Tutorial zeigt dir den Zusammenbau deiner senseBox:home.
-Das Video ist in verschiedene Kapitel unterteilt, über die Links kannst du direkt zu den einzelnen Kapiteln springen:
+This tutorial shows you the assembly of your senseBox:home.
+The video is divided into different chapters:
 
-Einsetzen der senseBox MCU in das Gehäuse: 0:10
-Aufsetzen des WiFi-Bees: 0:46
-Aufbau des Strahlenschutzgehäuses mit Temperatur- und Luftfeuchtigskeitssensor: 1:18
-Aufbau des Feinstaub-Sensors (SDS011): 2:18
-Anbindung der außenliegenden Sensoren und des USB-Kabels: 4:34
-Anbindung der Montageebene für Sensoren im Gehäuse. Anschluss des Luftdruck- und Licht-Sensors: 5:56
-Letzte Schritte: 7:49
+Inserting the senseBox MCU into the housing: 0:10
+
+Placing the WiFi-Bees: 0:46
+
+Design of the radiation protection housing with temperature and humidity sensor: 1:18
+
+Structure of the fine dust sensor (SDS011): 2:18
+
+Connection of the external sensors and the USB cable: 4:34
+
+Connection of the mounting level for sensors in the housing. Connection of the air pressure and light sensor: 5:56
+
+Last steps: 7:49
