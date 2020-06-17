@@ -13,35 +13,35 @@ image1: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-1.png
 image2: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-2.png
 ---
 
-Bevor du loslegen kannst, musst du die Arduino IDE installieren. Wie dies funktioniert findest du [hier](/allgemein/allgemein-arduino-ide-installieren//)
+Before you can get started, you need to install the Arduino IDE. How this works you can find [here](/general/general-arduino-ide-install//)
 
-## Grundlagen
+## Basics
 
-Wenn du die IDE öffnest, siehst du direkt einen großen weißen Bereich, in welchem du dein Programm schreiben wirst.
-Im schwarzen Bereich darunter werden dir Status- und Fehlermeldungen angezeigt. Es lohnt sich immer bei Fehlern einen Blick auf diese Meldungen zu werfen.
+When you open the IDE, you will immediately see a large white area where you will write your program.
+In the black area below you will see status and error messages. It is always worth taking a look at these messages when errors occur.
 
-Zuletzt solltest du dir noch die kleinen Schaltflächen über dem weißen Bereich anschauen.
+Finally you should have a look at the small buttons above the white area.
 
 {% include image.html image=page.image1 %}
 
-Das Häkchen und der Pfeil sind die beiden wichtigsten Symbole für dich:
-Mit dem Häkchen kannst du dein Programm auf Schreibfehler überprüfen lassen, und mit den Pfeil überträgst du dein Programm an die senseBox MCU.
+The checkmark and arrow are the two most important symbols for you:
+With the check mark you can have your program checked for typing errors, and with the arrow you transfer your program to the senseBox MCU.
 
 {% include image.html image=page.image2 %}
 
-Die anderen drei Symbole - angefangen mit dem kleinen Blatt ganz links - stehen dafür ein neues Programm zu erstellen, ein gespeichertes zu öffnen und dein geschriebenes Programm zu speichern.
+The other three symbols - starting with the small sheet on the far left - stand for creating a new program, opening a saved one and saving your written program.
 
-## Der Arduino-Sketch
-Ein Arduino Programm (auch "Sketch" genannt) hat einen sehr einfachen Aufbau, der aus zwei Hauptbestandteilen besteht. Diese zwei benötigten Funktionen enthalten Blöcke von Anweisungen, welche den Programmablauf beschreiben:
+## The Arduino sketch
+An Arduino program (also known as a "sketch") has a very simple structure consisting of two main components. These two required functions contain blocks of instructions that describe the program flow:
 
-```arduino
+``arduino
 void setup(){
-    // Anweisung
+    // Statement
 }
 void loop(){
-    // Anweisung
+    // Statement
 }
 ```
-Die `setup`-Funktion wird nur einmal beim Start des Programmes ausgeführt. In der `loop`-Funktion werden hingegen alle Anweisungen in einer endlosen Schleife wiederholt. Beide Funktionen sind zwingend notwendig, um das Programm erfolgreich kompilieren und ausführen zu können. "Kompilieren" bezeichnet die Übersetzung des Programms in einen Maschinencode, welcher vom Arduino-Prozessor verstanden werden kann; dies übernimmt die Arduino-IDE für uns.
+The 'setup' function is only executed once when the program is started. In the 'loop' function, however, all statements are repeated in an endless loop. Both functions are mandatory for successfully compiling and executing the program. "Compiling" means translating the program into machine code that can be understood by the Arduino processor; the Arduino IDE does this for us.
 
-Mit einem doppelten Schrägstrich (`//`) lassen sich Kommentare zum Programmcode hinzufügen. Es ist immer wichtig seinen Programmcode zu kommentieren, damit auch andere nachvollziehen können, was an einer bestimmten Stelle passiert.
+A double slash (`//') is used to add comments to the program code. It is always important to comment his program code so that others can understand what happens at a certain point.

@@ -12,44 +12,44 @@ resources:
   - name: "openroberta Wiki"
     link: https://jira.iais.fraunhofer.de/wiki/display/ORInfo  
 image1: /images/2020-03-11-allgemein-einfuehrung-openroberta/openroberta-carousel.png
-image2: /images/2020-03-11-allgemein-einfuehrung-openroberta/openroberta-oberflaeche.png
+image2: /images/2020-03-11-allgemein-einfuehrung-openroberta/openroberta-oberflaeche-en.png
 image3: /images/2020-03-11-allgemein-einfuehrung-openroberta/openroberta-buttons.png
 
 ---
 
-openRoberta ist eine vom Fraunhofer Institut entwickelte graphische Programmieroberfläche. Neben der senseBox kannst du viele weitere System über openRoberta Programmieren.  
+openRoberta is a graphical programming interface developed by the Fraunhofer Institute. Besides the senseBox you can program many other systems via openRoberta.  
 
-## Erste Schritte
-Öffne das openroberta lab unter [lab.open-roberta.org](https://lab.openroberta.org). Dort musst du zuerst dein System, also die senseBox, auswählen.
+## First Steps
+Open the openroberta lab at [lab.open-roberta.org](https://lab.openroberta.org). There you first have to select your system, the senseBox.
 
 {% include image.html image=page.image1 %}
 
-
-## Die Oberfläche
-Nachdem du dein System gewählt hast, befindest du dich auf der Programmieroberfläche. Diese lässt sich grob in drei Bereiche aufteilen:
-Die Navigationsleiste oben, die Toolbox links und der große weiße Arbeitsbereich. 
+After you have chosen your system, you will find yourself on the programming interface. This can be roughly divided into three areas:
+The navigation bar at the top, the toolbox on the left and the large white work area. 
 
 {% include image.html image=page.image2 %}
 
-### Navigationsleiste
-Die *Navigationsleiste* lässt sich in zwei Bereiche aufteilen. In der oberen Hälfte die Schaltflächen "Bearbeiten", "Roboter", "Hilfe" etc. Dort lassen sich beispielsweise gespeicherte Programme öffnen oder das System wechseln.
-In der untere Hälfte befinden sich die Reiter für "Programm" und "Roboterkonfiguration". Der Reiter "Programm" ist standardmäßig geöffnet und zeigt dir deine Arbeitsfläche um Programme zu schreiben. Unter dem Reiter "Roboterkonfiguration" müssen die verschiedenen angeschlossenen Sensoren und Aktoren angegeben werden.
+> By clickling on the Globe Icon in the top right of the navigation bar you can choose your language.
 
-> Ist ein angeschlossenes Bauteil nicht in der Roboterkonfiguration angegeben, lässt es sich auch nicht im Programm verwenden!
+### Navigation bar
+The *Navigation bar* can be divided into two areas. In the upper half the buttons "Edit", "Robot", "Help" etc. There, for example, stored programs can be opened or the system can be changed.
+In the lower half are the tabs for "Program" and "Robot Configuration". The "Program" tab is open by default and shows you your desktop to write programs. Under the tab "Robot configuration" the different connected sensors and actuators must be specified.
+
+> If a connected component is not specified in the robot configuration, it cannot be used in the program!
 
 ### Toolbox
-Hinter der *Toolbox* verbergen sich alle Blöcke, die du zum Programmieren der senseBox benötigst. Sie können einfach per *Drag & Drop* in den Arbeitsbereich ziehen. Alle Blöcke einer Kategorie sind immer in der gleichen Farbe wie die Kategorie eingefärbt.
+Behind the *Toolbox* are all the blocks you need to program the senseBox. You can simply *drag and drop* into the workspace. All blocks of a category are always colored in the same color as the category.
 
-### Arbeitsbereich
-Im *Arbeitsbereich* programmierst du deine senseBox. Wie du siehst befinden sich standardmäßig bereits zwei Blöcke im Arbeitsbereich `Start`und `Wiederhole undendlich oft`. Diese Blöcke sind für jedes Programm unerlässlich und lassen sich deswegen auch nicht entfernen.
-Weiterhin findest du unten rechts im Arbeitsbereich die Schaltfläche zum Übertragen deines Programms auf die senseBox, Speichern des Programms in der Cloud, zum Vergrößern und Verkleinern deiner Blöcke im Arbeitsbereich und den Mülleimer zum Löschen von Blöcken.
+### Workspace
+In the *workspace* you program your senseBox. As you can see, by default there are already two blocks in the 'Start' and 'Repeat infinitely often' workspace. These blocks are essential for every program and therefore cannot be removed.
+Furthermore you will find the button in the lower right corner of the workspace to transfer your program to the senseBox, save the program in the cloud, zoom in and out your blocks in the workspace and the trash can to delete blocks.
 
 {% include image.html image=page.image3 %}
 
-## Übertragen von Programmen
-Um dein Programm auf die senseBox übertragen zu können, musst du die senseBox über das USB-Kabel mit deinem Computer verbinden. Als nächstes kannst du es mit einem Klick auf die "Play-Schaltfläche" unten links im Arbeitsbereich herunterladen. Folge nun den Anweisungen in dem Pop
-Up Fenster.
+## Transferring programs
+To transfer your program to the senseBox, you must connect the senseBox to your computer via the USB cable. Next, you can download it by clicking the "Play" button in the lower left corner of the workspace. Now follow the instructions in the popup
+Up window.
 
 
 ## openroberta Wiki
-Diese und alle weiteren Informationen zum openroberta-lab findest du online in der [Dokumentation zum openroberta-lab vom Fraunhofer Institut](https://jira.iais.fraunhofer.de/wiki/display/ORInfo ).
+This and all other information about the openroberta-lab can be found online in the [Documentation on the openroberta-lab from the Fraunhofer Institute] (https://jira.iais.fraunhofer.de/wiki/display/ORInfo ).
