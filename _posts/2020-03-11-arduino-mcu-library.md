@@ -2,7 +2,7 @@
 date: 2020-03-11
 title: senseBoxMCU Library
 categories: arduino
-description: Verwendung der senseBoxMCU Library
+description: Usage of the senseBoxMCU Library
 type: Document
 resources:
   - name: "Shop"
@@ -11,28 +11,28 @@ resources:
     link: https://github.com/sensebox/SenseBoxMCU-Lib
 ---
 # senseBox MCU Library
-Die senseBox MCU Library bietet dir Zugriff auf die folgenden Funktionen/Sensoren:
+The senseBox MCU Library gives you access to the following functions/sensors:
 
-- Temperatur- und Luftfeuchtigkeitsensor [Sensor HDC1080](https://sensebox.kaufen/product/temperatur-luftfeuchte)
-- Luftdruck- und Temperatursensor [BMP280](https://sensebox.kaufen/product/luftdruck-temperatur)
-- Helligkeit- und UV-Sensor [TSL45315 and VEML6070](https://sensebox.kaufen/product/licht-sensor)
-- Ultraschall Distanzsensor [HC SR04]
-- Feinstaubsensor [SDS011](https://sensebox.kaufen/product/feinstaub-sds011)
-- senseBox GPS [CAM-M8Q](https://sensebox.kaufen/product/gps) --> benötigt [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus)
-- Wifi-Verbindung über das WifiBee [WINC1500](https://sensebox.kaufen/product/wifi-bee) 
-- Senden von Daten an die [openSenseMap](https://opensensemap.org)
+- Temperature and humidity sensor [Sensor HDC1080](https://sensebox.shop/product/temperatur-luftfeuchte)
+- Air pressure and temperature sensor [BMP280](https://sensebox.shop/product/luftdruck-temperatur)
+- Brightness and UV Sensor [TSL45315 and VEML6070](https://sensebox.shop/product/licht-sensor)
+- Ultrasonic distance sensor [HC SR04].
+- Fine dust sensor [SDS011](https://sensebox.shop/product/feinstaub-sds011)
+- senseBox GPS [CAM-M8Q](https://sensebox.shop/product/gps) --> required [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus)
+- Wifi connection via the WifiBee [WINC1500](https://sensebox.shop/product/wifi-bee) 
+- Send data to the [openSenseMap](https://opensensemap.org)
 
-## Verwendung
-Die senseBoxMCU Library ist Bestandteil des Board-Support-Package und wird automatisch installiert. 
+## Use
+The senseBoxMCU Library is part of the Board-Support-Package and is installed automatically. 
 
-Die senseBoxMCU Library lässt sich einzeln über folgenden Befehl einbinden:
+The senseBoxMCU library can be included individually with the following command:
 
 ```arduino
 include <senseBoxMCU.h>
 ```
 
-## Klassen und Funktionen
-Die Library enthält die folgenden Klassen und Funktionen. Erstelle eine neue Instanz einer Klasse um auf ihre Funktionen zugreifen zu können, z.B. bietet dir die Klasse 
+## Classes and functions
+The library contains the following classes and functions. Create a new instance of a class to access its functions, e.g. the class 
 
 ```Arduino
 #include "senseBoxMCU.h"
@@ -40,7 +40,7 @@ Die Library enthält die folgenden Klassen und Funktionen. Erstelle eine neue In
 HDC1080 hdc;
 ```
  
-Zugriff auf die folgenden Funktionen:
+Access to the following functions:
 
 ```Arduino
 hdc.getTemperature();
@@ -60,7 +60,7 @@ public:
 
 ### OpenSenseMap
 ```Arduino 
-Classname: OpenSenseMap
+Class name: OpenSenseMap
 
 functions public:
 			OpenSenseMap(const char* boxId, Bee* bee, const char* host);
@@ -71,7 +71,7 @@ functions public:
 
 ### SDS011
 ```Arduino 
-Classname: SDS011
+Class name: SDS011
 
 functions public:
 			SDS011(Stream& serial);
@@ -81,7 +81,7 @@ functions public:
 
 ### HDC1080
 ```Arduino 
-Classname: HDC1080
+Class name: HDC1080
 
 functions public:
 			uint8_t begin(void);
@@ -91,7 +91,7 @@ functions public:
 
 ### VEML6070
 ```Arduino 
-Classname: TSL45315
+Class name: TSL45315
 
 functions public:
 			uint8_t begin(void);
@@ -100,7 +100,7 @@ functions public:
 
 ### TSL45315
 ```Arduino 
-Classname: TSL45315
+Class name: TSL45315
 
 functions public:
 			uint8_t begin(void);
@@ -109,7 +109,7 @@ functions public:
 
 ### Ultrasonic
 ```Arduino 
-Classname: Ultrasonic
+Class name: Ultrasonic
 
 functions public:
 			Ultrasonic(int rx, int tx);
@@ -118,10 +118,10 @@ functions public:
 
 ### BMP280
 ```Arduino 
-Classname: BMP280
+Class name: BMP280
 
 functions public:
-			bool  begin();
+			bool begin();
 			float getTemperature(void);
 			float getPressure(void);
 			float getAltitude(float seaLevelhPa = 1013.25);
@@ -129,7 +129,7 @@ functions public:
 
 ### GPS
 ```Arduino 
-Classname: GPS
+Class name: GPS
 
 functions public:
 			void begin();
@@ -146,10 +146,10 @@ functions public:
 
 ```Arduino
 
-Classname: Microphone
+Class name: Microphones
 
 functions public: 
-		Microphone (int pin);
+		Microphones (int pin);
 		float getValue();
 ```
 
@@ -159,7 +159,7 @@ functions public:
 
 Classname BMX055
 
-functions	public:
+functions public:
 		uint8_t beginAcc(char range);
 		uint8_t beginGyro(void);
 		uint8_t beginMagn(void);
