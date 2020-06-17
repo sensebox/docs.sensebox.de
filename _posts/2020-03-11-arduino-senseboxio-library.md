@@ -2,37 +2,37 @@
 date: 2020-03-11
 title: senseBoxIO Library
 categories: arduino
-description: Verwendung der senseboxIO Library
+description: Usage of the senseboxIO Library
 type: Document
 resources:
   - name: "senseBoxIO Library"
     link: https://github.com/sensebox/senseBoxMCU-core/tree/master/arduino/samd/libraries/senseBoxIO
 ---
 
-Die senseBoxIO Library ist Bestandteil des Board-Support-Package und wird automatisch installiert. 
+> The senseBoxIO Library is part of the Board Support Package and is installed automatically. 
 
-Die senseBoxIO Library lässt sich einzeln über folgenden Befehl einbinden:
+The senseBoxIO library can be included individually using the following command:
 
 ```arduino
 include <senseBoxIO.h>
 ```
 
-> Beachte: Verwendest du bereits die senseBoxMCU Library ist die senseBoxIO Library bereits integriert und muss nicht zustäzlich inkludiert werden
+> Note: If you already use the senseBoxMCU Library, the senseBoxIO Library is already integrated and does not need to be included
 
-## Ein-/ausschalten der Ports
+## Switching ports on/off
 
-Über die senseBoxIO Library können nicht verwendete Ports Ein-/ausgeschaltet werden:
+Unused ports can be switched on/off via the senseBoxIO library:
 
-#### Deaktivieren aller Ports
+#### Disable all ports
 ```arduino
  void powerNone(void)
 ```  
-#### Aktivieren aller Ports
+#### Activate all ports
 
 ```arduino
   void powerAll(void)
 ```  
-#### Selektives Ein-/Ausschalten von Ports und Anschlüssen
+#### Selective on/off switching of ports and connectors
 
 ```arduino
 
@@ -52,16 +52,15 @@ include <senseBoxIO.h>
 
 ```
 
-## Ein-/Ausschalten der Status LED
+## Switch on/off the status LED
 
-Erlaubt das Ein-/Ausschalten der Status LED's
+Allows to switch on/off the status LEDs
 
 
 ```arduino
-  void statusNone(void) // deaktiviere alle Status LED's
+  void statusNone(void) // deactivate all status LED's
 
-  void statusRed(void) //aktiviere die rote Status LED
+  void statusRed(void) //activate the red status LED
 
-  void statusGreen(void) //aktivere die grüne Status LED
+  void statusGreen(void) //activate the green status LED
 ```
-
