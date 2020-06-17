@@ -1,8 +1,8 @@
 ---
 date: 2020-03-11
-title: Die senseBoxMCU
+title: The senseBoxMCU
 categories: hardware
-description: Die senseBox MCU
+description: Informations about the senseBox MCU
 type: Document
 resources:
   - name: "Shop"
@@ -10,25 +10,23 @@ resources:
 image1: /images/2020-03-11-allgemein-sensebox-mcu/mcu_one_top.png
 ---
 
-Der senseBox-Microcontroller ist speziell für die Bedürfnisse der senseBox entwickelt. Deshalb hat der Microcontroller insbesondere drei Eigenschaften: er ist schnell, energiesparend und hat einen großen Programmspeicher.
+The senseBox microcontroller has been specially developed for the needs of the senseBox. Therefore, the microcontroller has three characteristics in particular: it is fast, energy-saving and has a large program memory.
 
-Auch ohne Vorkenntnisse kann der Microcontroller ganz einfach mit der Übertragung eines vorgefertigten Sketches in 10 Minuten "programmiert" werden. Für fortgeschrittene Programmierer kann wie gewohnt die Arduino IDE eingesetzt werden, um neue und individuelle Projekte durchzuführen.
+Even without any previous knowledge, the microcontroller can be "programmed" in 10 minutes by simply transferring a ready-made sketch. For advanced programmers, the Arduino IDE can be used as usual to run new and individual projects.
 
 {% include image.html image=page.image1 %}
 
-## Technische Spezifikationen
+## Technical specifications
 
-### Prozessor
-Der Prozessor basiert auf dem ARM Cortex-M0+ Prozessor aus der SAM D21 Familie von Microchip.
+### Processor
+The processor is based on the ARM Cortex-M0+ processor from Microchip's SAM D21 family.
 
-### Schnittstellen
-Sensoren und Aktoren werden über die bewährten Schnittstellen wie I2C, UART und digitale I/Os mit einem robusten JST-Steckersystem angesprochen (5V tolerant). 
+### Interfaces
+Sensors and actuators are addressed via the proven interfaces such as I2C, UART and digital I/Os with a robust JST connector system (5V tolerant). 
 
-### Datenübertragung
-Über die beiden XBee kompatiblen Sockel werden UART oder SPI Module angeboten. Wahlweise kann die Datenübertragung dadurch per WLAN, LAN oder LoRa in Echtzeit durchgeführt werden, oder auf einer Mikro-SD Karte abgespeichert werden.  
+### Data transmission
+UART or SPI modules are offered via the two XBee compatible sockets. The data transfer can be carried out in real time via WLAN, LAN or LoRa, or stored on a micro SD card.  
 
-## Programmierung
-
-Die senseBox MCU kann über verschiedene Programmierumgebungen programmiert werde. Eine genaue Übersicht findest du [hier](/allgemein/allgemein-sensebox-editoren/)
-
+## Programming
+The senseBox MCU can be programmed using various programming environments. You can find a detailed overview [here](/general/general-sensebox-editors/)
 
