@@ -1,8 +1,8 @@
 ---
 date: 2020-03-11
-title: senseBox:home mit LoRa
+title: senseBox:home with LoRa
 categories: sensebox-home
-description: Daten der senseBox:home über LoRa verschicken
+description: Send senseBox:home data via LoRa
 type: Document
 set: sensebox-home-general
 set_order: 3
@@ -16,96 +16,91 @@ image06: /images/2020-03-11-home-erweiterung-lora/home-lora-06.png
 image07: /images/2020-03-11-home-erweiterung-lora/home-lora-07.png
 image08: /images/2020-03-11-home-erweiterung-lora/home-lora-08.png
 image09: /images/2020-03-11-home-erweiterung-lora/home-lora-09.png
-image10: /images/2020-03-11-home-erweiterung-lora/home-lora-10.png
+image10: /images/2020-03-11-home-erweiterung-lora/home-lora-10-en.png
 image11: /images/2020-03-11-home-erweiterung-lora/home-lora-11.png
-image12: /images/2020-03-11-home-erweiterung-lora/home-lora-12.png
-image13: /images/2020-03-11-home-erweiterung-lora/home-lora-13.png
+image12: /images/2020-03-11-home-erweiterung-lora/home-lora-12-en.png
+image13: /images/2020-03-11-home-erweiterung-lora/home-lora-13-en.png
 image14: /images/2020-03-11-home-erweiterung-lora/home-lora-14.png
 image15: /images/2020-03-11-home-erweiterung-lora/home-lora-15.png
 image16: /images/2020-03-11-home-erweiterung-lora/home-lora-16.png
 ---
 
-## LoRa und TheThingsNetwork
+## LoRa and TheThingsNetwork.org
 
-Die Daten werden über das [TheThingsNetwork](https://www.thethingsnetwork.org/) (TTN) versendet, daher muss im ersten Schritt ein **Device** angelegt und eine weiterleitung (**Integration**) der Daten zur openSenseMap eingerichtet werden. Grundsätzlich können alle Sensoren, die direkt über die openSenseMap auszuwählen sind, verwendet werden. Das Decodieren findet direkt auf der openSenseMap statt und muss **nicht** mehr über die TTN Console eingestellt werden. 
+If you want so use LoRa with your senseBox:home the data is sent via the [TheThingsNetwork](https://www.thethingsnetwork.org/) (TTN), therefore in the first step a **Device** must be created and a forwarding (**Integration**) of the data to the openSenseMap must be set up. In principle, all sensors that can be selected directly via the openSenseMap can be used. Decoding takes place directly on the openSenseMap and does **no longer ** have to be set via the TTN Console. 
 
-## Registrieren im TheThingsNetwork
+## Registration on TheThingsNetwork.org
 
-Viele Gateways, die von verschiedenen Gruppen, Vereinen oder auch Unternemhmen aufgestellt wurden, verwendet das TheThingsNetwork, um die Daten zu empfangen und zu versenden. Damit Daten innerhalb des Netzes empfangen und verabeitet werden können muss zuerst ein Account erstellt und die **Devices** registriert werden.
+Many gateways set up by different groups, associations or companies use TheThingsNetwork to receive and send data. To receive and process data within the network, an account must first be created and the **devices** registered.
 
-In sehr vielen Städten ist schon eine gute Abdeckung des Netzwerkes vorhanden. Eine Übersicht über die Abdeckung findest du auf [ttnmapper.org](https://ttnmapper.org/). 
-> Beachte hierbei jedoch, dass die Abdeckung evlt. nicht der Realität entspricht und die Daten veraltet sein könnten.
+In very many cities there is already a good LoRa coverage. You can find an overview of the coverage on [ttnmapper.org](https://ttnmapper.org/). 
+> Note that the coverage may not correspond to reality and the data may be out of date.
 
-### Anlegen der Application und erstellen eines Devices
+### Creating the application and a device
 
-Erstelle dir einen neuen Account unter [https://www.thethingsnetwork.org/](https://www.thethingsnetwork.org/). Anschließe klicke auf Console und wähle **Applications**.
+Create a new account at [https://www.thethingsnetwork.org/](https://www.thethingsnetwork.org/). Then click on Console and select **Applications**.
 
 {% include image.html image=page.image00 %}
 
-Du bekommst eine Übersicht über alle bereits registrierten **Applications** und kannst über **add Application** eine neue hinzufügen. 
+You get an overview of all already registered **Applications** and can add a new one via **add Application** in the top right corner. 
 
 {% include image.html image=page.image01 %}
 
-Wähle einen Namen für deine Application und füge eine kurze Beschreibung hinzu. Alle anderen Parameter können unverändert bleiben.
+Choose a name for your application and add a short description. All other parameters can remain unchanged.
 {% include image.html image=page.image03 %}
 
-Nach einem klick auf **Add Application** gelangst du auf die Übersichtsseite. 
+After a click on **Add Application** you get to the overview page. 
 {% include image.html image=page.image04 %}
 
-Innerhalb einer Application können nun mehrere Devices registriert werden. Klicke dazu auf **Devices** und wähle **register Device**. 
+Several Devices can now be registered within an application. Click on **Devices** and select **register Device**. 
 {% include image.html image=page.image05 %}
 
-Gib deinem **Device** eine einmale ID. Die Device EUI, der APP Key und auch die APP EUI werden später benötigt und automatisch generiert. 
+Give your **device** a one-time ID. The Device EUI, the APP Key and also the APP EUI are needed later and are generated automatically. 
 {% include image.html image=page.image06 %}
 
-### Anlegen der openSenseMap integration
+### openSenseMap integration
 
-Die Daten werden über das TheThingsNetwork als einfache Bytes versendet werden von dort an die openSenseMap weitergeleitet. Damit diese weiterleitung stattfinden kann klicke auf **Integrations** und lege anschließend eine neue Integration an. 
+The data is sent via TheThingsNetwork as simple bytes and from there it is forwarded to the openSenseMap. For this forwarding to take place click on **Integrations** and then create a new integration. 
 
-Für einige Dienste sind bereits vorgefertigte **Inteegrations** angelegt. Für die Weiterleitung an die openSenseMap verwenden wir die einfache **HTTP-Integration**. 
+Predefined **Integrations** are already created for some services. For the forwarding to the openSenseMap we use the simple **HTTP integration**. 
 
 {% include image.html image=page.image07 %}
 
-Gib der Integration einen Namen und trage ihn unter Process ID ein. Wähle als **Access Key** den __default key__ aus. Als URL für die Integration wird `https://ttn.opensensemap.org/v1.1`. Alle anderen Parameter können unverändert bleiben. 
+Give the integration a name and enter it under Process ID. Select the __default key__ as **Access Key**. The URL for the integration is 'https://ttn.opensensemap.org/v1.1'. All other parameters can remain unchanged. 
 
 {% include image.html image=page.image09 %}
 
-Die Registrierung im TheThingsNetwork ist nun abgeschlossen. 
+The registration to TheThingsNetwork is now complete. 
 
 
-## Registrieren auf der openSenseMap
+## Registration on the openSenseMap
 
-Die Registrierung auf der openSenseMap erfolgt wie hier beschrieben. Wähle unter Verbindsart LoRa aus und füge die Sensoren hinzu, die du im ersten Schritt an deine senseBox angeschlossen hast. 
+The registration on the openSenseMap is done as described here. Select LoRa under connection type and add the sensors you connected to your senseBox in the first step. 
 {% include image.html image=page.image10 %}
 
-Damit die Verbindung zwischen dem TheThingsNetwork und der openSenseMap korrekt erfolgt muss im nächsten Schritt noch **senseBox:home** als Dekodierungs-Profil ausgeäwhlt werden. Füge noch deine TTN Application-ID und deine TTN Device-ID ein. Klicke auf weiter, um die Registrierung abzuschließen.
+In order for the connection between TheThingsNetwork and the openSenseMap to work correctly, the next step is to select **senseBox:home** as decoding profile. Add your TTN Application ID and your TTN Device ID. Click on continue to complete the registration.
 
-## Kompilieren und übertragen
+## Compile and transfer
 
-Nach der Registrierung kannst du deinen Programmcode für die senseBox auf der openSenseMap kompilieren. Du musst daher keine Software auf dem Computer installieren. 
+After the registration you can compile your program code for the senseBox on the openSenseMap. Therefore you do not need to install any software on your computer. 
 
 {% include image.html image=page.image12 %}
 {% include image.html image=page.image13 %}
 
-Kopiere die Device EUI, die Application EUI und den Application Key aus der Device Übersicht und füge diese in die entsprechenden Felder ein und drücke anschließend auf Kompilieren.
+Copy the Device EUI, the Application EUI and the Application Key from the Device Overview and paste them into the corresponding fields and then press Compile.
 
-### Kopieren auf die senseBox
+### Transferring to the senseBox
 
-Bringe die senseBox durch einen Doppelklick auf den roten Resetbutton in den Lernmodus. Die senseBox taucht nun als Wechseldatenträger auf und du kannst das zuvor heruntergeladene Programm auf die senseBox kopieren. Anschließend startet die senseBox automatisch neu und die Daten werden übertragen. 
+Bring the senseBox into "learn mode" by double clicking the red reset button. The senseBox now appears as a removable disk and you can copy the previously downloaded program to the senseBox. The senseBox then restarts automatically and the data is transferred. 
 
->Beachte: Unter MacOS funktioniert das Kopieren der .BIN per Drag & Drop leider nicht. Am einfachsten funktioniert es mit unserem senseBox-Sketch Uploader. Einfach die Zip Datei entpacken und das Programm starten. Das Programm kannst du [hier](https://sensebox.de/docs/senseBox_Sketch_Uploader_DE.zip) direkt herunterladen. Alternativ kannst du die Datei auch über [MuCommander](https://www.mucommander.com/) oder über das Terminal mittels `dd` kopieren (empfehlen wir allerdings nur Erfahrenen Nutzer\*innen).
+>Beware: Under MacOS, the copying of the .BIN by Drag & Drop unfortunately does not work. The easiest way to do this is with our senseBox-Sketch Uploader. Just unzip the zip file and start the program. You can download the program [here](https://sensebox.de/docs/senseBox_Sketch_Uploader_DE.zip) directly. Alternatively, you can copy the file via [MuCommander](https://www.mucommander.com/) or via the terminal using 'd' (however, we recommend only experienced users\*).
 
-## Probleme
+## Problems
 
-Sollten deine Daten nicht auf der openSenseMap angezeigt werden solltest du als erstes Überprüfen ob die Daten im TheThingsNetwork ankommen. Klicke dazu in deinem **Device Overview** auf Data und schaue ob dort Daten ankommen. Zum einen solltest du eine Aktivierungsnachricht sehen, die mit einem Blitz gekenntzeichnet ist. Die ankommenden Daten werden mit Payload gekennzeichnet.
+If your data does not appear on the openSenseMap, the first thing you should do is to check if your data has arrived at TheThingsNetwork. To do this, click on Data in your **Device Overview** and see if any data arrives there. Firstly, you should see an activation message marked with a flash. The incoming data is marked with Payload.
 
 {% include image.html image=page.image14 %}
 
-Sollten Daten in der Console auftauchen diese allerdings nicht an die openSenseMap weitergeleitet werden überprüfe ob alle Parameter für die Integration von TTN auf der openSenseMap richtig kopiert worden sind. Die Paremter findest im Dasboard der openSenseMap.
+If data appears in the console but is not forwarded to the openSenseMap check if all parameters for the integration of TTN on the openSenseMap have been copied correctly. You can find the paremter in the dasboard of the openSenseMap.
 
-{% include image.html image=page.image15 %}
-
-Klicke auf bei deiner senseBox auf Editieren und wähle anschließend im Seitenmenü TheThingsNetwork aus. 
-
-{% include image.html image=page.image16 %}
-
+Click on Edit on your senseBox and then select TheThingsNetwork from the side menu. 
