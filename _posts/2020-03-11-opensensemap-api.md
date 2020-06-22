@@ -1,11 +1,11 @@
 ---
 date: 2020-03-11
-title: API Dokumentation
+title: API documentation
 categories: opensensemap
 description: openSenseMap RESTful API
 type: Document
 ---
 
-Die openSenseMap stellt eine API zur Abfrage von Daten zu Boxen und Messungen sowie zum Upload von Messungen findest du [hier](https://api.opensensemap.org/).
+The openSenseMap provides an API for querying box and measurement data and uploading measurements [here](https://api.opensensemap.org/).
 
-Die Dokumentation der API-Routen ist [hier](https://docs.opensensemap.org) zu finden.
+The documentation of the API routes can be found [here](https://docs.opensensemap.org).
