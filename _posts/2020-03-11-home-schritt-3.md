@@ -1,38 +1,38 @@
 ---
 date: 2020-03-11
-title: "Schritt 3: Programmcode übertragen"
+title: "Step 3: Transfer program code"
 title_order: 3
 categories: sensebox-home
-description: Schritt 3 zum Aufbau der senseBox:home
+description: Step 3 for building the senseBox:home
 type: Document
 set: aufbau-sensebox-home
 set_order: 3
-image1: /images/sensebox-home/compile.png
+image1: /images/sensebox-home/compile-en.png
 ---
 
-Nach der Registrierung muss der Programmcode auf die senseBox kopiert werden. Wenn du eine senseBox mit WiFi-Bee oder Lan-Bee hast kannst du den Programmcode einfach und schnell online kompilieren und per Drag-and-Drop übertragen. Dazu brauchst du keine Software auf dem Computer installieren
+After registration, the program code must be copied to the senseBox. If you have a senseBox with WiFi-Bee or Lan-Bee you can easily compile the program code online and transfer it via drag and drop. You do not need to install any software on your computer
 
-## Online kompilieren
-Der einfachste Weg deinen Code auf die senseBox zu bekommen ist unseren Online Compiler zu benutzen. Dafür musst du in der Maske einige Angaben machen. Wenn etwas nicht auf deinen individuellen Aufbau der senseBox passt, kannst du das Feld einfach frei lassen. Zum Abschluss drückst du auf "Kompilieren" und eine Datei im Format .BIN wird von deinem Browser heruntergeladen. 
+## Compiling online
+The easiest way to get your code onto the senseBox is to use our online compiler. You have to enter some information in the mask. If something does not fit your individual structure of the senseBox, you can simply leave this field blank. Finally press "Compile" and a file in the format .BIN will be downloaded by your browser. 
 
 {% include image.html image=page.image1 %}
 
-### Übertragen auf die senseBox MCU
+### Transfering to the senseBox MCU
 
-Schließt du deine senseBox MCU an deinen Computer an und führst einen Doppelklick auf den roten Button aus, wird diese als Wechseldatendräger erkannt. Mit einem Klick auf "Code Kompilieren" in der Weboberfläche wird dein Programmcode auf dem Server kompiliert und eine .BIN Datei wird dir zum Download angeboten. Je nachdem welches Betriebssystem du verwendest, unterscheidet sich nun der Kopiervorgang. 
+If you connect your senseBox MCU to your computer and double-click on the red button, it will be recognized as a removable data carrier. With a click on "Compile Code" in the web interface your program code will be compiled on the server and a .BIN file will be offered for download. Depending on which operating system you are using, the copying process differs. 
 
-#### Kopieren unter Windows 
+#### Copying with Windows 
 
-Unter Windows kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den Wechseldatenträger <b>SENSEBOX</b> kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. 
+With Windows you can simply drag and drop the created .BIN file to the removable disk <b>SENSEBOX</b>. The red LED on the button will flicker briefly and then the board will restart automatically and execute your program code. 
 
-#### Kopieren unter MacOS
+#### Copying with MacOS
 
-Unter MacOS funktioniert das Kopieren der .BIN per Drag & Drop leider zurzeit noch nicht. Eine Möglichkeit ist die Datei im Terminal per dd-Befehl zu kopieren (nur erfahrenen Nutzern zu empfehlen!) oder einen alternativen Dateimanager wie zum Beispiel [muCommander](http://www.mucommander.com/) zu verwenden.
+Unfortunately, copying with MacOS by drag & drop does not yet work. One possibility is to copy the file in the terminal using the dd command (only recommended for experienced users!) or to use an alternative file manager such as [muCommander](http://www.mucommander.com/).
 
-#### Kopieren unter Linux 
+#### Copying with Linux 
 
-Unter Linux kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den Wechseldatenträger <b>SENSEBOX</b> kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus. 
+With Linux you can simply drag and drop the created .BIN file to the removable disk <b>SENSEBOX</b>. The red LED on the button will flicker briefly and then the board will restart automatically and execute your program code. 
 
 <hr>
 
-<a href="/sensebox-home/home-schritt-2/" class="button">Zurück zu Schritt 2</a>
+<a href="/sensebox-home/home-schritt-2/" class="button">Back to step 2</a>
