@@ -1,9 +1,9 @@
 ---
 date: 2020-03-11
-title: 'Schritt 1: Aufbau der Hardware'
+title: 'Step 1: Hardware setup'
 title_order: 1
 categories: sensebox-home
-description: Schritt 1 zum Aufbau der senseBox:home.
+description: Step 1 for setting up the senseBox:home.
 type: Document
 set: aufbau-sensebox-home
 set_order: 1
@@ -35,116 +35,113 @@ image23: /images/sensebox-home/sensebox-home-30.jpg
 ---
 
 
-## Willkommen zum Tutorial für den Zusammenbau der senseBox:home
+## Welcome to the tutorial for the assembly of senseBox:home
 
-Da die senseBox ein modularer Bausatz ist, können einzelne Schritte zu Sensoren abweichen oder sogar in deinem Fall übersprungen werden. Zuerst zeigen wir Euch, wie der Microcontroller in das Gehäuse eingesetzt wird.
+Since the senseBox is a modular kit, individual steps to sensors may differ or even be skipped in your case. First we show you how to insert the microcontroller into the case.
 {% include image.html image=page.image1 %}
-Dazu nehmt ihr das Gehäuse und richtet es mit der Aufbohrung nach unten aus. Der grüne senseBox Microcontroller wird nun auf der gegenüberliegenden Seite aufgelegt, sodass der rote Reset Knopf und der USB-Port nach vorne zeigen. 
-
-
+To do this, take the housing and align it with the bore pointing downwards. The green senseBox microcontroller is now placed on the opposite side, so that the red reset button and the USB port are facing the front. 
 
 {% include image.html image=page.image2 %}
 
-Nun nehmt ihr die zwei beiliegenden kleineren Schrauben und befestigt die Platine über die mittleren Bohrlöcher am Gehäuse. Wenn die Platine etwas Spielraum hat ist das kein Problem. 
+Now you take the two smaller screws included and fix the board to the case via the middle drill holes. If the board has some clearance it is no problem. 
 
-## Aufsetzten des WiFi-Bee
-Als nächstes zeigen wir, wie das Wifi-Bee aufgesetzt wird. 
+## Setting up the WiFi-Bee
+Next we will show how to set up the Wifi-Bee. 
 
-Dazu haben wir auf alle Bees eine Kennzeichnung aufgedruckt, welche die Richtung anzeigt. Wenn du ein anderes Datenübertragungsmodul hast, z.B. LAN, oder LoRaWAN, erfolgt das aufsetzten aber genau gleich. 
+We have printed a label on all Bees to indicate the direction. If you have another data transfer module, e.g. LAN, or LoRaWAN, this is exactly the same. 
 {% include image.html image=page.image3 %}
 
-Das Wifi-Bee wird auf den XBee-Port 1 aufgesetzt und vorsichtig in die Sockelleiste eingedrückt, sodass alle Pins des Bees eingesteckt sind.
+The Wifi-Bee is placed on XBee port 1 and carefully pressed into the baseboard so that all pins of the Bees are inserted.
 
 {% include image.html image=page.image4 %}
 
 
-## Aufbau des Strahlenschutz-Gehäuse
+## Setup of the radiation protection housing
 
-Nun zeigen wir den Aufbau des Stahlenschutz-Gehäuses in welchem der Temperatur und Luftfeuchtigkeitssensor angebracht wird.
-Im Strahlenschutz befinden sich einige Befestigungsteile um diesen später außen anzubringen. Diese brauchen wir erstmal nicht. 
+Now we show the construction of the radiation protection housing in which the temperature and humidity sensor is mounted.
+In the radiation protection there are some mounting parts to mount it later outside. These we do not need for the time being. 
 
 {% include image.html image=page.image5 %}
 
-Zuerst wird ein langes senseBox Kabel durch die Öffnung im Bodes des Strahlenschutzes gezogen und der Temperatur- und Luftfeuchtigkeitssensor Innen angesteckt.
+First, a long senseBox cable is pulled through the opening in the base of the radiation shield and the temperature and humidity sensor is plugged in.
 
 {% include image.html image=page.image6 %}
 
-Der Sensor kann nun zusätzlich noch mit etwas Klebeband oder einem Kabelbinder am Ständer befestigt werden. Das Strahlenschutzgehäuse sorgt später für eine gute Luftzirkulation und schützt den Sensor gleichzeitig vor der Witterung.
-02:34 Nun kann das Strahlenschutzgehäuse noch zusammengesteckt werden und später wird der Sensor dann mit der senseBox Microcontroller verbunden.
+The sensor can now also be attached to the stand with some adhesive tape or a cable tie. The radiation protection housing later ensures good air circulation and at the same time protects the sensor from the weather.
+Now the radiation protection housing can be plugged together and later the sensor is connected to the senseBox microcontroller.
 
-## Aufbau des Feinstaubsensors
+## Setup of the fine dust sensor
 
-
-Als nächstes zeigen wir den Aufbau des Feinstaub-Sensors. 
+Next we show the setup of the fine dust sensor. 
 {% include image.html image=page.image7 %}
 
 
 {% include image.html image=page.image8 %}
-Dazu muss das Gehäuse für den Sensor mit Öffnungen für Kabel und die Luftzufuhr versehen werden. 
-Die Öffnungen sollen gegenüberliegend auf den Seiten mit jeweils zwei Sollbruchstellen liegen. 
-Aus Sicherheitsgründen empfehlen wir die Öffnungen aufzubohren. Theoretisch, kann man die Öffnungen aber auch an den Sollbruchstellen mit einem stumpfen Gegenstand aufschlagen.  
+For this purpose, the housing for the sensor must be provided with openings for cables and the air supply. 
+The openings should be opposite each other on the sides with two predetermined breaking points each. 
+For safety reasons we recommend drilling the openings. Theoretically, the openings can also be opened at the predetermined breaking points with a blunt object.  
 
 
-Als nächstes nehmen wir den Feinstaubsensor und legen ihn in das Gehäuse, sodass der Kabel-Anschluss und der Luftansaugstutzen an den gerade gebohrten Öffnungen liegen.
+Next, we take the fine dust sensor and place it in the housing so that the cable connection and the air intake socket are at the openings that have just been drilled.
 
 {% include image.html image=page.image9 %} 
 
-Das Kabel für den Feinstaubsensor hat eine andere Farbe und wird mit dem größeren Anschluss am Sensor angebracht. 
+The cable for the fine dust sensor has a different colour and is attached to the sensor with the larger connector. 
 
 
-Dann werden die Verschraubungen für den Kabelanschluss angebracht.
-Einfach die Kabelverschraubung auseinander schrauben und dann die einzelnen Teile in der richtige Reihenfolge einsortieren. Dann noch schnell zusammenschrauben und das wars.
+Then the cable glands for the cable connection are fitted.
+Simply unscrew the cable gland and then sort the individual parts in the correct order. Then quickly screw them together and that's it.
 
 {% include image.html image=page.image10 %} 
- Auf der anderen Seite des Sensors wird nun der Schlauch auf den Luftansaugstutzen aufgesteckt.
-Hier benutzen wir auch eine Kabelverschraubung um den Schlauch abzudichten. Dann heißt es wieder alles richtig einsortieren. Am Ende ist etwas Druck auf den Schlauch nötig um Ihn auf den Stutzen aufzusetzen. Als letztes noch den Deckel aufsetzen und der Feinstaubsensor ist fertig.
+On the other side of the sensor, the hose is now attached to the air intake socket.
+Here we also use a cable gland to seal the hose. Then we have to sort everything correctly. At the end, some pressure on the tube is necessary to put it on the socket. Finally put on the lid and the fine dust sensor is ready.
 
 {% include image.html image=page.image11 %} 
-## Anschluss der externen Sensoren an die MCU
+## Connecting the external sensors to the MCU
 
 {% include image.html image=page.image12 %} 
-Die außenliegenden Sensoren, also der Sensor für Temp. Und Luftfeuchtigkeit, sowie der Feinstaubsensor werden jetzt an die MCU angeschlossen.
-Dafür nehmen wir zuerst das Kabel aus dem Strahlenschutz und fädeln es durch die letzte Kabelverschraubung in das Gehäuse.
+The external sensors, i.e. the sensor for temp. and humidity and the fine dust sensor are now connected to the MCU.
+For this, we first take the cable out of the radiation protection and thread it through the last cable gland into the housing.
 {% include image.html image=page.image13 %} 
-Dort wird das Kabel in einen der Steckplätze mit der Aufschrift I2C/Wire eingesteckt. 
+There the cable is plugged into one of the slots marked I2C/Wire. 
 {% include image.html image=page.image14 %} 
 
 
-Danach wird das Kabel aus dem Feinstaubsensor genommen und durch die Verschraubung eingefädelt. 
-Dieses Kabel kommt in einen der Steckplätze welche mit UART/Serial beschriftet sind. 
+Then the cable is taken out of the fine dust sensor and threaded through the gland. 
+This cable is inserted into one of the slots labeled UART/Serial. 
 
 {% include image.html image=page.image15 %} 
 
-## Verbinden des USB Kabels
+## Connecting the USB cable
 
 {% include image.html image=page.image16 %} 
 
-Als letztes schließen wir noch das Mini-USB Kabel an, über welches der Micro Controller programmiert wird, sowie die senseBox später im Betrieb mit Strom versorgt wird. 
-Bitte beachte, dass der Mini-USB Port empfindlich ist und außerdem der Hebelwirkung des Kabels ausgesetzt ist. Deshalb sollte später möglichst nicht am USB-Kabel gerissen werden.
+Finally, we connect the micro-USB cable, which is used to program the microcontroller and to supply the senseBox with power later during operation. 
+Please note that the micro-USB port is sensitive and is also subject to the leverage of the cable. For this reason, the USB cable should not be torn later.
 {% include image.html image=page.image17 %} 
 
-## Anschluss der internen Sensoren an die MCU
+## Connecting the internal sensors to the MCU
 
 {% include image.html image=page.image18 %} 
-Nachdem die äußeren Sensoren angeschlossen sind, werden die übrigen Sensoren im Gehäuse angebracht.
-Dafür wird eine Montageebene aufgebaut. Zuerst werden vier Abstandhalter in die außenliegenden Löcher des Mikrocontrollers eingesteckt. 
-Die Abstandshalter haben einen Rastermechanismus. Deshalb sollten diese, falls Sie mal gelöst werden müssen, nicht mit Gewalt rausgerissen werden, sondern leicht am Kopf eingedrückt werden.  
-Danach schließen wir zwei senseBox Kabel in die I2C/Wire Steckplätze um dort den Luftdruck Sensor und den Lichtsensor anzubringen.
+After the outer sensors are connected, the remaining sensors are mounted inside the housing.
+A mounting level is constructed for this purpose. First, four spacers are inserted into the external holes of the microcontroller. 
+The spacers have a grid mechanism. Therefore, if they have to be loosened, they should not be torn out by force, but slightly pressed in at the head.  
+Afterwards we connect two senseBox cables to the I2C/Wire slots to attach the air pressure sensor and the light sensor.
 {% include image.html image=page.image19 %} 
 
-Die Kabel werden durch die mittleren Aussparungen der Montageplatte gefädelt. 
+The cables are threaded through the middle recesses of the mounting plate. 
 {% include image.html image=page.image20 %} 
-Dann wird die Montageplatte auf die Abstandshalter gedrückt und die Kabel mit den Sensoren verbunden. 
-Die Sensoren mit jeweils zwei Abstandhalter ausgestattet und auf der Montageplatte befestigt. 
-Hast du einen Lichtsensor gewählt, sollte dieser möglichst mittig im Gehäuse angebracht werden, um gute Messwerte zu erhalten.
-Der Luftdruck-Sensor kann in den äußeren Steckplatz.
+Then the mounting plate is pressed onto the spacers and the cables are connected to the sensors. 
+The sensors are each equipped with two spacers and fastened to the mounting plate. 
+If you have chosen a light sensor, it should be placed as centrally as possible in the housing to obtain good measured values.
+The air pressure sensor can be placed in the outer slot.
 {% include image.html image=page.image21 %} 
 
-Als letztes wird der Deckel mit den Schrauben versehen und ein Silikagelbeutel zum weiteren Schutz vor entstehende Feuchtigkeit in das Gehäuse gelegt.
+Finally, the cover is fitted with the screws and a silica gel bag is placed inside the housing for further protection against moisture.
 {% include image.html image=page.image22 %} 
 {% include image.html image=page.image23 %} 
-Nun werden noch die Schnellverschlussschrauben eingedreht und damit die senseBox verschlossen. 
+Now the quick release screws are screwed in and the senseBox is closed. 
 
 
 <hr>
-<a href="/sensebox-home/home-schritt-2/" class="button" style="float: right;">Weiter mit Schritt 2</a>
+<a href="/sensebox-home/home-step-2/" class="button" style="float: right;">continue with step 2</a>
