@@ -1,57 +1,56 @@
 ---
 date: 2020-03-11
-title: "Schritt 2: Registrieren auf der openSenseMap"
+title: "Step 2: Registration on the openSenseMap"
 title_order: 2
 categories: sensebox-home
-description: Schritt 2 zum Aufbau der senseBox:home
+description: Step 2 for building the senseBox:home
 type: Document
 set: aufbau-sensebox-home
 set_order: 2
-image1: /images/sensebox-home/osem-1.png
-image2: /images/sensebox-home/osem-2.png
-image3: /images/sensebox-home/osem-3.png
-image4: /images/sensebox-home/osem-4.png
-image5: /images/sensebox-home/osem-5.png
+image1: /images/sensebox-home/osem-1-en.png
+image2: /images/sensebox-home/osem-2-en.png
+image3: /images/sensebox-home/osem-3-en.png
+image4: /images/sensebox-home/osem-4-en.png
+image5: /images/sensebox-home/osem-5-en.png
 ---
 
-Nachdem deine Messstation zusammengebaut wurde wird diese auf der [openSenseMap](https://opensensemap.org) registriert. 
+After your senseBox:home has been assembled, it needs be registered on the [openSenseMap](https://opensensemap.org). 
 
-Die openSenseMap ist eine Plattform um Sensordaten zu speichern, zu vergleichen und zu visualisieren. Schau sie dir doch am besten mal an. Gehe auf [www.opensensemap.org](https://www.opensensemap.org) und entdecke einen riesigen Pool an Sensordaten aus der ganzen Welt. Nicht nur senseBoxen senden Daten an die openSenseMap, sondern auch andere Microcontroller mit Sensoren. Wie die einzelnen Funktionen der openSenseMap und ihre Schnittstellen funktionieren, findest du [hier](https://docs.sensebox.de/opensensemap/).
+The openSenseMap is a platform to store, compare and visualize sensor data. It is best to have a look at it. Go to [www.opensensemap.org](https://www.opensensemap.org) and discover a huge pool of sensor data from all over the world. Not only senseBoxes send data to the openSenseMap, but also other microcontrollers with sensors. How the individual functions of the openSenseMap and their interfaces work, you can find [here](https://docs.sensebox.de/opensensemap/).
 
 {% include image.html image=page.image1 %}
 
 
-## 1. Nutzeraccount Registrierung
-Gehe auf [www.opensensemap.org](https://www.opensensemap.org) und lege dir einen Account an. Dafür klickst du rechts oben in der Ecke auf "Login" und gehst dann auf "Sign up". Du brauchst zum Registrieren eine gültige E-Mail-Adresse. Nach erfolgreicher Registrierung erhältst du eine E-Mail mit einem Bestätigungslink. Bitte klicke den Link, um die Registrierung abzuschließen. 
+## 1.User account registration
+Go to [www.opensensemap.org](https://www.opensensemap.org) and create an account. To do this, click on "Login" in the top right corner and then go to "Sign up". You need a valid e-mail address to register. After successful registration you will receive an e-mail with a confirmation link. Please click on the link to complete the registration. 
 
 
 {% include image.html image=page.image2 %}
 
+## 2. Create a new senseBox
+After the successful registration you can start creating your senseBox. To do so, click on "New senseBox" in your menu and confirm the terms of use. Then follow the instructions of the registration and enter the following data:
 
-## 2. Eine neue senseBox anlegen
-Nach der erfolgreichen Registrierung kannst du damit beginnen deine senseBox anzulegen. Klicke dafür auf "New senseBox / Neue senseBox" in deinem Menü und bestätige die Nutzungsbedingungen. Befolge danach die Anweisungen der Registrierung und gebe folgende Daten an:
-
-* Einen frei wählbaren Namen der senseBox
-* Die Umgebung (Exposure), in der du deine senseBox aufstellen möchtest
-* Den Ort (Location), an dem du deine senseBox aufstellen möchtest (du kannst deinen Standort auch automatisch bestimmen lassen)
+* A freely selectable name for the senseBox
+* The environment (exposure) in which you want to set up your senseBox
+* The location where you want to set up your senseBox (you can also have your location determined automatically)
 
 
 {% include image.html image=page.image3 %}
 
-Da die openSenseMap offen für alle Arten von senseBoxen ist, wirst du nach der verwendeten Hardware gefragt. Wähle *senseBox:home V2* und das Datenübertragungsmodul, das du verwendest. Möchtest du deine Daten über LoRa an die openSenseMap schicken, wählst du bei "Verbindungsart" LoRa aus. Anschließend kannst du im Reiter "Erweitert" deine Lora Einstellungen angeben. Hier musst du die Application-ID und Device-ID angeben, welche du beim <a href="www.thethingsnetwork.org">TheThingsNetwork</a> angegeben hast. Mehr Informationen dazu findest du hier [hier](/sensebox-home-erweiterungen/home-erweiterung-lora/)
+Since the openSenseMap is open for all kinds of senseBoxes, you will be asked for the hardware used. Select *senseBox:home V2* and the data transfer module you are using. If you want to send your data via LoRa to the openSenseMap, select LoRa at "connection type". Then you can specify your Lora settings in the "Advanced" tab. Here you have to enter the Application-ID and Device-ID which you have entered at <a href="www.thethingsnetwork.org">TheThingsNetwork</a>. More information can be found here [here](/sensebox-home-extensions/home-extensions-lora/)
 
 {% include image.html image=page.image4 %}
 
-Bei einigen Sensoren musst du noch auswählen an welchen Port du diese angeschlossen hast. 
+For some sensors you still have to select to which port you have connected them. 
 {% include image.html image=page.image5 %}
 
 
-## 3. Summary der Registrierung und Mail erhalten
-Wenn du die Registrierung abgeschlossen hast, musst du noch einmal der Veröffentlichung deiner Daten zustimmen. Danach erhälst du eine Übersicht deiner Registrierung. Dort wird dir deine senseBox ID, deine Sensoren-IDs und der Arduino Code angezeigt.  
+## 3. Summary of the registration 
+Once you have completed the registration process, you will have to agree to the publication of your data again. Afterwards you will receive an overview of your registration. There you will see your senseBox ID, your sensor IDs and the Arduino code.  
 
-Die senseBox ID ist ein eindeutiger Identifikator deiner senseBox. Damit kannst du deine senseBox z.B. über die URL finden (opensensemap.org/explore/HIER-DEINE-SENSEBOX-ID-EINGEBEN) oder in Datensätzen aufspüren. Des Weiteren wird sie für verschiedene Applications und Funktionen rund um die senseBox und die openSenseMap verwendet.
+The senseBox ID is a unique identifier of your senseBox. You can use it to find your senseBox e.g. via the URL (opensensemap.org/explore/ENTER HERE YOUR-SENSEBOX-ID) or in records. Furthermore it is used for various applications and functions around the senseBox and the openSenseMap.
 
 
 <hr>
-<a href="/sensebox-home/home-schritt-1/" class="button">Zurück zu Schritt 1</a>
-<a href="/sensebox-home/home-schritt-3/" style="float: right;" class="button">Weiter mit Schritt 3</a>
+<a href="/sensebox-home/home-schritt-1/" class="button">Back to step 1</a>
+<a href="/sensebox-home/home-schritt-3/" style="float: right;" class="button">Continue with step 3</a>

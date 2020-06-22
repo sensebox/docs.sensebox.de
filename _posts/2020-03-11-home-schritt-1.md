@@ -144,4 +144,4 @@ Now the quick release screws are screwed in and the senseBox is closed.
 
 
 <hr>
-<a href="/sensebox-home/home-step-2/" class="button" style="float: right;">continue with step 2</a>
+<a href="/sensebox-home/home-schritt-2/" class="button" style="float: right;">continue with step 2</a>
