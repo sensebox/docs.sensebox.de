@@ -5,77 +5,71 @@ categories: opensensemap
 description: Datendownload über die openSenseMap
 type: Document
 resources:
-image1: /images/2020-03-11-opensensemap-download/1-filter.png
-image2: /images/2020-03-11-opensensemap-download/1-download.png
+image1: /images/2020-03-11-opensensemap-download/1-filter-en.png
+image2: /images/2020-03-11-opensensemap-download/1-download-en.png
 ---
 
-Es bestehen mehrere Möglichkeiten Sensordaten von der openSenseMap herunterzuladen.
-Abhängig von der Fragestellung bietet sich je eine Option an.
-Bei den von der senseBox aufgenommenen Daten handelt es sich um Open Data, das heißt sie stehen für alle Nutzer zur freien Verfügung. 
+There are several possibilities to download sensor data from the openSenseMap.
+Depending on the problem, one option is available for each.
+The data recorded by the senseBox is Open Data, i.e. it is freely available to all users. 
 
-## Daten zu einer Box
+## Data of one box
 
-Unter <https://archive.opensensemap.org> wird ein Archiv für sämtliche Messungen in der openSenseMap Datenbank geführt.
-Hier sind nach Tag und Box gegliederte Messwerte als CSV beziehungsweise ZIP-Archiv verfügbar.
+An archive for all measurements in the openSenseMap database is kept under <https://archive.opensensemap.org>.
+Here, measured values structured by tag and box are available as CSV or ZIP archives.
 
 ## Filter
 
-Durch einen Klick auf den Reiter "Filter" in der openSenseMap kannst du dir zunächst optional spezifische Dinge für deine Suche und den anschließenden Download der Daten vorfiltern lassen.
-Solltest du nach einem Namen filtern, kannst du auch die Werte einer einzelnen senseBox herunterladen.
-Das der Filter aktiv ist, erkennst du an einem roten Dreick unter dem "Reiter" Namen
-
+By clicking on the tab "Filter" in the openSenseMap you can optionally have specific things pre-filtered for your search and the subsequent download of the data.
+If you filter by a name, you can also download the values of a single senseBox.
+You can see that the filter is active by a red triangle under the "Name" tab
 {% include image.html image=page.image1 %}
 
-## Grapische Darstellung von Daten  
+## Graphical representation of data  
 
-Neben der Funktion zum Filtern kannst du dir auch die Statistiken der einzelnen Boxen anzeigen lassen, indem du einfach auf eine beliebige Box in der Karte klickst, woraufhin du dann in der Sidebar die Statistiken auswählen 
-kannst, die du angezeigt bekommen möchtest.
-
+In addition to the filter function, you can also view the statistics of each box by simply clicking on any box on the map.
 ## Download
 
-Wenn du auf der Seite der openSenseMap den Reiter "Datendownload" auswählst, kannst du eine Reihe von räumlichen und zeitlichen Filtern auf die bereits von den senseBoxen gemessenen Werte anwenden.
+If you select the "Data Download" tab on the openSenseMap, you can apply a number of spatial and temporal filters to the values already measured by the senseBoxes.
 
 {% include image.html image=page.image2 %}
 
 
-### Zeitraum auswählen
+### Select period
 
-Zunächst solltest du einen Zeitraum auswählen, von welchem du die Daten angezeigt haben möchtest.
-Dies geht entweder manuell, oder du wählst zwischen "letzte 24 Stunden",
-"Letzte Woche" oder "Letzter Monat".  
+First you should select a period of time from which you would like to have the data displayed.
+This can be done manually or you can choose between "last 24 hours", "Last week" or "Last month".  
 
 
-### Gruppieren nach...
+### Group by...
 
-Jetzt wählst du aus, ob du die Daten gemittelt haben möchtest. Hierbei kannst du wieder einen Zeitraum auswählen.
-Alternativ ist es aber auch möglich, dir die Rohdaten ausgeben zu lassen.
+Now you select whether you want to have the data averaged. Here you can again select a time period.
+Alternatively, it is also possible to have the raw data output.
 
 ### Operation
 
-Jetzt kannst du unter "Operation" entscheiden, welche Funktion du auf die Werte anwenden möchtest.
-Hierbei kannst du dir zum Beispiel das Maximum oder Minimum von gemessenen Tempertaturen berechnen lassen.
+Under "Operation" you can decide which function you want to apply to the values.
+For example, you can calculate the maximum or minimum of measured temperatures.
 
-### Wähle einen Sensor
+### Select a sensor
 
-Hier kannst du nun einen Sensor auswählen, von dem du die gewünschten Werte mit den Filtern, die du vorher ausgewählt hast, angezeigt haben möchtest.
+Here you can now select a sensor from which you want to have the desired values displayed with the filters you selected before.
 
 ### Columns
 
-Klicke auf den Button "Columns", um auswählen zu können, welche zusätzlichen Informationen du zu deinen Werten bekommen möchtest.
+Click on the "Columns" button to choose what additional information you would like to receive about your values.
 
 
+> **Attention**: Depending on the selection of the filter parameters the download can be very large (several 100MB)!
 
-> **Achtung**: Je nach Auswahl der Filterparameter kann der Download sehr groß werden (mehrere 100MB)!
 
+### Formats
 
-### Formate
+Currently, only the CSV data format is supported, which can be used with spreadsheet tools such as 
+Microsoft Excel, Libre office, R-Studio or ArcGis.
 
-Derzeit wird nur das Datenformat CSV unterstützt, welches problemlos mit Tabellenkalkulations-Tools wie 
-[Microsoft Excel](excel.md), [Libre office](libre.md), [R-Studio](R.md) oder [ArcGis](Arc.md) verarbeitet werden kann.
-Informationen zu weiteren Datenformaten findet ihr [hier](formate.md)
-
-Jede Zeile enthält eine Messung einer senseBox mit dem ausgewählten Phänomen.
-Der Messwert (`value`), Standort des Sensors (`lat`, `lng`, Referenzsystem WGS84) und ein Zeitstempel (`createdAt`) sind in je einer Spalte angegeben:
+Each line contains a measurement of a senseBox with the selected phenomenon.
+The measured value (`value`), location of the sensor (`lat`, `lng`, reference system WGS84) and a time stamp (`createdAt`) are given in one column each:
 
 ```csv
 createdAt;value;lat;lng
@@ -87,13 +81,13 @@ createdAt;value;lat;lng
 
 ## API-Download
 
-Falls die beiden genannten Möglichkeiten nicht flexibel genug sind, können über die [REST API unter `/boxes/data`](osem_api.md#get-latest-measurements-for-a-phenomenon-as-csv-) auch komplexe Anfragen gestellt werden.
+If the two options mentioned above are not flexible enough, complex requests can be made via the [REST API under `/boxes/data`](osem_api.md#get-latest-measurements-for-a-phenomenon-as-csv-).
 
-Für solche Anfragen bietet sich das Kommandozeilenwerkzeug `curl` an.
-Unter Linux ein Terminal öffnen und beispielsweise folgenden Befehl eingeben, um sämtliche Temperatur-Messungen im geographischen Bereich 51°N - 52°N, 7°E - 8°E in die Datei `measurements.csv` herunterzuladen:
+The command line tool `curl` is useful for such requests.
+Open a terminal under Linux and enter the following command to download all temperature measurements in the geographical area 51°N - 52°N, 7°E - 8°E into the file `measurements.csv`:
 
 ```
 curl "https://api.opensensemap.org/boxes/data?phenomenon=Temperatur&bbox=7,51,8,52" > measurements.csv
 ```
 
-Andere geeignete Parameter (Zeitraum, Box-IDs, ...) lassen sich der verlinkten API-Dokumentation entnehmen.
+Other suitable parameters (period, Box-IDs, ...) can be found in the linked API documentation.
