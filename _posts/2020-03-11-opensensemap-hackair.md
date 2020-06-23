@@ -2,35 +2,30 @@
 date: 2020-03-11
 title: hackAIR
 categories: opensensemap
-description: Anleitung eines hackAIR
+description: Instuctions for hackAIR
 type: Document
 ---
+It is also possible to send the measured data of the hackAIR home sensors (version 2) to the openSenseMap.
 
-Es besteht die Möglichkeit, die gemessenen Daten der hackAIR home Sensoren (Version 2) auch an die openSenseMap zu senden.
+To do this you have to [assemble](http://www.hackair.eu/hackair-home-v2/) your device and transfer the [hackair-v2-advanced](https://github.com/mkraats/hackair-v2-advanced).
 
-Dazu musst du zuerst dein hackAIR Sensor, wie folgt [zusammenbauen](http://www.hackair.eu/hackair-home-v2/) und den [hackair-v2-advanced](https://github.com/mkraats/hackair-v2-advanced) aufspielen.
+Afterwards the openSenseMap configuration is available in the web interface. There you have to register a senseBox with the correct hardware.
 
-Danach steht dir die openSenseMap Konfiguration im Webinterface zur Verfügung. <img src="https://github.com/sensebox/resources/raw/master/images/hackair/02_Sensor_Konfiguration.png"/>
+## 1. [Registration](https://opensensemap.org/register) of a new senseBox
+- Fill in user, location, exposure and name. Group identification could be for example: hackAIR.
+- Under the item **"Hardware "** in the step **"my senseBox "** unfold the field **"hackAIR "** and select the appropriate sensor configuration. 
+- Complete the registration.
+- **Important:** Copy 'SenseBox ID'. This is a 24 characters long string that looks something like this: *58a88c6b650831d8a3625e01
+- **Important:** Copy 'access token'. This is a 64 character long string.
+- If a correct e-mail address is given, the senseBox ID will be sent again by mail. (for example: *Your senseBox ID is: 58a88c6b650831d8a3625e01*)
 
-Danach muss eine senseBox auf der openSenseMap mit der korrekten Hardware registriert werden.
+## 2. configure hackAIR device
+The 'hackAIR home v2' sensor can be easily configured via a website. To do so, connect the device to the power supply.
+After that an open network called 'ESP-wemos' should be available. After that you have to do the following steps:
 
-## 1. Neue senseBox [registrieren](https://opensensemap.org/register)
-- User, Standort, Aufstellungsort und Namen ausfüllen. Gruppenkennzeichnung könnte z.B.: hackAIR sein.
-- Unter dem Punkt **"Hardware"** im Schritt **"meine senseBox"** das Feld **"hackAIR"** ausklappen und die passende Sensorkonfiguration auswählen. <img src="https://github.com/sensebox/resources/raw/master/images/hackair/01_openSenseMap_Konfiguration.png"/>
-- Registrierung abschließen.
-- **Wichtig:** `senseBox ID` kopieren. Dies ist eine 24 Zeichen lange Zeichenkette die ungefähr so aussieht: *58a88c6b650831d8a3625e01*
-- **Wichtig:** `access token` kopieren. Dies ist eine 64 Zeichen lange Zeichenkette.
-- Wenn eine korrekte E-Mailadresse angegeben wurde, kommt die senseBox ID auch nochmal per Mail. (zum Beispiel: *Deine senseBox-ID lautet: 58a88c6b650831d8a3625e01*)
+- Use your browser to open the hackAIR home v2 configuration page (http://192.168.4.1).
+- Under the item **Configure WiFi** enter the *senseBox-ID* in the field **openSenseMap senseBox ID**.
+- Under the item **Configure WiFi** enter the **access token* in the field **senseBox access token
+- Click on **Save** at the bottom of the page
 
-## 2. hackAIR Gerät konfigurieren
-Der `hackAIR home v2` Sensor lässt sich bequem über eine Webseite konfigurieren. Dazu schließt ihr das Gerät am Strom an.
-Danach sollte ein offenes Netzwerk mit dem Namen `ESP-wemos` verfügbar sein. Danach müsst ihr noch folgende Schritte durchführen:
-
-- Mit dem Browser die Konfigurationsseite des hackAIR home v2 aufrufen (http://192.168.4.1).
-- Unter dem Punkt **Configure WiFi** tragt ihr im Feld **openSenseMap senseBox ID** die *senseBox-ID* ein.
-- Unter dem Punkt **Configure WiFi** tragt ihr im Feld **senseBox access token** den *access token* ein
-- Ganz unten auf der Seite auf **Save** klicken
-
-## Fertig
-Der `hackAIR home v2` Sensor sollte nun die Daten an die openSenseMap senden.
 
