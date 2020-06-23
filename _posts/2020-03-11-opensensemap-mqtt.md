@@ -1,26 +1,26 @@
 ---
 date: 2020-03-11
-title: MQTT Integration
+title: MQTT integration
 categories: opensensemap
-description: MQTT Integration für die openSenseMap
+description: MQTT integration for the openSenseMap
 type: Document
 ---
 
-Diese Anleitung beschreibt die Möglichkeit, Messwerte über MQTT an die openSenseMap zu senden. Die openSenseMap ist in der Lage, sich als MQTT Client mit einem öffentlichen MQTT Broker zu verbinden. Einen eigenen MQTT Broker bietet die openSenseMap nicht an. Der openSenseMap MQTT Client verbindet sich, wenn nicht anders in den Verbindungseinstellungen angegeben, mit einer 13 Stelligen Id mit prefix `osem_` gefolgt von 8 zufälligen Ziffern und Buchstaben von A bis F.
+This manual describes the possibility to send measured values via MQTT to the openSenseMap. The openSenseMap is able to connect to a public MQTT broker as an MQTT client. The openSenseMap does not offer an own MQTT broker. The openSenseMap MQTT client connects to a public MQTT Broker with a 13-digit Id with prefix 'osm_' followed by 8 random numbers and letters from A to F, unless otherwise specified in the connection settings.
 
-Je registrierte senseBox müssen separate MQTT Einstellungen vorgenommen werden. Für eine Verbindung mit einem Broker können die folgenden Parameter angegeben werden. Alle angegeben Einstellungen werden in der Datenbank der openSenseMap gespeichert. Es bietet sich also an, eigene Zugangsdaten einzurichten.
+Separate MQTT settings must be made for each registered senseBox. For a connection to a broker the following parameters can be specified. All specified settings are stored in the database of the openSenseMap. It is therefore advisable to set up your own access data.
 
 ## URL
-Die Adresse zum MQTT Broker sollte mit `mqtt://` oder `ws://` beginnen. Sollte der MQTT Broker eine Authentifizierung mittels Nutzername und Passwort benötigen, können diese in der URL kodiert werden. Die URL sollte dann wie folgt aussehen: `mqtt://username:password@hostname.of.mqtt.broker`
+The address to the MQTT Broker should start with 'mqtt://' or 'brows://'. If the MQTT Broker requires authentication by username and password, these can be encoded in the URL. The URL should then look like this: `mqtt://username:password@hostname.of.mqtt.broker`
 
 ## Topic
-Das MQTT Topic unter dem die openSenseMap Nachrichten empfangen soll, kann zum Beispiel `home/temperatures/outside` lauten.
+The MQTT Topic under which the openSenseMap messages should be received can be for example 'home/temperatures/outside'.
 
-## Nachrichtenformat
-Hier sollte zwischen `json` und `csv` ausgewählt werden. Die Formate entsprechen JSON-Array und csv dokumentiert in [docs.opensensemap.org](https://docs.opensensemap.org/#api-Measurements-postNewMeasurements).
+## Message format
+Here you should choose between 'json' and 'csv'. The formats correspond to JSON array and csv documented in [docs.opensensemap.org](https://docs.opensensemap.org/#api-Measurements-postNewMeasurements).
 
-## Dekodierungsoptionen
-Erwartet ein JSON Objekt. Nur für Nachrichtenformat json: Erlaubt es, unter dem Schlüssel jsonPath einen JSONPath Ausdruck anzugeben, welches die Position der JSON kodierten Daten angibt. Beispiel: `{"jsonPath":"$.payload_fields"}`
+## Decoding options
+Expecting a JSON object. For json message format only: Allows a JSONPath expression to be specified under the jsonPath key, which specifies the position of the JSON-encoded data. Example: `{"jsonPath":"$.payload_fields"}`
 
-## Verbindungsoptionen
-Erwartet ein JSON Objekt. Erlaubt es, dem MQTT Client Verbindungsoptionen zu übergeben. Die Schlüssel `keepAlive`, `reschedulePings`, `clientId`, `username` und `password` von [https://github.com/mqttjs/MQTT.js#client](https://github.com/mqttjs/MQTT.js#client) sind erlaubt.
+## Connection options
+Expecting a JSON object. Allows to pass connection options to the MQTT client. The keys `keepAlive`, `reschedulePings`, `clientId`, `username` and `password` from [https://github.com/mqttjs/MQTT.js#client](https://github.com/mqttjs/MQTT.js#client) are allowed.
