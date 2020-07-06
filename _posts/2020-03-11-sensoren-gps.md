@@ -10,25 +10,25 @@ resources:
   - name: "CAM M8Q"
     link: https://sensebox.kaufen/assets/datenblatt/senseBox-CAM-M8Q_v20.pdf
 image: /images/2020-03-11-sensoren-gps/gps.png    
-block: /images/2020-03-11-sensoren-gps/block_gps.svg
+block: /images/2020-03-11-sensoren-gps/block-gps-en.svg
 ---
 
-Das GPS-Modul empfängt die Position (Längengrad/Breitengrad/Höhe) der senseBox. Diese kann für mobile Anwendungen, z.B. die mobile Datenübertragung auf die openSenseMap, genutzt werden. Dieser Sensor ist kompatibel mit den gängingen GNS Systemen (GPS, QZSS, GLONASS, BeiDou, Galileo) und basiert auf dem u-blox CAM-M8Q Multi GNSS Modul.
+The GPS module receives the position (longitude/latitude/altitude) of the senseBox. This can be used for mobile applications, e.g. mobile data transfer to the openSenseMap. This sensor is compatible with the most common GNS systems (GPS, QZSS, GLONASS, BeiDou, Galileo) and is based on the u-blox CAM-M8Q Multi GNSS module.
 
 {% include image.html image=page.image %}
 
-Der GPS Sensor wird an einen I2C-Port angeschlossen.
+The GPS sensor is connected to an I2C port.
 
-## Technische Details
-- "Plug-in-and-Go" senseBox kompatibel durch Breakout-Board mit JST-Anschluss
-- Simultanempfang von GPS, QZSS, GLONASS, BeiDou
-- Navigationsempfindlichkeit von –167 dBm
-- Empfänger: 72-Kanal u-blox M8
-- Update-Rate: Single GNSS - bis zu 18Hz, Dual GNSS bis zu 10Hz
-- Stromaufnahme: 30mA im Dauerbetrieb bzw. 10mA Power Save Mode 1Hz bei 3V
+## Technical Details
+- "Plug-in-and-Go" senseBox compatible through breakout board with JST connector
+- Simultaneous reception of GPS, QZSS, GLONASS, BeiDou
+- Navigation sensitivity of -167 dBm
+- Receiver: 72-channel u-blox M8
+- Update rate: Single GNSS - up to 18Hz, Dual GNSS up to 10Hz
+- Current consumption: 30mA in continuous operation or 10mA Power Save Mode 1Hz at 3V
 
 
-## Programmierung 
+## Programming (Arduino)
 
 ```arduino
 #include <SenseBoxMCU.h>
@@ -72,17 +72,17 @@ void loop()
 ```
 
 
-## Programmierung (Blockly)
+## Programming (Blockly)
 
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
-Im Block kannst du zwischen den verschiedenen Parametern des GPS Modules auswählen:
-- Längengrad
-- Breitengrad
-- Höhe
-- Zeitstempel (RFC3339)
-- Geschwindigkeit
-- Datum
-- Zeit
+In the block you can choose between the different parameters of the GPS module:
+- Longitude
+- Latitude
+- Height
+- timestamp (RFC3339)
+- Speed
+- Date
+- Time

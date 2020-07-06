@@ -1,8 +1,8 @@
 ---
 date: 2020-03-11
-title: Helligkeits- und UV-Sensor
+title: brightness and UV sensor
 categories: hardware
-description: Helligkeits- und UV-Sensor
+description: TSL45315 and VEML6070
 type: Document
 resources:
   - name: "Datenblatt"
@@ -14,35 +14,35 @@ block: /images/2020-03-11-sensoren-helligkeit-uv/block_helligkeit_uv.svg
 ---
 
 
-Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.
+Two sensors are combined on this senseBox component.
 
-Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen. Dieser Sensor erkennt die Lichtverhältnissen ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.
+The light intensity is measured with the TSL45315 sensor from AMS-TAOS. This sensor detects the lighting conditions similar to the human eye and outputs the brightness values directly in lux, with a wide dynamic range (3 lux to 220k lux).
 
-Der zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Dieser wandelt die Intensität des UV-Lichts der Sonne in digitale Daten um. Der Sensor hat eine hervorragende UV-Empfindlichkeit und Linearität über Filtron™-Technologie. Er hat eine gute UV-Strahlungsmessung auch bei langer Sonnen-UV-Belastung und kann exzellenter Temperaturschwankungen ausgleichen.
+The second sensor is a Vishay VEML6070 ultraviolet (UV) light sensor. It converts the intensity of the sun's UV light into digital data. The sensor has excellent UV sensitivity and linearity via Filtron™ technology. It has a good UV radiation measurement even during long solar UV exposure and can compensate excellent temperature fluctuations.
 
 {% include image.html image=page.image %}
 
-## Technische Details
+## Technical details
 
-### Belichtungssensor
+### Exposure sensor
 
-* 3,3V - 5V tolerantes I2C/TWI Interface
-* Eingangsspannungsbereich: 3,3V - 5V
-* on-board 2,5V Spannungsregler
-* on-board Pegelwandler
+* 3.3V - 5V tolerant I2C/TWI interface
+* Input voltage range: 3.3V - 5V
+* on-board 2.5V voltage regulator
+* on-board level converter
 
-### UV-Sensor
+### UV sensor
 
-* Betriebsspannung: 2,7V - 5,5V I2C Interface
-* Unterstützt Quittierungsfunktion (Active Acknowledge-Funktion)
-* Temperaturkompensation: -40°C bis +85°C
-* Software-Abschaltregelung für Immunität bei flackernden Leuchtstofflampen
+* Operating voltage: 2.7V - 5.5V I2C Interface
+* Supports acknowledge function (Active Acknowledge function)
+* Temperature compensation: -40°C to +85°C
+* Software shutdown control for immunity to flickering fluorescent lamps
 
-### Maße
+### Dimensions
 * 25mm x 25mm x 9mm
-* Gewicht: 2,5 g
+* Weight: 2.5 g
 
-## Programmierung
+## Programming (Arduino)
 
 ```arduino
 #include "SenseBoxMCU.h"
@@ -65,14 +65,14 @@ void loop() {
 }
 ```
 
-## Programmierung (Blockly)
+## Programming (Blockly)
 
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
-Im Block kannst du zwischen den verschiedenen Parametern des Helligkeit/UV-Sensor auswählen:
+In the block you can choose between the different parameters of the brightness/UV sensor:
 
-- Helligkeit in LUX
-- UV-Belastung in µW/m^2
+- Brightness in LUX
+- UV exposure in µW/m^2
 

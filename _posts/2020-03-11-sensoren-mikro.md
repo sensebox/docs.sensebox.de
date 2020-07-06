@@ -1,30 +1,30 @@
 ---
 date: 2020-03-11
-title:  Mikrofon 
+title:  Microphone 
 categories: hardware
-description: Kondensator Mikrofon
+description: Microphone
 type: Document
 resources:
 image: /images/2020-03-11-sensoren-mikro/mic.png
 aufbau: /images/2020-03-11-sensoren-mikro/mikro-aufbau.png
-block: /images/2020-03-11-sensoren-mikro/mikro-block.svg
+block: /images/2020-03-11-sensoren-mikro/block-micro-en.svg
 
 ---
-Das Kondesatormikrofon von Watterott Electronics ist mit einem Verstärker ausgestattet und kann Geräusche zwischen 58 und 110 dB wahrnehmen.
-Es gibt die gemessenen Geräusche in einem Pegel von 0-5V aus.
+The condenser microphone from Watterott Electronics is equipped with an amplifier and can pick up sounds between 58 and 110 dB.
+It outputs the measured noise at a level of 0-5V.
 
 {% include image.html image=page.image %}
 
-## Technische Informationen
+## Technical Information
 
-* Maße: 30mm x 11mm x 7,5mm
-* Betriebsspannung von 2,7 - 5,5V DC
-* Wahrnehmung von Geräuschen zwischen 58 und 110dB
+* Dimensions: 30mm x 11mm x 7,5mm
+* Operating voltage from 2.7 - 5.5V DC
+* Perception of sounds between 58 and 110dB
 
-{% include image.html image=page.aufbau %}
+{% include image.html image=page.structure %}
 
 
-## Programmierung (Arduino)
+## Programming (Arduino)
 
 
 ```arduino
@@ -72,13 +72,13 @@ Serial.print(volts);
 Serial.println(" Volt");          
 }
 ```
-## Programmierung (Blockly)
+## Programming (Blockly)
 
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
 
-Wähle den Port, an dem du den Sensor angeschlossen hast über das Dropdown-Menü aus.
+Select the port where you have connected the sensor from the drop-down menu.
 
 

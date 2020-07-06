@@ -1,33 +1,33 @@
 ---
 date: 2020-03-11
-title: Luftdruck- und Temperatursensor
+title: Air pressure and temperature sensor
 categories: hardware
-description: Luftdruck- und Temperatursensor (BMP280)
+description: BMP280
 type: Document
 resources:
   - name: "Shop"
-    link: https://sensebox.kaufen/product/luftdruck-temperatur
+    link: https://sensebox.shop/product/luftdruck-temperatur
   - name: "Bosch BMP280 Data sheet"
     link: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf
 image: /images/2020-03-11-sensoren-luftdruck-temperatur/bmp_top.png
-block: /images/2020-03-11-sensoren-luftdruck-temperatur/block_luftdruck_temperatur.svg
+block: /images/2020-03-11-sensoren-luftdruck-temperatur/block-luftdruck-temperatur-en.svg
 ---
-Dieser Sensor misst den Luftdruck und die Temperatur und basiert auf dem BMP280 Sensor von Bosch.
+This sensor measures air pressure and temperature and is based on the Bosch BMP280 sensor.
 
 {% include image.html image=page.image %}
 
 
-## Technische Informationen
+## Technical Information
 
-* "Plug-in-and-Go" senseBox kompatibel
-* Betriebsdruck 300 bis 1100 hPa
-* Relative Präzision ±0.12 hPa
-* Absolute Präzision ±1 hPa
-* Betriebsversorgungsstrom 2.7μA bei 1 Hz Sampling Frequenz
-* Maße: 25mm x 25mm x 9mm
-* Gewicht: 2,4 g
+* "Plug-in-and-Go" senseBox compatible
+* Operating pressure 300 to 1100 hPa
+* Relative precision ±0.12 hPa
+* Absolute precision ±1 hPa
+* Operating supply current 2.7μA at 1 Hz sampling frequency
+* Dimensions: 25mm x 25mm x 9mm
+* Weight: 2.4 g
 
-## Programmierung
+## Programming (Arduino)
 
 ```arduino
 #include "SenseBoxMCU.h"
@@ -50,14 +50,14 @@ void loop() {
 }
 ```
 
-## Programmierung (Blockly)
+## Programming (Blockly)
 
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
-Im Block kannst du zwischen den verschiedenen Parametern des Luftdruck-/Temperatursensor auswählen:
+In the block you can choose between the different parameters of the air pressure/temperature sensor:
 
-- Luftdruck in Pascal (Pa)
-- Temperatur in Celsius (°C)
-- Höhe über NN in m (dazu wird ein Referenzluftdruck benötigt)
+- Air pressure in Pascal (Pa)
+- Temperature in Celsius (°C)
+- Height above sea level in m (a reference air pressure is required)

@@ -1,47 +1,41 @@
 ---
 date: 2020-03-11
-title: Bodenfeuchte- und Temperatursensor
+title: Soil moisture and temperature sensor
 categories: hardware
-description: Bodenfeuchte- und Temperatursensor Truebner SMT50
+description: Truebner SMT50
 type: Document
 resources:
   - name: "Shop"
-    link: https://sensebox.kaufen/product/bodenfeuchte-temperatursensor-smt50
+    link: https://sensebox.shop/product/bodenfeuchte-temperatursensor-smt50
   - name: "Truebner SMT50"
     link: http://www.truebner.de/sites/default/files/Anleitung_SMT50_V1.1.pdf
 image: /images/2020-03-11-sensoren-truebner/sensoren_bodenfeuchte_temperatur.png
-block: /images/2020-03-11-sensoren-truebner/block_bodenfeuchte_temperatur.svg
+block: /images/2020-03-11-sensoren-truebner/block-bodenfeuchte-temperatur-en.svg
 ---
-
-# Bodentemperatur- & Feuchtigkeitssensor {#head}
-
-Der truebner SMT50 ist ein kapazitiver Bodentemperatur- und Feuchtigkeitssensor und eignet sich daher gut für diverse Anwendung im heimischen Garten. Kapazitive Bodenfeuchtesensoren erzeugen ein elektrisches Feld um ihre Messelektroden herum. Das Feld dringt in den umgebenden Boden ein. Die Messelektronik des Sensors ermittelt die resultierende elektrische Kapazität der Elektroden. Je höher der Wassergehalt im Boden ist,desto größer wird die Messkapazität des Sensors.
+The truebner SMT50 is a capacitive soil temperature and humidity sensor and is therefore well suited for various applications in the home garden. Capacitive soil moisture sensors generate an electrical field around their measuring electrodes. The field penetrates into the surrounding soil. The sensor's measuring electronics determine the resulting electrical capacity of the electrodes. The higher the water content in the soil, the greater the measuring capacity of the sensor.
 
 {% include image.html image=page.image %}
 
-## Technische Details
-- Versorgungsspannung: 3.3 - 30 VDC (Gleichspannung)
-- Stromaufnahme ca. 2.7 mA (gemessen bei 12VDC)
-- Messbereich volumetrischer Wassergehalt: 0 – 50 % (bei +/- 3% Genauigkeit)
-- Messbereich Temperatur: -20 bis +85 °C (bei +/- 1,0°C Genauigkeit)
-- Messverfahren: FDR (Frequency Domain Response)
-- Messsignal: symmetrisch, bipolar differentiell
+## Technical details
+- Supply voltage: 3.3 - 30 VDC (direct voltage)
+- Current consumption approx. 2.7 mA (measured at 12VDC)
+- Measuring range volumetric water content: 0 - 50 % (with +/- 3% accuracy)
+- Measuring range temperature: -20 to +85 °C (at +/- 1.0°C accuracy)
+- Measurement procedure: FDR (Frequency Domain Response)
+- Measuring signal: balanced, bipolar differential
 
-### Maße
-- Abmessungen: ca. 13,5 cm x 2,15 cm
-- Gewicht inkl. 10m Kabel: ca. 235 g
-
-## Programmierung (Arduino)
+### Dimensions
+- Dimensions: approx. 13.5 cm x 2.15 cm
+- Weight incl. 10m cable: approx. 235 g
 
 
+## Programming (Blockly)
 
-## Programmierung (Blockly)
-
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
-Im Block kannst du zwischen den verschiedenen Parametern des Bodenfeuchte- und Temperatursensor auswählen:
+In the block you can choose between the different parameters of the soil moisture and temperature sensor:
 
-- Bodentemperatur in Grad Celsius (°C)
-- Bodenfeuchte
+- Soil temperature in degrees Celsius (°C)
+- Soil Moisture

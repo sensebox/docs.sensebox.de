@@ -1,8 +1,8 @@
 ---
 date: 2020-03-11
-title: Feinstaubsensor
+title: Particulate matter sensor
 categories: hardware
-description: Feinstaubsensor SDS011
+description: SDS011
 type: Document
 resources:
   - name: Shop
@@ -10,24 +10,20 @@ resources:
   - name: Datenblatt NOVA SDS011
     link: https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf
 image: /images/2020-03-11-sensoren-feinstaub/sensoren_feinstaub.png
-block: /images/2020-03-11-sensoren-feinstaub/block_feinstaubsensor.svg
+block: /images/2020-03-11-sensoren-feinstaub/block-feinstaubsensor-en.svg
 ---
 
-Mit diesem Sensor SDS011 ist es möglich die Feinstaubkonzentration in der Luft zu bestimmen. Der Sensor gibt zwei Werte aus: Die Konzentration von PM2.5 (Partikel < 2.5 um) und PM10 (Partikel < 10 um). Dieser Sensor ist mit einem kleinen Ventilator ausgestattet, um Luft anzusaugen. In seinem Inneren befindet sich ein Laser, der zusammen mit einer Photodiode die Anzahl der Partikel misst. Die Ergebnisse der Messungen werden in µg/m³ (Mikrogramm pro Kubikmeter) angegeben.
+With the SDS011 it is possible to determine the fine dust concentration in the air. The sensor outputs two values: The concentration of PM2.5 (particles < 2.5 um) and PM10 (particles < 10 um). This sensor is equipped with a small fan to suck in air. Inside it there is a laser which, together with a photodiode, measures the number of particles. The results of the measurements are given in µg/m³ (microgram per cubic meter).
 
 {% include image.html image=page.image %}
 
-## Technische Details
-* "Plug-in-and-Go" senseBox kompatibel
-* Schnelle Reaktionszeit von weniger als 10 Sekunden
-* Hohe Auflösung bis zu 0.3µg/m3
-* Mehrfach wissenschaftliche Prüfung der Datengenauigkeit
+## Technical details
+* "Plug-in-and-Go" senseBox compatible
+* Fast response time of less than 10 seconds
+* High resolution up to 0.3µg/m3
+* Multiple scientific verification of data accuracy
 
-## Programmierung (Arduino)
-
-Ist dies erledigt können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.
-
-Als erstes muss eine Instanz des Sensors erstellt werden. Dazu erstellen wir noch 2 Variablen in denen wir unsere beiden Messwerte für PM10 und PM2.5 speichern.
+## Programming (Arduino)
 
 ```arduino
 #include "SenseBoxMCU.h"
@@ -60,11 +56,11 @@ void loop(){
 
 ## Programmierung (Blockly)
 
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
-Wähle den Port, an dem du den Sensor angeschlossen hast und den Messwert über das Dropdown Menü aus.
+Select the port to which you have connected the sensor and the measured value via the drop-down menu.
 
-- PM2.5: Feinstaubfraktion unterhalb von 2.5 µg/m^3 
-- PM10: Feinstaubfratkion unterhalb von 10µg/m^3
+- PM2.5: Fine dust fraction below 2.5 µg/m^3 
+- PM10: Fine dust fraction below 10µg/m^3

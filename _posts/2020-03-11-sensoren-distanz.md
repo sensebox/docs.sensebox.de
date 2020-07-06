@@ -1,31 +1,28 @@
 ---
 date: 2020-03-11
-title: Ultraschall Distanzsensor
+title: Ultrasonic distance sensor
 categories: hardware
 description: HC-SR04
 type: Document
 resources:
 image1: /images/2020-03-11-sensoren-distanz/US-Sensor.png
 aufbau: /images/2020-03-11-sensoren-distanz/Aufbau-Ultraschall.png
-block: /images/2020-03-11-sensoren-distanz/ultraschall-block.svg
+block: /images/2020-03-11-sensoren-distanz/ultraschall-block-en.svg
 
 ---
-Der HC-SR04 misst Distanzen mit Hilfe von Ultraschall und gibt diese in Zentimetern (cm) aus.
+The HC-SR04 measures distances using ultrasound and outputs them in centimeters (cm).
 
 {% include image.html image=page.image1 %}
 
 
-## Technische Informationen
+## Technical Information
 
-* Maße: 45mm x 20mm x 17mm
-* Versorgungsspannung von 5V bei einer Stromaufnahme weniger als 2mA
-*  bis zu 50 Messungen pro Sekunde möglich
-
-{% include image.html image=page.aufbau %}
+* Dimensions: 45mm x 20mm x 17mm
+* Supply voltage of 5V with a current consumption of less than 2mA
+* up to 50 measurements per second possible
 
 
-## Programmierung (Arduino)
-
+## Programming (Arduino)
 
 ```arduino
 int trig = 1;  // Trig-Pin des Sensors ist an Pin 1 angeschlossen.
@@ -49,13 +46,12 @@ distance = time / 58;
 Serial.println(distance);
 }
 ```
-## Programmierung (Blockly)
+## Programming (Blockly)
 
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
 
-Wähle den Port, an dem du den Sensor angeschlossen hast über das Dropdown-Menü aus. Trigger und Echo Pin werden dann automatisch angepasst.
-
+Select the port where you have connected the sensor from the drop-down menu. Trigger and echo pin will be adjusted automatically.
 

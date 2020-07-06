@@ -1,58 +1,57 @@
 ---
 date: 2020-03-11
-title: Umweltsensor
+title: Environmental sensor
 categories: hardware
-description: Luftdruck- und Temperatursensor (BME680)
+description: BME680
 type: Document
 resources:
   - name: "Shop"
-    link: https://sensebox.kaufen/product/sensebox-mini
+    link: https://sensebox.shop/product/sensebox-mini
   - name: Bosh BME680
     link: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme680-ds001.pdf
 image: /images/2020-03-11-sensoren-umweltsensor/bme.png
-block: /images/2020-03-11-sensoren-umweltsensor/block_umweltsensor.svg
+block: /images/2020-03-11-sensoren-umweltsensor/block-umweltsensor-en.svg
 ---
-
-Mit dem Sensor BME680 kannst du eine verschiedene Auswahl an Phänomenen messen. Lufttemperatur, relative Luftfeuchtigkeit, Luftdruck und Luftqualität können mit dem BME680 bestimmt werden. Er ist also ein echter Alleskönner. 
+With the BME680 sensor you can measure a variety of phenomena. Air temperature, relative humidity, air pressure and air quality can be determined with the BME680. It is therefore a real all-rounder. 
 
 {% include image.html image=page.image %}
 
-## Technische Details
-* Schnelle Reaktionszeit von weniger als 10 Sekunden
-* "Plug-in-and-Go" senseBox kompatibel
-* Abweichung bei Gasmessungen von +-15%
+## Technical details
+* Fast response time of less than 10 seconds
+* "Plug-in-and-Go" senseBox compatible
+* deviation for gas measurements of +-15%
 
-## Anschluss und Programmierung
+## Connection and programming
 
-Mit dem mitgelieferten Verbindungskabel kannst du deinen Gassensor mit dem "I2C"-Port der senseBoxMCU verbinden. 
-Ist dies erledigt können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.
+With the included connection cable you can connect your gas sensor to the "I2C" port of the senseBoxMCU. 
+If this is done we can now initialize the sensor in the program code and get the first measured values.
 
-**Achtung** Der BME Gassensor ist nicht mit dem BMP280 Luftdrucksensor kompatibel. Das heißt du kannst nur einen der beiden gleichzeitig anschließen und auslesen!
+**Attention** The BME gas sensor is not compatible with the BMP280 air pressure sensor. That means you can only connect and read out one of the two at the same time!
 
 
-## Programmierung (Blockly)
+## Programming (Blockly)
 
-In Blockly kann der Sensor über folgenden Block ausgelesen werden:
+In Blockly the sensor can be read out via the following block:
 
 {% include image.html image=page.block %}
 
-Im Block kannst du zwischen den verschiedenen Parametern des Umweltsensor auswählen:
+In the block you can choose between the different parameters of the environmental sensor:
 
-- Temperatur in Grad Celsius (°C)
-- Luftfeuchtigkeit in %
-- Luftdruck in Pa
-- Innenraumluftqualität (IAQ)
-- Kalibrierungswert
-- CO2 Äquivalent
-- Atemluft VOC Äquivalent
+- Temperature in degrees Celsius (°C)
+- Air humidity in %
+- Air pressure in Pa
+- Indoor air quality (IAQ)
+- Calibration value
+- carbon dioxide equivalent
+- Breathing air VOC equivalent
 
-## Kalibrierungswert
+## Calibration value
 
-Den Status der Kalibrierung kann über den Wert IAQ Accuracy abgelesen werden. Er ist entweder 0, 1, 2 oder 3 und sagt folgendes aus:
+The status of the calibration can be read off via the IAQ Accuracy value. It is either 0, 1, 2 or 3 and indicates the following:
 
-- IAQ Accuracy = 0 heißt Sensor wird stabilisiert (dauert ca. 25 Minuten) oder dass es eine Zeitüberschreitung gab (which should be indicated by a warning/error flag by BSEC ← Muss in Blockly abgefangen werden),
-- IAQ Accuracy = 1 heißt Wert ist ungenau,
-- IAQ Accuracy = 2 heißt Sensor wird kalibriert,
-- IAQ Accuracy = 3 heißt Sensor erfolgreich kalibriert.
+- IAQ Accuracy = 0 means that the sensor is stabilized (takes about 25 minutes) or that there was a timeout (which should be indicated by a warning/error flag by BSEC ← Must be intercepted in Blockly),
+- IAQ Accuracy = 1 means value is not accurate,
+- IAQ Accuracy = 2 means sensor is being calibrated,
+- IAQ Accuracy = 3 means sensor successfully calibrated.
 
-Der IAQ Index ist also nur aussagekräftig bei IAQ Accuracy = 3. Neben dem Wert für IAQ stellt uns BSEC noch K und VOC äquivalente Werte bereit. 
+The IAQ index is therefore only meaningful when IAQ Accuracy = 3. In addition to the value for IAQ, BSEC also provides us with K and VOC equivalent values. 
