@@ -3,25 +3,25 @@ date: 2020-04-07
 title: Audio
 title_order: 12
 categories: Blockly
-description: Grundlagen zur Kategorie Audio
+description: Usage of the Audio Blocks
 type: Document
 
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
-image1: /images/2020-04-08-blockly-ton/blockly-ton-1.svg
-image2: /images/2020-04-08-blockly-ton/blockly-ton-2.svg
+image1: /images/2020-04-08-blockly-ton/blockly-sound-1.svg
+image2: /images/2020-04-08-blockly-ton/blockly-sound-2.svg
 
 ---
 
-## Spiele Ton
-Mit dem `Spiele Ton`-Block kannst du Töne abspielen lassen. Unter __Pin__ wird der verwendete Pin ausgewählt und im Blockabschnitt __Frequenz__ die gewünschte Frequenz des Tons angegeben.
+## Set tone
+With the `set tone` block you can play sounds. Under __Pin__ the used pin is selected and in the block section __Frequency__ the desired frequency of the sound is specified.
 
 {% include image.html image=page.image1 %}
 
-> Je größer die Frequenz eines Tones, desto höher höhrt er sich an.
+> The higher the frequency of a tone, the higher it sounds.
 
-## Schalte Ton aus
-Mit dem `Schalte Ton aus`-Block kannst du einen Ton wieder ausschalten.
+## Turn off tone
+With the `turn of tone` block you can switch off a sound again.
 
 {% include image.html image=page.image2 %}

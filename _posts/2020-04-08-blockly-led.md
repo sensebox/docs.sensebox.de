@@ -3,29 +3,29 @@ date: 2020-04-07
 title: LED
 title_order: 4
 categories: Blockly
-description: Erste Schritte LED
+description: First Steps LED
 type: Document
 
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
-image1: /images/2020-04-08-blockly-led/blockly-led-1.svg
-image2: /images/2020-04-08-blockly-led/blockly-led-2.svg
-image3: /images/2020-04-08-blockly-led/blockly-led-3.svg
+image1: /images/2020-04-08-blockly-led/blockly-led-1-en.svg
+image2: /images/2020-04-08-blockly-led/blockly-led-2-en.svg
+image3: /images/2020-04-08-blockly-led/blockly-led-3-en.svg
 
 ---
 
 ## LED
-Mit dem `LED an digitalen Pin`-Block kannst du eine an einem der sechs digitalen Pins angeschlossene LED ansteuern. Im Dropdown-Menü __Pin__ wählst du den jeweiligen Pin aus und unter __Status__ ob die LED ein- oder ausgeschaltet werden soll.
+With the `LED on Digital Pin` block you can control an LED connected to one of the six digital pins. Select the pin in the __Pin__ drop-down menu and choose whether the LED should be switched 'on' or 'off' in __Status__.
 
 {% include image.html image=page.image1 %}
 
-> BUILTIN_1 und BUILTIN_2 sind die auf der senseBox MCU fest verbauten LEDs neben dem roten RESET-Knopf.
+> BUILTIN_1 and BUILTIN_2 are the fixed LEDs on the senseBox MCU next to the red RESET button.
 
-## RGB-LED
-Mit dem `RGB-LED`Block kannst du eine an einem der sechs digitalen Pins angeschlossene RGB-LED ansteuern. Im Dropdown-Menü __Pin__ währst du den jeweiligen Pin aus. An die Blockabschnitte __rot__, __grün__ und  __blau__ können Zahlen von 0 bis 255 angeknüpft werden, um die Intesität der verschiedenen Farbanteile festzulegen. Bei einem Wert von 0 ist kein Farbanteil vorhanden, bei einem Wert von 255 ist der maximale Farbanteil vorhanden.
+## RGB LED
+With the `RGB LED` block you can control an RGB LED connected to one of the six digital pins. In the drop-down menu __Pin__ you select the respective pin. Numbers from 0 to 255 can be attached to the __red__, __green__ and __blue__ block sections to determine the intensity of the different color components. A value of 0 means that there is no color portion, a value of 255 means that the maximum color portion is present.
 
 {% include image.html image=page.image2 %}
 
-> Der Farbcode für senseBox Grün lautet zum Beispiel:  
+> For example, the color code for senseBox Green is  
 {% include image.html image=page.image3 %}

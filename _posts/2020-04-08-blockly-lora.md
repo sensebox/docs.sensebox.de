@@ -3,94 +3,88 @@ date: 2020-04-07
 title: LoRa
 title_order: 5
 categories: Blockly
-description: Verwendung der LoRa Blöcke 
+description: Usage of LoRa blocks in Blockly
 type: Document
 
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
-image1: /images/2020-04-08-blockly-lora/blockly-lora-1.svg
-image2: /images/2020-04-08-blockly-lora/blockly-lora-2.svg
-image3: /images/2020-04-08-blockly-lora/blockly-lora-3.svg
-image4: /images/2020-04-08-blockly-lora/blockly-lora-4.svg
-image5: /images/2020-04-08-blockly-lora/blockly-lora-5.svg
-image6: /images/2020-04-08-blockly-lora/blockly-lora-6.svg
-image7: /images/2020-04-08-blockly-lora/blockly-lora-7.svg
-image8: /images/2020-04-08-blockly-lora/blockly-lora-8.svg
-image9: /images/2020-04-08-blockly-lora/blockly-lora-9.svg
-image10: /images/2020-04-08-blockly-lora/blockly-lora-10.svg
-image11: /images/2020-04-08-blockly-lora/blockly-lora-11.svg
+image1: /images/2020-04-08-blockly-lora/blockly-lora-1-en.svg
+image2: /images/2020-04-08-blockly-lora/blockly-lora-2-en.svg
+image3: /images/2020-04-08-blockly-lora/blockly-lora-3-en.svg
+image4: /images/2020-04-08-blockly-lora/blockly-lora-4-en.svg
+image5: /images/2020-04-08-blockly-lora/blockly-lora-5-en.svg
+image6: /images/2020-04-08-blockly-lora/blockly-lora-6-en.svg
+image7: /images/2020-04-08-blockly-lora/blockly-lora-7-en.svg
+image8: /images/2020-04-08-blockly-lora/blockly-lora-8-en.svg
+image9: /images/2020-04-08-blockly-lora/blockly-lora-9-en.svg
+image10: /images/2020-04-08-blockly-lora/blockly-lora-10-en.svg
+image11: /images/2020-04-08-blockly-lora/blockly-lora-11-en.svg
 image12: /images/2020-04-08-blockly-lora/blockly-lora-12.svg
 image13: /images/2020-04-08-blockly-lora/blockly-lora-13.png
 image14: /images/2020-04-08-blockly-lora/blockly-lora-14.png
-imageHumidty: /images/2020-04-08-blockly-lora/blockly-lora-humidity.svg
-imageTemperatur: /images/2020-04-08-blockly-lora/blockly-lora-temperatur.svg
-imageIlluminance: /images/2020-04-08-blockly-lora/blockly-lora-illuminance.svg
+imageHumidty: /images/2020-04-08-blockly-lora/blockly-lora-humidity-en.svg
+imageTemperatur: /images/2020-04-08-blockly-lora/blockly-lora-temperature-en.svg
+imageIlluminance: /images/2020-04-08-blockly-lora/blockly-lora-illuminance-en.svg
 ---
-
-
-
-## Aktivierung
+## Activation
 
 {% include image.html image=page.image1 %}
 
-Mit diesen Blöcken kannst du das Lora-Bee initializieren und dich mit dem The Things Network verbinden. Je nachdem welche Aktivierungsmethode du verwendest (OTAA oder ABP) musst du die entsprechenden ID's in dem Block eintragen. Zusätzlich kann das Übertragungsinterval in Minuten eingestellt werden.  
+With these blocks you can initialize the Lora-Bee and connect to The Things Network. Depending on which activation method you use (OTAA or ABP) you have to enter the corresponding ID's in the block. Additionally, you can set the transmission interval in minutes.  
 
 
-## Lora Nachricht
+## Lora Message
 {% include image.html image=page.image2 %}
 
-Verwende diese Blöcke, um eine Nachricht über das LoRa Netzwerk zu versendet. Hierbei wird kein spezielles Format für die Nachricht (oft auch Payload) genannt verwendet. Die Daten werden hierbei als Byte codiert, sodass diese schnell und effizient über das LoRa Netz übertragen werden können. Anschließend müssen die Daten in der TTN Console wieder über einen speziellen Decoder in ein lesbares Format umgewandelt werden. 
+Use this block to send a message via the LoRa network. No special format is used for the message (often called payload). The data is encoded as bytes so that it can be transmitted quickly and efficiently over the LoRa network. The data must then be converted back into a readable format in the TTN Console using a special decoder. 
 
-## Decoder Erstellen
+## Create Decoder
+TTN decoding is all about understanding bytes. Then it is possible to create quick solutions to access your data measured by senseBox.
 
-Beim TTN Decoding geht nur darum, Bytes zu verstehen. Danach ist es möglich, schnelle Lösungen zu erstellen, um auf deine, von senseBox gemessenen Daten, zuzugreifen.
+### Theory
+LoRaWAN is not suitable for sending large amounts of data, therefore the information is divided into small bytes and sent. One byte contains 8 bits. This means that you can distinguish between 256 different values. 2 bytes already contain 16 bits, so it is possible to distinguish between 65536 values.
 
-
-### Theorie
-LoRaWAN ist nicht geeignet für das Senden von großen Datenmengen, deshalb werden die Informationen in kleine Bytes unterteilt und gesendet. Ein Byte enhält 8 Bit. Das heißt, man kann zwischen 256 verschiedenen Werten unterscheiden. 2 Bytes enhalten schon 16 Bits, sodass es möglich ist, zwischen 65536 Werten zu unterscheiden.
-
-Die nachfolgende Tabelle gibt eine Übersicht über die Bandbreite:
+The following table gives an overview of the bandwidth:
 
 
-| Bytes | Bit | min (signed)   | max (signed)  | min (unsigned) | max (unsigned) |
+| bytes | bit | min (signed) | max (signed) | min (unsigned) | max (unsigned) |
 |-------|-----|----------------|---------------|----------------|----------------|
-| 1     | 8   | -128           | 127           | 0              | 255            |
-| 2     | 16  | −32.768        | 32.767        | 0              | 65.535         |
-| 3     | 24  | −2.147.483.648 | 2.147.483.647 | 0              | 4.294.967.295  |
+| 1 | 8 | -128 | 127 | 0 | 255 |
+| 2 | 16 | −32.768 | 32.767 | 0 | 65.535 |
+| 3 | 24 | −2.147.483.648 | 2.147.483.647 | 0 | 4.294.967.295 |
 
-In der Tabelle gibt es zwei verschiedenen Typen: "signed" und "unsigned". Signded Werte decken sowohl den positiven als auch negativen Wertebereich ab. 
+There are two different types in the table: "signed" and "unsigned". Signded values cover both the positive and negative value range. 
 
-Beispiel: Du möchtest die Luftfeuchtigkeit messen. Die Werte liegen zwischen 0% und 100%. Es handelt sich aber um keine Kommazahlen sondern nur um ganzzahlige Werte. Man könnte nun ein Byte verwenden, welcher den Wert für die Luftfeuchtigkeit entspricht. Möchte man allerdings eine Dezimalzahl mit zwei Nachkommastellen versenden, reicht 1 Byte nicht mehr aus. 2 Bytes müssen verwendet werden.  
+Example: You want to measure the humidity. The values are between 0% and 100%. However, they are not decimal numbers but only integer values. You could now use a byte which corresponds to the value for the humidity. However, if you want to send a decimal number with two decimal places, 1 byte is no longer sufficient. 2 bytes must be used.  
 
-Stellen dir vor vor, wir messen 85,42%. Ein einfacher Ansatz wäre es, die Messung zu nehmen und mit 100 zu multiplizieren. Nun haben wir ein Wert von 85,42 * 100 = 8542. Wir können 8542 in zwei Bytes kodieren, sie an TTN senden und diese zwei Bytes decodieren, um 8542 zu erhalten. Diese Zahl kann nun durch 100 geteilt werden, und wir erhalten den Wert von 85,42%. So funktioniert es im Grunde genommen.
+Imagine we measure 85.42%. A simple approach would be to take the measurement and multiply it by 100. Now we have a value of 85.42 * 100 = 8542. We can encode 8542 into two bytes, send them to TTN and decode these two bytes to get 8542. This number can now be divided by 100 and we get the value of 85.42%. This is basically how it works.
 
-
-### Beispiel
+### Example
 
 __Blockly__:
-Auf der Arduino Seite wird die [lora-serialization](https://github.com/thesolarnomad/lora-serialization) Bibliothek verwendet. Die Dokumentation zeigt eine[Funktion](https://github.com/thesolarnomad/lora-serialization#unsigned-16bit-integer-2-bytes), um einen Wert mit 16 Bit zu versenden. Diese Funktion kann genutzt werden, um die Werte für die Luftfeuchtigkeit zu versenden. Der Wert für die Luftfeuchtigkeit liegt zwischen 0 und 100%, sodass folgende Blöcke zum versenden verwendet werden können:
+On the Arduino site the [lora-serialization](https://github.com/thesolarnomad/lora-serialization) library is used. The documentation shows a [function](https://github.com/thesolarnomad/lora-serialization#unsigned-16bit-integer-2-bytes) to send a value with 16 bits. This function can be used to send humidity values. The humidity value is between 0 and 100%, so the following blocks can be used for sending:
 
 {% include image.html image=page.imageHumidty %}
 
-Der Messwert wird mit 100 multipliziert, um die zwei Nachkommastellen beizubehalten. 
+The measured value is multiplied by 100 to maintain the two decimal places. 
 
-Da der Wert für die Temperatur auch in den negativen Bereich fallen kann, muss zunächst der Wert in einen positven konvertviert werden und anschließend mit einem Wert multipliziert werden, um die Nachkommastellen zu behalten. 
+As the value for the temperature can also fall into the negative range, the value must first be converted into a positive one and then multiplied by one to retain the two decimal places. 
 
 {% include image.html image=page.imageTemperatur %}
 
-In diesem Beispiel wird ein Temperatursensor verwendet, der Werte ab -18 Grad Celsius gemessen hat und die Temperatur mit einer Genauigkeit von 0.0013 Grad Celsius rausgibt. 
+This example uses a temperature sensor that has measured values from -18 degrees Celsius and outputs the temperature with an accuracy of 0.0013 degrees Celsius. 
 
 __TTN__:
-In der TTN Console kommen nun zwei verschiedene Werte von der senseBox an. Diese Werte müssen nun mithilfe eines Decoders wieder von Bytes zu den ursprünglichen Werten decodiert werden. Den Decoder kannst du unter Payloads definieren:
+In the TTN Console two different values are now coming from the senseBox. These values must now be decoded back from bytes to the original values using a decoder. You can define the decoder under Payloads:
 
 {% include image.html image=page.image13 %}
 
-```js
+``js
 /**
  * Convert the array of bytes to an unsigned integer, LSB. 
  *
- * BEWARE: This is only safe up to 0x1FFFFFFFFFFFFF, so: 6 bytes.
+ * BEWARE: This is only safe up to 0x1FFFFFFFFFFF, so: 6 bytes.
  */
 function uint(bytes) {
 
@@ -103,7 +97,7 @@ function uint(bytes) {
 }
 ```
 
-Hier kann nun der Decoder definiert werden
+Here you can now define the decoder
 ```js
 function Decoder(bytes) {
 
@@ -127,19 +121,19 @@ function Decoder(bytes) {
   return decoded;
 }
 ```
-Die Funktion nimmt die ersten zwei Bytes und konvertiert sie zu zum Messwert für Luftfeuchtigkeit. Die nächsten zwei Bytes werden zu einem Messwert für die Temperatur konvertiert. Wenn du die openSenseMap als Endpunkt (`https://ttn.opensensemap.org/v1.1`)in der TTN HTTP integration verwendest, werden die Messwerte mit deinen Sensor IDs verknüpft und die Messwerte auf der openSenseMap angezeigt. Mehr über die openSenseMap TTN integration findest du [hier](https://sensebox.github.io/books-v2/osem/ttn_integration.html)
+The function takes the first two bytes and converts them to the humidity reading. The next two bytes are converted to a temperature reading. If you use the openSenseMap as endpoint (`https://ttn.opensensemap.org/v1.1`) in the TTN HTTP integration, the readings are linked to your sensor IDs and the readings are displayed on the openSenseMap. More about the openSenseMap TTN integration can be found [here](https://sensebox.github.io/books-v2/osem/ttn_integration.html)
 
-### Wichtige Punkte
-Einige wichtige Punkte sind zu beachten:
+### Important points
+Some important points should be noted:
 
-→ Die Dekodierung schlägt fehl / gibt falsche Werte zurück, wenn du nicht alles sendest, was dekodiert werden muss. Wenn der Decoder z.B. einen Feuchte- und einen Temperaturwert akzeptiert, die senseBox aber nur einen Feuchtewert sendet, erhälst du keine korrekten Werte.
+→ Decoding fails / returns wrong values if you do not send everything that needs to be decoded. For example, if the decoder accepts a humidity and a temperature value, but the senseBox only sends a humidity value, you will not get correct values.
 
-→ Beim senden von Werten, die größer als 3 Bytes sind, ist es ein wenig anders. Werte für die Helligkeit können im Maximum größer sein als ein 2 Byte Integer. Daher werden 3 Bytes benötigt. Du kannst das Ganze wie folgt senden: 
+→ When sending values larger than 3 bytes it is a little bit different. Values for brightness can be larger than a 2 byte integer at maximum. Therefore 3 bytes are needed. You can send the whole thing as follows: 
 
 {% include image.html image=page.imageIlluminance%}
 
 
-und wie folgt decodieren:
+and decode as follows:
 ```js
 var lux = bytes[i] | bytes[i+1]<<8 | bytes[i+2]<<16;
 i = i + 3 // increment counter afterwards
@@ -147,7 +141,7 @@ i = i + 3 // increment counter afterwards
 
 ## Cayenne LPP
 {% include image.html image=page.image3 %}
-Das [Cayenne Low Power Payload Format](https://community.mydevices.com/t/cayenne-lpp-2-0/7510) bietet eine einfache Möglichkeit Daten über das LoRaWAN Netzwerk zu versenden. Die Daten können direkt über einen vorhanenden Decoder wieder in ein lesbares Format decodiert werden. Für unterschiedliche Messwerte stehen verschiedenen Blöcke bereit, um zu Gewährleiten, dass alle Nachkommastellen korrekt übertragen werden. 
+The [Cayenne Low Power Payload Format](https://community.mydevices.com/t/cayenne-lpp-2-0/7510) offers an easy way to send data over the LoRaWAN network. The data can be decoded directly into a readable format using an existing decoder. Different blocks are available for different measured values to ensure that all decimal places are transmitted correctly. 
 
 {% include image.html image=page.image5 %}
 {% include image.html image=page.image6 %}
@@ -158,6 +152,6 @@ Das [Cayenne Low Power Payload Format](https://community.mydevices.com/t/cayenne
 {% include image.html image=page.image11 %}
 {% include image.html image=page.image12 %}
 
-In der TTN Konsole kannst du unter __Payload__ den Decoder auswählen. Wähle dort Cayenne LPP aus und die Werte werden automatisch decodiert.
+In the TTN console you can select the decoder under __Payload__. Select Cayenne LPP and the values will be decoded automatically.
 
 {% include image.html image=page.image14 %}

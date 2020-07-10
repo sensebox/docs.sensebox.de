@@ -3,26 +3,25 @@ date: 2020-04-07
 title: Web - WiFi
 title_order: 5
 categories: Blockly
-description: Erste Schritte Web
+description: First Steps WiFi
 type: Document
 
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
-image1: /images/2020-04-08-blockly-web/blockly-Web-Wifi-1.svg
-image2: /images/2020-04-08-blockly-web/blockly-Web-Wifi-2.svg
+image1: /images/2020-04-08-blockly-web/blockly-Web-Wifi-1-en.svg
+image2: /images/2020-04-08-blockly-web/blockly-Web-Wifi-2-en.svg
 
 
 ---
-
-## Allgemeines
-In Blockly hast du die verschieden Möglichkeiten Projekte umzusetzen, die mit dem Internet arbeiten. Für alle musst du deine senseBox zuerst mit den Internet verbinden.
+## General
+In Blockly you have the different possibilities to realize projects that work with the internet. For all of them you have to connect your senseBox to the internet first.
 
 ## WiFi
-Mit dem `Verbinde mit WLAN`-Block kannst du deine senseBox im Setup() mit einem WLAN-Netzwerk verbinden. Unter SSID muss der Netzwerkname und unter Passwort das WLAN-Zugangspasswort eingegeben werden.
+With the `Connect to WiFi` block you can connect your senseBox to a WiFi network in Setup(). Under SSID you have to enter the network name and under Password the WiFi access password.
 
 {% include image.html image=page.image1 %}
 <br>
-Mit dem `Initialisiere WLAN Access Point`-Block kann deine senseBox ein WLAN-Netzwerk erstellen, in welches du mit anderen Geräten beitreten kannst. Im Textfeld SSID kannst du den Names deines Netzwerks festlegen.
+With the `Initialize WiFi Access Point` block, your senseBox can create a WLAN network that you can join with other devices. In the text field SSID you can set the name of your network.
 
 {% include image.html image=page.image2 %}

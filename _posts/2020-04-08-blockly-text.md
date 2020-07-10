@@ -3,49 +3,48 @@ date: 2020-04-07
 title: Text
 title_order: 10
 categories: Blockly
-description: Grundlagen zur Kategorie Text
+description: First Steps Text
 type: Document
 
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
 image1: /images/2020-04-08-blockly-text/blockly-text-1.svg
-image2: /images/2020-04-08-blockly-text/blockly-text-2.svg
-image3: /images/2020-04-08-blockly-text/blockly-text-3.svg
-image4: /images/2020-04-08-blockly-text/blockly-text-4.svg
-image5: /images/2020-04-08-blockly-text/blockly-text-5.svg
-image6: /images/2020-04-08-blockly-text/blockly-text-6.gif
+image2: /images/2020-04-08-blockly-text/blockly-text-2-en.svg
+image3: /images/2020-04-08-blockly-text/blockly-text-3-en.svg
+image4: /images/2020-04-08-blockly-text/blockly-text-4-en.svg
+image5: /images/2020-04-08-blockly-text/blockly-text-5-en.svg
+image6: /images/2020-04-08-blockly-text/blockly-text-6-en.gif
 ---
 
-## Textfeld
-Mit dem Textfeld Block `" "` kannst du Text erstellen. Schreibe den gewünschten Text dazu in das Feld zwischen den Anführungszeichen. 
+## Text field
+With the text field Block `" "` you can create text. Write the desired text in the field between the quotation marks. 
 
 {% include image.html image=page.image1 %}
 
-## Erstelle Text aus
-Mit dem `Erstelle Text aus`-Block kannst du einerseits Messwerte in Text umwandeln und andererseits um zusammengesetze Texte (aus mehreren Textfeldern, Zahlen, Messwerten oder Variablen) zu erstellen. 
+## Create text with
+With the `Create text with` block you can convert measured values into text on the one hand and on the other hand to create compound texts (from several text fields, numbers, measured values or variables). 
 
 {% include image.html image=page.image2 %}
 
-Der normale Erstelle-Text-Aus-Block kann mit einem Klick auf das Zahnrad erweitert werden. Du kannst noch weitere Elemente durch Klicken und Ziehen hinzufügen um Text aus mehreren Elementen zu erstellen. Nach dem Bearbeiten kann mit einem weiteren Klick auf das Zahnrad das Fenster wieder geschlossen werden. 
+The normal `Create Text with` block can be expanded by clicking on the gear wheel. You can add more elements by clicking and dragging to create text from multiple elements. After editing you can close the window again by clicking on the gear wheel again. 
 
 {% include image.html image=page.image6 %}
-## Text anhängen
-
-Mit dem `Text anhängen`-Block kannst du Text an eine bestehende Variable anhängen.
+## Append text
+With the `Append Text` block you can append text to an existing variable.
 
 {% include image.html image=page.image3 %}
 
-## Länge
+## Length of
 
-Mit dem `Länge`-Block kannst du dir die Länge eines Textblocks ausgeben lassen.
+With the `Length of` block you can get the length of a text block.
 
 {% include image.html image=page.image4 %}
 
-> Der Textblock "senseBox" wäre zum Beispiel 8 Einheiten lang.
+> For example, the text block "senseBox" would be 8 units long.
 
-## ist leer?
+## is empty?
 
-Mit dem `ist leer?`-Block kannst du überprüfen, ob ein gegebener Textblock leer ist (die Länge 0 hat). Das Ergebnis ist entweder wahr (wenn der gegebene Textblock tatsächlich leer ist) oder falsch (wenn sich Zeichen im Textblock befinden). 
+With the `is empty` block you can check if a given text block is empty (has length 0). The result is either true (if the given text block is actually empty) or false (if there are characters in the text block). 
 
 {% include image.html image=page.image5 %}

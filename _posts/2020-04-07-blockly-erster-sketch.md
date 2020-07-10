@@ -1,9 +1,9 @@
 ---
 date: 2020-04-07
-title: Dein erster Sketch
+title: Your first sketch
 title_order: 1 # Indicates the order of apperance on the overview pages
 categories: Blockly
-description: Schreibe dein erstes Programm für die senseBox
+description: Write your first program for the senseBox
 type: Document
 set: blockly-erste-schritte
 set_order: 3
@@ -11,41 +11,40 @@ set_order: 3
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
-image1: /images/2020-04-08-blockly-erste-schritte/blockly-es-1.svg
-image2: /images/2020-04-08-blockly-erste-schritte/blockly-es-2.svg
-image3: /images/2020-04-08-blockly-erste-schritte/blockly-es-3.svg
+image1: /images/2020-04-08-blockly-erste-schritte/blockly-fs-1.svg
+image2: /images/2020-04-08-blockly-erste-schritte/blockly-fs-2.svg
+image3: /images/2020-04-08-blockly-erste-schritte/blockly-fs-3.svg
 
 ---
+To get to know Blockly you write a simple program that makes the built-in LED on the senseBox blink.
 
-Um Blockly etwas kennenzulernen schreibst du ein einfaches Programm, welches die eingebaute LED auf der senseBox blinken lässt.
+## Programming
 
-## Programmierung
+### Step 1: Setup and endless loop
 
-### Schritt 1: Setup und Endlosschleife
-
-Dieser Block wird direkt beim Starten der Oberfläche geladen und sollte immer verwendet werden. Die zwei Basisfunktionen `Setup()` und `Endlosschleife()` werden immer benötigt, um ein funtkionsfähiges Programm zu schreiben.
-Alle Blöcke, die innerhalb der `Setup()`-Funktion stehen, werden nur zu Beginn des Programmes einmal ausgeführt. In dieser Funktion wird zum Beispiel das Display initialsiert oder die WLAN Verbindung hergestellt. Alle Blöcke, die innerhalb der `Endlosschleife()` stehen, werden fortlaufend ausgeführt. Der Mikrocontroller führt hierbei alle Blöcke immer wieder von oben nach unten hin aus. In der `Endlosschleife()` werden zum Beispiel die Sensoren ausgelesen oder auch die Messwerte auf SD-Karte gespeichert oder ins Internet übertragen.
+This block is loaded directly when the interface is started and should always be used. The two basic functions `Setup()` and `Loop()` are always needed to write a working program.
+All blocks within the `Setup()` function are only executed once at the beginning of the program. In this function for example the display is initialized or the WLAN connection is established. All blocks that are within the `Loop()` function are executed continuously. The microcontroller executes all blocks again and again from top to bottom. In the 'loop()`, for example, the sensors are read out or the measured values are stored on an SD card or transferred to the Internet.
 
 {% include image.html image=page.image1 %}
 
-### Schritt 2: Die eingebaute LED einschalten
+### Step 2: Switch on the built-in LED
 
-Um die eingebaute LED anzuschalten, musst du den `LED an digital`-Block in die Endlosschleife ziehen. Anschließend wählst du unter PIN "BUILTIN_1" und unter Status "Ein" aus.
+To switch on the built-in LED, you have to pull the 'LED on digital' block into an loop. Then select "BUILTIN_1" under PIN and "On" under Status.
 
 {% include image.html image=page.image2 %}
 
->Die eingebaute LED findest du über dem roten Reset-Knopf auf der senseBox MCU.
+>The built-in LED can be found above the red reset button on the senseBox MCU.
 
 
-### Schritt 3: Die eingebaute LED blinken lassen
+### Step 3: Let the built-in LED flash
 
-Um die eingebaute LED blinken zu lassen, ist es nötig, sie mit einem weiteren `LED an digital` Block wieder auszuschalten. Zusätzlich muss nach dem An- sowie Ausschalten eine Pause eingefügt werden, damit das Blinken überhaupt sichtbar ist. Den `Warte` Block findest du in der Kategorie `Zeit`.
+To make the built-in LED flash, it is necessary to switch it off again with another 'LED on digital' block. In addition, a pause must be inserted after switching on and off so that the flashing is visible at all. You can find the 'Waiting' block in the category 'Time'.
 
 {% include image.html image=page.image3 %}
 
 <div class="panel panel-info">
   <div class="panel-heading">
-1000 Millisekunden sind 1 Sekunde
+1000 milliseconds are 1 second
   </div>
   <div class="panel-body">
   </div>

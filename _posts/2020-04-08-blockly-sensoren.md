@@ -1,67 +1,67 @@
 ---
 date: 2020-04-07
-title: Sensoren
+title: Sensors
 title_order: 2
 categories: Blockly
-description: Grundlagen zur Kategorie Sensoren
+description: First Steps Sensors
 type: Document
 
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
-image0: /images/2020-04-08-blockly-sensoren/blockly-sensoren-0.svg
-image1: /images/2020-04-08-blockly-sensoren/blockly-sensoren-1.svg
-image2: /images/2020-04-08-blockly-sensoren/blockly-sensoren-2.svg
-image3: /images/2020-04-08-blockly-sensoren/blockly-sensoren-3.svg
-image4: /images/2020-04-08-blockly-sensoren/blockly-sensoren-4.svg
-image5: /images/2020-04-08-blockly-sensoren/blockly-sensoren-5.svg
-image6: /images/2020-04-08-blockly-sensoren/blockly-sensoren-6.svg
-image7: /images/2020-04-08-blockly-sensoren/blockly-sensoren-7.svg
-image8: /images/2020-04-08-blockly-sensoren/blockly-sensoren-8.svg
-image9: /images/2020-04-08-blockly-sensoren/blockly-sensoren-9.svg
-image10: /images/2020-04-08-blockly-sensoren/blockly-sensoren-10.svg
+image0: /images/2020-04-08-blockly-sensoren/blockly-sensoren-0-en.svg
+image1: /images/2020-04-08-blockly-sensoren/blockly-sensoren-1-en.svg
+image2: /images/2020-04-08-blockly-sensoren/blockly-sensoren-2-en.svg
+image3: /images/2020-04-08-blockly-sensoren/blockly-sensoren-3-en.svg
+image4: /images/2020-04-08-blockly-sensoren/blockly-sensoren-4-en.svg
+image5: /images/2020-04-08-blockly-sensoren/blockly-sensoren-5-en.svg
+image6: /images/2020-04-08-blockly-sensoren/blockly-sensoren-6-en.svg
+image7: /images/2020-04-08-blockly-sensoren/blockly-sensoren-7-en.svg
+image8: /images/2020-04-08-blockly-sensoren/blockly-sensoren-8-en.svg
+image9: /images/2020-04-08-blockly-sensoren/blockly-sensoren-9-en.svg
+image10: /images/2020-04-08-blockly-sensoren/blockly-sensoren-10-en.svg
 
 ---
 
-## Allgemeines
-In der senseBox befinden sich verschiedene Umweltsensoren. In diesem Kapitel beschränken wir uns zunächst auf die bereits auf der senseBox MCU verbauten, oder per JST-Kabel anschließbaren Sensoren. 
+## General
+Various environmental sensors are located in the senseBox. In this chapter, we will first restrict ourselves to the sensors already installed on the senseBox MCU or those that can be connected via JST cable. 
 
-> Um Messwerte auszulesen und anzeigen zu lassen verwendest du am besten das Display. In diesem Kapitel nutzen wir eine Art Minimalbeispiel um Messwerte auf dem Display anzeigen zu lassen.
+> To read out and display measured values, it is best to use the display. In this chapter we use a kind of minimal example to show measured values on the display.
 
-## Beschleinigungssensor (BMX055)
-Der Beschleunigungssensor ist bereits auf der senseBox MCU verbaut. Er kann dir die Beschleunigung in X-, Y-, und Z-Achse und die Gesamtbeschleunigung angeben. Dabei kannst du den Messbereich zwischen 2g, 4g, 8g und 16g wählen.
+## Accelerometer (BMX055)
+The acceleration sensor is already installed on the senseBox MCU. It can give you the acceleration in X-, Y-, and Z-axis and the total acceleration. You can choose the measuring range between 2g, 4g, 8g and 16g.
 
 {% include image.html image=page.image0 %}
 
->  Die mittlere Erdbeschleunigung wird in *g* angegeben und beträgt abgerundet 9,81 m/s<sup>2</sup>
+> The mean acceleration due to gravity is given in *g* and is rounded off to 9.81 m/s<sup>2</sup>
 
 ## Button
-Ein Button ist bereits auf der senseBox MCU verbaut. Zusätzliche Buttons können über die drei Digital Ports angeschlossen werden. Im Dropdown Menü können verschiedene Modi für den Button ausgewählt werden:
+A button is already installed on the senseBox MCU. Additional buttons can be connected via the three digital ports. In the dropdown menu different modes for the button can be selected:
 
-- __ist gedrückt__: Mit diesem Modus kannst du abfragen ob der Block gerade gedrückt wird. Du erhältst entweder den Wert TRUE oder FALSE.
-- __wurde gedrückt__: Mit diesem Modus kannst du abfragen ob der Block gedrückt wurde. Erst wenn der Knopf gedrückt und wieder losgelassen wurde erhältst du TRUE zurück
-- __als Schalter__: Wenn du diesen Modus verwendest kannst du den Knopf wie ein Lichtschalter verwenden. Der Status wird gespeichert bis der Button erneut gedrückt wird
+- __is pressed__: With this mode you can ask if the block is pressed at the moment. You will get either the value TRUE or FALSE.
+- __was pressed__: With this mode you can ask if the block was pressed. Only if the button was pressed and released you will get TRUE back
+- __as switch__: If you use this mode you can use the button like a light switch. The status is saved until the button is pressed again
 
 
 {% include image.html image=page.image10 %}
 
-## Temperatur- und Luftfeuchtigkeitssensor (HDC1080)
-Der Temperatur- und Luftfeuchtigkeitssensor wird an einen der fünf I2C/Wire Ports gesteckt. Er kann dir die Temperatur in °C und die relative Luftfeuchtigkeit in % angeben.
+## Temperature and humidity sensor (HDC1080)
+The temperature and humidity sensor is plugged into one of the five I2C/Wire ports. It can give you the temperature in °C and the relative humidity in %.
 
 {% include image.html image=page.image1 %}
 
-## Temperatur- und Luftdrucksensor (BMP280)
-Der Temperatur- und Luftdrucksensor wird an einen der fünf I2C/Wire Ports gesteckt. Er kann dir die Temperatur in °C, den Luftdruck in Pa und die Höhe über NN in m angeben.
+## Temperature and Air Pressure Sensor (BMP280)
+The temperature and air pressure sensor is plugged into one of the five I2C/Wire ports. It can give you the temperature in °C, the air pressure in Pa and the altitude above sea level in m.
 
 {% include image.html image=page.image2 %}
 
-## Helligkeits- und UV-Sensor (TSL45315 & VEML6070)
-Der Helligkeits- und UV-Sensor wird an einen der fünf I2C/Wire Ports angeschlossen. Er kann dir die Helligkeit in Lux und die UV-Intensität in &mu;W/cm<sup>2</sup> angeben.
+## Brightness and UV sensor (TSL45315 & VEML6070)
+The brightness and UV sensor is connected to one of the five I2C/Wire ports. It can tell you the brightness in lux and the UV intensity in &mu;W/cm<sup>2</sup>.
 
 {% include image.html image=page.image3 %}
 
-## Umweltsensor (BME680)
-Der Umweltsensor wird an einen der fünf I2C-Wire Ports angeschlossen. Er kann dir die Temperatur in °C, die relative Luftfeuchtigkeit in %, den Luftdruck in Pa und die Innenraumluftqualität (IAQ) auf einer Skala von 0-500 angegeben.
+## Environmental sensor (BME680)
+The environmental sensor is connected to one of the five I2C-Wire ports. It can give you the temperature in °C, relative humidity in %, air pressure in Pa and indoor air quality (IAQ) on a scale of 0-500.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
@@ -74,7 +74,7 @@ Der Umweltsensor wird an einen der fünf I2C-Wire Ports angeschlossen. Er kann d
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-61z8">Wert<br></th>
+    <th class="tg-61z8">Value<br></th>
     <th class="tg-xdoy">0-50</th>
     <th class="tg-xdoy">51-100</th>
     <th class="tg-xdoy">101-150</th>
@@ -84,14 +84,14 @@ Der Umweltsensor wird an einen der fünf I2C-Wire Ports angeschlossen. Er kann d
     <th class="tg-xdoy">&gt; 350</th>
   </tr>
   <tr>
-    <td class="tg-w810">Luftqualität</td>
-    <td class="tg-ptrm">Ausgezeichnet</td>
+    <td class="tg-w810">Air Quality</td>
+    <td class="tg-ptrm">Excellent</td>
     <td class="tg-ptrm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-ptrm">Leicht<br>verschmutzt</td>
-    <td class="tg-ptrm">Moderat<br>verschmutzt</td>
-    <td class="tg-ptrm">Stark<br>verschmutzt</td>
-    <td class="tg-ptrm">Erheblich<br>verschmutzt</td>
-    <td class="tg-ptrm">Extrem<br>verschmutzt</td>
+    <td class="tg-ptrm">Lightly<br>polluted</td>
+    <td class="tg-ptrm">Moderately<br>polluted</td>
+    <td class="tg-ptrm">Heavily<br>polluted</td>
+    <td class="tg-ptrm">Severely<br>polluted</td>
+    <td class="tg-ptrm">Extremly<br>polluted</td>
   </tr>
 </table>
 <br>
@@ -99,30 +99,31 @@ Der Umweltsensor wird an einen der fünf I2C-Wire Ports angeschlossen. Er kann d
 
 {% include image.html image=page.image7 %}
 
-Neben den oben genannten Parametern kann der Sensor dir zusätzlich den Kalibrierungswert (eine Statusmeldung) und Teilgrößen CO<sub>2</sub>-Äquivalent und Atemluft VOC der Innenraumluftqualität angeben.
+In addition to the parameters mentioned above, the sensor can also give you the calibration value (a status message) and partial quantities CO<sub>2</sub>-equivalent and breathing air VOC of the indoor air quality.
 
-## Feinstaubsensor (SDS011)
-Der Feinstaubsensor wird an einem der zwei UART/Serial Ports angeschlossen und im Block der jeweilige Port ausgewählt. Er kann dir die Feinstaubkonzentration PM2.5 und PM10 in &mu;g/cm<sup>3</sup> angeben.
+## Fine particular sensor (SDS011)
+The fine particular sensor is connected to one of the two UART/Serial ports and the respective port is selected in the block. It can give you the fine dust concentration PM2.5 and PM10 in &mu;g/cm<sup>3</sup>.
 
 {% include image.html image=page.image4 %}
 
-## Bodentemperatur- und Bodenfeuchtesensor (SMT50)
-Der Bodentemperatur-  und Bodenfeuchtesensor wird ein einen der drei Digital Ports angeschlossen und im Block der jeweilge Port ausgewählt. Er kann dir die Bodentemperatur in °C und den volumetrischen Wassergehalt des Bodens in %.
+## Soil temperature and soil moisture sensor (SMT50)
+The soil temperature and soil moisture sensor is connected to one of the three digital ports and the respective port is selected in the block. It can display the soil temperature in °C and the volumetric water content of the soil in %.
 
 {% include image.html image=page.image5 %}
 
-## GPS-Modul (CAM-M8Q)
-Das GPS-Modul wird an einen der fünf I2C/Wire Ports angeschlossen. Es kann dir den Breitengrad, den Längengrad, die Höhe über NN in m, die aktuelle Geschwindigkeit, einen Zeitstempel, die Uhrzeit und das Datum angeben.
+## GPS module (CAM-M8Q)
+The GPS module is connected to one of the five I2C/Wire ports. It can give you latitude, longitude, altitude in meters, current speed, timestamp, time and date.
 
 {% include image.html image=page.image6 %}
 
-## Ultraschall Abstandssensor
-Der Ultraschall-Distanzsensor wird an einen der drei Digital Ports angeschlossen und im Block der jeweilige Port ausgewählt. Er kann dir die Entfernung in cm angeben.
+## Ultrasonic distance sensor
+The ultrasonic distance sensor is connected to one of the three digital ports and the respective port is selected in the block. It can give you the distance in cm.
 
 {% include image.html image=page.image8 %}
 
-## Mikrofon
-Das Mikrofon wird an einen der drei Digital Ports angeschlossen und im Block der jeweilige Port ausgewählt. Er kann dir die Lautstärke als Pegel zwischen 0 und 5V ausgeben.
+## Microphone
+The microphone is connected to one of the three digital ports and the respective port is selected in the block. It can give you the volume as a level between 0 and 5V.
+
 
 {% include image.html image=page.image9 %}
 

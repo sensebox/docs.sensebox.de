@@ -10,12 +10,12 @@ bild: /images/2020-05-06-zubehoer-expander/hub_bottom.png
 
 
 ---
-Der Sensor-Hub ist eine Erweiterung um mehr Sensoren an die senseBox anzuschließen. Dafür stehen vier weitere Ports zum Anschluss von JST Kabeln zur Verfügung.
+The sensor hub is an extension to connect more sensors to the senseBox. Four additional ports are available for connecting JST cables.
 
 {% include image.html image=page.bild %}
 
-## Technische Informationen
+## Technical Information
 
-* "Plug-in-and-Go" senseBox kompatibel durch Breakout-Board mit JST-Anschluss
-* 4x JST Anschluss
+* "Plug-in-and-Go" senseBox compatible through breakout board with JST connector
+* 4x JST connection
 

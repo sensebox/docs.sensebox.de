@@ -7,18 +7,18 @@ type: Document
 resources:
 bild: /images/2020-05-06-zubehoer-display/display.png
 ---
-Mit dem senseBox OLED Display lassen sich auf 128x64 Pixeln Messwerte, Statusmeldungen und vieles mehr anzeigen.
+With the senseBox OLED display, measured values, status messages and much more can be displayed on 128x64 pixels.
 
 {% include image.html image=page.bild %}
 
-## Technische Informationen
+## Technical Information
 
-* "Plug-in-and-Go" senseBox kompatibel durch Breakout-Board mit JST-Anschluss
-* Maße: 24mm x 25mm x 19mm
-* Auflösung von 128x64 Pixeln
-* Panel Größe: 26,70x19,26x1,45 (mm)
+* "Plug-in-and-Go" senseBox compatible through breakout board with JST connector
+* Dimensions: 24mm x 25mm x 19mm
+* Resolution of 128x64 pixels
+* Panel size: 26.70x19.26x1.45 (mm)
 
 
-## Programmierung
+## Programming
 
-Zur Programmierung des Displays siehe im Kapitel [Blockly für die senseBox - Display](/blockly/blockly-Display/).
+To program the display, see the chapter [Blockly for the senseBox - Display](/blockly/blockly-display/).

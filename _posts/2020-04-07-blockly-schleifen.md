@@ -1,31 +1,29 @@
 ---
 date: 2020-04-07
-title: Schleifen
+title: Loops
 title_order: 8
 categories: Blockly
-description: Verwendung von Schleifen in Blockly
+description: Usage of Loops in Blockly
 type: Document
 
-image1: /images/2020-04-08-blockly-schleifen/blockly-schleifen-1.svg
-image2: /images/2020-04-08-blockly-schleifen/blockly-schleifen-2.svg
-image3: /images/2020-04-08-blockly-schleifen/blockly-schleifen-3.svg
+image1: /images/2020-04-08-blockly-schleifen/blockly-schleifen-1-en.svg
+image2: /images/2020-04-08-blockly-schleifen/blockly-schleifen-2-en.svg
+image3: /images/2020-04-08-blockly-schleifen/blockly-schleifen-3-en.svg
 ---
+## General
+Loops are among the most important control structures in programming. They help you whenever you want to have one or more statements execute a certain number of repetitions often. There are different types of loops in Blockly, but their functions are always very similar. You can find all loops in the category of the same name in the Toolbox.
 
-## Allgemeines
-Schleifen gehören zu den wichtigsten Kontrollstrukturen beim Programmieren. Sie helfen dir immer dann, wenn du eine oder mehrere Anweisungen eine gewisse Anzahl von Wiederholungen oft ausführen lassen willst. In Blockly gibt es verschiedene Arten von Schleifen, deren Funktionsweisen allerdings immer sehr ähnlich sind. Du findest alle Schleifen in der gleichnamigen Kategorie in der Toolbox.
-
-## Wiederhole X mal Schleife
-Die einfachste Schleife ist die `Wiederhole X mal`-Schleife. In ihr werden alle Befehle innerhalb der Schleife X-mal wiederholt.
+## Repeat X times loop
+The simplest loop is the 'Repeat X times' loop. In this loop, all commands within the loop are repeated X times.
 
 {% include image.html image=page.image1 %}
 
-## Wiederhole solange Schleife
-Die zweite  Schleife ist die `Wiederhole solange/bis`-Schleife. Die in der Schleife eingefügten Befehle werden nur dann ausgeführt, wenn eine im freien Blockabschnitt angeknüpfte Bedingung zutrifft/wahr ist. Im Dropdown-Menü des Blockst lässt sich auswählen ob die Befehle ausgeführt werden soll **bis** eine Bedingung zutrifft, oder **solang** eine Bedindung zutrifft.
+## Repeat while loop
+The second loop is the 'Repeat until/for' loop. The commands inserted in the loop are only executed if a condition attached in the free block section is true. In the drop-down menu of the blockst you can select whether the commands should be executed **while** a condition applies, or **as long as** a condition applies.
 
 {% include image.html image=page.image2 %}
 
-## Schleife mit Laufvariable
-Die dritte Schleife wird mithilfe einer Laufvariable umgesetzt, welche auch innerhalb des Programms eingesetzt werden kann. Zuerst wird eine Variable mit einem Startwert initialisiert und ein Maximalwert für sie festgelegt. Dann wird die Laufvariable nach jedem Durchgang um die angegebene Zahl erhöht. So kann für jeden Zustand der Laufvariable eine Anweisung festgelegt werden.
+## Loop with run variable
+The third loop is implemented by means of a run variable, which can also be used within the program. First, a variable is initialized with a start value and a maximum value is set for it. Then the run variable is increased by the specified number after each run. Thus, an instruction can be defined for each state of the run variable.
 
 {% include image.html image=page.image3 %}
-

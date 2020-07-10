@@ -10,31 +10,30 @@ resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
 
-image5: /images/2020-04-08-blockly-web/blockly-Web-Telegram-1.svg
-image6: /images/2020-04-08-blockly-web/blockly-Web-Telegram-2.svg
-image7: /images/2020-04-08-blockly-web/blockly-Web-Telegram-3.svg
-image8: /images/2020-04-08-blockly-web/blockly-Web-Telegram-4.svg
+image5: /images/2020-04-08-blockly-web/blockly-Web-Telegram-1-en.svg
+image6: /images/2020-04-08-blockly-web/blockly-Web-Telegram-2-en.svg
+image7: /images/2020-04-08-blockly-web/blockly-Web-Telegram-3-en.svg
+image8: /images/2020-04-08-blockly-web/blockly-Web-Telegram-4-en.svg
 
 ---
 
-
 ## Telegram
-Mit [Telegram](https://www.telegram.org) kannst du einen Chatbot bauen, der dir Hiflt deine senseBox von überall per Textnachricht auszulesen. 
+With [Telegram](https://www.telegram.org) you can build a chatbot, which helps you to read your senseBox from everywhere via text message. 
 
-> Telegram ist ein kostenloser Messenger, der die Möglichkeit bietet auf einfachste Art Chatbots anzulegen. Um diesen nutzen zu können benötigst du einen Telegram Account. Bei der Erstellung deines Chatborts wird die dann ein Token angezeigt, welches du in Blockly verwenden kannst um dich zu authentifizieren. Mehr zur Erstellung eines Chatbots findest du im Projekt [Telegram Chatbot für die senseBox mit Blockly](https://sensebox.de/projects/de/2019-12-15-telegram-blockly).
+> Telegram is a free messenger, which offers the possibility to create chatbots in the easiest way. To use it you need a Telegram account. When you create your chatbord a token will be displayed which you can use in Blockly to authenticate yourself. More about creating a chatbot can be found in the project [Telegram chatbot for the senseBox with Blockly](https://sensebox.de/projects/de/2019-12-15-telegram-blockly).
 
-Mit dem `Telegram Bot initialisieren`-Block wird im Setup() die senseBox darauf vorbereitet Daten auf Anfrage an den Chatbot zu senden. Im Textfeld "Token" musst du den beim Erstellen deines Chatbots angezeigten Token eintragen.
+With the 'Initialize Telegram Bot' block in Setup() the senseBox is prepared to send data to the chatbot on request. In the text field "Token" you have to enter the token that is displayed when creating your chatbot.
 
 {% include image.html image=page.image5 %}
 
-Anschließend kann mit dem Block `Telegram mache` in der Endlosschleife() programmiert werden, was genau der Chatbot ausführen soll.
+Afterwards, the block 'Telegram do' can be used to program in the endless loop() what exactly the chatbot should do.
 
 {% include image.html image=page.image6 %}
 
-Die Blöcke `Bei Nachricht` und `Sende Nachricht` können im freien Blockabschnitt des `Telegam mache`-Blocks platziert werden um festzulegen was die senseBox beim Empfang einer bestimmten Nachricht ausführen soll.
+The `On Message` and `Send Message` blocks can be placed in the free block section of the 'Make Legam' block to specify what the senseBox should do when it receives a particular message.
 
 <table style="border-collapse:collapse;border-spacing:0;border:none" class="tg"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;text-align:left;vertical-align:middle">{% include image.html image=page.image7 %}</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;text-align:left;vertical-align:top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;text-align:left;vertical-align:top">{% include image.html image=page.image8 %}</th></tr></table>
 
-Mit dem `Bei Nachricht`-Block kann eine Aktion festgelegt werden, die die senseBox ausführen soll wenn eine bestimmte Nachricht über Telegram eintrifft. Zum Beispiel eine LED an- oder ausschalten.
+With the `On Message` block you can define an action that the senseBox should perform when a certain message arrives via telegram. For example switching a LED on or off.
 
-Mit dem `Sende Nachricht`-Block kann eine Nachricht über Telegram an den Nutzer des Bots gesendet werden.
+With the `Send Message` block a message can be sent via telegram to the user of the bot.

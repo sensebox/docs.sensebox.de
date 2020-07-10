@@ -3,93 +3,93 @@ date: 2020-04-07
 title: Display  
 title_order: 3
 categories: Blockly
-description: Verwendung des Displays der senseBox
+description: Usage of the senseBox Display
 type: Document
 resources:
   - name: "Blockly.senseBox.de"
     link: https://blockly.sensebox.de
 image1: /images/2020-04-07-blockly-display/Display.png 
-image2: /images/2020-04-07-blockly-display/blockly-display-1.svg
-image3: /images/2020-04-07-blockly-display/blockly-display-2.svg
-image4: /images/2020-04-07-blockly-display/blockly-display-3.svg
-image5: /images/2020-04-07-blockly-display/blockly-display-4.svg
-image6: /images/2020-04-07-blockly-display/blockly-display-5.svg
-image7: /images/2020-04-07-blockly-display/blockly-display-6.svg
-image8: /images/2020-04-07-blockly-display/blockly-display-7.svg
+image2: /images/2020-04-07-blockly-display/blockly-display-1-en.svg
+image3: /images/2020-04-07-blockly-display/blockly-display-2-en.svg
+image4: /images/2020-04-07-blockly-display/blockly-display-3-en.svg
+image5: /images/2020-04-07-blockly-display/blockly-display-4-en.svg
+image6: /images/2020-04-07-blockly-display/blockly-display-5-en.svg
+image7: /images/2020-04-07-blockly-display/blockly-display-6-en.svg
+image8: /images/2020-04-07-blockly-display/blockly-display-7-en.svg
 ---
-## Allgemeines
-In der senseBox ist ein OLED-Display enthalten. Dieses kann benutzt werden um z.B. Text, Messwerte oder Graphen anzeigen zu lassen.
-Das Display hat eine Auflösung von 128x64 Pixeln. Das heißt 128 Pixel in horizontaler Richtung (x-Achse) und 64 Pixel in vertikaler Richtung (y-Achse). 
+## General
+An OLED display is included in the senseBox. This can be used to display text, measured values or graphs, for example.
+The display has a resolution of 128x64 pixels. This means 128 pixels in horizontal direction (x-axis) and 64 pixels in vertical direction (y-axis). 
 
 {% include image.html image=page.image1 %}
 
-Um Informationen auf dem Display anzeigen zu lassen muss dieses zuerst im `Setup()` initalisiert werden. Anschließend können in der `Endlosschleife()` die `Zeige auf dem Display`-Schleife und der `Display löschen`-Block platziert werden. Im freien Abschnitt des `Zeige auf Display`-Blocks kann dann anschließend festgelegt werden, was genau angezeigt werden soll. Der `Display löschen`-Block muss hinzugefügt werden, damit verschiedene Informationen nicht übereinander geschrieben werden.
+To show information on the display, it must first be initialized in the 'Setup()`. Afterwards in the `Endless Loop()` the `Show on Display` loop and the `Delete Display` block can be placed. In the free section of the 'Show on Display' block, you can then specify exactly what is to be displayed. The 'Clear Display' block must be added so that different information is not written on top of each other.
 
 {% include image.html image=page.image2 %}
 
-## Text/Zahl anzeigen
-Um Text oder eine Zahl anzeigen zu lassen, ziehe den `Schreibe Text/Zahl`-Block in den freien Abschnitt des `Zeige auf Display`-Blocks.
+## Display text/number
+To display text or a number, drag the 'Write text/number' block into the free section of the 'Point to display' block.
 
 {% include image.html image=page.image3 %}
 
-Der `Schreibe Text/Zahl`-Block verfügt über fünf Einstellungsmöglichkeiten:
-* **Schriftfarbe:** Hier kannst du wählen ob du mit weißer Schrift auf schwarzem Grund, oder mit schwarzer Schrift auf weißem Grund schreiben möchtest.
-* **Schriftgröße:** Hier kannst du einstellen, in welcher Größe dein Text, bzw. deine Zahl angezeigt werden soll. In Schriftgröße 1 ist ein Zeichen 8 Pixel hoch, in Schriftgröße 2 bereits 16 Pixel.
-* **x-Koordinate:** Hier legst du fest, an welcher x-Koordinate (siehe Abb. oben) du beginnen möchtest zu schreiben.
-* **y-Koordinate:** Hier legst du fest, an welcher y-Koordinate (siehe Abb. oben) du beginnen möchtest zu schreiben.
-* **Wert:** An diesen freien Blockabschnitt kann der jeweilige Text, die Zahl oder der Messwert angefügt werden.
+The 'Write text/number' block has five setting options:
+* Here you can choose if you want to write with white font on black background or with black font on white background.
+* Font size: Here you can choose in which size your text or number should be displayed. In font size 1 a character is 8 pixels high, in font size 2 already 16 pixels.
+* **x-coordinate:** Here you can define at which x-coordinate (see figure above) you want to start writing.
+* **y-Coordinate:** Here you define at which y-coordinate (see figure above) you want to start writing.
+* **value:** The respective text, number or measured value can be added to this free block section.
 
 {% include image.html image=page.image4 %}
 
-## Punkt zeichnen
-Um einen Punkt auf dem Display anzeigen zu lassen, ziehe den `Zeichne Punkt`-Block in den freien Abschnitt des `Zeige auf Display`-Blocks.
+## Draw point
+To display a dot on the display, drag the 'Draw Dot' block into the free section of the 'Point to Display' block.
 
 {% include image.html image=page.image5 %}
 
-Der `Zeichne Punkt`-Block verfügt über vier Einstellungsmöglichkeiten:
-* **x-Koordinate:** Hier legst du fest, an welcher x-Koordinate (siehe Abb. oben) der Punkt gezeichnet werden soll.
-* **y-Koordinate:** Hier legst du fest, an welcher y-Koordinate (siehe Abb. oben) der Punkt gezeichnet werden soll.
-* **Radius:**  Hier kannst du den Radius des Kreises in Pixeln festelegen.
-* **Ausgefüllt:** Durch setzen oder entfernen des Häkchens legst du fest, ob dein Punkt ausgefüllt, also komplett weiß, oder nur seine Kontur gezeichnet werden soll.
+The 'Draw Dot' block has four setting options:
+* **x-Coordinate:** Here you define at which x-coordinate (see figure above) the point should be drawn.
+* **y-Coordinate:** Here you define at which y-coordinate (see figure above) the point should be drawn.
+* **Radius:** Here you can define the radius of the circle in pixels.
+**Filled:** By checking or unchecking this box you can define whether your point should be filled, i.e. completely white, or only its outline should be drawn.
 
-## Rechteck zeichnen
-Um ein Rechteck auf dem Display anzeigen zu lassen, ziehe den `Zeichne Rechteck`-Block in den freien Abschnitt des `Zeige auf Display`-Blocks.
+## Draw rectangle
+To display a rectangle on the display, drag the 'Draw rectangle' block into the free section of the 'Point to display' block.
 
 {% include image.html image=page.image6 %}
 
-Der `Zeichne Rechteck`-Block verfügt über vier Einstellungsmöglichkeiten:
-* **x-Koordinate:** Hier legst du fest, an welcher x-Koordinate (siehe Abb. oben) das Rechteck gezeichnet werden soll.
-* **y-Koordinate:** Hier legst du fest, an welcher y-Koordinate (siehe Abb. oben) das Rechteck gezeichnet werden soll.
-* **Breite:**  Hier kannst du die Breite des Rechtecks in Pixeln festlegen.
-* **Höhe:**  Hier kannst du die Höhe des Rechtseckts in Pixeln festlegen festelegen.
-* **Ausgefüllt:** Durch setzen oder entfernen des Häkchens legst du fest, ob dein Rechteck ausgefüllt, also komplett weiß, oder nur seine Kontur gezeichnet werden soll.
+The 'Draw rectangle' block has four setting options:
+* **x-coordinate:** Here you define at which x-coordinate (see figure above) the rectangle should be drawn.
+* **y-Coordinate:** Here you define at which y-coordinate (see figure above) the rectangle should be drawn.
+**Width:** Here you can define the width of the rectangle in pixels.
+* **Height:** Here you can define the height of the rectangle in pixels.
+**Filled:** By checking or unchecking the box, you can specify whether your rectangle should be filled, i.e. completely white, or only its outline should be drawn.
 
-## Diagramm zeichnen
-Um ein Diagramm in Echtzeit aus Messwerten zeichenen zu lassen, ziehe den `Zeichne Diagramm`-Block in den freien Abschnitt des `Zeige auf Display`-Blocks. Auf der x-Achse wird standardmäßig die Zeit abgebildet und auf der y-Achse dein ausgewählter Messwert.
+## Draw diagram
+To draw a diagram in real time from measured values, drag the 'Draw Diagram' block into the free section of the 'Point to Display' block. By default, the x-axis shows the time and the y-axis shows your selected measurement.
 
 {% include image.html image=page.image7 %}
 
-Der `Zeiche Diagramm`-Block ist der umfangreichste Block in der Kategorie `Display`. Er verfügt über elf Einstellungsmöglichkeiten:
-* **Title:** In das hier angeknüpfte Textfeld kannst du den Titel deines Diagramms eintragen.
-* **Y-Achsenbeschriftung:** In das hier angeknüpfte Textfeld kannst du die Beschriftung der y-Achse eintragen. 
-* **X-Achsenbeschriftung:** In das hier angeknüpfte Textfeld kannst du die Beschriftung der y-Achse eintragen.
+The 'Character Diagram' block is the most extensive block in the 'Display' category. It has eleven setting options:
+* **Title:** In the text field attached here you can enter the title of your diagram.
+* **Y-axis label:** In the text field attached here you can enter the label of the y-axis. 
+* **X-axis label:** In the text field attached here you can enter the label of the y-axis.
 
-> Achtung: Je länger deine Beschriftungen an x- und y-Achse sind, desto weniger Platz bleibt für das eigentliche Diagramm. Versuche dich bei Beschriftungen am besten auf die Formelzeichen (z.B. T für Temperatur) zu beschränken
+> Attention: The longer your labels are on the x- and y-axis, the less space is left for the actual diagram. Try to limit your labels to the formula symbols (e.g. T for temperature)
 
-* **X-Wertebereich Anfang:**  Hier legst du den Beginn des Wertebereichs der x-Achse fest. 
-* **X-Wertebereich Ende:** Hier legst du das Ende des Wertebereichs der x-Achse fest. 
-* **Y-Wertebereich Anfang:** Hier legst du den Beginn des Wertebereichs der y-Achse fest. 
-* **Y-Wertebereich Ende:** Hier legst du das Ende des Wertebereichs der y-Achse fest. 
+* **X value range start:** Here you define the start of the value range of the x-axis. 
+* **X-Range End:** Here you define the end of the value range of the x-axis. 
+* Y value range start:** Here you define the start of the value range of the y axis. 
+* Here you define the end of the value range of the y-axis. 
 
-> Tipp: Am Wertebereich der x-Achse musst du für ein Standarddiagramm, welches einen Messwert gegen die Zeit aufträgt nichts verändern. Den Wertebereich der y-Achse solltest du je nach Messwert anpassen.
+> Tip: You do not have to change anything in the value range of the x-axis for a standard diagram, which records a measured value against time. You should adjust the value range of the y-axis depending on the measured value.
 
-* **X-Linienabstand:** Hier legst du den Abstand der Hilfslinien auf der x-Achse fest. 
-* **Y-Linienabstand:** Hier legst du den Abstand der Hilflinien auf der y-Achse fest.
+* **X-line distance:** Here you define the distance of the auxiliary lines on the x-axis. 
+* **Y line distance:** Here you define the distance of the auxiliary lines on the y-axis.
 
-> Tipp: Bei einem Wert von 0 werden keine Hilflinien gezeichnet. 
+> Hint: With a value of 0, no help lines are drawn. 
 
-* **Zeitabschnitt:** Hier legst du den Zeitabschnitt fest, nachdem dein Diagramm gelöscht und neu begonnen wird. Im Normalfall sollte dieser Wert immer gleich dem Endes des x-Wertebereichs sein.
-* **Wert:** An diesen freien Blockabschnitt kann der jeweilige Sensor angeknüpft werden, dessen Messwert auf der y-Achse aufgetragen werden soll.
+* **Time interval:** Here you define the time interval after your diagram is deleted and started again. Normally, this value should always be equal to the end of the x-range of values.
+* **Value:** The respective sensor whose measured value is to be plotted on the y-axis can be linked to this free block segment.
 
 {% include image.html image=page.image8 %}
-> In diesem Beispiel wird die Temperatur gegen die Zeit aufgetragen. Alle 5 Sekunden erscheint eine Hilfsline und nach 15 Sekunden wird das Diagramm gelöscht und neu begonnen, da das Display voll ist.
+> In this example the temperature is plotted against time. Every 5 seconds an auxiliary line appears and after 15 seconds the diagram is cleared and restarted because the display is full
