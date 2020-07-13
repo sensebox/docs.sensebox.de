@@ -2,35 +2,34 @@
 date: 2020-03-11
 title: luftdaten.info
 categories: opensensemap
-description: Registrieren einer neuen senseBox auf der openSenseMap
+description: Registering a new luftdaten.info device on the openSenseMap
 type: Document
+resources:
+
+image1: /images/2020-03-11-opensensemap-luftdaten/01_Sensor_Konfiguration.png
+image2: /images/2020-03-11-opensensemap-luftdaten/02_Osem_Konfiguration.png
 ---
 
-Die Feinstaub Sensoren des OK Lab Stuttgart (Luftdaten.info) erlauben es, die gemessenen Daten auch an die openSenseMap zu senden. Um die Daten an die openSenseMap zu senden, muss zu allererst herausgefunden werden, welche Sensoren am Feinstaubsensor verwendet werden. Dies kann man am besten in dem Webinterface des Feinstaubsensors nachsehen. ([Abb. 1](#abbildung-1-webinterface-feinstaubsensor))
+The fine particulate matter sensors of the OK Lab Stuttgart (sensor.community) also allow the measured data to be sent to the openSenseMap. To send the data to the openSenseMap, first of all it must be identified which sensors are used on the particulate matter sensor. This can best be checked in the web interface of the particulate matter sensor.
+{% include image.html image=page.image1 %}
 
-Danach muss eine senseBox auf der openSenseMap mit der gerade erhaltenen Konfiguration registriert werden.
-Sollten bei der Registrierung die falschen Sensoren ausgewählt worden sein, ist es am einfachsten die Box einfach wieder zu löschen und mit der korrekten Sensorkonfiguration neu zu registrieren.
+Afterwards a "senseBox" must be registered on the openSenseMap with the configuration just received.
+If the wrong sensors have been selected during registration, the easiest way is to simply delete the box and register it again with the correct sensor configuration.
 
-## 1. Neue senseBox registrieren
-Erstellen einer neuen senseBox unter: [registrieren](https://opensensemap.org/register)
-- User, Standort, Aufstellungsort und Namen ausfüllen. Gruppenkennzeichnung könnte z.B.: Luftdaten sein.
-- Unter dem Punkt **"Hardware"** im Schritt **"meine senseBox"** das Feld **"luftdaten.info"** ausklappen und die passende Sensorkonfiguration auswählen. ([Abb. 2](#abbildung-2-registrierung-opensensemap))
-- Registrierung abschließen.
-- **Wichtig:** senseBox ID kopieren. Dies ist eine 24 Zeichen lange Zeichenkette die ungefähr so aussieht: *58a88c6b650831d8a3625e01*
-- Wenn eine korrekte E-Mailadresse angegeben wurde, kommt die senseBox ID auch nochmal per Mail. (zum Beispiel: *Deine senseBox-ID lautet: 58a88c6b650831d8a3625e01*)
+## 1. Register a new Device
+Create a new senseBox under: [register](https://opensensemap.org/register)
+- Fill in user, location, site and name. Group identification could be, for example: Air data.
+- Under the item **"Hardware "** in the step **"my senseBox "** unfold the field **"luftdaten.info"** and select the appropriate sensor configuration.
+{% include image.html image=page.image2 %}
+- Complete registration.
+- **Important:** Copy senseBox ID. This is a 24 characters long string that looks something like this: *58a88c6b650831d8a3625e01
+- If a correct e-mail address is entered, the senseBox ID will also be sent again by e-mail. (for example: *Your senseBox ID is: 58a88c6b650831d8a3625e01*)
 
-## 2. Feinstaub Sensor konfigurieren
-Der Feinstaub Sensor von Luftdaten.info lässt sich bequem über eine Webseite konfigurieren. Hierfür muss zuerst die IP des Geräts im WLAN ausfindig gemacht werden. Dies gelingt am besten durch ablesen im WLAN-Router.
 
-- Mit dem Browser die Konfigurationsseite des Feinstaubsensors aufrufen.
-- Unter dem Punkt **Weitere APIs** einen Haken bei **An openSenseMap senden** machen. In das Feld *senseBox-ID* die eigene senseBox-ID eintragen.
-- Ganz unten auf der Seite auf **Speichern** klicken.
+## 2. Configuration of the fine particulate matter sensor
+The fine dust sensor from Luftdaten.info can be easily configured via a website. To do this, the IP of the device in the WLAN must first be found out. The best way to do this is to read it off the WLAN router.
 
-## Fertig
-Der Feinstaubsensor sollte nun seine Daten an die openSenseMap senden.
+- Call up the configuration page of the fine dust sensor with the browser.
+- Under the item **More APIs** check the box **Send to openSenseMap**. In the field *senseBox-ID* enter your own senseBox-ID.
+- Click on **Save** at the bottom of the page.
 
-## Abbildung 1: Webinterface Feinstaubsensor
-<img src="https://github.com/sensebox/resources/raw/master/images/luftdaten/02_Sensor_Konfiguration.png"/>
-
-## Abbildung 2: Registrierung openSenseMap
-<img src="https://github.com/sensebox/resources/raw/master/images/luftdaten/01_openSenseMap_Konfiguration.png"/>
