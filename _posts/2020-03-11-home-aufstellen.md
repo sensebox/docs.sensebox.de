@@ -9,8 +9,6 @@ set: aufbau-sensebox-home
 set_order: 4
 ---
 
-
-# Die senseBox aufstellen
 Um eine erfolgreiche Datenübertragen, sowie die Vergleichbarkeit der Daten zu maximieren, gibt es einige Tipps was sie beim Aufstellen der senseBox:home beachten sollten.
 
 ## Technische Ausstattung am Aufstellungsort:
