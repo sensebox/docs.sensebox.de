@@ -24,7 +24,7 @@ Die Daten werden auf dem Rechenzentrum der Uni Münster gespeichert.
 Die openSenseMap empfängt, als offene Plattform, Daten von allen Geräten die ihre Messdaten zur openSenseMap schicken.
 
 ### Ich habe keine senseBox kann ich trotzdem Daten hochladen?
-
+Jedes Gerät das Daten über HTTP verschicken kann, kann Daten zur openSenseMap schicken.
 
 ### Wo finde ich weitere Informatioen über die openSenseMap und den Code?
 
