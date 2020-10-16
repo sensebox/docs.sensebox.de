@@ -4,6 +4,7 @@ title: Sicherheit
 categories: opensensemap
 description: Sicherer Datenupload zur openSenseMap
 type: Document
+title_order: 10
 resources:
 image1: /images/2020-10-16-opensensemap-security/security_osem_de.jpg
 ---
