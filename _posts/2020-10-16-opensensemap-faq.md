@@ -1,9 +1,9 @@
 ---
 title: "openSenseMap FAQ"
-categories: opensensemap
 layout: just-content
 ---
-Willkommen auf der openSenseMap - deine Platform für freie Umweltdaten. 
+# Willkommen auf der openSenseMap - deine Platform für freie Umweltdaten. 
+![/images/2020-10-16-opensensemap-faq/openSenseMap_github.png](/images/2020-10-16-opensensemap-faq/openSenseMap_github.png)
 
 ### Wer steckt hinter dem Projekt?
 Die opensenseMap ist im Jahr 2014 vom Institut für Geoinformatik der Universität Münster ins Leben gerufen worden. Seit dem Start ist die openSenseMap eng mit dem Projekt der [senseBox](https://sensebox.de) verbunden. 
