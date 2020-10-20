@@ -15,11 +15,13 @@ It is possible to protect the data upload to your senseBox with a generated auth
 
 ## How to use the Token?
 
-As soon as you enable the authentification all the POST-Requests for your senseBox have to include your authentication token. Otherwise the openSenseMap will reject the data submitted. The two endpoint which require this token are `https://api.opensensemap.org/boxes/:senseBoxId/:sensorId` and `https://api.opensensemap.org/boxes/:senseBoxId/data`.
+As soon as you enable the authentication all the POST-Requests for your senseBox have to include your authentication token. Otherwise the openSenseMap will reject the data submitted. The two endpoint which require this token are `https://api.opensensemap.org/boxes/:senseBoxId/:sensorId` and `https://api.opensensemap.org/boxes/:senseBoxId/data`.
 An Example header would look like this:
 
 ```
 'Authentication' : 'YOUR_BOX_ACCESS_TOKEN'
 ```
 
+## MQTT und TTN
 
+If you use the MQTT or TTN extension to upload your data to the openSenseMap you will not need this token, but it is advised to enable the authentication in order to prevent third parties from sending data to your senseBox.
