@@ -21,4 +21,7 @@ Sobald du die Option "Authentifizierung aktivieren" ausgewählt hast müssen all
 'Authentication' : 'YOUR_BOX_ACCESS_TOKEN'
 ```
 
+## MQTT und TTN
+
+Solltest du die Datenübertragung per MQTT oder TTN durchführen brauchst du diesen Authentifizierungs-Token zwar nicht, es ist aber trotzdem ratsam die Authentifizierung zu aktivieren, um zu verhindern das dritte Daten zu deiner senseBox senden.
 
