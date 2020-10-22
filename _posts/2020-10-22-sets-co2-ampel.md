@@ -8,7 +8,7 @@ resources:
   - name: "Shop"
     link: https://sensebox.kaufen/product/co2-ampel-bausatz
   - name: senseBox CO2 Ampel Programmcode V1
-    link: /docs/sensebox_co2_ampel.bin
+    link: /docs/sensebox_co2_ampel_v1.bin
 image1: /images/2020-10-22-sets-co2-ampel/image1.png
 image2: /images/2020-10-22-sets-co2-ampel/image2.png
 image3: /images/2020-10-22-sets-co2-ampel/image3.png
