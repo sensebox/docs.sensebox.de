@@ -1,8 +1,8 @@
 ---
 date: 2020-10-20
-title: Das CO2-Ampel-Set
+title: Das CO<sub>2</sub>-Ampel-Set
 categories: hardware
-description: Das CO2-Ampel-Set
+description: Das CO<sub>2</sub>-Ampel-Set
 type: Document
 resources:
   - name: "Shop"
@@ -47,7 +47,7 @@ image26: /images/2020-10-22-sets-co2-ampel/image26.jpg
 {% include image.html image=page.image2 %}
 
 -   senseBox Mikrocontroller (MCU) Lite
--   CO2 Sensor
+-   CO<sub>2</sub> Sensor
 -   RGB LED
 -   Display
 -   3x JST Verbindungskabel
@@ -66,7 +66,7 @@ image26: /images/2020-10-22-sets-co2-ampel/image26.jpg
 
 ## 1.  Sensorhalterung vorbereiten
 
-An die Sensorhalterung werden das Display, der CO2 Sensor und die RGB
+An die Sensorhalterung werden das Display, der CO<sub>2</sub> Sensor und die RGB
 LED angebracht. Später wird sie mit der Hauptplatine verbunden und
 getestet.
 
@@ -81,7 +81,7 @@ folgt auf der gleichen Seite der PCB-Halterung:
 Nun 5 kurze Abstandshalter auf der Unterseite anbringen:
 
 {% include image.html image=page.image5 %}
-Auf die Unterseite werden jetzt der CO2 Sensor und die RGB LED eingehängt:
+Auf die Unterseite werden jetzt der CO<sub>2</sub> Sensor und die RGB LED eingehängt:
 
 {% include image.html image=page.image6 %}
 {% include image.html image=page.image7 %}
@@ -117,14 +117,14 @@ fest bis sie einrasten:
 {% include image.html image=page.image15 %}
 
 Steckt jetzt ein Verbindungskabel für die RGB LED in einen der digitalen
-Anschlüsse und zwei Verbindungskabel für Display und CO2-Sensor in einen
+Anschlüsse und zwei Verbindungskabel für Display und CO<sub>2</sub>-Sensor in einen
 der drei I2C Steckplätze:
 
 {% include image.html image=page.image6 %}
 
-Jetzt könnt ihr die Kabel an den CO2-Sensor, das Display und die RGB LED
+Jetzt könnt ihr die Kabel an den CO<sub>2</sub>-Sensor, das Display und die RGB LED
 Anschließen. Hierbei darauf achten, dass die RGB LED mit dem digitalen
-Anschluss verbunden ist, bzw. das Display und der CO2-Sensor mit je
+Anschluss verbunden ist, bzw. das Display und der CO<sub>2</sub>-Sensor mit je
 einem der I2C Anschlüsse:
 
 {% include image.html image=page.image17 %}
@@ -176,6 +176,6 @@ Seitenteile einrasten:
 
 {% include image.html image=page.image26 %}
 
-Nun ist die CO2-Ampel einsatzbereit! Ihr könnt sie jetzt aufhängen und
+Nun ist die CO<sub>2</sub>-Ampel einsatzbereit! Ihr könnt sie jetzt aufhängen und
 über das USB Kabel und das Netzteil an eine Steckdose anschließen.
 
