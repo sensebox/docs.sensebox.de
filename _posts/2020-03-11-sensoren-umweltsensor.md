@@ -43,7 +43,7 @@ Im Block kannst du zwischen den verschiedenen Parametern des Umweltsensor auswä
 - Luftdruck in Pa
 - Innenraumluftqualität (IAQ)
 - Kalibrierungswert
-- CO2 Äquivalent
+- CO<sub>2</sub> Äquivalent
 - Atemluft VOC Äquivalent
 
 ## Kalibrierungswert
