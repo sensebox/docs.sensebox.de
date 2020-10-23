@@ -9,37 +9,37 @@ resources:
     link: https://sensebox.kaufen/product/co2-ampel-bausatz
   - name: senseBox CO2 Ampel Programmcode V1
     link: /docs/sensebox_co2_ampel_v1.bin
-image1: /images/2020-10-22-sets-co2-ampel/image1.png
-image2: /images/2020-10-22-sets-co2-ampel/image2.png
-image3: /images/2020-10-22-sets-co2-ampel/image3.png
-image4: /images/2020-10-22-sets-co2-ampel/image4.png
-image5: /images/2020-10-22-sets-co2-ampel/image5.png
-image6: /images/2020-10-22-sets-co2-ampel/image6.png
-image7: /images/2020-10-22-sets-co2-ampel/image7.png
-image8: /images/2020-10-22-sets-co2-ampel/image8.png
-image9: /images/2020-10-22-sets-co2-ampel/image9.png
-image10: /images/2020-10-22-sets-co2-ampel/image10.png
-image11: /images/2020-10-22-sets-co2-ampel/image11.png
-image12: /images/2020-10-22-sets-co2-ampel/image12.png
-image13: /images/2020-10-22-sets-co2-ampel/image13.png
-image14: /images/2020-10-22-sets-co2-ampel/image14.png
-image15: /images/2020-10-22-sets-co2-ampel/image15.png
-image16: /images/2020-10-22-sets-co2-ampel/image16.png
-image17: /images/2020-10-22-sets-co2-ampel/image17.png
-image18: /images/2020-10-22-sets-co2-ampel/image18.png
-image19: /images/2020-10-22-sets-co2-ampel/image19.png
-image20: /images/2020-10-22-sets-co2-ampel/image20.png
+image1: /images/2020-10-22-sets-co2-ampel/image1.jpg
+image2: /images/2020-10-22-sets-co2-ampel/image2.jpg
+image3: /images/2020-10-22-sets-co2-ampel/image3.jpg
+image4: /images/2020-10-22-sets-co2-ampel/image4.jpg
+image5: /images/2020-10-22-sets-co2-ampel/image5.jpg
+image6: /images/2020-10-22-sets-co2-ampel/image6.jpg
+image7: /images/2020-10-22-sets-co2-ampel/image7.jpg
+image8: /images/2020-10-22-sets-co2-ampel/image8.jpg
+image9: /images/2020-10-22-sets-co2-ampel/image9.jpg
+image10: /images/2020-10-22-sets-co2-ampel/image10.jpg
+image11: /images/2020-10-22-sets-co2-ampel/image11.jpg
+image12: /images/2020-10-22-sets-co2-ampel/image12.jpg
+image13: /images/2020-10-22-sets-co2-ampel/image13.jpg
+image14: /images/2020-10-22-sets-co2-ampel/image14.jpg
+image15: /images/2020-10-22-sets-co2-ampel/image15.jpg
+image16: /images/2020-10-22-sets-co2-ampel/image16.jpg
+image17: /images/2020-10-22-sets-co2-ampel/image17.jpg
+image18: /images/2020-10-22-sets-co2-ampel/image18.jpg
+image19: /images/2020-10-22-sets-co2-ampel/image19.jpg
+image20: /images/2020-10-22-sets-co2-ampel/image20.jpg
 image21: /images/2020-10-22-sets-co2-ampel/image21.png
 image22: /images/2020-10-22-sets-co2-ampel/image22.png
-image23: /images/2020-10-22-sets-co2-ampel/image23.png
-image24: /images/2020-10-22-sets-co2-ampel/image24.png
-image25: /images/2020-10-22-sets-co2-ampel/image25.png
-image26: /images/2020-10-22-sets-co2-ampel/image26.png
+image23: /images/2020-10-22-sets-co2-ampel/image23.jpg
+image24: /images/2020-10-22-sets-co2-ampel/image24.jpg
+image25: /images/2020-10-22-sets-co2-ampel/image25.jpg
+image26: /images/2020-10-22-sets-co2-ampel/image26.jpg
 
 ---
 
 
-*vorläufige Version - vom 22.10.202*
+*vorläufige Version - vom 22.10.2020*
 
 {% include image.html image=page.image1 %}
 
@@ -73,10 +73,9 @@ getestet.
 Bringt als erstes auf der Oberseite die vier mittleren Abstandshalter
 an:
 {% include image.html image=page.image3 %}
->
-> Als nächstes braucht ihr 6 kurze Abstandshalter und befestigt sie wie
-> folgt auf der gleichen Seite der PCB-Halterung:\
-> \
+
+Als nächstes braucht ihr 6 kurze Abstandshalter und befestigt sie wie
+folgt auf der gleichen Seite der PCB-Halterung:
 {% include image.html image=page.image4 %}
 
 Nun 5 kurze Abstandshalter auf der Unterseite anbringen:
