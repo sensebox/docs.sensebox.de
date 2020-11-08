@@ -27,7 +27,11 @@ Unter Windows kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den
 
 #### Kopieren unter MacOS
 
-Unter MacOS funktioniert das Kopieren der .BIN per Drag & Drop leider zurzeit noch nicht. Eine Möglichkeit ist die Datei im Terminal per dd-Befehl zu kopieren (nur erfahrenen Nutzern zu empfehlen!) oder einen alternativen Dateimanager wie zum Beispiel [muCommander](http://www.mucommander.com/) zu verwenden.
+Unter MacOS funktioniert das Kopieren der .BIN per Drag & Drop leider zurzeit noch nicht. Folgende Möglichkeiten bieten sich die Datei auf die senseBox zu kopieren:
+
+- Verwende das [senseBox Kopiertool](https://sensebox.de/docs/senseBox_Sketch_Uploader_DE.zip). Entpacke die ZIP Datei und starte das darin enthaltene Programm. 
+- Verwende einen alternativen Dateimanager wie zum Beispiel [muCommander](http://www.mucommander.com/)
+- Kopiere die Datei über das Terminal per dd-Befehl (nur erfahrenen Nutzern zu empfehlen!)
 
 #### Kopieren unter Linux 
 
