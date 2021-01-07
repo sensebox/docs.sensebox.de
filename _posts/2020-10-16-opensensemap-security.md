@@ -19,7 +19,7 @@ As soon as you enable the authentication all the POST-Requests for your senseBox
 An Example header would look like this:
 
 ```
-'Authentication' : 'YOUR_BOX_ACCESS_TOKEN'
+'Authorization' : 'YOUR_BOX_ACCESS_TOKEN'
 ```
 
 ## MQTT und TTN
