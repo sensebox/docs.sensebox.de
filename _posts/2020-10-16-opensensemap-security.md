@@ -15,10 +15,10 @@ Es besteht die Möglichkeit deine senseBox mit einem Token vor falscher Datenein
 
 ## Wie wird der Token genutzt
 
-Sobald du die Option "Authentifizierung aktivieren" ausgewählt hast müssen alle POST-Requests für deine senseBox an die Endpunkte `https://api.opensensemap.org/boxes/:senseBoxId/:sensorId` und `https://api.opensensemap.org/boxes/:senseBoxId/data` mit einem Authentication-Header versehen werden. Requests ohne diese Header oder mit einem falschen Token werden von der openSenseMap nicht mehr akzeptiert. So ein Header sieht wie folgt aus:
+Sobald du die Option "Authentifizierung aktivieren" ausgewählt hast müssen alle POST-Requests für deine senseBox an die Endpunkte `https://api.opensensemap.org/boxes/:senseBoxId/:sensorId` und `https://api.opensensemap.org/boxes/:senseBoxId/data` mit einem Authorization-Header versehen werden. Requests ohne diese Header oder mit einem falschen Token werden von der openSenseMap nicht mehr akzeptiert. So ein Header sieht wie folgt aus:
 
 ```
-'Authentication' : 'YOUR_BOX_ACCESS_TOKEN'
+'Authorization' : 'YOUR_BOX_ACCESS_TOKEN'
 ```
 
 ## MQTT und TTN
