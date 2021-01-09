@@ -30,4 +30,4 @@ Nicht nur von der senseBox könnten Daten auf die openSenseMap geladen werden. D
 Der gesamte Quellcode befindet sich unter einen freien Lizenz auf [Github](https://github.com/sensebox). 
 
 ### Ich finde das Projekt super, wie kann ich euch unterstützen?
-Wir freuen uns immer über Unterstützung jeglicher Art, sei es Mitarbeit am Code oder Ideen sammeln im [forum](https://forum.sensebox.de). 
+Wir freuen uns immer über Unterstützung jeglicher Art, sei es Mitarbeit am Code oder Ideen sammeln im <a href="https://forum.sensebox.de" target="_blank" rel="noopener noreferrer">Forum</a>. 
