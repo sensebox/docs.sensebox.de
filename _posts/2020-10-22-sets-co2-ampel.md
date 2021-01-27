@@ -39,8 +39,6 @@ image26: /images/2020-10-22-sets-co2-ampel/image26.jpg
 ---
 
 
-*vorläufige Version - vom 22.10.2020*
-
 {% include image.html image=page.image1 %}
 
 # Benötigte Bauteile
