@@ -43,7 +43,8 @@ image27: /images/sensebox-home/sensebox-home-35.JPG
 
 ## Willkommen zum Tutorial für den Zusammenbau der senseBox:home
 
-> Bei senseBoxen die ab Dezember 2020 verkauft wurden, kommt ein neuartiges Acrylgehäuse zum Einsatz. Wie das zusammengebaut wird, wird dir angezeigt wenn du bis nach unten scrollst. 
+> Achtung: Seit Dezember 2020 kommt ein neues Acrylgehäuse zum Einsatz. Die Hinweise zum "Gehäuse 2.0" findet ihr [unten auf der Seite](#1).
+
 
 Da die senseBox ein modularer Bausatz ist, können einzelne Schritte zu Sensoren abweichen oder sogar in deinem Fall übersprungen werden. Zuerst zeigen wir Euch, wie der Microcontroller in das Gehäuse eingesetzt wird.
 {% include image.html image=page.image1 %}
@@ -55,7 +56,7 @@ Dazu nehmt ihr das Gehäuse und richtet es mit der Aufbohrung nach unten aus. De
 
 Nun nehmt ihr die zwei beiliegenden kleineren Schrauben und befestigt die Platine über die mittleren Bohrlöcher am Gehäuse. Wenn die Platine etwas Spielraum hat ist das kein Problem. 
 
-## Aufsetzten des WiFi-Bee
+## Aufsetzten des WiFi-Bee <a name="2"></a>
 Als nächstes zeigen wir, wie das Wifi-Bee aufgesetzt wird. 
 
 Dazu haben wir auf alle Bees eine Kennzeichnung aufgedruckt, welche die Richtung anzeigt. Wenn du ein anderes Datenübertragungsmodul hast, z.B. LAN, oder LoRaWAN, erfolgt das aufsetzten aber genau gleich. 
@@ -153,9 +154,8 @@ Als letztes wird der Deckel mit den Schrauben versehen und ein Silikagelbeutel z
 {% include image.html image=page.image23 %} 
 Nun werden noch die Schnellverschlussschrauben eingedreht und damit die senseBox verschlossen. 
 
-## Gehäuse 2.0: senseBox mit Acrylgehäuse zusammenbauen
-senseBoxen die ab Dezember 2020 gekauft wurden, wurden mit einem neuen Gehäuse verschickt. Hier unterscheidet sich der Zusammenbau leicht von der oben gezeigten Variante, allerdings nur in den ersten Schritten.
- Zuerst verschaffen wir uns einen Überblick über die verfügbaren Bauteile. 
+## Gehäuse 2.0: Hinweise zum Aufbau im neuen Gehäuse <a name="1"></a>
+senseBoxen die seit Dezember 2020 gekauft wurden, sind mit einem neuen Gehäuse ausgestattet. Hierbei unterscheidet sich der Zusammenbau nur in den ersten Schritten leicht von der alten Variante. Zuerst verschaffen wir uns einen Überblick über die verfügbaren Bauteile.
 {% include image.html image=page.image24 %} 
 Von der Acrylplatte kann nun die Folie entfernt werden.
 {% include image.html image=page.image25 %}
@@ -164,7 +164,7 @@ Danach kannst du mit den schwarzen Schrauben die senseBox MCU auf die Acryllplat
 {% include image.html image=page.image26 %}
 {% include image.html image=page.image27 %}
 
-Nun ist die senseBox MCU im Gehäuse befestigt und du kannst mit anderen Tutorials zum Aufbau der senseBox fortfahren. 
+Nun ist die senseBox MCU im Gehäuse befestigt und du kannst [mit anderen Tutorials](#2) zum Aufbau der senseBox fortfahren. 
 
 
 <hr>
