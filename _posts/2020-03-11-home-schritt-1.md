@@ -33,10 +33,10 @@ image21: /images/sensebox-home/sensebox-home-28.jpg
 image22: /images/sensebox-home/sensebox-home-29.jpg
 image23: /images/sensebox-home/sensebox-home-30.jpg
 
-image24: /images/sensebox-home/sensebox-home-32.jpg
-image25: /images/sensebox-home/sensebox-home-33.jpg
-image26: /images/sensebox-home/sensebox-home-34.jpg
-image27: /images/sensebox-home/sensebox-home-35.jpg
+image24: /images/sensebox-home/sensebox-home-32.JPG
+image25: /images/sensebox-home/sensebox-home-33.JPG
+image26: /images/sensebox-home/sensebox-home-34.JPG
+image27: /images/sensebox-home/sensebox-home-35.JPG
 
 ---
 
@@ -154,15 +154,18 @@ Als letztes wird der Deckel mit den Schrauben versehen und ein Silikagelbeutel z
 Nun werden noch die Schnellverschlussschrauben eingedreht und damit die senseBox verschlossen. 
 
 ## Gehäuse 2.0: senseBox mit Acrylgehäuse zusammenbauen
-senseBoxen die ab Dezember 2020 gekauft wurden, wurden mit einem neuen Gehäuse verschickt. Hier unterscheidet sich der Zusammenbau leicht von der oben gezeigten Variante, allerdings nur in den ersten Schritten. Zuerst verschaffen wir uns einen Überblick über die verfügbaren Bauteile. 
+senseBoxen die ab Dezember 2020 gekauft wurden, wurden mit einem neuen Gehäuse verschickt. Hier unterscheidet sich der Zusammenbau leicht von der oben gezeigten Variante, allerdings nur in den ersten Schritten.
+ Zuerst verschaffen wir uns einen Überblick über die verfügbaren Bauteile. 
 {% include image.html image=page.image24 %} 
-
-Als nächstes kann von der Acrylplatte die Plastikfolie entfernt werden.
+Von der Acrylplatte kann nun die Folie entfernt werden.
 {% include image.html image=page.image25 %}
-
 Nun schraubst du die Acryllplatte in das Gehäuse fest. Achte darauf, dass die Öffnung für den USB Anschluss zur Öffnung des Gehäuses zeigt.
-Danach kannst du mit den schwarzen Schrauben die senseBox MCU auf die Acryllplatte schrauben. Hier wieder drauf achten, den USB Anschluss zur Öffnung des Gehäuses auszurichten.
+Danach kannst du mit den schwarzen Schrauben die senseBox MCU auf die Acryllplatte befestigen. Hier muss wieder darauf geachtet werden, dass der USB Anschluss zur Öffnung des Gehäuses ausgerichtet ist.
 {% include image.html image=page.image26 %}
+{% include image.html image=page.image27 %}
+
+Nun ist die senseBox MCU im Gehäuse befestigt und du kannst mit anderen Tutorials zum Aufbau der senseBox fortfahren. 
+
 
 <hr>
 <a href="/sensebox-home/home-schritt-2/" class="button" style="float: right;">Weiter mit Schritt 2</a>
