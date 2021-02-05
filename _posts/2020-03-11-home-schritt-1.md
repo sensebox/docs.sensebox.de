@@ -43,14 +43,31 @@ image27: /images/sensebox-home/sensebox-home-35.JPG
 
 ## Willkommen zum Tutorial für den Zusammenbau der senseBox:home
 
-> Achtung: Seit Dezember 2020 kommt ein neues Acrylgehäuse zum Einsatz. Die Hinweise zum "Gehäuse 2.0" findet ihr [unten auf der Seite](#1).
+> Achtung: Seit Dezember 2020 kommt ein neues Acrylgehäuse zum Einsatz. Nur der erste Schritt unterscheidet sich vom bisherigen Aufbau. Alle weiteren Schritte können analog zum alten Gehäuse durchgeführt werden. 
 
+Da die senseBox ein modularer Bausatz ist, können einzelne Schritte zu Sensoren abweichen oder sogar in deinem Fall übersprungen werden. 
 
-Da die senseBox ein modularer Bausatz ist, können einzelne Schritte zu Sensoren abweichen oder sogar in deinem Fall übersprungen werden. Zuerst zeigen wir Euch, wie der Microcontroller in das Gehäuse eingesetzt wird.
+## Einsetzen der MCU ins Gehäuse
+
+Im ersten Schritt wird die MCU in das Gehäuse eingesetzt. Das System wurde im laufe der Zeit leicht überarbeitet, sodass seit Dezember 2020 ein neues Befestigungssystem verwendet wird. 
+
+### senseBox:home ab Dezember 2020
+senseBoxen die seit Dezember 2020 gekauft wurden, sind mit einem neuen Gehäuse ausgestattet. Hierbei unterscheidet sich der Zusammenbau nur in den ersten Schritten leicht von der alten Variante. Zuerst verschaffen wir uns einen Überblick über die verfügbaren Bauteile.
+{% include image.html image=page.image24 %} 
+Von der Acrylplatte kann nun die Folie entfernt werden.
+{% include image.html image=page.image25 %}
+Nun schraubst du die Acryllplatte in das Gehäuse fest. Achte darauf, dass die Öffnung für den USB Anschluss zur Öffnung des Gehäuses zeigt.
+Danach kannst du mit den schwarzen Schrauben die senseBox MCU auf die Acryllplatte befestigen. Hier muss wieder darauf geachtet werden, dass der USB Anschluss zur Öffnung des Gehäuses ausgerichtet ist.
+{% include image.html image=page.image26 %}
+{% include image.html image=page.image27 %}
+
+Die folgenden Schritte können analog zum alten Gehäuse/Befestigungssystem durchgeführt werden. 
+
+### senseBox:home bis November 2020
+
+Zuerst zeigen wir Euch, wie der Microcontroller in das Gehäuse eingesetzt wird.
 {% include image.html image=page.image1 %}
 Dazu nehmt ihr das Gehäuse und richtet es mit der Aufbohrung nach unten aus. Der grüne senseBox Microcontroller wird nun auf der gegenüberliegenden Seite aufgelegt, sodass der rote Reset Knopf und der USB-Port nach vorne zeigen. 
-
-
 
 {% include image.html image=page.image2 %}
 
@@ -154,17 +171,7 @@ Als letztes wird der Deckel mit den Schrauben versehen und ein Silikagelbeutel z
 {% include image.html image=page.image23 %} 
 Nun werden noch die Schnellverschlussschrauben eingedreht und damit die senseBox verschlossen. 
 
-## Gehäuse 2.0: Hinweise zum Aufbau im neuen Gehäuse <a name="1"></a>
-senseBoxen die seit Dezember 2020 gekauft wurden, sind mit einem neuen Gehäuse ausgestattet. Hierbei unterscheidet sich der Zusammenbau nur in den ersten Schritten leicht von der alten Variante. Zuerst verschaffen wir uns einen Überblick über die verfügbaren Bauteile.
-{% include image.html image=page.image24 %} 
-Von der Acrylplatte kann nun die Folie entfernt werden.
-{% include image.html image=page.image25 %}
-Nun schraubst du die Acryllplatte in das Gehäuse fest. Achte darauf, dass die Öffnung für den USB Anschluss zur Öffnung des Gehäuses zeigt.
-Danach kannst du mit den schwarzen Schrauben die senseBox MCU auf die Acryllplatte befestigen. Hier muss wieder darauf geachtet werden, dass der USB Anschluss zur Öffnung des Gehäuses ausgerichtet ist.
-{% include image.html image=page.image26 %}
-{% include image.html image=page.image27 %}
 
-Nun ist die senseBox MCU im Gehäuse befestigt und du kannst [mit anderen Tutorials](#2) zum Aufbau der senseBox fortfahren. 
 
 
 <hr>
