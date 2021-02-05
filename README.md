@@ -34,6 +34,10 @@ Run `jekyll` commands through Bundler to ensure you're using the right versions:
 $ bundle exec jekyll serve
 ~~~
 
+## i18n
+
+The master contains the german version of the docs and serves [https://docs.sensebox.de]. English is stored in the `EN` branch and serves [https://en.docs.sensebox.de].
+
 ## How to add a Document
 
 
