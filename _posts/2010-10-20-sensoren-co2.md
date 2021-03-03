@@ -35,3 +35,79 @@ Der CO<sub>2</sub>-Sensor sollte nicht dauerhaft im Außenbereich verwendet werd
 - Genauigkeit (°C): ± (0.4 °C + 0.023 x (T [°C] - 25°C))
 - Wiederholpräzision (°C): 0.1 °C
 - Reaktionszeit: >10s
+
+## Kalibrieren des CO2 Sensors 
+
+Im Regelfall kommt der CO2 Sensor bereits kalibriert bei euch an. Grobe Handhabung, Versand oder Löten kann die Genauigkeit des Sensors reduzieren, was eine Kalibrierung notwendig macht. Für diesen Sketch benötigst du das Display. Hast du kein Display vorhanden kannst du die Display relevanten Teile löschen, dies beeinflusst die Kalibrierung des Sensors nicht !
+
+Um den CO2 Sensor zu kalibieren, muss dieser für 7 Tage jeweils mindestens eine Stunde Luft mit einer CO2 Konzentration von `400ppm` ausgesetzt sein. Wird der CO2 Sensor nicht unmittelbar an einer dicht befahrenen Straße aufgebaut, können wir davon ausgehen dass die Atmosphäre eine Konzentration von ca. `400ppm` aufweist <a href="https://www.esrl.noaa.gov/gmd/ccgg/trends//">(Tendenz steigend)</a>
+
+
+Installiere das Board-Support-Package der senseBox und zusätzlich über den Bibliotheksverwalter in der Arduino IDE die `SparkFun_SCD30_Arduino_Library`. Daraufhin kannst du folgenden Sketch auf die MCU hochladen.  
+
+```arduino 
+#include <SPI.h>
+#include <Wire.h>
+
+#include "SparkFun_SCD30_Arduino_Library.h" //Click here to get the library: http://librarymanager/All#SparkFun_SCD30
+
+// DISPLAY_PART_START
+#include "SenseBoxMCU.h"
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#define OLED_RESET 4
+Adafruit_SSD1306 display(OLED_RESET);
+// DISPLAY_PART_ENDE
+SCD30 airSensor;
+
+
+void setup() {
+  // DISPLAY_PART_START
+  senseBoxIO.powerI2C(true);
+  delay(2000);
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3D);
+  display.display();
+  delay(100);
+  display.clearDisplay();
+  // DISPLAY_PART_ENDE
+  if (airSensor.begin(Wire, true) == false)
+  {
+    while (1)
+      ;
+  }
+  airSensor.getAutoSelfCalibration();
+}
+
+
+void loop() {
+
+  // DISPLAY_PART_START
+  long time_elapsed = millis();
+  time_elapsed = time_elapsed / 1000;
+  time_elapsed = time_elapsed / 60;
+
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.setTextColor(WHITE, BLACK);
+  display.setTextSize(1);
+  display.println("Sensor eine Stunde an der frischen Luft lassen!");
+  display.println();
+  display.println();
+  display.println();
+  display.print("Zeit vergangen: ");
+  display.print(time_elapsed);
+  display.println(" min");
+  display.display();
+  // DISPLAY_PART_ENDE
+
+  if (airSensor.dataAvailable())
+  {
+    airSensor.getCO2();
+    airSensor.getTemperature();
+    airSensor.getHumidity();
+  }
+   delay(500);
+}
+```
+
+Nachdem der Sketch hochgeladen ist, bringe den CO2 Sensor nach draußen an die frische Luft. Auf dem Display wird dir angezeigt wieviel Zeit seit dem Upload vergangen ist. Für eine möglichst gute Kalibrierung des Sensors wiederhole dies für 7 Tage.
