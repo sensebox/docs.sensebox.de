@@ -45,6 +45,8 @@ Um den CO2 Sensor zu kalibieren, muss dieser für 7 Tage jeweils mindestens eine
 
 Installiere das Board-Support-Package der senseBox und zusätzlich über den Bibliotheksverwalter in der Arduino IDE die `SparkFun_SCD30_Arduino_Library`. Daraufhin kannst du folgenden Sketch auf die MCU hochladen.  
 
+Alternativ kannst du die kompilierte `.bin` Datei [hier](/docs/sensebox_co2_calibrate.bin) runtergeladen werden.
+
 ```arduino 
 #include <SPI.h>
 #include <Wire.h>
