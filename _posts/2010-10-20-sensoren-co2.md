@@ -10,7 +10,7 @@ resources:
 image1: /images/2010-10-20-sensoren-co2/DSCF9389.jpg
 ---
 
-Präziser CO<sub>2</sub>-Sensor vom Schweizer Hersteller Sensirion (Modell SCD30). Die Sensorplatine hat einen JST PHR4 Anschluss, passend zum Betrieb mit der senseBox MCU. Weiterhin ist er mit dem Quikk Connect System ausgestattet.
+Präziser CO<sub>2</sub>-Sensor vom Schweizer Hersteller Sensirion (Modell SCD30). Die Sensorplatine hat einen JST PHR4 Anschluss, passend zum Betrieb mit der senseBox MCU. Weiterhin ist er mit dem Qwiic Connect System ausgestattet.
 
 Neben der CO<sub>2</sub>-Erkennung kommt ein erstklassiger Sensirion Feuchte- und Temperatursensor auf dem gleichen Sensormodul zum Einsatz. Dank des angewandten Zweikanalprinzips zur Messung der Kohlendioxidkonzentration ist der Sensor dazu ausgelegt, Langzeitdrifts automatisch zu kompensieren.
 
@@ -39,12 +39,11 @@ Der CO<sub>2</sub>-Sensor sollte nicht dauerhaft im Außenbereich verwendet werd
 
 ## Kalibrieren des CO2 Sensors (Auto Kalibrierung)
 
-Im Regelfall kommt der CO2 Sensor bereits kalibriert bei euch an. Grobe Handhabung, Versand oder Löten kann die Genauigkeit des Sensors reduzieren, was eine Kalibrierung notwendig macht. Für diesen Sketch benötigst du das Display. Hast du kein Display vorhanden kannst du die Display relevanten Teile löschen, dies beeinflusst die Kalibrierung des Sensors nicht !
+Im Regelfall kommt der CO2 Sensor bereits kalibriert bei euch an. Grobe Handhabung, Versand oder Löten kann die Genauigkeit des Sensors reduzieren, was eine Kalibrierung notwendig macht. Für diesen Sketch benötigst du das Display. Hast du kein Display vorhanden kannst du die Display relevanten Teile löschen, dies beeinflusst die Kalibrierung des Sensors nicht!
 
-Um den CO2 Sensor zu kalibieren, muss dieser für 7 Tage jeweils mindestens eine Stunde Luft mit einer CO2 Konzentration von `400ppm` ausgesetzt sein. Wird der CO2 Sensor nicht unmittelbar an einer dicht befahrenen Straße aufgebaut, können wir davon ausgehen dass die Atmosphäre eine Konzentration von ca. `400ppm` aufweist <a href="https://www.esrl.noaa.gov/gmd/ccgg/trends//">(Tendenz steigend)</a>
+Um den CO2 Sensor zu kalibieren, muss dieser über einen Zeitraum von **mindestens 7 Tage** jeweils **täglich** mindestens eine Stunde Luft mit einer CO2 Konzentration von `400ppm` ausgesetzt sein. Wird der CO2 Sensor nicht unmittelbar an einer dicht befahrenen Straße aufgebaut, können wir davon ausgehen dass die Atmosphäre eine Konzentration von ca. `400ppm` aufweist <a href="https://www.esrl.noaa.gov/gmd/ccgg/trends//">(Tendenz steigend)</a>. 
 
-
-Installiere das Board-Support-Package der senseBox und zusätzlich über den Bibliotheksverwalter in der Arduino IDE die `SparkFun_SCD30_Arduino_Library`. Daraufhin kannst du folgenden Sketch auf die MCU hochladen.  
+Installiere das [Board-Support-Package](https://docs.sensebox.de/arduino/board-support-package-installieren/) der senseBox und zusätzlich über den Bibliotheksverwalter in der Arduino IDE die `SparkFun_SCD30_Arduino_Library`. Daraufhin kannst du folgenden Sketch auf die MCU hochladen.  
 
 Alternativ kann die kompilierte `.bin` Datei [hier](/docs/sensebox_co2_calibrate.bin) heruntergeladen werden.
 
@@ -52,7 +51,7 @@ Alternativ kann die kompilierte `.bin` Datei [hier](/docs/sensebox_co2_calibrate
 #include <SPI.h>
 #include <Wire.h>
 
-#include "SparkFun_SCD30_Arduino_Library.h" //Click here to get the library: http://librarymanager/All#SparkFun_SCD30
+#include "SparkFun_SCD30_Arduino_Library.h"
 
 // DISPLAY_PART_START
 #include "SenseBoxMCU.h"
@@ -113,8 +112,8 @@ void loop() {
 }
 ```
 
-Nachdem der Sketch hochgeladen ist, bringe den CO2 Sensor nach draußen an die frische Luft. Auf dem Display wird dir angezeigt wieviel Zeit seit dem Upload vergangen ist. Für eine möglichst gute Kalibrierung des Sensors wiederhole dies für 7 Tage.
+Nachdem der Sketch hochgeladen ist, bringe den CO2 Sensor über einen Zeitraum von 7 Tage täglich für mindestens 1 Stunde nach draußen an die frische Luft. Auf dem Display wird dir angezeigt wieviel Zeit seit dem Upload vergangen ist. Für eine möglichst gute Kalibrierung des Sensors wiederhole dies für 7 Tage.
 
 ## Kalibrieren des CO2 Sensors (Manuelle Kalibrierung)
 
-Im Gegensatz zur Auto Kalibrierung des CO2 Sensors, welche bis zu 7 Tage dauert, kannst du alternativ auch die manuelle Kalibrierung benutzen. [Dazu wurde im senseBox Forum eine hervorragende Anleitung geschrieben](https://forum.sensebox.de/t/co2-ampel-kalibrieren/1108).
+Im Gegensatz zur Auto Kalibrierung des CO2 Sensors, welche mindestens 7 Tage dauert, kannst du alternativ auch die manuelle Kalibrierung durchführen. [Dazu wurde im senseBox Forum eine hervorragende Anleitung geschrieben](https://forum.sensebox.de/t/co2-ampel-kalibrieren/1108).
