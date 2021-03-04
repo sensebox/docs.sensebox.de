@@ -36,7 +36,8 @@ Der CO<sub>2</sub>-Sensor sollte nicht dauerhaft im Außenbereich verwendet werd
 - Wiederholpräzision (°C): 0.1 °C
 - Reaktionszeit: >10s
 
-## Kalibrieren des CO2 Sensors 
+
+## Kalibrieren des CO2 Sensors (Auto Kalibrierung)
 
 Im Regelfall kommt der CO2 Sensor bereits kalibriert bei euch an. Grobe Handhabung, Versand oder Löten kann die Genauigkeit des Sensors reduzieren, was eine Kalibrierung notwendig macht. Für diesen Sketch benötigst du das Display. Hast du kein Display vorhanden kannst du die Display relevanten Teile löschen, dies beeinflusst die Kalibrierung des Sensors nicht !
 
@@ -113,3 +114,7 @@ void loop() {
 ```
 
 Nachdem der Sketch hochgeladen ist, bringe den CO2 Sensor nach draußen an die frische Luft. Auf dem Display wird dir angezeigt wieviel Zeit seit dem Upload vergangen ist. Für eine möglichst gute Kalibrierung des Sensors wiederhole dies für 7 Tage.
+
+## Kalibrieren des CO2 Sensors (Manuelle Kalibrierung)
+
+Im Gegensatz zur Auto Kalibrierung des CO2 Sensors, welche bis zu 7 Tage dauert, kannst du alternativ auch die manuelle Kalibrierung benutzen. [Dazu wurde im senseBox Forum eine hervorragende Anleitung geschrieben](https://forum.sensebox.de/t/co2-ampel-kalibrieren/1108).
