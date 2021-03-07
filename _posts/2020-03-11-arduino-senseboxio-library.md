@@ -17,11 +17,11 @@ Die senseBoxIO Library lässt sich einzeln über folgenden Befehl einbinden:
 include <senseBoxIO.h>
 ```
 
-> Beachte: Verwendest du bereits die senseBoxMCU Library ist die senseBoxIO Library bereits integriert und muss nicht zustäzlich inkludiert werden
+> Beachte: Verwendest du bereits die senseBoxMCU Library ist die senseBoxIO Library bereits integriert und muss nicht zusätzlich inkludiert werden.
 
-## Ein-/ausschalten der Ports
+## Ein-/Ausschalten der Ports
 
-Über die senseBoxIO Library können nicht verwendete Ports Ein-/ausgeschaltet werden:
+Über die senseBoxIO Library können nicht verwendete Ports ein-/ausgeschaltet werden:
 
 #### Deaktivieren aller Ports
 ```arduino
