@@ -32,7 +32,7 @@ Der [Adafruit Powerboost 1000C](https://www.adafruit.com/product/2465) sorgt dur
 {% include image.html image=page.image2 %}
 
 ### Technische Details
-   * Maximale Leistungs-Input: 3,7V 
+   * Maximaler Leistungs-Input: 3,7V 
    * Maximaler Leistungs-Output: 5,2V
    * Chipsatz: [TI TPS61090](http://www.ti.com/product/TPS61090/description)
    * 2A Interner Schalter
@@ -44,7 +44,7 @@ Um die senseBox mit einer Solarzelle zu benutzen, bedarf es lediglich einem Powe
 
 {% include image.html image=page.image3 %}
 
-> Wichtig 
+> Wichtig: 
   Der LiPo-Akku und der Powerboost sollten am besten vor Nässe geschützt aufgebaut werden, wenn ihr die Station draußen betreibt. Das passende Gehäuse gibt es im Set dazu, ist aber auch das Gleiche wie z.B. beim Feinstaubsensor. Beachte, dass niedrige Temperaturen die Leistung des Akkus stark beeinträchtigen können.
 
 
