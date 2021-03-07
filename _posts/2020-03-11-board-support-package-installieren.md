@@ -28,10 +28,10 @@ https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.j
 <img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png">
 
 
-  Gib "SAMD" oben in die Suchleiste ein um die Packages schneller zu finden.
+  Gib "SAMD" oben in die Suchleiste ein, um die Packages schneller zu finden.
 
 
-Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neuste Version zu installieren. 
+Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neueste Version zu installieren. 
 
 
 <img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png">
@@ -59,10 +59,10 @@ https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.j
 
 
 
-  Gib "SAMD" oben in die Suchleiste ein um die Packages schneller zu finden.
+  Gib "SAMD" oben in die Suchleiste ein, um die Packages schneller zu finden.
 
 
-Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neuste Version zu installieren. 
+Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neueste Version zu installieren. 
 
 
 <img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/ardu_update_mac.png">
@@ -84,8 +84,9 @@ https://github.com/sensebox/senseBoxMCU-core/raw/master/package_sensebox_index.j
 
 <img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/Ardu2.png">
 
-Gib "SAMD" oben in die Suchleiste ein um die Packages schneller zu finden.
-Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neuste Version zu installieren. 
+Gib "SAMD" oben in die Suchleiste ein, um die Packages schneller zu finden.
+
+Da wir das **senseBox SAMD Boards**-Package für euch regelmäßig aktualisieren, solltet ihr immer mal wieder in den Boardverwalter gehen und nachschauen, ob das **senseBox SAMD Boards**-Package noch aktuell ist. Öffnet dafür, wie oben beschrieben, den Boardverwalter und sucht nach **senseBox SAMD Boards**. Wenn ihr auf den Eintrag in der Liste klickt, erscheint dort im Falle einer neuen Version ein Update-Button. Klickt diesen, um die neueste Version zu installieren. 
 
 
 <img src="https://github.com/sensebox/resources/raw/master/gitbook_pictures/ardu/update-b-s-p.png">
