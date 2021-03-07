@@ -19,7 +19,7 @@ image2: /images/2020-03-11-allgemein-arduino-ide-installieren/arduino-donate.png
 
 
 
-Bevor die senseBox über die Arduino IDE programmieren kannst, musst du Treiber sowie eine Software auf deinem Computer installieren. 
+Bevor du die senseBox über die Arduino IDE programmieren kannst, musst du Treiber sowie eine Software auf deinem Computer installieren. 
 
 Schau dir die Anleitung für dein Betriebsystem an und folge den angegebenen Schritten.
 
@@ -32,15 +32,15 @@ Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren.
 
 {% include image.html image=page.image1 %}
 
->  	Lade bitte die zip-Datei herunter und <b> nicht </b> den Windows-Installer um mögliche Probleme zu vermeiden!
+>  	Lade bitte die zip-Datei herunter und <b> nicht </b> den Windows-Installer, um mögliche Probleme zu vermeiden!
 
 
-Arduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; falls du nichts spenden möchtest kannst du auf `JUST DOWNLOAD` klicken.
+Arduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; falls du nichts spenden möchtest, kannst du auf `JUST DOWNLOAD` klicken.
 
 {% include image.html image=page.image2 %}
 
 
-Lege auf deiner Festplatte einen neuen Ordner an und entpacke darin die zip-Datei. Durch das Starten der Datei `arduino.exe` kann die IDE gestartet werden.  
+Lege auf deiner Festplatte einen neuen Ordner an und entpacke darin die zip-Datei. Durch das Ausführen der Datei `arduino.exe` kann die IDE gestartet werden.  
 
 
 ## Arduino Software für Mac(OSX) herunterladen
@@ -85,7 +85,7 @@ tar -xvf arduino-1.8.7-linux64.tar.xz
 cd arduino-1.8.7
 ./install.sh
 ```
-Um den Arduino programmieren zu können, sind unter Ubuntu 14 & 16 zusätzliche Rechte notwendig. Diese können für den aktuellen Nutzer mit den folgenden Befehlen eingerichtet werden \(benötigt Admin-Rechte\):
+Um den Arduino programmieren zu können, sind unter Ubuntu 14 & 16 zusätzliche Rechte notwendig. Diese können für den/die aktuelle/n Nutzer:in mit den folgenden Befehlen eingerichtet werden \(benötigt Admin-Rechte\):
 
 Führe `udevadm monitor --udev` aus und schließe den Arduino per USB an, um die Device-ID zu bestimmen. Die angegebene Bezeichnung am Ende der Ausgabe \(zB. `ttyUSB0`\) ist die Device-ID. Beende `udevadm` per `ctrl+C`, und führe noch die folgenden Befehle aus, wobei die herausgefundene Device-ID eingesetzt werden muss:
 
