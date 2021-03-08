@@ -17,8 +17,8 @@ Um die senseBox zu verwenden, muss sie natürlich mit Strom versorgt werden. Es 
 
 ### 1. USB-Kabel
 
-Du kannst die senseBox mit Hilfe des beiliegenden Micro-USB-Kabels mit Strom versorgen. Diese Möglichkeit ist die einfachste, wenn du sowieso am Computer programmierst.
-Stecke das kleinere Ende des USB-Kabels in den USB-Anschluss des senseBox MCU. Dieser befindet sich oben neben dem roten Reset-Knopf. Das andere Ende des Kabels wird in den USB-Anschluss deines Computers oder einer Powerbank gesteckt.
+Du kannst die senseBox mit Hilfe des beiliegenden USB-Kabels mit Strom versorgen. Diese Möglichkeit ist die einfachste, wenn du sowieso am Computer programmierst.
+Stecke das Ende des USB-Kabels in den USB-C-Anschluss der senseBox MCU. Dieser befindet sich oben neben dem roten Reset-Knopf. Das andere Ende des Kabels wird in den USB-Anschluss deines Computers oder einer Powerbank gesteckt.
 
 {% include image.html image=page.image1 %}
 
