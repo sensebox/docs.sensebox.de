@@ -13,7 +13,7 @@ image: /images/2020-03-11-sensoren-feinstaub/sensoren_feinstaub.png
 block: /images/2020-03-11-sensoren-feinstaub/block_feinstaubsensor.svg
 ---
 
-Mit diesem Sensor SDS011 ist es möglich die Feinstaubkonzentration in der Luft zu bestimmen. Der Sensor gibt zwei Werte aus: Die Konzentration von PM2.5 (Partikel < 2.5 um) und PM10 (Partikel < 10 um). Dieser Sensor ist mit einem kleinen Ventilator ausgestattet, um Luft anzusaugen. In seinem Inneren befindet sich ein Laser, der zusammen mit einer Photodiode die Anzahl der Partikel misst. Die Ergebnisse der Messungen werden in µg/m³ (Mikrogramm pro Kubikmeter) angegeben.
+Mit diesem Sensor SDS011 ist es möglich, die Feinstaubkonzentration in der Luft zu bestimmen. Der Sensor gibt zwei Werte aus: Die Konzentration von PM2.5 (Partikel < 2.5 um) und PM10 (Partikel < 10 um). Dieser Sensor ist mit einem kleinen Ventilator ausgestattet, um Luft anzusaugen. In seinem Inneren befindet sich ein Laser, der zusammen mit einer Photodiode die Anzahl der Partikel misst. Die Ergebnisse der Messungen werden in µg/m³ (Mikrogramm pro Kubikmeter) angegeben.
 
 {% include image.html image=page.image %}
 
@@ -25,9 +25,9 @@ Mit diesem Sensor SDS011 ist es möglich die Feinstaubkonzentration in der Luft 
 
 ## Programmierung (Arduino)
 
-Ist dies erledigt können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.
+Ist dies erledigt, können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.
 
-Als erstes muss eine Instanz des Sensors erstellt werden. Dazu erstellen wir noch 2 Variablen in denen wir unsere beiden Messwerte für PM10 und PM2.5 speichern.
+Als erstes muss eine Instanz des Sensors erstellt werden. Dazu erstellen wir noch zwei Variablen, in denen wir unsere beiden Messwerte für PM10 und PM2.5 speichern.
 
 ```arduino
 #include "SenseBoxMCU.h"
@@ -42,7 +42,7 @@ void setup(){
     // Normalen seriellen Port initialisieren 
     Serial.begin(9600);
     while(!Serial);
-    // Seriellen Port an dem unsere Sensor angeschlossen ist initialisieren
+    // Seriellen Port, an dem unsere Sensor angeschlossen ist initialisieren
     Serial1.begin(9600);
     delay(5000);
 }
