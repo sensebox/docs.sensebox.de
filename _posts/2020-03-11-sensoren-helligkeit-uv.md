@@ -16,9 +16,9 @@ block: /images/2020-03-11-sensoren-helligkeit-uv/block_helligkeit_uv.svg
 
 Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.
 
-Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen. Dieser Sensor erkennt die Lichtverhältnissen ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.
+Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen. Dieser Sensor erkennt die Lichtverhältnisse ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.
 
-Der zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Dieser wandelt die Intensität des UV-Lichts der Sonne in digitale Daten um. Der Sensor hat eine hervorragende UV-Empfindlichkeit und Linearität über Filtron™-Technologie. Er hat eine gute UV-Strahlungsmessung auch bei langer Sonnen-UV-Belastung und kann exzellenter Temperaturschwankungen ausgleichen.
+Der zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Dieser wandelt die Intensität des UV-Lichts der Sonne in digitale Daten um. Der Sensor hat eine hervorragende UV-Empfindlichkeit und Linearität über Filtron™-Technologie. Er hat eine gute UV-Strahlungsmessung auch bei langer Sonnen-UV-Belastung und kann exzellent Temperaturschwankungen ausgleichen.
 
 {% include image.html image=page.image %}
 
@@ -71,7 +71,7 @@ In Blockly kann der Sensor über folgenden Block ausgelesen werden:
 
 {% include image.html image=page.block %}
 
-Im Block kannst du zwischen den verschiedenen Parametern des Helligkeit/UV-Sensor auswählen:
+Im Block kannst du zwischen den verschiedenen Parametern des Helligkeits-/UV-Sensors auswählen:
 
 - Helligkeit in LUX
 - UV-Belastung in µW/m^2
