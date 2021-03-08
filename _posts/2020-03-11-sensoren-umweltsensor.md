@@ -25,7 +25,7 @@ Mit dem Sensor BME680 kannst du eine verschiedene Auswahl an Phänomenen messen.
 ## Anschluss und Programmierung
 
 Mit dem mitgelieferten Verbindungskabel kannst du deinen Gassensor mit dem "I2C"-Port der senseBoxMCU verbinden. 
-Ist dies erledigt können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.
+Ist dies erledigt, können wir nun im Programmcode den Sensor initialisieren und uns die ersten Messwerte ausgeben lassen.
 
 **Achtung** Der BME Gassensor ist nicht mit dem BMP280 Luftdrucksensor kompatibel. Das heißt du kannst nur einen der beiden gleichzeitig anschließen und auslesen!
 
@@ -36,7 +36,7 @@ In Blockly kann der Sensor über folgenden Block ausgelesen werden:
 
 {% include image.html image=page.block %}
 
-Im Block kannst du zwischen den verschiedenen Parametern des Umweltsensor auswählen:
+Im Block kannst du zwischen den verschiedenen Parametern des Umweltsensors auswählen:
 
 - Temperatur in Grad Celsius (°C)
 - Luftfeuchtigkeit in %
