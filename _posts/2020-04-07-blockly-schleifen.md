@@ -20,12 +20,12 @@ Die einfachste Schleife ist die `Wiederhole X mal`-Schleife. In ihr werden alle 
 {% include image.html image=page.image1 %}
 
 ## Wiederhole solange Schleife
-Die zweite  Schleife ist die `Wiederhole solange/bis`-Schleife. Die in der Schleife eingefügten Befehle werden nur dann ausgeführt, wenn eine im freien Blockabschnitt angeknüpfte Bedingung zutrifft/wahr ist. Im Dropdown-Menü des Blockst lässt sich auswählen ob die Befehle ausgeführt werden soll **bis** eine Bedingung zutrifft, oder **solang** eine Bedindung zutrifft.
+Die zweite  Schleife ist die `Wiederhole solange/bis`-Schleife. Die in der Schleife eingefügten Befehle werden nur dann ausgeführt, wenn eine im freien Blockabschnitt angeknüpfte Bedingung zutrifft/wahr ist. Im Dropdown-Menü des Blockst lässt sich auswählen, ob die Befehle ausgeführt werden sollen **bis** eine Bedingung zutrifft, oder **solange** eine Bedindung zutrifft.
 
 {% include image.html image=page.image2 %}
 
 ## Schleife mit Laufvariable
-Die dritte Schleife wird mithilfe einer Laufvariable umgesetzt, welche auch innerhalb des Programms eingesetzt werden kann. Zuerst wird eine Variable mit einem Startwert initialisiert und ein Maximalwert für sie festgelegt. Dann wird die Laufvariable nach jedem Durchgang um die angegebene Zahl erhöht. So kann für jeden Zustand der Laufvariable eine Anweisung festgelegt werden.
+Die dritte Schleife wird mithilfe einer Laufvariable umgesetzt, die auch innerhalb des Programms eingesetzt werden kann. Zuerst wird eine Variable mit einem Startwert initialisiert und ein Maximalwert für sie festgelegt. Dann wird die Laufvariable nach jedem Durchgang um die angegebene Zahl erhöht. So kann für jeden Zustand der Laufvariable eine Anweisung festgelegt werden.
 
 {% include image.html image=page.image3 %}
 
