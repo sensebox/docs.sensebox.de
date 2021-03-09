@@ -24,23 +24,23 @@ image10: /images/2020-04-08-blockly-sensoren/blockly-sensoren-10.svg
 ---
 
 ## Allgemeines
-In der senseBox befinden sich verschiedene Umweltsensoren. In diesem Kapitel beschränken wir uns zunächst auf die bereits auf der senseBox MCU verbauten, oder per JST-Kabel anschließbaren Sensoren. 
+In der senseBox befinden sich verschiedene Umweltsensoren. In diesem Kapitel beschränken wir uns zunächst auf die bereits auf der senseBox MCU verbauten oder per JST-Kabel anschließbaren Sensoren. 
 
-> Um Messwerte auszulesen und anzeigen zu lassen verwendest du am besten das Display. In diesem Kapitel nutzen wir eine Art Minimalbeispiel um Messwerte auf dem Display anzeigen zu lassen.
+> Um Messwerte auszulesen und anzeigen zu lassen, verwendest du am besten das Display. In diesem Kapitel nutzen wir eine Art Minimalbeispiel, um Messwerte auf dem Display anzeigen zu lassen.
 
-## Beschleinigungssensor (BMX055)
+## Beschleunigungssensor (BMX055)
 Der Beschleunigungssensor ist bereits auf der senseBox MCU verbaut. Er kann dir die Beschleunigung in X-, Y-, und Z-Achse und die Gesamtbeschleunigung angeben. Dabei kannst du den Messbereich zwischen 2g, 4g, 8g und 16g wählen.
 
 {% include image.html image=page.image0 %}
 
->  Die mittlere Erdbeschleunigung wird in *g* angegeben und beträgt abgerundet 9,81 m/s<sup>2</sup>
+>  Die mittlere Erdbeschleunigung wird in *g* angegeben und beträgt abgerundet 9,81 m/s<sup>2</sup>.
 
 ## Button
 Ein Button ist bereits auf der senseBox MCU verbaut. Zusätzliche Buttons können über die drei Digital Ports angeschlossen werden. Im Dropdown Menü können verschiedene Modi für den Button ausgewählt werden:
 
-- __ist gedrückt__: Mit diesem Modus kannst du abfragen ob der Block gerade gedrückt wird. Du erhältst entweder den Wert TRUE oder FALSE.
-- __wurde gedrückt__: Mit diesem Modus kannst du abfragen ob der Block gedrückt wurde. Erst wenn der Knopf gedrückt und wieder losgelassen wurde erhältst du TRUE zurück
-- __als Schalter__: Wenn du diesen Modus verwendest kannst du den Knopf wie ein Lichtschalter verwenden. Der Status wird gespeichert bis der Button erneut gedrückt wird
+- __ist gedrückt__: Mit diesem Modus kannst du abfragen, ob der Block gerade gedrückt wird. Du erhältst entweder den Wert TRUE oder FALSE.
+- __wurde gedrückt__: Mit diesem Modus kannst du abfragen, ob der Block gedrückt wurde. Erst wenn der Knopf gedrückt und wieder losgelassen wurde, erhältst du TRUE zurück.
+- __als Schalter__: Wenn du diesen Modus verwendest, kannst du den Knopf wie ein Lichtschalter verwenden. Der Status wird gespeichert bis der Button erneut gedrückt wird.
 
 
 {% include image.html image=page.image10 %}
@@ -107,7 +107,7 @@ Der Feinstaubsensor wird an einem der zwei UART/Serial Ports angeschlossen und i
 {% include image.html image=page.image4 %}
 
 ## Bodentemperatur- und Bodenfeuchtesensor (SMT50)
-Der Bodentemperatur-  und Bodenfeuchtesensor wird ein einen der drei Digital Ports angeschlossen und im Block der jeweilge Port ausgewählt. Er kann dir die Bodentemperatur in °C und den volumetrischen Wassergehalt des Bodens in %.
+Der Bodentemperatur- und Bodenfeuchtesensor wird in einen der drei Digital Ports angeschlossen und im Block der jeweilge Port ausgewählt. Er kann dir die Bodentemperatur in °C und den volumetrischen Wassergehalt des Bodens in % ausgeben.
 
 {% include image.html image=page.image5 %}
 
@@ -116,7 +116,7 @@ Das GPS-Modul wird an einen der fünf I2C/Wire Ports angeschlossen. Es kann dir 
 
 {% include image.html image=page.image6 %}
 
-## Ultraschall Abstandssensor
+## Ultraschall-Abstandssensor
 Der Ultraschall-Distanzsensor wird an einen der drei Digital Ports angeschlossen und im Block der jeweilige Port ausgewählt. Er kann dir die Entfernung in cm angeben.
 
 {% include image.html image=page.image8 %}
