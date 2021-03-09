@@ -32,17 +32,17 @@ imageIlluminance: /images/2020-04-08-blockly-lora/blockly-lora-illuminance.svg
 
 {% include image.html image=page.image1 %}
 
-Mit diesen Blöcken kannst du das Lora-Bee initializieren und dich mit dem The Things Network verbinden. Je nachdem welche Aktivierungsmethode du verwendest (OTAA oder ABP) musst du die entsprechenden ID's in dem Block eintragen. Zusätzlich kann das Übertragungsinterval in Minuten eingestellt werden.  
+Mit diesen Blöcken kannst du das Lora-Bee initialisieren und dich mit dem [The Things Network](https://www.thethingsnetwork.org/) verbinden. Je nachdem, welche Aktivierungsmethode du verwendest (OTAA oder ABP), musst du die entsprechenden ID's in den Block eintragen. Zusätzlich kann das Übertragungsintervall in Minuten eingestellt werden.  
 
 
-## Lora Nachricht
+## Lora-Nachricht
 {% include image.html image=page.image2 %}
 
-Verwende diese Blöcke, um eine Nachricht über das LoRa Netzwerk zu versendet. Hierbei wird kein spezielles Format für die Nachricht (oft auch Payload) genannt verwendet. Die Daten werden hierbei als Byte codiert, sodass diese schnell und effizient über das LoRa Netz übertragen werden können. Anschließend müssen die Daten in der TTN Console wieder über einen speziellen Decoder in ein lesbares Format umgewandelt werden. 
+Verwende diese Blöcke, um eine Nachricht über das LoRa-Netzwerk zu versenden. Hierbei wird kein spezielles Format für die Nachricht (oft auch Payload genannt) verwendet. Die Daten werden hierbei als Byte codiert, sodass diese schnell und effizient über das LoRa-Netz übertragen werden können. Anschließend müssen die Daten in der TTN Console wieder über einen speziellen Decoder in ein lesbares Format umgewandelt werden. 
 
 ## Decoder Erstellen
 
-Beim TTN Decoding geht nur darum, Bytes zu verstehen. Danach ist es möglich, schnelle Lösungen zu erstellen, um auf deine, von senseBox gemessenen Daten, zuzugreifen.
+Beim TTN Decoding geht es nur darum, Bytes zu verstehen. Danach ist es möglich, schnelle Lösungen zu erstellen, um auf deine von senseBox gemessenen Daten zuzugreifen.
 
 
 ### Theorie
@@ -57,17 +57,17 @@ Die nachfolgende Tabelle gibt eine Übersicht über die Bandbreite:
 | 2     | 16  | −32.768        | 32.767        | 0              | 65.535         |
 | 3     | 24  | −2.147.483.648 | 2.147.483.647 | 0              | 4.294.967.295  |
 
-In der Tabelle gibt es zwei verschiedenen Typen: "signed" und "unsigned". Signded Werte decken sowohl den positiven als auch negativen Wertebereich ab. 
+In der Tabelle gibt es zwei verschiedenen Typen: "signed" und "unsigned". Signed Werte decken sowohl den positiven als auch den negativen Wertebereich ab. 
 
-Beispiel: Du möchtest die Luftfeuchtigkeit messen. Die Werte liegen zwischen 0% und 100%. Es handelt sich aber um keine Kommazahlen sondern nur um ganzzahlige Werte. Man könnte nun ein Byte verwenden, welcher den Wert für die Luftfeuchtigkeit entspricht. Möchte man allerdings eine Dezimalzahl mit zwei Nachkommastellen versenden, reicht 1 Byte nicht mehr aus. 2 Bytes müssen verwendet werden.  
+Beispiel: Du möchtest die Luftfeuchtigkeit messen. Die Werte liegen zwischen 0% und 100%. Es handelt sich aber um keine Kommazahlen, sondern nur um ganzzahlige Werte. Man könnte nun ein Byte verwenden, der dem Wert für die Luftfeuchtigkeit entspricht. Möchte man allerdings eine Dezimalzahl mit zwei Nachkommastellen versenden, reicht 1 Byte nicht mehr aus. 2 Bytes müssen verwendet werden.  
 
-Stellen dir vor vor, wir messen 85,42%. Ein einfacher Ansatz wäre es, die Messung zu nehmen und mit 100 zu multiplizieren. Nun haben wir ein Wert von 85,42 * 100 = 8542. Wir können 8542 in zwei Bytes kodieren, sie an TTN senden und diese zwei Bytes decodieren, um 8542 zu erhalten. Diese Zahl kann nun durch 100 geteilt werden, und wir erhalten den Wert von 85,42%. So funktioniert es im Grunde genommen.
+Stelle dir vor, wir messen 85,42%. Ein einfacher Ansatz wäre es, die Messung zu nehmen und mit 100 zu multiplizieren. Nun haben wir ein Wert von 85,42 * 100 = 8542. Wir können 8542 in zwei Bytes kodieren, sie an TTN senden und diese zwei Bytes decodieren, um 8542 zu erhalten. Diese Zahl kann nun durch 100 geteilt werden und wir erhalten den Wert von 85,42%. So funktioniert es im Grunde genommen.
 
 
 ### Beispiel
 
 __Blockly__:
-Auf der Arduino Seite wird die [lora-serialization](https://github.com/thesolarnomad/lora-serialization) Bibliothek verwendet. Die Dokumentation zeigt eine[Funktion](https://github.com/thesolarnomad/lora-serialization#unsigned-16bit-integer-2-bytes), um einen Wert mit 16 Bit zu versenden. Diese Funktion kann genutzt werden, um die Werte für die Luftfeuchtigkeit zu versenden. Der Wert für die Luftfeuchtigkeit liegt zwischen 0 und 100%, sodass folgende Blöcke zum versenden verwendet werden können:
+Auf der Arduino Seite wird die [lora-serialization](https://github.com/thesolarnomad/lora-serialization) Bibliothek verwendet. Die Dokumentation zeigt eine [Funktion](https://github.com/thesolarnomad/lora-serialization#unsigned-16bit-integer-2-bytes), um einen Wert mit 16 Bit zu versenden. Diese Funktion kann genutzt werden, um die Werte für die Luftfeuchtigkeit zu versenden. Der Wert für die Luftfeuchtigkeit liegt zwischen 0 und 100%, sodass folgende Blöcke zum Versenden verwendet werden können:
 
 {% include image.html image=page.imageHumidty %}
 
@@ -101,7 +101,7 @@ function uint(bytes) {
 }
 ```
 
-Hier kann nun der Decoder definiert werden
+Hier kann nun der Decoder definiert werden:
 ```js
 function Decoder(bytes) {
 
@@ -125,14 +125,14 @@ function Decoder(bytes) {
   return decoded;
 }
 ```
-Die Funktion nimmt die ersten zwei Bytes und konvertiert sie zu zum Messwert für Luftfeuchtigkeit. Die nächsten zwei Bytes werden zu einem Messwert für die Temperatur konvertiert. Wenn du die openSenseMap als Endpunkt (`https://ttn.opensensemap.org/v1.1`)in der TTN HTTP integration verwendest, werden die Messwerte mit deinen Sensor IDs verknüpft und die Messwerte auf der openSenseMap angezeigt. Mehr über die openSenseMap TTN integration findest du [hier](https://sensebox.github.io/books-v2/osem/ttn_integration.html)
+Die Funktion nimmt die ersten zwei Bytes und konvertiert sie zum Messwert für Luftfeuchtigkeit. Die nächsten zwei Bytes werden zu einem Messwert für die Temperatur konvertiert. Wenn du die openSenseMap als Endpunkt (`https://ttn.opensensemap.org/v1.1`) in der TTN HTTP Integration verwendest, werden die Messwerte mit deinen Sensor IDs verknüpft und die Messwerte auf der openSenseMap angezeigt. Mehr über die openSenseMap TTN integration findest du [hier](https://sensebox.github.io/books-v2/osem/ttn_integration.html)
 
 ### Wichtige Punkte
 Einige wichtige Punkte sind zu beachten:
 
 → Die Dekodierung schlägt fehl / gibt falsche Werte zurück, wenn du nicht alles sendest, was dekodiert werden muss. Wenn der Decoder z.B. einen Feuchte- und einen Temperaturwert akzeptiert, die senseBox aber nur einen Feuchtewert sendet, erhälst du keine korrekten Werte.
 
-→ Beim senden von Werten, die größer als 3 Bytes sind, ist es ein wenig anders. Werte für die Helligkeit können im Maximum größer sein als ein 2 Byte Integer. Daher werden 3 Bytes benötigt. Du kannst das Ganze wie folgt senden: 
+→ Beim Senden von Werten, die größer als 3 Bytes sind, ist es ein wenig anders. Werte für die Helligkeit können im Maximum größer sein als ein 2 Byte Integer. Daher werden 3 Bytes benötigt. Du kannst das Ganze wie folgt senden: 
 
 {% include image.html image=page.imageIlluminance%}
 
