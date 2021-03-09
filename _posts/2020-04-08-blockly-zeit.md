@@ -25,7 +25,7 @@ Mit den `Warte`-Blöcken kannst du deinen Programmcode für eine gewisse Zeit un
 {% include image.html image=page.image2 %}
 
 ## Bereits vergangene Zeit
-Mit den `Bereits vergangene Zeit`-Blöcken kannst du dir die Zeit, die dein Programmcode bereits läuft ausgeben lassen. Die Laufzeit wird in Millisekunden oder Microsekunden angegeben
+Mit den `Bereits vergangene Zeit`-Blöcken kannst du dir die Zeit, die dein Programmcode bereits läuft, ausgeben lassen. Die Laufzeit wird in Millisekunden oder Microsekunden angegeben.
 
 {% include image.html image=page.image3 %}
 {% include image.html image=page.image4 %}
