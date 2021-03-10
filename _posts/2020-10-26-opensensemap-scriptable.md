@@ -18,6 +18,6 @@ image1: /images/2020-10-26-opensensemap-scriptable/widget.jpg
 Wenn ihr folgende URL direkt über ein iOS Gerät öffnet, auf dem App installiert ist, wird das Widget automatisch hinzugefügt.
 [scriptable:///run?scriptName=Osem%20Widget](scriptable:///run?scriptName=Osem%20Widget)
 
-Alternativ könnt ihr den Code über folgenden [link](https://gist.github.com/mariopesch/61fc8167b84776225ce4d7c7738bba9b) abrufen und kopieren. 
+Alternativ könnt ihr den Code über folgenden [Link](https://gist.github.com/mariopesch/61fc8167b84776225ce4d7c7738bba9b) abrufen und kopieren. 
 
 Viel Spaß damit!
