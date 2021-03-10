@@ -3,13 +3,13 @@ date: 2017-01-15
 title: "Tutorial 4: Einparkhilfe"
 title_order: 6
 video_id: _VPqKrjeTNo
-description: 🎬 In diesem Video zeigt dir Felix wir ihr eine Einparkhilfe wie im Auto mit der senseBox bauen und programmieren könnt.
+description: 🎬 In diesem Video zeigt dir Felix, wir du eine Einparkhilfe wie im Auto mit der senseBox bauen und programmieren kannst.
 categories: sensebox-tutorials
 type: Video
 set: sensebox-tutorials
 set_order: 6
 ---
-🎬 In diesem Video zeigt dir Felix wir ihr eine Einparkhilfe wie im Auto mit der senseBox bauen und programmieren könnt.
+🎬 In diesem Video zeigt dir Felix, wir du eine Einparkhilfe wie im Auto mit der senseBox bauen und programmieren kannst.
 
 🧰 Du brauchst:
 - senseBox MCU 
@@ -21,9 +21,9 @@ set_order: 6
 - Verbindungskabel
 
 
-🎥 Dieses Video entstand in Zusammenarbeit mit der Hopp Foundation for computer literacy & informatics (https://www.hopp-foundation.de/)
+🎥 Dieses Video entstand in Zusammenarbeit mit der Hopp Foundation for Computer Literacy & Informatics (https://www.hopp-foundation.de/).
 
- 🔎 Weitere Informationen zum Projekt und zusätzliche Materialien findest du auf https://www.sensebox.de
+ 🔎 Weitere Informationen zum Projekt und zusätzliche Materialien findest du auf https://www.sensebox.de.
 
 
 👍 Folgt uns in den sozialen Netzwerken:
