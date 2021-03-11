@@ -2,7 +2,7 @@
 date: 2017-01-15
 title: senseBox:home assembly video
 video_id: dUuRfZI39U8
-description: Assembly of the senseBox:home in german language
+description: Assembly of the senseBox:home in German language
 categories: sensebox-home
 type: Video
 set: aufbau-sensebox-home
