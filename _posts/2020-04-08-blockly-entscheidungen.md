@@ -20,7 +20,7 @@ image8: /images/2020-04-08-blockly-entscheidungen/blockly-entscheidungen-8.svg
 ---
 
 ## Entscheidungen
-Entscheidungen oder Verzweigungn in Programmen gehören zu den wichtigsten Kontrollstrukturen beim Programmieren. Sie ermöglichen dir dein Programm auf verschiedene
+Entscheidungen oder Verzweigungn in Programmen gehören zu den wichtigsten Kontrollstrukturen beim Programmieren. Sie ermöglichen dir, dein Programm auf verschiedene Bedingungen reagieren zu lassen.
 
 ### Wenn, mache Beziehung
 Der `wenn, mache`-Block verfügt über zwei freie Blockabschnitte `wenn` und `mache`.
