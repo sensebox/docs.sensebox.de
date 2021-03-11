@@ -39,7 +39,7 @@ Arduino is an open source project and is financed by donations. Therefore you wi
 {% include image.html image=page.image2 %}
 
 
-Create a new folder on your hard disk and unzip the zip file. By starting the file 'arduino.exe' the IDE can be started.  
+Create a new folder on your hard disk and unzip the zip file. The IDE can be started by executing the file 'arduino.exe'.  
 
 
 ## Download Arduino Software for Mac(OSX)
@@ -71,7 +71,7 @@ Arduino is an open source project and is financed by donations. Therefore you wi
 
 ### Installing the IDE on Linux
 
-Linux users can download and unpack the Linux variant. The included 'install.sh' script automatically creates a desktop shortcut. The fastest way to do this is via the terminal. To do this, open the terminal by pressing the keys 'Ctrl + Alt + T' and enter the following commands there
+Linux users can download and unpack the Linux variant. The included 'install.sh' script automatically creates a desktop shortcut. The fastest way to do this is via the terminal. To do this, open the terminal by pressing the keys 'Ctrl + Alt + T' and enter the following commands there:
 
 ```text
 # if the downloaded file is not stored in the downloads folder, replace "Downloads" with the path to the corresponding folder
