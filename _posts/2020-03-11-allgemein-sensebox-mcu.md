@@ -28,5 +28,5 @@ Sensors and actuators are addressed via the proven interfaces such as I2C, UART 
 UART or SPI modules are offered via the two XBee compatible sockets. The data transfer can be carried out in real time via WLAN, LAN or LoRa, or stored on a micro SD card.  
 
 ## Programming
-The senseBox MCU can be programmed using various programming environments. You can find a detailed overview [here](/general/general-sensebox-editors/)
+The senseBox MCU can be programmed using various programming environments. You can find a detailed overview [here](/general/general-sensebox-editors/).
 
