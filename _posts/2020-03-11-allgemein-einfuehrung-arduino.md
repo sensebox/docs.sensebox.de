@@ -1,9 +1,9 @@
 ---
 date: 2020-03-11
-title: Erste Schritte mit der Arduino IDE
+title: First steps with the Arduino IDE
 title_order: 4
 categories: arduino
-description: Programmierung der senseBox in der Arduino IDE
+description: Programming the senseBox in the Arduino IDE
 type: Document
 set: first-steps-arduino
 set_order: 5
@@ -13,7 +13,7 @@ image1: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-1.png
 image2: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-2.png
 ---
 
-Before you can get started, you need to install the Arduino IDE. How this works you can find [here](/general/general-arduino-ide-install//)
+Before you can get started, you need to install the Arduino IDE. You can find out how this works [here](/general/general-arduino-ide-install//)
 
 ## Basics
 
