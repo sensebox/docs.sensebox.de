@@ -37,7 +37,7 @@ After the successful registration you can start creating your senseBox. To do so
 
 {% include image.html image=page.image3 %}
 
-Since the openSenseMap is open for all kinds of senseBoxes, you will be asked for the hardware used. Select *senseBox:home V2* and the data transfer module you are using. If you want to send your data via LoRa to the openSenseMap, select LoRa at "connection type". Then you can specify your Lora settings in the "Advanced" tab. Here you have to enter the Application-ID and Device-ID which you have entered at <a href="www.thethingsnetwork.org">TheThingsNetwork</a>. More information can be found here [here](/sensebox-home-extensions/home-extensions-lora/)
+Since the openSenseMap is open for all kinds of senseBoxes, you will be asked for the hardware used. Select *senseBox:home V2* and the data transfer module you are using. If you want to send your data via LoRa to the openSenseMap, select LoRa at "connection type". Then you can specify your Lora settings in the "Advanced" tab. Here you have to enter the Application-ID and Device-ID which you have entered at <a href="www.thethingsnetwork.org">TheThingsNetwork</a>. More information can be found [here](/sensebox-home-extensions/home-extensions-lora/)
 
 {% include image.html image=page.image4 %}
 
