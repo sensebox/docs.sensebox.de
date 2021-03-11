@@ -9,13 +9,13 @@ resources:
 image1: /images/2020-10-16-opensensemap-security/security_osem_en.jpg
 ---
 
-It is possible to protect the data upload to your senseBox with a generated auth Tokenn. This option can be enabled on the openSenseMap in your personal dashboard. You also have the ability to generate a new token, but be careful, this can not be undone.
+It is possible to protect the data upload to your senseBox with a generated auth token. This option can be enabled on the openSenseMap in your personal dashboard. You also have the ability to generate a new token, but be careful, this can not be undone.
 
 {% include image.html image=page.image1 %}
 
 ## How to use the Token?
 
-As soon as you enable the authentication all the POST-Requests for your senseBox have to include your authentication token. Otherwise the openSenseMap will reject the data submitted. The two endpoint which require this token are `https://api.opensensemap.org/boxes/:senseBoxId/:sensorId` and `https://api.opensensemap.org/boxes/:senseBoxId/data`.
+As soon as you enable the authentication, all the POST-Requests for your senseBox have to include your authentication token. Otherwise the openSenseMap will reject the data submitted. The two endpoint which require this token are `https://api.opensensemap.org/boxes/:senseBoxId/:sensorId` and `https://api.opensensemap.org/boxes/:senseBoxId/data`.
 An Example header would look like this:
 
 ```
