@@ -10,7 +10,7 @@ set_order: 3
 image1: /images/sensebox-home/compile-en.png
 ---
 
-After registration, the program code must be copied to the senseBox. If you have a senseBox with WiFi-Bee or Lan-Bee you can easily compile the program code online and transfer it via drag and drop. You do not need to install any software on your computer
+After the registration, the program code must be copied to the senseBox. If you have a senseBox with WiFi-Bee or Lan-Bee you can easily compile the program code online and transfer it via drag and drop. You do not need to install any software on your computer.
 
 ## Compiling online
 The easiest way to get your code onto the senseBox is to use our online compiler. You have to enter some information in the mask. If something does not fit your individual structure of the senseBox, you can simply leave this field blank. Finally press "Compile" and a file in the format .BIN will be downloaded by your browser. 
