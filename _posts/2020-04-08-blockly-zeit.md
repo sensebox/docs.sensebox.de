@@ -25,17 +25,17 @@ With the `Wait` blocks you can interrupt your program code for a certain time. D
 {% include image.html image=page.image2 %}
 
 ## Current elapsed time
-With the `current elapsed time` blocks, you can display the time that your program code is already running. The runtime is given in milliseconds or microseconds
+With the `current elapsed time` blocks, you can display the time that your program code is already running. The runtime is given in milliseconds or microseconds.
 
 {% include image.html image=page.image3 %}
 {% include image.html image=page.image4 %}
 
 ## Wait forever
-With the `Wait forever` block you can end your program.
+With the `Wait forever` block, you can end your program.
 
 {% include image.html image=page.image5 %}
 
 ## Measuring interval
-With the block `Measuring interval` you can determine how often your measured values are transmitted. By default (i.e. without measuring interval block) the measured values are transmitted every second.
+With the block `Measuring interval`, you can determine how often your measured values are transmitted. By default (i.e. without measuring interval block) the measured values are transmitted every second.
 
 {% include image.html image=page.image6 %}
