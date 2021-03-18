@@ -32,13 +32,13 @@ imageIlluminance: /images/2020-04-08-blockly-lora/blockly-lora-illuminance-en.sv
 
 {% include image.html image=page.image1 %}
 
-With these blocks you can initialize Lora-Bee and connect to The Things Network. Depending on which activation method you use (OTAA or ABP) you have to enter the corresponding ID's in the block. Additionally, you can set the transmission interval in minutes.  
+With these blocks you can initialize LoRa Bee and connect to The Things Network. Depending on which activation method you use (OTAA or ABP), you have to enter the corresponding ID's in the block. Additionally, you can set the transmission interval in minutes.  
 
 
 ## Lora Message
 {% include image.html image=page.image2 %}
 
-Use these blocks to send a message via the LoRa network. No special format is used for the message (often called payload). The data is encoded as bytes so that it can be transmitted quickly and efficiently over the LoRa network. The data must then be converted back into a readable format in the TTN Console using a special decoder. 
+Use these blocks to send a message via the LoRa network. No special format is used for the message (often called payload). The data is encoded as bytes so that it can be transmitted quickly and efficiently over the LoRa network. The data must then be converted back into a readable format in the TTN console using a special decoder. 
 
 ## Create Decoder
 
@@ -80,7 +80,7 @@ As the value for the temperature can also fall into the negative range, the valu
 This example uses a temperature sensor that has measured values from -18 degrees Celsius and outputs the temperature with an accuracy of 0.0013 degrees Celsius. 
 
 __TTN__:
-In the TTN Console two different values are now coming from the senseBox. These values must now be decoded back from bytes to the original values using a decoder. You can define the decoder under Payloads:
+In the TTN console, two different values are now coming from the senseBox. These values must now be decoded back from bytes to the original values using a decoder. You can define the decoder under Payloads:
 
 {% include image.html image=page.image13 %}
 
@@ -156,6 +156,6 @@ The [Cayenne Low Power Payload Format](https://community.mydevices.com/t/cayenne
 {% include image.html image=page.image11 %}
 {% include image.html image=page.image12 %}
 
-In the TTN console you can select the decoder under __Payload__. Select Cayenne LPP and the values will be decoded automatically.
+In the TTN console, you can select the decoder under __Payload__. Select Cayenne LPP and the values will be decoded automatically.
 
 {% include image.html image=page.image14 %}

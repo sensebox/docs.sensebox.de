@@ -15,8 +15,7 @@ image3: /images/2020-04-08-blockly-SD/blockly-SD-3-en.svg
 image4: /images/2020-04-08-blockly-SD/blockly-SD-4-en.svg
 
 ---
-
-With the senseBox you can, with the help of the SD-Bee, store data on a microSD card for later analysis on the computer.
+With the senseBox, you can use the SD-Bee to save data on a microSD card for later analysis on the computer.
 
 ## Store values on SD card
 With the `Create File on SD Card` block in Setup() a new file can be created on the SD card. The name of the file can be changed in the block drop down menu.

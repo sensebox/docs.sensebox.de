@@ -17,10 +17,10 @@ image3: /images/2020-03-11-allgemein-einfuehrung-openroberta/openroberta-buttons
 
 ---
 
-openRoberta is a graphical programming interface developed by the Fraunhofer Institute. Besides the senseBox you can program many other systems via openRoberta.  
+openRoberta is a graphical programming interface developed by the Fraunhofer Institute. Besides the senseBox, you can program many other systems via Open Roberta.  
 
 ## First Steps
-Open the openroberta lab at [lab.open-roberta.org](https://lab.openroberta.org). There you first have to select your system, the senseBox.
+Open the Open Roberta Lab at [lab.open-roberta.org](https://lab.openroberta.org). There you first have to select your system, the senseBox.
 
 {% include image.html image=page.image1 %}
 
@@ -47,9 +47,8 @@ Furthermore you will find the button in the lower right corner of the workspace 
 {% include image.html image=page.image3 %}
 
 ## Transferring programs
-To transfer your program to the senseBox, you must connect the senseBox to your computer via the USB cable. Next, you can download it by clicking the "Play" button in the lower left corner of the workspace. Now follow the instructions in the popup
-Up window.
+To transfer your program to the senseBox, you must connect the senseBox to your computer via the USB cable. Next, you can download it by clicking the "Play" button in the lower left corner of the workspace. Now follow the instructions in the Pop-up window.
 
 
 ## openroberta Wiki
-This and all other information about the openroberta-lab can be found online in the [Documentation on the openroberta-lab from the Fraunhofer Institute] (https://jira.iais.fraunhofer.de/wiki/display/ORInfo ).
+This and all other information about the Open Roberta Lab can be found online in the [Documentation on the openroberta-lab from the Fraunhofer Institute] (https://jira.iais.fraunhofer.de/wiki/display/ORInfo ).

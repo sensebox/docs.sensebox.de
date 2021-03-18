@@ -16,16 +16,16 @@ The openSenseMap only understands numerical measurement values. Text, images or 
 Measured values can be uploaded via a variety of different devices. 
 
 ### How many data can I upload per minute?
-In order not to overload the database, 6 packages of readings per minute can be uploaded. You should therefore pay attention to 
+In order not to overload the database, 6 packages of readings per minute can be uploaded. You should therefore be careful not to upload more.
 
 ### Where is the data stored?
 The data is stored at the computer center of the University of Münster.
 
 ### Which devices are supported?
-The openSenseMap receives, as an open platform, data from all devices that send their measurement data to the openSenseMap.
+As an open platform, the openSenseMap receives data from all devices that send their measurement data to the openSenseMap.
 
 ### I do not have a senseBox can I still upload data?
-Not only from the senseBox data could be uploaded to the openSenseMap. The openSenseMap also supports measurement devices from the Citizen Science projects [luftdaten.info](https://luftdaten.info/) and [HackAIR](https://www.hackair.eu/). However, thanks to the *REST API*, measured values from almost every IoT measuring device can be sent to the openSenseMap. For more information and how to register your meter, please visit [https://docs.sensebox.de/](https://docs.sensebox.de/category/opensensemap/)
+Not only from the senseBox data could be uploaded to the openSenseMap. The openSenseMap also supports measurement devices from the Citizen Science projects [luftdaten.info](https://luftdaten.info/) and [HackAIR](https://www.hackair.eu/). However, thanks to the *REST API*, measured values from almost every IoT measuring device can be sent to the openSenseMap. For more information and how to register your meter, please visit [https://docs.sensebox.de/](https://docs.sensebox.de/category/opensensemap/).
 
 ### Where can I find more information about the openSenseMap and the code?
 All source code is available under a free license at [Github](https://github.com/sensebox). 

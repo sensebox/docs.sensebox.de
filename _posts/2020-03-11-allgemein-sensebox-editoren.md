@@ -31,6 +31,6 @@ You can download the Arduino IDE free of charge from the [Arduino website](https
 
 ## openRoberta
 
-openRoberta is another way to program the senseBox. The openRoberta lab requires no installation on your computer and offers a similar functionality as Blockly for senseBox. A short introduction to the use of the senseBox in openRoberta can be found [here](/general/general-introduction-openroberta/)
+openRoberta is another way to program the senseBox. The openRoberta lab requires no installation on your computer and offers a similar functionality as Blockly for senseBox. A short introduction to the use of the senseBox in openRoberta can be found [here](/general/general-introduction-openroberta/).
 
 {% include image.html image=page.image3 %}

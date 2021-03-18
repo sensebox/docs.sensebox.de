@@ -19,7 +19,7 @@ image7: /images/2020-04-08-blockly-entscheidungen/blockly-logic-7.svg
 image8: /images/2020-04-08-blockly-entscheidungen/blockly-logic-8.svg
 ---
 
-Decisions or branching in programmes are among the most important control structures in programming. They allow you to adapt your program to different
+Decisions or branching in programmes are among the most important control structures in programming. They allow you to adapt your program to different conditions.
 
 ### If, do relationship
 The `if, do` block has two free block sections 'if' and 'do'.
@@ -32,10 +32,10 @@ For example, the built-in LED on the senseBox MCU should be switched on *when* t
 
 {% include image.html image=page.image2 %}
 
-Commands added after the 'if, do' block will be executed in any case, even if the condition was not met before.
+Commands added after the 'if, do' block will be executed in any case, even if the condition was not fulfilled before.
 
 ### else
-With a click on the small cogwheel in the top left corner of the `if, do` block you can add a 'else' block section to the block. Commands stored in this block section will only be executed if the condition **wasn't** fulfilled before. If the condition was met, they are skipped.
+With a click on the small cogwheel in the top left corner of the `if, do` block you can add a 'else' block section to the block. Commands stored in this block section will only be executed if the condition **wasn't** fulfilled before. If the condition was filfilled, they are skipped.
 
 For example, here the built-in LED 1 should only light up **when** the built-in button is pressed **else** the built-in LED 2 should be switched on.
 
