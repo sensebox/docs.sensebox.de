@@ -12,7 +12,7 @@ resources:
 image1: /images/2020-04-08-blockly-led/blockly-led-1.svg
 image2: /images/2020-04-08-blockly-led/blockly-led-2.svg
 image3: /images/2020-04-08-blockly-led/blockly-led-3.svg
-
+image4: /images/2020-04-08-blockly-led/blockly-led-4.svg
 ---
 
 ## LED
@@ -29,3 +29,15 @@ Mit dem `RGB-LED`Block kannst du eine an einem der sechs digitalen Pins angeschl
 
 > Der Farbcode für senseBox Grün lautet zum Beispiel:  
 {% include image.html image=page.image3 %}
+
+## RGB-LED 
+
+Die verkettbare RGB-Led, welche über ein JST-Kabel direkt mit der senseBox MCU verbunden wird kann über folgenden Block programmiert werden:
+
+{% include image.html image=page.image4 %}
+
+Folgende Parameter können eingestellt werden:
+
+- Helligkeit: Gib einen Wert zwischen 0 (dunkel/aus) und 255 (sehr hell) an. Beachte, dass die Helligkeit im Verlaufe des Programmes nicht verändert werden sollte
+- Position: Sobald du mehrere RGB-LED mit einander verbunden hast kannst du hier über die Position die jeweilige LED auswähle. Beachte, dass die Position 0 der ersten LED entspricht.
+- Rot/Grün/Blau: Gib einen Wert zwischen 0 und 255 an.

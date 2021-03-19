@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '3.7.2'
+gem "jekyll", "~> 3.6"
+
+gem "kramdown-parser-gfm"
+gem "webrick", "~> 1.7"
 
 group :jekyll_plugins do
   gem 'jekyll-archives', '2.1.1'

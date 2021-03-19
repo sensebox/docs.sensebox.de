@@ -7,7 +7,7 @@ type: Document
 resources:
   - name: "Shop"
     link: https://sensebox.kaufen/product/co2-sensor
-image1: /images/2010-10-20-sensoren-co2/DSCF9389.jpg
+image1: /images/2020-10-20-sensoren-co2/DSCF9389.jpg
 ---
 
 Präziser CO<sub>2</sub>-Sensor vom Schweizer Hersteller Sensirion (Modell SCD30). Die Sensorplatine hat einen JST PHR4 Anschluss, passend zum Betrieb mit der senseBox MCU. Weiterhin ist er mit dem Qwiic Connect System ausgestattet.
