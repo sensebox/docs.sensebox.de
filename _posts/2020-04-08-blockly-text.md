@@ -23,11 +23,11 @@ Mit dem Textfeld Block `" "` kannst du Text erstellen. Schreibe den gewünschten
 {% include image.html image=page.image1 %}
 
 ## Erstelle Text aus
-Mit dem `Erstelle Text aus`-Block kannst du einerseits Messwerte in Text umwandeln und andererseits um zusammengesetze Texte (aus mehreren Textfeldern, Zahlen, Messwerten oder Variablen) zu erstellen. 
+Mit dem `Erstelle Text aus`-Block kannst du einerseits Messwerte in Text umwandeln und andererseits zusammengesetze Texte (aus mehreren Textfeldern, Zahlen, Messwerten oder Variablen) erstellen. 
 
 {% include image.html image=page.image2 %}
 
-Der normale Erstelle-Text-Aus-Block kann mit einem Klick auf das Zahnrad erweitert werden. Du kannst noch weitere Elemente durch Klicken und Ziehen hinzufügen um Text aus mehreren Elementen zu erstellen. Nach dem Bearbeiten kann mit einem weiteren Klick auf das Zahnrad das Fenster wieder geschlossen werden. 
+Der normale Erstelle-Text-Aus-Block kann mit einem Klick auf das Zahnrad erweitert werden. Du kannst noch weitere Elemente durch Klicken und Ziehen hinzufügen, um Text aus mehreren Elementen zu erstellen. Nach dem Bearbeiten kann mit einem weiteren Klick auf das Zahnrad das Fenster wieder geschlossen werden. 
 
 {% include image.html image=page.image6 %}
 ## Text anhängen

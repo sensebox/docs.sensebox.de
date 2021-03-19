@@ -6,6 +6,6 @@ description: openSenseMap RESTful API
 type: Document
 ---
 
-Die openSenseMap stellt eine API zur Abfrage von Daten zu Boxen und Messungen sowie zum Upload von Messungen findest du [hier](https://api.opensensemap.org/).
+Die openSenseMap erstellt eine API zur Abfrage von Daten zu Boxen und Messungen sowie zum Upload von Messungen. Du findest sie [hier](https://api.opensensemap.org/).
 
 Die Dokumentation der API-Routen ist [hier](https://docs.opensensemap.org) zu finden.

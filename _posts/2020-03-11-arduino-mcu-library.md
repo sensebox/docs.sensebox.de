@@ -23,7 +23,7 @@ Die senseBox MCU Library bietet dir Zugriff auf die folgenden Funktionen/Sensore
 - Senden von Daten an die [openSenseMap](https://opensensemap.org)
 
 ## Verwendung
-Die senseBoxMCU Library ist Bestandteil des Board-Support-Package und wird automatisch installiert. 
+Die senseBoxMCU Library ist Bestandteil des Board-Support-Packages und wird automatisch installiert. 
 
 Die senseBoxMCU Library lässt sich einzeln über folgenden Befehl einbinden:
 
@@ -32,7 +32,7 @@ include <senseBoxMCU.h>
 ```
 
 ## Klassen und Funktionen
-Die Library enthält die folgenden Klassen und Funktionen. Erstelle eine neue Instanz einer Klasse um auf ihre Funktionen zugreifen zu können, z.B. bietet dir die Klasse 
+Die Library enthält die folgenden Klassen und Funktionen. Erstelle eine neue Instanz einer Klasse, um auf ihre Funktionen zugreifen zu können, z.B. bietet dir die Klasse 
 
 ```Arduino
 #include "senseBoxMCU.h"

@@ -32,7 +32,7 @@ Die Arduino IDE kannst du auf der Website von Arduino <a href="https://arduino.c
 ## Open Roberta
 
 
-openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox. Eine kurze Einführung in die Verwendung der senseBox in openRoberta findest du [hier](/allgemein/allgemein-einfuehrung-openroberta/)
+openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox. Eine kurze Einführung in die Verwendung der senseBox in openRoberta findest du [hier](/allgemein/allgemein-einfuehrung-openroberta/).
 
 {% include image.html image=page.image3 %}
 

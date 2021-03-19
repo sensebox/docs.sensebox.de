@@ -25,10 +25,10 @@ Der Prozessor basiert auf dem ARM Cortex-M0+ Prozessor aus der SAM D21 Familie v
 Sensoren und Aktoren werden über die bewährten Schnittstellen wie I2C, UART und digitale I/Os mit einem robusten JST-Steckersystem angesprochen (5V tolerant). 
 
 ### Datenübertragung
-Über die beiden XBee kompatiblen Sockel werden UART oder SPI Module angeboten. Wahlweise kann die Datenübertragung dadurch per WLAN, LAN oder LoRa in Echtzeit durchgeführt werden, oder auf einer Mikro-SD Karte abgespeichert werden.  
+Über die beiden XBee kompatiblen Sockel werden UART oder SPI Module angeboten. Wahlweise kann die Datenübertragung dadurch per WLAN, LAN oder LoRa in Echtzeit durchgeführt werden. Alternativ können die Daten auch auf einer Mikro-SD Karte gespeichert werden.  
 
 ## Programmierung
 
-Die senseBox MCU kann über verschiedene Programmierumgebungen programmiert werde. Eine genaue Übersicht findest du [hier](/arduino/allgemein-sensebox-editoren/)
+Die senseBox MCU kann über verschiedene Programmierumgebungen programmiert werde. Eine genaue Übersicht findest du [hier](/arduino/allgemein-sensebox-editoren/).
 
 

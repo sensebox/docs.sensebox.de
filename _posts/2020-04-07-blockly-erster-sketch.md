@@ -21,7 +21,7 @@ image6: /images/2020-04-08-blockly-erste-schritte/modi.png
 ---
 
 
-Blockly ist die vom senseBox Team entwickelte grafische Programmierumgebung für die senseBox. Sie ist online kostenlos und ohne Softwareinstallation verfügbar und basiert auf dem [Blockly Framework](https://developers.google.com/blockly) von Google.
+Blockly ist die vom senseBox-Team entwickelte grafische Programmierumgebung für die senseBox. Sie ist online kostenlos und ohne Softwareinstallation verfügbar und basiert auf dem [Blockly Framework](https://developers.google.com/blockly) von Google.
 
 ## Erste Schritte
 
@@ -36,8 +36,8 @@ Nachdem du deine senseBox-Version ausgewählt hast, befindest du dich auf der Pr
 {% include image.html image=page.image2 %}
 
 1. **Die Menüleiste:**
-    In der Menüleiste findest du von links nach rechts das Menü, den Namen deines Projektes, die Schaltflächen um Öffnen und Speichern von Blöcken, dem Speichern eines kompilierten Sketches und dem Löschen des gesamten Projektes.
-    >ACHTUNG: Wenn du dein Projekt speichern möchtest, um es später erneut in Blockform zu öffnen muss es als Blöcke gespeichert werden. Beim Speichern als Sketch wird dein Programm in kompilierter Form gespeichert und kann nicht mehr in Blockform geöffnet werden.
+    In der Menüleiste findest du von links nach rechts das Menü, den Namen deines Projektes, die Schaltflächen zum Öffnen und Speichern von Blöcken, dem Speichern eines kompilierten Sketches und dem Löschen des gesamten Projektes.
+    >ACHTUNG: Wenn du dein Projekt speichern möchtest, um es später erneut in Blockform zu öffnen, muss es als Blöcke gespeichert werden. Beim Speichern als Sketch wird dein Programm in kompilierter Form gespeichert und kann nicht mehr in Blockform geöffnet werden.
 2. **Die Toolbar:**
     Hier findest du alle Blöcke zum Programmieren der senseBox. Die Farbe der Blöcke zeigt die jeweilige Kategorie an, zu welcher der Block gehört.
 3. **Der Arbeitsbereich:**
@@ -49,7 +49,7 @@ Nachdem du deine senseBox-Version ausgewählt hast, befindest du dich auf der Pr
 
 ## Programmieren
 
-Um dein Programm zu schreiben müssen die Blöcke aus der Toolbar per Drag & Drop im Arbeitsbereich platziert werden.
+Um dein Programm zu schreiben, müssen die Blöcke aus der Toolbar per Drag & Drop im Arbeitsbereich platziert werden.
 
 ### Schritt 1: Setup und Endlosschleife
 
@@ -84,30 +84,30 @@ Um die eingebaute LED blinken zu lassen, ist es nötig, sie mit einem weiteren `
 
 ## Herunterladen und Übertragen
 
-Nachdem dein Programm fertig ist, klickst du die orangene "Sketch kompilieren" Button und es wird dir eine .BIN-Datei zum Download angeboten. Diese musst du an einem beliebigen Ort speichern.
+Nachdem dein Programm fertig ist, klickst du den orangenen "Sketch kompilieren" Button und es wird dir eine .BIN-Datei zum Download angeboten. Diese musst du an einem beliebigen Ort speichern.
 
 ### Modus der senseBox MCU wechseln
-Die senseBox MCU verfügt über zwei Modi. Den Programm-  und den Lern-Modus. 
+Die senseBox MCU verfügt über zwei Modi. Den Programm- und den Lern-Modus. 
 
-Im **Programm-Modus** wird ein übertragenes Programm ausgeführz. Du erkennst ihn daran, dass die grünen Status-LEDs der senseBox MCU leuchten.
+Im **Programm-Modus** wird ein übertragenes Programm ausgeführt. Du erkennst ihn daran, dass die grünen Status-LEDs der senseBox MCU leuchten.
 
 Im **Lern-Modus** wird die senseBox als Wechseldatenträger erkannt und es können neue Programme übertragen werden. Du erkennst ihn daran, dass die rote LED neben dem Reset-Knopf dauerhaft leuchtet/pulsiert.
 
 {% include image.html image=page.image6 %}
 <br>
-Um dein Programm übertragen zu können musst du deine MCU nun in den Lern-Modus versetzen. 
+Um dein Programm übertragen zu können, musst du deine MCU nun in den Lern-Modus versetzen. 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/jzlOJ7Zuqqw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 
 ### Übertragen 
-Schließt du deine senseBox MCU an deinen Computer an und führst einen Doppelklick auf den roten Button aus, wird diese als Wechseldatendräger erkannt. Mit einem Klick auf “Code Kompilieren” in der Weboberfläche wird dein Programmcode auf dem Server kompiliert und eine .BIN Datei wird dir zum Download angeboten. Je nachdem welches Betriebssystem du verwendest, unterscheidet sich nun der Kopiervorgang.
+Schließt du deine senseBox MCU an deinen Computer an und führst einen Doppelklick auf dem roten Button aus, wird diese als Wechseldatendräger erkannt. Mit einem Klick auf “Code Kompilieren” in der Weboberfläche wird dein Programmcode auf dem Server kompiliert und eine .BIN-Datei wird dir zum Download angeboten. Je nachdem welches Betriebssystem du verwendest, unterscheidet sich nun der Kopiervorgang.
 
 **Kopieren unter Windows**
-Unter Windows kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den Wechseldatenträger SENSEBOX kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus.
+Unter Windows kannst du die erstellte .BIN-Datei einfach per Drag & Drop auf den Wechseldatenträger SENSEBOX kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus.
 
 **Kopieren unter MacOS**
-Unter MacOS funktioniert das Kopieren der .BIN per Drag & Drop leider zurzeit noch nicht. Eine Möglichkeit ist die Datei im Terminal per dd-Befehl zu kopieren (nur erfahrenen Nutzern zu empfehlen!) oder einen alternativen Dateimanager wie zum Beispiel muCommander zu verwenden.
+Unter MacOS funktioniert das Kopieren der .BIN-Datei per Drag & Drop leider zurzeit noch nicht. Eine Möglichkeit ist die Datei im Terminal per dd-Befehl zu kopieren (nur erfahrenen Nutzern zu empfehlen!) oder einen alternativen Dateimanager wie zum Beispiel [muCommander](https://www.mucommander.com/) zu verwenden.
 
 **Kopieren unter Linux**
-Unter Linux kannst du die erstellte .BIN Datei einfach per Drag & Drop auf den Wechseldatenträger SENSEBOX kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus.
+Unter Linux kannst du die erstellte .BIN-Datei einfach per Drag & Drop auf den Wechseldatenträger SENSEBOX kopieren. Die rote LED am Button wird kurz flackern und anschließend startet das Board selbstständig neu und führt deinen Programmcode aus.
 

@@ -20,7 +20,7 @@ Mit einem senseBox I2C-Multiplexer lassen sich bis zu acht Geräte mit gleicher 
 * 8x JST Anschluss
 
 ## Verwendung
-Der senseBox I2C-Multiplexer basiert auf dem [TCA9548A von Texas Instruments](http://www.ti.com/product/TCA9548A), welcher bereits Bestandteil vieler Tutorials aus der Community geworden ist. Mit dem folgenden Beispielcode von [Retians Blog](https://arduino-projekte.webnode.at/meine-libraries/i2c-multiplexer-tca9548a/) könnt ihr den Multiplex testen und überprüfen an welche Kanälen etwas angeschlossen ist:
+Der senseBox I2C-Multiplexer basiert auf dem [TCA9548A von Texas Instruments](http://www.ti.com/product/TCA9548A), welcher bereits Bestandteil vieler Tutorials aus der Community geworden ist. Mit dem folgenden Beispielcode von [Retians Blog](https://arduino-projekte.webnode.at/meine-libraries/i2c-multiplexer-tca9548a/) könnt ihr den Multiplex testen und überprüfen, an welche Kanälen etwas angeschlossen ist:
 
 [https://arduino-projekte.webnode.at/_files/200002383-38c7539c19/TCA9548A_Scanner.ino.txt](https://arduino-projekte.webnode.at/_files/200002383-38c7539c19/TCA9548A_Scanner.ino.txt)
 
@@ -49,7 +49,7 @@ void setup() {
 }
 ```
 
-In der Endlosschleife werden mit Hilfe einer for-Schleife die Kanäle fortlaufend gewechselt. Für jeden Kanal wird der Multiplex über seine Adresse angesprochen. Dann übergeben wir lediglich die Nummer des Kanals an den alle Folgebefehle gesendet werden. Das geschieht so lang bis ein neuer Kanal kommuniziert wird. 
+In der Endlosschleife werden mithilfe einer for-Schleife die Kanäle fortlaufend gewechselt. Für jeden Kanal wird der Multiplex über seine Adresse angesprochen. Dann übergeben wir lediglich die Nummer des Kanals, an den alle Folgebefehle gesendet werden. Das geschieht so lange bis ein neuer Kanal kommuniziert wird. 
 
 ```
 for (int i = 0; i < (sizeof(channels)/sizeof(channels[0])); i++){
