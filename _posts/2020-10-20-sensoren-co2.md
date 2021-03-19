@@ -47,7 +47,7 @@ Installiere das [Board-Support-Package](https://docs.sensebox.de/arduino/board-s
 
 Alternativ kann die kompilierte `.bin` Datei [hier](/docs/sensebox_co2_calibrate.bin) heruntergeladen werden.
 
-```arduino 
+```c++ 
 #include <SPI.h>
 #include <Wire.h>
 
@@ -116,4 +116,6 @@ Nachdem der Sketch hochgeladen ist, bringe den CO<sub>2</sub> Sensor über einen
 
 ## Kalibrieren des CO<sub>2</sub> Sensors (Manuelle Kalibrierung)
 
-Im Gegensatz zur Auto Kalibrierung des CO<sub>2</sub> Sensors, welche mindestens 7 Tage dauert, kannst du alternativ auch die manuelle Kalibrierung durchführen. [Dazu wurde im senseBox Forum eine hervorragende Anleitung geschrieben](https://forum.sensebox.de/t/co2-ampel-kalibrieren/1108).
+Im Gegensatz zur Auto Kalibrierung des CO2 Sensors, welche mindestens 7 Tage dauert, kannst du alternativ auch die manuelle Kalibrierung durchführen. [Dazu wurde im senseBox Forum eine hervorragende Anleitung geschrieben](https://forum.sensebox.de/t/co2-ampel-kalibrieren/1108).
+
+Die kompilierte `.bin` Datei kann [hier](/docs/sensebox_co2_calibrate_manual.bin) heruntergeladen werden.
