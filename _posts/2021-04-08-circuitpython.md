@@ -12,13 +12,12 @@ resources:
 image1: /images/2021-01-28-rtc-modul/rtc.png
 ---
 
-CircuitPython ist eine Programmiersprache, die das Experimentieren und Programmieren auf einfacher Mikrocontroller-Boards vereinfacht. Sobald das Board eingerichtet ist, kann mit einem beliebigen Texteditor programmiert werden. Die senseBox MCU ist CircuitPython kompatibel.
+CircuitPython ist eine Programmiersprache, die das Experimentieren und Programmieren auf einfachen Mikrocontroller-Boards vereinfacht. Sobald das Board eingerichtet ist, kann mit einem beliebigen Texteditor programmiert werden. Die senseBox MCU ist CircuitPython kompatibel.
 
 ## Installation von Circuit Python
 
-
 Die aktuellste Version kann immer über die offizielle [CircuitPython Website](https://circuitpython.org/board/sensebox_mcu/){:target="_blank"} heruntergeladen werden. 
-Schließe die senseBox MCU mit einem USB Kabel an deinen Computer an und versetzte diese über einen Doppelklick auf den roten Reset Button in den Programmiermodus. Kopiere die .uf2 Datei auf deine senseBox MCU. Anschließend wird die senseBox als neues Gerät mit den Namen "CircuitPy" erkannt.
+Schließe die senseBox MCU mit einem USB Kabel an deinen Computer an und versetzte diese über einen Doppelklick auf den roten Reset-Button in den Programmiermodus. Kopiere die .uf2 Datei auf deine senseBox MCU. Anschließend wird die senseBox als neues Gerät mit den Namen "CircuitPy" erkannt.
 
 ## Programmieren
 
@@ -40,7 +39,7 @@ while True:
     
 ```    
 
-Nach dem speichern der Datei wird der Code direkt ausgeführt und die kleine LED neben dem Resetbutton fängt an zu blinken. Du kannst nun den einfach verändern und speichern und dieser wird direkt ausgeführt.
+Nach dem Speichern der Datei wird der Code direkt ausgeführt und die kleine LED neben dem Resetbutton fängt an zu blinken. Du kannst nun den Code einfach verändern und speichern und dieser wird direkt ausgeführt.
 
 Als Alternative kann auch folgender Web Editor verwendet werden:
 https://sensebox-circuitpython-webide.netlify.app/
@@ -49,7 +48,7 @@ https://sensebox-circuitpython-webide.netlify.app/
 Viele weitere Informationen zur Programmierung mit CircuitPython sind über die offizielle [CircuitPython Website](https://circuitpython.org/awesome){:target="_blank"} erhältlich.
 
 ## Bibliotheken
-Für die meisten Komponenten der senseBox stehen Bibliotheken bereit, die verwendet werden können. Hierbei ist allerdings zu beachten, dass die Bibliotheken auf das CIRCUITPY Laufwerk kopiert werden müssen. Insgesamt stehen hierfür 48Kb Speicher zur Verfügung. Das gesamte Paket mit den Bibliotheken kann [hier](https://circuitpython.org/libraries){:target="_blank"} heruntergeladen werden. Achtet darauf die *.mpy Version herunterzuladen. 
+Für die meisten Komponenten der senseBox stehen Bibliotheken bereit, die verwendet werden können. Hierbei ist allerdings zu beachten, dass die Bibliotheken auf das CIRCUITPY Laufwerk kopiert werden müssen. Insgesamt stehen hierfür 48Kb Speicher zur Verfügung. Das gesamte Paket mit den Bibliotheken kann [hier](https://circuitpython.org/libraries){:target="_blank"} heruntergeladen werden. Achtet darauf die *.mpy Version* herunterzuladen. 
 
 ## Serieller Monitor
 Um auf den Seriellen Monitor zugreifen zu können über das Terminal 
@@ -62,7 +61,7 @@ screen /dev/tty.board_name 115200
 ```
 
 ## SD-Karte
-Um Bibliotheken von SD Karte zu laden, folgenden Code als `sdmount_lib.py` auf die SD KArte kopieren.
+Um Bibliotheken von SD Karte zu laden, folgenden Code als `sdmount_lib.py` auf die SD Karte kopieren.
 
 ```python
 import sys
@@ -90,12 +89,12 @@ sys.path.append("/sd/lib")
 ```
 
 Die Bibliotheken können anschließend auf die SD Karte in /lib kopiert werden. 
-Über `import sdmount_lib` wird das SD Modul aktiviert und die libraries können verwendet werden.
+Über `import sdmount_lib` wird das SD Modul aktiviert und die Libraries können verwendet werden.
 
 https://learn.adafruit.com/adafruit-micro-sd-breakout-board-card-tutorial/circuitpython
 
 ## Deinstallation
-Um Circuit Python zu deinstallieren, bringe die senseBox durch einen Doppelklick auf den roten Reset-Button. Kopiere folgende .bin Datei auf die sensebox MCU und die senseBox MCU ist wieder über Blockly und Arduino programmierbar.
+Um Circuit Python zu deinstallieren, bringe die senseBox durch einen Doppelklick auf den roten Reset-Button in Programmiermodus. Kopiere folgende .bin Datei auf die sensebox MCU und die senseBox MCU ist wieder über Blockly und Arduino programmierbar.
 
 ## Powering the pins
 Per Default sind die einzelen Pins nicht mit Strom versorgt. 
