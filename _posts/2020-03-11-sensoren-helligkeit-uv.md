@@ -9,6 +9,8 @@ resources:
     link: https://sensebox.kaufen/assets/datenblatt/senseBox-VEML-TSL_v20.pdf
   - name: "Datenblatt Vishay VEML6070"
     link: https://www.vishay.com/docs/84277/veml6070.pdf
+  - name: Datenblatt LTR329
+    link: http://optoelectronics.liteon.com/upload/download/DS86-2014-0006/LTR-329ALS-01_DS_V1.pdf
 image: /images/2020-03-11-sensoren-helligkeit-uv/sensor_helligkeit_uv.png
 block: /images/2020-03-11-sensoren-helligkeit-uv/block_helligkeit_uv.svg
 ---
@@ -16,7 +18,7 @@ block: /images/2020-03-11-sensoren-helligkeit-uv/block_helligkeit_uv.svg
 
 Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.
 
-Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen. Dieser Sensor erkennt die Lichtverhältnisse ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.
+Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen oder dem LiteOn LTR329ALS-01 gemessen (seit 02/21). Dieser Sensor erkennt die Lichtverhältnisse ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.
 
 Der zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Dieser wandelt die Intensität des UV-Lichts der Sonne in digitale Daten um. Der Sensor hat eine hervorragende UV-Empfindlichkeit und Linearität über Filtron™-Technologie. Er hat eine gute UV-Strahlungsmessung auch bei langer Sonnen-UV-Belastung und kann exzellent Temperaturschwankungen ausgleichen.
 
@@ -48,7 +50,7 @@ Der zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Diese
 #include "SenseBoxMCU.h"
 #include <SPI.h>
 
-TSL45315 tsl;
+Lightsensor lightsensor;
 VEML6070 veml;
 
 void setup() {
@@ -59,7 +61,7 @@ void setup() {
 
 void loop() {
     Serial.print("Illuminance: ");
-    Serial.println(tsl.getIlluminance());
+    Serial.println(lightsensor.getIlluminance());
     Serial.print("UV-Intensity: ");
     Serial.println(veml.getUvIntesity());
 }
