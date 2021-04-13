@@ -17,7 +17,7 @@ CircuitPython ist eine Programmiersprache, die das Experimentieren und Programmi
 ## Installation von Circuit Python
 
 
-Die aktuellste Version kann immer über die offizielle [CircuitPython Website](https://circuitpython.org/board/sensebox_mcu/) heruntergeladen werden. 
+Die aktuellste Version kann immer über die offizielle [CircuitPython Website](https://circuitpython.org/board/sensebox_mcu/){:target="_blank"} heruntergeladen werden. 
 Schließe die senseBox MCU mit einem USB Kabel an deinen Computer an und versetzte diese über einen Doppelklick auf den roten Reset Button in den Programmiermodus. Kopiere die .uf2 Datei auf deine senseBox MCU. Anschließend wird die senseBox als neues Gerät mit den Namen "CircuitPy" erkannt.
 
 ## Programmieren
@@ -46,10 +46,10 @@ Als Alternative kann auch folgender Web Editor verwendet werden:
 https://sensebox-circuitpython-webide.netlify.app/
 
 
-Viele weitere Informationen zur Programmierung mit CircuitPython sind über die offizielle [CircuitPython Website](https://circuitpython.org/awesome) erhältlich.
+Viele weitere Informationen zur Programmierung mit CircuitPython sind über die offizielle [CircuitPython Website](https://circuitpython.org/awesome){:target="_blank"} erhältlich.
 
 ## Bibliotheken
-Für die meisten Komponenten der senseBox stehen Bibliotheken bereit, die verwendet werden können. Hierbei ist allerdings zu beachten, dass die Bibliotheken auf das CIRCUITPY Laufwerk kopiert werden müssen. Insgesamt stehen hierfür 48Kb Speicher zur Verfügung. Das gesamte Paket mit den Bibliotheken kann [hier](https://circuitpython.org/libraries) heruntergeladen werden. Achtet darauf die *.mpy Version herunterzuladen. 
+Für die meisten Komponenten der senseBox stehen Bibliotheken bereit, die verwendet werden können. Hierbei ist allerdings zu beachten, dass die Bibliotheken auf das CIRCUITPY Laufwerk kopiert werden müssen. Insgesamt stehen hierfür 48Kb Speicher zur Verfügung. Das gesamte Paket mit den Bibliotheken kann [hier](https://circuitpython.org/libraries){:target="_blank"} heruntergeladen werden. Achtet darauf die *.mpy Version herunterzuladen. 
 
 ## Serieller Monitor
 Um auf den Seriellen Monitor zugreifen zu können über das Terminal 
