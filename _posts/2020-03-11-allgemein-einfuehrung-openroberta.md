@@ -1,7 +1,7 @@
 ---
 date: 2020-03-11
 title: openRoberta
-categories: Blockly
+categories: misc
 description: Programmierung der senseBox in openRoberta
 type: Document
 set: editoren
@@ -20,7 +20,7 @@ image3: /images/2020-03-11-allgemein-einfuehrung-openroberta/openroberta-buttons
 openRoberta ist eine vom Fraunhofer-Institut entwickelte graphische Programmieroberfläche. Neben der senseBox kannst du viele weitere Systeme über openRoberta programmieren.  
 
 ## Erste Schritte
-Öffne das openroberta lab unter [lab.open-roberta.org](https://lab.openroberta.org). Dort musst du zuerst dein System, also die senseBox, auswählen.
+Öffne das openroberta lab unter [lab.open-roberta.org](https://lab.open-roberta.org/){:target="_blank"}. Dort musst du zuerst dein System, also die senseBox, auswählen.
 
 {% include image.html image=page.image1 %}
 

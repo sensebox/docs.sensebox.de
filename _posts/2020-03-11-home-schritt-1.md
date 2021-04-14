@@ -93,13 +93,14 @@ Im Strahlenschutz befinden sich einige Befestigungsteile, um diesen später auß
 
 Zuerst wird ein langes senseBox Kabel durch die Öffnung im Boden des Strahlenschutzes gezogen und der Temperatur- und Luftfeuchtigkeitssensor innen angesteckt.
 
-{% include image.html image=page.image6 %}
+
 
 Der Sensor kann nun zusätzlich noch mit etwas Klebeband oder einem Kabelbinder am Ständer befestigt werden. Das Strahlenschutzgehäuse sorgt später für eine gute Luftzirkulation und schützt den Sensor gleichzeitig vor der Witterung.
 Nun kann das Strahlenschutzgehäuse noch zusammengesteckt werden und später wird der Sensor dann mit dem senseBox Microcontroller verbunden.
 
 ## Aufbau des Feinstaubsensors
 
+{% include image.html image=page.image6 %}
 
 Als Nächstes zeigen wir den Aufbau des Feinstaubsensors. 
 {% include image.html image=page.image7 %}
@@ -122,10 +123,13 @@ Dann werden die Verschraubungen für den Kabelanschluss angebracht.
 Einfach die Kabelverschraubung auseinanderschrauben und dann die einzelnen Teile in der richtige Reihenfolge einsortieren. Dann noch schnell zusammenschrauben und das war´s.
 
 {% include image.html image=page.image10 %} 
- Auf der anderen Seite des Sensors wird nun der Schlauch auf den Luftansaugstutzen aufgesteckt.
+ Auf der anderen Seite des Sensors wird nun der Schlauch auf den Luftansaugstutzen aufgesteckt. 
+ 
+> Der Luftansaugstutzen wird seit einiger Zeit mit einem Filter ausgeliefert. Dieser Filter sorgt dafür, dass grober Dreck und Insekten nicht in den Sensor gelangen. 
 Hier benutzen wir auch eine Kabelverschraubung, um den Schlauch abzudichten. Dann heißt es wieder alles richtig einsortieren. Am Ende ist etwas Druck auf den Schlauch nötig, um ihn auf den Stutzen aufzusetzen. Als letztes noch den Deckel aufsetzen und der Feinstaubsensor ist fertig.
 
 {% include image.html image=page.image11 %} 
+
 ## Anschluss der externen Sensoren an die MCU
 
 {% include image.html image=page.image12 %} 
