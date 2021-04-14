@@ -1,6 +1,6 @@
 ---
 categories: misc
 head: Verschiedenes
-description: Verschiedenes zur senseBox
+description: Verschiedene Dokumentationen zur senseBox
 image: /images/category-icons/allgemein.png
 ---
