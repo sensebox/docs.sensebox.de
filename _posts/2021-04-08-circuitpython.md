@@ -94,10 +94,11 @@ Die Bibliotheken können anschließend auf die SD Karte in /lib kopiert werden.
 https://learn.adafruit.com/adafruit-micro-sd-breakout-board-card-tutorial/circuitpython
 
 ## Deinstallation
-Um Circuit Python zu deinstallieren, bringe die senseBox durch einen Doppelklick auf den roten Reset-Button in Programmiermodus. Kopiere folgende .bin Datei auf die sensebox MCU und die senseBox MCU ist wieder über Blockly und Arduino programmierbar.
+Um Circuit Python zu deinstallieren, bringe die senseBox durch einen Doppelklick auf den roten Reset-Button in Programmiermodus. Kopiere einfach eine .bin Datei (z.B. in Blockly erstellt) auf die sensebox MCU und die senseBox MCU ist wieder wie gewohnt über Blockly und Arduino programmierbar.
 
-## Powering the pins
-Per Default sind die einzelen Pins nicht mit Strom versorgt. 
+## Stromversorgung der Anschlüsse
+Per Default sind die einzelen Pins nicht mit Strom versorgt. Über folgenden Code (wie auch im SD-Beispiel verwendet) können die einzelen Schnittstellen mit Strom versorgt werden. Beachtet, dass die XB-Ports inverted sind.
+
 * XB1_PWR = False //inverted
 * XB2_PWR = False //inverted
 * I2C_PWR = True
