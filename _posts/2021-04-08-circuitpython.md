@@ -42,8 +42,8 @@ while True:
 
 Nach dem Speichern der Datei wird der Code direkt ausgeführt und die kleine LED neben dem Resetbutton fängt an zu blinken. Du kannst nun den Code einfach verändern und speichern und dieser wird direkt ausgeführt.
 
-Als Alternative kann auch folgender Web Editor verwendet werden:
-[https://sensebox-circuitpython-webide.netlify.app/](https://sensebox-circuitpython-webide.netlify.app/)
+Als Alternative kann auch folgender Web Editor (nur mit Google Chrome) verwendet werden:
+[https://circuitpython.sensebox.de/](https://circuitpython.sensebox.de/)
 
 
 Viele weitere Informationen zur Programmierung mit CircuitPython sind über die offizielle [CircuitPython Website](https://circuitpython.org/awesome){:target="_blank"} erhältlich.
