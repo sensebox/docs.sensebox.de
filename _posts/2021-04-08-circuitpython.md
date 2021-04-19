@@ -9,6 +9,8 @@ resources:
     link: https://circuitpython.org/board/sensebox_mcu/
   - name: "Bibliotheken"
     link: "https://circuitpython.org/libraries"
+  - name: senseBox MCU CircuitPython auf Github
+    link: "https://github.com/adafruit/circuitpython/tree/main/ports/atmel-samd/boards/sensebox_mcu"
 image1: /images/2021-01-28-rtc-modul/rtc.png
 ---
 
@@ -36,13 +38,12 @@ while True:
     time.sleep(0.5)
     led.value = False
     time.sleep(0.5)
-    
 ```    
 
 Nach dem Speichern der Datei wird der Code direkt ausgeführt und die kleine LED neben dem Resetbutton fängt an zu blinken. Du kannst nun den Code einfach verändern und speichern und dieser wird direkt ausgeführt.
 
 Als Alternative kann auch folgender Web Editor verwendet werden:
-https://sensebox-circuitpython-webide.netlify.app/
+[https://sensebox-circuitpython-webide.netlify.app/](https://sensebox-circuitpython-webide.netlify.app/)
 
 
 Viele weitere Informationen zur Programmierung mit CircuitPython sind über die offizielle [CircuitPython Website](https://circuitpython.org/awesome){:target="_blank"} erhältlich.
@@ -89,24 +90,31 @@ sys.path.append("/sd/lib")
 ```
 
 Die Bibliotheken können anschließend auf die SD Karte in /lib kopiert werden. 
-Über `import sdmount_lib` wird das SD Modul aktiviert und die Libraries können verwendet werden.
+Über `import sdmount_lib` wird das SD Modul aktiviert und die Libraries können verwendet werden. Weitere Informationen zum Verwenden eines SD Moduls mit Circuit Python gibt es direkt bei [Adafruit](https://learn.adafruit.com/adafruit-micro-sd-breakout-board-card-tutorial/circuitpython)
 
-https://learn.adafruit.com/adafruit-micro-sd-breakout-board-card-tutorial/circuitpython
 
 ## Deinstallation
 Um Circuit Python zu deinstallieren, bringe die senseBox durch einen Doppelklick auf den roten Reset-Button in Programmiermodus. Kopiere einfach eine .bin Datei (z.B. in Blockly erstellt) auf die sensebox MCU und die senseBox MCU ist wieder wie gewohnt über Blockly und Arduino programmierbar.
 
 ## Stromversorgung der Anschlüsse
-Per Default sind die einzelen Pins nicht mit Strom versorgt. Über folgenden Code (wie auch im SD-Beispiel verwendet) können die einzelen Schnittstellen mit Strom versorgt werden. Beachtet, dass die XB-Ports inverted sind.
+Per Default sind die einzelen Ports/Pins nicht mit Strom versorgt. Über folgenden Code (wie auch im SD-Beispiel verwendet) können die einzelnen Schnittstellen mit Strom versorgt werden. 
 
-* XB1_PWR = False //inverted
-* XB2_PWR = False //inverted
-* I2C_PWR = True
-* UART_PWR = True
+Beispiel für den Port XBee 2:
 
 ```
-xb2_pwr = DigitalInOut(board.XB2_PWR)
+xb2_pwr = DigitalInOut(board.XB2_PWR) # hier den jeweilen Pin angeben siehe Tabelle
 xb2_pwr.direction = Direction.OUTPUT
 xb2_pwr.value = True
 ```
+Die weiteren Ports können wie folgt Eingeschaltet werden. Beachtet, dass der Status der XBee-Ports invertiert ist:
+
+| Ports/Pin | Name im Code | Status (aktiviert) | Status (deaktiviert) |
+| --- | ---- | ---- | ---- | 
+| XBEE 1 | XB1_PWR |  False | True |
+| XBEE 2 | XB2_PWR |  False | True | 
+| I2C |  I2C_PWR |  True | False |
+| UART | UART_PWR |  True | False |
+| Grüne LED | GREEN_LED | True | False |
+| Rote LED | RED_LED | True | False |
+| Pins D1-D13 | D1-D13 | True | False |
 
