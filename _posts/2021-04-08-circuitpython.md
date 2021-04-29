@@ -49,7 +49,35 @@ Als Alternative kann auch folgender Web Editor (nur mit Google Chrome) verwendet
 Viele weitere Informationen zur Programmierung mit CircuitPython sind über die offizielle [CircuitPython Website](https://circuitpython.org/awesome){:target="_blank"} erhältlich.
 
 ## Bibliotheken
-Für die meisten Komponenten der senseBox stehen Bibliotheken bereit, die verwendet werden können. Hierbei ist allerdings zu beachten, dass die Bibliotheken auf das CIRCUITPY Laufwerk kopiert werden müssen. Insgesamt stehen hierfür 48Kb Speicher zur Verfügung. Das gesamte Paket mit den Bibliotheken kann [hier](https://circuitpython.org/libraries){:target="_blank"} heruntergeladen werden. Achtet darauf die *.mpy Version* herunterzuladen. 
+Für die meisten Komponenten der senseBox stehen Bibliotheken bereit, die verwendet werden können. Hierbei ist allerdings zu beachten, dass die Bibliotheken auf das CIRCUITPY Laufwerk kopiert werden müssen. Insgesamt stehen hierfür 48Kb Speicher zur Verfügung. 
+
+>Beachtet: Durch den geringen Speicherplatz, der für Bibliotheken zur Verfügung steht, können komplexere Projekte wie z.B. die CO2-Ampel oder auch die Umweltmessstation nicht mit CircuitPython umgesetzt werden. Der Speicherplatz sollte aber ausreichend sein z.B. um einzelne Sensoren auszulesen.
+
+Das gesamte Paket mit den Bibliotheken kann [hier](https://circuitpython.org/libraries){:target="_blank"} heruntergeladen werden. Achtet darauf die *.mpy Version* herunterzuladen. 
+
+
+### Unterstütze Komponenten
+
+Da für einige Bauteile keine Bibliotheken verfügbar oder die Bibliotheken zu groß sind findet ihr hier eine kurze Auflistung der getesteten Komponenten:
+
+>Die Tabelle ist evtl. unvollständig und wird laufend erweitert. Solltet ihr Komponenten getestet haben, die bisher in der Liste noch nicht vorhanden sind, freuen wir uns auf eine kurze Rückmeldung. 
+
+| Komponente | Bibliothek vorhanden | Test erfolgreich |
+| ---------  | --------             |   ---------      |
+| BME680 Umweltsensor | Ja | Ja | 
+| CO2 Sensor | Ja | Ja |
+| BMP280 | Ja | Ja (anpassung der I2C Adresse notwendig) |
+| HDC1080 | Nein | Nein |
+| BMX055 | Nein | Nein |
+| HC-SR04 Ultraschall | Ja | |
+| WS2818 RGB LED |  Ja | Ja |
+| Display | Ja | Ja |
+| SD-Bee | Ja | Ja |
+| LoRa-Bee |  | | 
+| WiFi-Bee | nein | WiFi wird von CP nicht unterstütz |
+ 
+
+
 
 ## Serieller Monitor
 Um auf den Seriellen Monitor zugreifen zu können über das Terminal 
