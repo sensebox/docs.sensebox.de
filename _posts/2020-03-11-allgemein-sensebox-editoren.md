@@ -1,23 +1,30 @@
 ---
 date: 2020-03-11
 title: Editoren für die senseBox
-title_order: 2
-categories:  arduino
+title_order: 4
+categories:  misc
 description: Übersicht über die verschiedenen Editoren der senseBox
 type: Document
-set: erste-schritte-arduino
-set_order: 2
 resources:
+  - name: "Blockly für senseBox"
+    link: https://blockly.sensebox.de
+  - name: "Arduino IDE"
+    link: https://www.arduino.cc/
+  - name: "openRoberta"
+    link: https://lab.open-roberta.org/
+  - name: "CircuitPython für die senseBox MCU"
+    link: https://circuitpython.org/board/sensebox_mcu/
 image1: /images/2020-03-11-sensebox-editoren/blockly.png
 image2: /images/2020-03-11-sensebox-editoren/arduino.png
 image3: /images/2020-03-11-sensebox-editoren/nepo.png
+image4: /images/2020-03-11-sensebox-editoren/circuitpython.png
 ---
 
-Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren programmieren. 
+Die senseBox kann mithilfe von vier verschiedenen Editoren programmieren werden. 
 
 ## Blockly für senseBox
 
-Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Programmieroberfläche programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. Für Tablets gibt es eine App, sodass auch über ein Tablet drahtlos die senseBox programmiert werden kann.
+Mit [Blockly für senseBox](https://blockly.sensebox.de/ardublockly/?board=sensebox-mcu) kannst du deine senseBox MCU über eine grafische Programmieroberfläche programmieren. Auf dem Computer muss keine Software installiert werden und du kannst direkt loslegen. 
 
 {% include image.html image=page.image1 %}
 
@@ -31,8 +38,12 @@ Die Arduino IDE kannst du auf der Website von Arduino <a href="https://arduino.c
 
 ## Open Roberta
 
-
 openRoberta ist eine weitere Möglichkeit die senseBox zu programmieren. Das openRoberta lab benötigt keine Installation auf deinem Computer und bietet einen ähnlichen Funktionsumfang wie Blockly für senseBox. Eine kurze Einführung in die Verwendung der senseBox in openRoberta findest du [hier](/allgemein/allgemein-einfuehrung-openroberta/).
 
 {% include image.html image=page.image3 %}
 
+## CircuitPython
+
+Die senseBox MCU kann auch über Circuit Python programmiert werden. CircuitPython benötigt einen angepassten Bootloader, der einfach auf die senseBox MCU kopiert werden kann. Mehr Informationen zur Verwendung von CircuitPython mit der senseBox MCU findest du [hier](/misc/circuitpython/)
+
+{% include image.html image=page.image4 %}

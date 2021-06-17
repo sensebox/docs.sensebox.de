@@ -7,7 +7,6 @@ description: Installation der Arduino IDE
 type: Document
 set: erste-schritte-arduino
 set_order: 3
-
 resources:
   - name: "Arduino"
     link: https://www.arduino.cc
@@ -23,31 +22,23 @@ Bevor du die senseBox über die Arduino IDE programmieren kannst, musst du Treib
 
 Schau dir die Anleitung für dein Betriebsystem an und folge den angegebenen Schritten.
 
-## Arduino Software für Windows herunterladen
+## Arduino IDE für Windows herunterladen
 
-> Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.
-
-Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung _Arduino IDE_ programmiert. Lade die Version 1.8.7 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
+Die senseBox besteht aus einem Microcontroller und verschiedenene weitere Komponenten und Sensoren. Der Microcontroller kann über Blockly und openRoberta auch über die Entwicklungsumgebung _Arduino IDE_ programmiert. Lade die aktuellste Version (1.8.15 - Stand Juni 2021) von der [Arduino Homepage](https://www.arduino.cc/en/software) herunter:
 
 
 {% include image.html image=page.image1 %}
-
->  	Lade bitte die zip-Datei herunter und <b> nicht </b> den Windows-Installer, um mögliche Probleme zu vermeiden!
-
 
 Arduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wirst du vor dem Download nach einer Spende gefragt; falls du nichts spenden möchtest, kannst du auf `JUST DOWNLOAD` klicken.
 
 {% include image.html image=page.image2 %}
 
+Installiere die Arduino IDE und füge im nächsten Schritt das [Board Support Package hinzu](/arduino/board-support-package-installieren/) 
 
-Lege auf deiner Festplatte einen neuen Ordner an und entpacke darin die zip-Datei. Durch das Ausführen der Datei `arduino.exe` kann die IDE gestartet werden.  
 
+## Arduino IDE für MacOS herunterladen
 
-## Arduino Software für Mac(OSX) herunterladen
-
-> Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.
-
-Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung _Arduino IDE_ programmiert. Lade die Version 1.8.7 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
+Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung _Arduino IDE_ programmiert. Lade die Version aktuellste Version (1.8.15 - Stand Juni 2021) von der [Arduino Homepage](https://www.arduino.cc/en/software)  herunter:
 
 {% include image.html image=page.image1 %}
 
@@ -55,14 +46,12 @@ Arduino ist ein Open-Source Projekt und wird durch Spenden finanziert. Daher wir
 
 {% include image.html image=page.image2 %}
 
-In deinem Downloads-Ordner sollte eine Arduino.app-Datei erscheinen. Verschiebe diese Datei in deinen "Programme"-Ordner. Durch Öffnen der Datei `Arduino.app` kann die IDE gestartet werden. 
+In deinem Downloads-Ordner sollte eine Arduino.app-Datei erscheinen. Verschiebe diese Datei in deinen "Programme"-Ordner. Durch Öffnen der Datei `Arduino.app` kann die IDE gestartet werden. Im zweiten Schritt muss noch das [Board Support Package installiert werden](/arduino/board-support-package-installieren/), um die senseBox MCU programmieren zu können.
 
 
-## Arduino Software für Linux herunterladen
+## Arduino IDE für Linux herunterladen
 
-> Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.
-
-Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung _Arduino IDE_ programmiert. Lade die Version 1.8.7 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
+Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung _Arduino IDE_ programmiert. Lade die Version aktuellste Version (1.8.15 - Stand Juni 2021) von der [Arduino Homepage](https://www.arduino.cc/en/software)  herunter:
 
 {% include image.html image=page.image1 %}
 

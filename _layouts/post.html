@@ -9,7 +9,11 @@ layout: simple
 			{% for item in sub_navigation %}
 			<li><a href="#{{ item.id }}">{{ item.text }}</a></li>
 			{% endfor %}
+			{% if page.resources %}	
+			<li><a href="#resources">Links</a></li>			
+			{% endif %}
 		</ul>
+		
 	</section>
 	<section class="tutorial-content">
 		<h1>{{ page.title }}</h1>
@@ -22,8 +26,10 @@ layout: simple
 		<div class="tutorial-main">
 			{{ content }}
 		</div>
+		<hr>
 		{% if page.resources %}
-		<div class="resources">
+		<div class="resources" id="resources">
+			<h3>Links</h3>
 			<ul>
 				{% for resource in page.resources %}
 				<li><a href="{{ resource.link }}">{{ resource.name }}</a></li>
