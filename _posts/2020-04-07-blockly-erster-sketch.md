@@ -44,7 +44,7 @@ Nachdem du deine senseBox-Version ausgewählt hast, befindest du dich auf der Pr
     In diesem Bereich fügst du deine Programme zusammen. Unten rechts befinden sich Schaltfläche zum Zentrieren, Vergrößern, Verkleinern und Löschen der Blöcke.
 4. **Kopieren und Kompilieren:**
     Die orange Schaltfläche mit dem Notizblock ist die Schaltfläche zum Kompilieren und Herunterladen deines Programms. Die blaue Schaltfläche speichert den Arduino Quellcode deines Programms in der Zwischenablage.
-5. **Arduino Quellcofe und XML Blöcke:**
+5. **Arduino Quellcode und XML Blöcke:**
     Hier wird dir parellel zur grafischen Programmierung der Arduino Quellcode angezeigt. Durch einen Klick auf die Schaltfläche XML Blöcke lässt sich die Ansicht auf den XML Code umschalten.
 
 ## Programmieren
