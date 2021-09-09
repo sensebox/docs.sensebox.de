@@ -11,7 +11,7 @@ Diese Anleitung beschreibt die Möglichkeit, Messwerte über MQTT an die openSen
 Für jede registrierte senseBox müssen separate MQTT Einstellungen vorgenommen werden. Für eine Verbindung mit einem Broker können die folgenden Parameter angegeben werden. Alle angegeben Einstellungen werden in der Datenbank der openSenseMap gespeichert. Es bietet sich also an, eigene Zugangsdaten einzurichten.
 
 ## URL
-Die Adresse zum MQTT Broker sollte mit `mqtt://`, `mqtts://` oder `ws://` beginnen. Sollte der MQTT Broker eine Authentifizierung mittels Nutzername und Passwort benötigen, können diese in der URL kodiert werden. Die URL sollte dann wie folgt aussehen: `mqtt://username:password@hostname.of.mqtt.broker` oder bei MQTTS `mqtts://username:password@hostname.of.mqtt.broker`.
+Die Adresse zum MQTT Broker sollte mit `mqtt://`, `mqtts://`, `ws://` oder `wss://` beginnen. Sollte der MQTT Broker eine Authentifizierung mittels Nutzername und Passwort benötigen, können diese in der URL kodiert werden. Die URL sollte dann wie folgt aussehen: `mqtt://username:password@hostname.of.mqtt.broker` oder bei MQTTS `mqtts://username:password@hostname.of.mqtt.broker`.
 Es besteht auch die Möglichkeit in der MQTT Broker Adresse einen Port anzugeben. Die URL sollte dann wie folgt aussehen: `mqtt://username:password@hostname.of.mqtt.broker:post`
 
 ## Topic
