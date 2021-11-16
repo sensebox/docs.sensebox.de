@@ -12,6 +12,8 @@ title: Editoren für die senseBox
 description: Übersicht über die verschiedenen Editoren der senseBox
 categories: arduino
 ---
+![](../images/2020-03-10-editoren-für-die-sensebox/bildschirmfoto-2021-11-16-um-20.42.58.png)
+
 Du kannst die senseBox MCU mithilfe von drei verschiedenen Editoren programmieren. 
 
 ## Blockly für senseBox
