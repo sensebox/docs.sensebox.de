@@ -1,76 +1,108 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css" />
+    <link
+      rel="apple-touch-icon"
+      href="{{ site.baseurl }}/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ site.baseurl }}/touch-icon.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ site.baseurl }}/images/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Merriweather:400italic,400,300italic,300,700,700italic|Open+Sans:400italic,600italic,700italic,700,600,400|Inconsolata:400,700"
+    />
 
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
-	<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
-	<link rel="stylesheet"
-		href="//fonts.googleapis.com/css?family=Merriweather:400italic,400,300italic,300,700,700italic|Open+Sans:400italic,600italic,700italic,700,600,400|Inconsolata:400,700">
-	
-	{% seo %}
-	{% feed_meta %}
+    {% seo %} {% feed_meta %}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    ></script>
+  </head>
 
-</head>
+  {% assign t = site.data.translations %}
 
-{% assign t = site.data.translations %}
+  <body class="{{ page.body_class }}">
+    <header>
+      <div class="hero-image">
+        <div class="wrapper">
+          <section class="top-bar">
+            <div class="logo">
+              <a href="{{ site.baseurl }}/">{% include logo.html %}</a>
+            </div>
+            {% include navigation.html %}
+          </section>
+          <section class="hero_search">
+            <h1>{{ t.headline }}</h1>
+            <p>{{ t.description }}</p>
+            {% include search.html %}
+          </section>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="wrapper">{{ content }}</div>
+    </section>
 
-<body class="{{ page.body_class }}">
-	<header>
-		<div class="hero-image">
-			<div class="wrapper">
-				<section class="top-bar">
-					<div class="logo"><a href="{{ site.baseurl }}/">{% include logo.html %}</a></div>
-					{% include navigation.html %}
-				</section>
-				<section class="hero_search">
-					<h1>{{ t.headline }}</h1>
-					<p>{{ t.description }}</p>
-					{% include search.html %}
-				</section>
-			</div>
-		</div>
-	</header>
-	<section class="content">
-		<div class="wrapper">
-			{{ content }}
-		</div>
-	</section>
+    {% include footer.html %}
+    <script>
+      $(function () {
+        $("a[href*=\\#]")
+          .not(".no-smooth")
+          .on("click", function (event) {
+            var el = $(this.hash);
+            if (el.length > 0) {
+              // event.preventDefault();
+              $("html,body").animate(
+                { scrollTop: $(this.hash).offset().top - 50 },
+                500
+              );
+            }
+          });
 
-	{% include footer.html %}
-	<script>
-		$(function () {
-			$('a[href*=\\#]').not(".no-smooth").on('click', function (event) {
-				var el = $(this.hash);
-				if (el.length > 0) {
-					// event.preventDefault();
-					$('html,body').animate({ scrollTop: $(this.hash).offset().top - 50 }, 500);
-				}
-			});
+        $("svg").click(function () {
+          $(this).parent("form").submit();
+        });
+      });
 
-			$('svg').click(function () {
-				$(this).parent('form').submit();
-			});
-		});
-
-		document.getElementById("open-nav").addEventListener("click", function (event) {
-			event.preventDefault();
-			document.body.classList.toggle("nav-open");
-		});
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function (event) {
-			mediumZoom('[data-zoomable]')
-		});
-	</script>
-</body>
-
+      document
+        .getElementById("open-nav")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.body.classList.toggle("nav-open");
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        mediumZoom("[data-zoomable]");
+      });
+    </script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
