@@ -49,4 +49,4 @@ collections:
               { label: "Link", name: "link", widget: "string" },
             ],
         }
-           - { label: "Content", name: "content", widget: "markdown" }
+      - { label: "Content", name: "content", widget: "markdown" }
