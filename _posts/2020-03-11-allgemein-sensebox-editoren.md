@@ -1,6 +1,12 @@
 ---
 set: erste-schritte-arduino
-resources: null
+resources:
+  - name: Blockly für die senseBox
+    link: https://blockly.sensebox.de
+  - name: Arduino
+    link: https://arduino.cc
+  - name: NEPO - openRoberta
+    link: https://lab.open-roberta.org/
 title_order: 2
 date: 2020-03-11
 set_order: 2
