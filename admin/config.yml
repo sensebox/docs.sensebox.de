@@ -25,7 +25,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - {
-          label: "Categories",
+          label: "categories",
           name: "categories",
           widget: "select",
           options:
