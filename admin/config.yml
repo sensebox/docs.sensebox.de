@@ -58,3 +58,18 @@ collections:
             ],
         }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "FAQ"
+    label: "FAQ"
+    preview: false
+    files:
+      - label: "FAQ"
+        name: "FAQ"
+        file: "_data/faq.yml"
+        fields:
+          - label: "Faw Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: question, name: question, widget: string }
+              - { label: answer, name: answer, widget: string }

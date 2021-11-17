@@ -2,7 +2,7 @@
 layout: simple
 ---
 
-{% assign faq = site.data.faq %}
+{% assign faq = site.data.faq.items %}
 
 <h1>FAQ</h1>
 
@@ -14,8 +14,12 @@ layout: simple
   </ul>
 
   {% for item in faq %}
-  <h2 id="{{ item.question | slugify}}">{{ item.question }}<a class="header-link"
-      href="#{{ item.question | slugify }}">#</a></h2>
-  {{ item.answer | markdownify }}
-  {% endfor %}
+  <h2 id="{{ item.question | slugify}}">
+    {{ item.question }}<a
+      class="header-link"
+      href="#{{ item.question | slugify }}"
+      >#</a
+    >
+  </h2>
+  {{ item.answer | markdownify }} {% endfor %}
 </section>
