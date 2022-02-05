@@ -25,5 +25,3 @@ Mit diesem zertifizierten Modul lassen sich Bluetooth- bzw. BLE-Funktionalitäte
 * Integrierte Antenne
 * einfache Kommunikation über UART
 * Bezeichnung: BLE-Bee
-
-> Bitte prüfe die LoRa-Verfügbarkeit in eurer Region, bevor ihr ein LoRa-Bee für eure senseBox anschafft. Dies ist auf der [Karte](https://www.thethingsnetwork.org/community#list-communities-map) des TTN möglich.
