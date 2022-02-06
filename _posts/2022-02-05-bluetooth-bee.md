@@ -12,11 +12,7 @@ resources:
 ---
 Mit diesem zertifizierten Modul lassen sich Bluetooth- bzw. BLE-Funktionalitäten auf der senseBox MCU nutzen. Damit lassen beispielsweise Sensordaten über kurze Distanzen drahtlos zu einem Empfänger, wie einem Smartphone, übertragen und visualisieren. 
 
-
-
 ![](/images/2022-02-05-bluetooth-bee/blebee_top.png)
-
-
 
 ## Technische Informationen
 
@@ -25,3 +21,13 @@ Mit diesem zertifizierten Modul lassen sich Bluetooth- bzw. BLE-Funktionalitäte
 * Integrierte Antenne
 * einfache Kommunikation über UART
 * Bezeichnung: BLE-Bee
+
+## Programmierung
+
+Das Bluetooth-Bee kann über unsere graphische Lern- und Programmierumgebung programmiert werden. 
+
+
+
+![](/images/2022-02-05-bluetooth-bee/phyphoxco2-messgerät.svg)
+
+Das Beispielprogramm kannst du [hier](https://blockly-react.netlify.app/gallery/60ae27f41842740018c65b07) abrufen. Für die Darstellung der Messwerte auf dem Smartphone oder Tablet benötigst du noch die [Phyphox App](https://phyphox.org/), die für iOS und Android Geräte verfügbar ist.
