@@ -9,7 +9,7 @@ resources:
     link: https://sensebox.kaufen/product/bluetooth-bee
   - name: "Datenblatt ublox NINA - B3 "
     link: https://www.u-blox.com/sites/default/files/NINA-B3_DataSheet_UBX-17052099.pdf
-  - name: Phyhox App
+  - name: Phyphox App
     link: https://phyphox.org/
   - name: Programmbeispiel
     link: https://blockly-react.netlify.app/gallery/60ae27f41842740018c65b07
