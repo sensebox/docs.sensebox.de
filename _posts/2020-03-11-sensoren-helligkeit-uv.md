@@ -1,21 +1,19 @@
 ---
-date: 2020-03-11
-title: Helligkeits- und UV-Sensor
-categories: hardware
-description: Helligkeits- und UV-Sensor
-type: Document
 resources:
-  - name: "Datenblatt"
+  - name: Datenblatt
     link: https://sensebox.kaufen/assets/datenblatt/senseBox-VEML-TSL_v20.pdf
-  - name: "Datenblatt Vishay VEML6070"
+  - name: Datenblatt Vishay VEML6070
     link: https://www.vishay.com/docs/84277/veml6070.pdf
   - name: Datenblatt LTR329
     link: http://optoelectronics.liteon.com/upload/download/DS86-2014-0006/LTR-329ALS-01_DS_V1.pdf
-image: /images/2020-03-11-sensoren-helligkeit-uv/sensor_helligkeit_uv.png
 block: /images/2020-03-11-sensoren-helligkeit-uv/block_helligkeit_uv.svg
+type: Document
+date: 2020-03-11
+title: Helligkeits- und UV-Sensor
+image: /images/2020-03-11-sensoren-helligkeit-uv/sensor_helligkeit_uv.png
+description: Helligkeits- und UV-Sensor
+categories: hardware
 ---
-
-
 Auf diesem senseBox-Bauteil sind zwei Sensoren zusammengelegt.
 
 Die Lichtintensität wird mit dem TSL45315-Sensor von AMS-TAOS gemessen oder dem LiteOn LTR329ALS-01 gemessen (seit 02/21). Dieser Sensor erkennt die Lichtverhältnisse ähnlich dem menschlichen Auge und gibt die Helligkeitswerte direkt in Lux, mit großem Dynamikbereich (3 Lux bis 220k Lux), aus.
@@ -41,6 +39,7 @@ Der zweite Sensor ist ein Vishay VEML6070 Ultravioletter (UV)-Lichtsensor. Diese
 * Software-Abschaltregelung für Immunität bei flackernden Leuchtstofflampen
 
 ### Maße
+
 * 25mm x 25mm x 9mm
 * Gewicht: 2,5 g
 
@@ -75,6 +74,5 @@ In Blockly kann der Sensor über folgenden Block ausgelesen werden:
 
 Im Block kannst du zwischen den verschiedenen Parametern des Helligkeits-/UV-Sensors auswählen:
 
-- Helligkeit in LUX
-- UV-Belastung in µW/m^2
-
+* Helligkeit in LUX
+* UV-Belastung in µW/cm^2
