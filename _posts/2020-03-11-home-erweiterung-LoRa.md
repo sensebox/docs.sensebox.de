@@ -73,6 +73,8 @@ Gib der Integration einen Namen und trage ihn unter Webhook ID ein. Wähle als *
 
 {% include image.html image=page.image09 %}
 
+Jetzt klickst du auf **Register Webhook**.
+
 Die Registrierung im TheThingsNetwork ist nun abgeschlossen. 
 
 
