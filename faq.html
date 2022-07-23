@@ -6,13 +6,39 @@ layout: simple
 
 <h1>FAQ</h1>
 
-<section class="faq">
-  <ul>
+<section>
+  
+  <h3>Allgemein</h3>
+  {% for item in faq %}
+{% if item.category == "general" %}
+  <button class="accordion">{{ item.question }}</button>
+<div class="panel">
+<p>{{ item.answer | markdownify }}</p>
+</div>
+{%endif%}
+  {% endfor %}
+<hr>
+    <h3>Hardware</h3>
     {% for item in faq %}
-    <li><a href="#{{ item.question | slugify }}">{{ item.question }}</a></li>
+{% if item.category == "hardware" %}
+    <button class="accordion">{{ item.question }}</button>
+<div class="panel">
+  <p>{{ item.answer | markdownify }}</p>
+</div>
+{%endif%}
     {% endfor %}
-  </ul>
+  <hr>
+    <h3>Software</h3>
+    {% for item in faq %}
+{% if item.category == "software" %}
+    <button class="accordion">{{ item.question }}</button>
+<div class="panel">
+  <p>{{ item.answer | markdownify }}</p>
+</div>
+{%endif%}
+    {% endfor %}
 
+<!-- 
   {% for item in faq %}
   <h2 id="{{ item.question | slugify}}">
     {{ item.question }}<a
@@ -21,5 +47,24 @@ layout: simple
       >#</a
     >
   </h2>
-  {{ item.answer | markdownify }} {% endfor %}
+  {% endfor %} -->
 </section>
+
+
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>

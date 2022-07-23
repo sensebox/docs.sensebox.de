@@ -2,6 +2,7 @@ items:
   - question: Wo finde ich Informationen zur senseBox zusammengefasst?
     answer: Alle wichtigen Informationen zu den verschiedenen senseBoxen findest du
       [hier](https://sensebox.de/de/products)
+    category: general
   - question: Welche senseBox ist die Richtige für mich?
     answer: Die
       [<b>senseBox:edu</b>](https://sensebox.kaufen/product/sensebox-edu)  ist
@@ -28,16 +29,20 @@ items:
       Sensoren und Bauteile können selbständig ausgewählt und so eine
       individuelle Umweltmessstation kreiert werden. Den passenden Programmcode
       gibt es von uns dazu, es muss also nicht programmiert werden.
+    category: general
   - question: Für wen ist die senseBox geeignet?
     answer: Im Schulkontext empfehlen wir ein Mindestalter von 12 Jahren. Diese
       Empfehlung ist natürlich ganz stark vom Betreuungsschlüssel abhängig. Wir
       führen auch Workshops in Grundschulen durch.
+    category: general
   - question: Was brauche ich für die senseBox?
     answer: In einer senseBox ist alles enthalten, was du brauchst. Mit Ausnahme
       eines Computers und einer Internetverbindung natürlich.
+    category: general
   - question: Wo kann ich die senseBox kaufen?
     answer: Die senseBox ist in unserem eigenen Online Shop unter
       [sensebox.kaufen](https://sensebox.kaufen) erhältlich.
+    category: general
   - question: Wo finde ich die Anleitung für meine ersten Schritte?
     answer: Hier in den Docs findest du Anleitungen für die ersten Schritte mit
       [Blockly für senseBox](/blockly/allgemein-basics-inbetriebnahme-copy/),
@@ -51,16 +56,19 @@ items:
       Anleitungen für die <b>senseBox:home</b> findest du
       [hier](/category/sensebox-home/) in den Docs. Alle Materialien sind open
       educational ressources (OER) und somit frei verfügbar.
-  - question: Unterstützt ihr Schulen bei der Einrichtung der senseBox?
-    answer: Ja! Kontaktiere uns einfach und wir schauen gemeinsam, wie wir die
-      senseBox an deiner Schule einrichten können.
   - question: Wie kann die senseBox programmiert werden?
-    answer: Die senseBox kann grafisch über [Blockly für
-      senseBox](https://blockly.sensebox.de/ardublockly/?board=sensebox-mcu) und
-      [openroberta](https://lab.open-roberta.org/), oder textbasiert über die
+    answer: "Die senseBox kann grafisch über unsere [Lern- und Programmierumgebung (Blockly)](https://blockly-react.netlify.app/) und
+      dem [Open Roberta Lab](https://lab.open-roberta.org/) programmiert werden. Alternativ kann die senseBox textbasiert über die
       [Arduino IDE](https://www.arduino.cc/) programmiert werden. Mehr
-      Informationen zum Umgang mit den Programmierumgebungen findest du in den
-      [Docs](https://docs.sensebox.de/).
+      Informationen zum Umgang mit den Programmierumgebungen findest du in den einzelnen Anleitungen: 
+
+       - [Blockly für die senseBox]()
+
+       - [Open Roberta Lab](https://docs.sensebox.de/misc/allgemein-einfuehrung-openroberta/) 
+
+       - [Arduino IDE]() 
+      "
+    category: software
   - question: Warum kein standard Arduino oder Raspberry?
     answer: Der Raspberry ist für den Einsatz mit Programmieranfängern zu
       kompliziert und für unsere Einsatzzwecke einfach überdimensioniert. Die

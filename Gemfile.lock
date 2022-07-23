@@ -81,7 +81,8 @@ DEPENDENCIES
   jekyll-seo-tag (= 2.4.0)
   jekyll-sitemap (= 1.2.0)
   kramdown-parser-gfm
+  nokogiri (~> 1.8, >= 1.8.2)
   webrick (~> 1.7)
 
 BUNDLED WITH
-    2.2.16
+   2.2.16
