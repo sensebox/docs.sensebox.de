@@ -15,13 +15,13 @@ title: Installation der Arduino IDE
 description: Installation der Arduino IDE
 categories: arduino
 ---
-Bevor du die senseBox über die Arduino IDE programmieren kannst, musst du Treiber sowie eine Software auf deinem Computer installieren. 
+Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie kann über die Entwicklungsumgebung *Arduino IDE* programmiert werden. Bevor du die senseBox über die Arduino IDE programmieren kannst, musst du Treiber sowie eine Software auf deinem Computer installieren.
 
 Schau dir die Anleitung für dein Betriebsystem an und folge den angegebenen Schritten.
 
 ## Arduino Software für Windows herunterladen
 
-Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung *Arduino IDE* programmiert. Lade die neueste Version 1.8.16 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
+ Lade die neueste Version 2.0.0 oder höher von der [Arduino Homepage](https://www.arduino.cc/en/software) herunter:
 
 {% include image.html image=page.image1 %}
 
@@ -35,9 +35,7 @@ Lege auf deiner Festplatte einen neuen Ordner an und entpacke darin die zip-Date
 
 ## Arduino Software für Mac(OSX) herunterladen
 
-> Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.
-
-Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung *Arduino IDE* programmiert. Lade die Version 1.8.7 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
+Lade die Version 2.0.0 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
 
 {% include image.html image=page.image1 %}
 
@@ -49,9 +47,7 @@ In deinem Downloads-Ordner sollte eine Arduino.app-Datei erscheinen. Verschiebe 
 
 ## Arduino Software für Linux herunterladen
 
-> Bitte benutze Arduino Version 1.8.7 für einen reibungslosen Ablauf.
-
-Die senseBox ist ein Microcontroller mit verschiedenen Komponenten und Sensoren. Sie wird über die Entwicklungsumgebung *Arduino IDE* programmiert. Lade die Version 1.8.7 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
+Lade die Version 2.0.0 von der [Arduino Homepage](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) herunter:
 
 {% include image.html image=page.image1 %}
 
@@ -70,18 +66,20 @@ cd Downloads
 
 ```text
 # entpacke die Datei mit folgendem Befehl und installiere Arduino
-tar -xvf arduino-1.8.7-linux64.tar.xz
-cd arduino-1.8.7
+tar -xvf arduino-2.0.0-linux64.tar.xz
+cd arduino-2.0.0
 ./install.sh
 ```
 
 Um den Arduino programmieren zu können, sind unter Ubuntu 14 & 16 zusätzliche Rechte notwendig. Diese können für den/die aktuelle/n Nutzer:in mit den folgenden Befehlen eingerichtet werden (benötigt Admin-Rechte):
 
-Führe `udevadm monitor --udev` aus und schließe den Arduino per USB an, um die Device-ID zu bestimmen. Die angegebene Bezeichnung am Ende der Ausgabe (zB. `ttyUSB0`) ist die Device-ID. Beende `udevadm` per `ctrl+C`, und führe noch die folgenden Befehle aus, wobei die herausgefundene Device-ID eingesetzt werden muss:
+Führe `udevadm monitor --udev` aus und schließe den Arduino beziehungsweise die senseBox per USB an, um die Device-ID zu bestimmen. Die angegebene Bezeichnung am Ende der Ausgabe (zB. `ttyUSB0`) ist die Device-ID. Beende `udevadm` per `ctrl+C`, und führe noch die folgenden Befehle aus, wobei die herausgefundene Device-ID eingesetzt werden muss:
 
 ```text
 sudo usermod -a -G dialout $(whoami)
 sudo chmod a+rw /dev/<device-id>
 ```
 
-Nach einem Logout und erneutem Login sollte der Arduino aus der Arduino IDE programmierbar sein!
+Nach einem Logout und erneutem Login sollte ein Arduino oder die Sensebox aus der Arduino IDE programmierbar sein!
+
+Für letzteres kann nun das [Board-Support-Package installiert](https://docs.sensebox.de/arduino/board-support-package-installieren/) werden.
