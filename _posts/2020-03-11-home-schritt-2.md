@@ -38,7 +38,7 @@ Nach der erfolgreichen Registrierung kannst du damit beginnen, deine senseBox an
 
 {% include image.html image=page.image3 %}
 
-Da die openSenseMap offen für alle Arten von senseBoxen ist, wirst du nach der verwendeten Hardware gefragt. Wähle *senseBox:home V2* und das Datenübertragungsmodul, das du verwendest. Möchtest du deine Daten über LoRa an die openSenseMap schicken, wählst du bei "Verbindungsart" LoRa aus. Anschließend kannst du im Reiter "Erweitert" deine Lora-Einstellungen angeben. Hier musst du die Application-ID und Device-ID eintragen, welche du beim <a href="www.thethingsnetwork.org">TheThingsNetwork</a> angegeben hast. Weitere Informationen dazu findest du hier [hier](/sensebox-home-erweiterungen/home-erweiterung-lora/).
+Da die openSenseMap offen für alle Arten von senseBoxen ist, wirst du nach der verwendeten Hardware gefragt. Wähle *senseBox:home V2* und das Datenübertragungsmodul, das du verwendest. Möchtest du deine Daten über LoRa an die openSenseMap schicken, wählst du bei "Verbindungsart" LoRa aus. Anschließend kannst du im Reiter "Erweitert" deine Lora-Einstellungen angeben. Hier musst du die Application-ID und Device-ID eintragen, welche du beim [TheThingsNetwork](https://www.thethingsnetwork.org) angegeben hast. Weitere Informationen dazu findest du hier [hier](/sensebox-home/home-erweiterung-lora/).
 
 {% include image.html image=page.image4 %}
 
