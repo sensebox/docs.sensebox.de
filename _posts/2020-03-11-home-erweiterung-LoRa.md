@@ -62,7 +62,7 @@ Anschließend generierst du die **DeviceEUI** und den **AppKey** über die entsp
 Abschließend kannst du dem Device noch eine ID geben, oder die vorgefertigte ID nutzen. Klicke auf **Register end device**
 {% include image.html image=page.image02 %}
 
-Fertig, TTN kennt nun deine senseBox. Weiter geht es auf der openSenseMap!
+Fertig, TTN kennt nun deine senseBox.
 
 ### Anlegen der openSenseMap Integration
 
@@ -70,7 +70,7 @@ Die Daten werden über das TheThingsNetwork als einfache Bytes versendet und wer
 
 {% include image.html image=page.image07 %}
 
-Für einige Dienste sind bereits vorgefertigte **Webhooks** angelegt. Für die Weiterleitung an die openSenseMap verwenden wir einen **Custom webhook** (das unterste Element in der Liste). 
+Für einige Dienste sind bereits vorgefertigte **Webhooks** angelegt. Für die Weiterleitung an die openSenseMap verwenden wir einen **Custom webhook**. 
 
 {% include image.html image=page.image08 %}
 
@@ -80,7 +80,7 @@ Gib der Integration einen Namen und trage ihn unter Webhook ID ein. Wähle als *
 
 Jetzt klickst du auf **Register Webhook**.
 
-Die Registrierung im TheThingsNetwork ist nun abgeschlossen. 
+Die Registrierung im TheThingsNetwork ist nun abgeschlossen. Weiter geht es auf der openSenseMap!
 
 
 ## Registrieren auf der openSenseMap
