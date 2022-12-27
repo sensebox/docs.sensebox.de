@@ -55,9 +55,14 @@ Nach einem Klick auf **Add Application** gelangst du auf die Übersichtsseite.
 Innerhalb einer Application können nun mehrere Devices registriert werden. Klicke dazu auf **+ Add end device**.
 {% include image.html image=page.image05 %}
 
-Klicke jetzt oben auf **Manually** und übernehme dann die Angaben die im Bild markiert sind. Anschließend generierst du die **DeviceEUI** und den **AppKey** über die entsprechenden Schaltflächen und klickst bei der **AppEUI** auf **Fill with zeros**
-Abschließend kannst du dem Device noch eine ID geben, oder die vorgefertigte ID nutzen. Klicke auf **Register end device**
+Klicke jetzt unter **End device type** auf **Enter end device specifics manually** und übernehme dann die Angaben die im Bild markiert sind. Dann musst du noch das Feld **Join EUI** mit Nullen füllen, damit der __Confirm__ Button aufleuchtet
 {% include image.html image=page.image06 %}
+
+Anschließend generierst du die **DeviceEUI** und den **AppKey** über die entsprechenden Schaltflächen.
+Abschließend kannst du dem Device noch eine ID geben, oder die vorgefertigte ID nutzen. Klicke auf **Register end device**
+{% include image.html image=page.image02 %}
+
+Fertig, TTN kennt nun deine senseBox. Weiter geht es auf der openSenseMap!
 
 ### Anlegen der openSenseMap Integration
 
