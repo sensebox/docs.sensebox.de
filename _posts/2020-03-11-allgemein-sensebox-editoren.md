@@ -27,7 +27,6 @@ Mit Blockly für senseBox kannst du deine senseBox MCU über eine grafische Prog
 ![](/images/2020-03-10-editoren-für-die-sensebox/blockly.png)
 
 
-
 ## Arduino IDE
 
 Die Arduino IDE kannst du auf der Website von Arduino <a href="https://arduino.cc/downloads">kostenlos herunterladen</a>. Die Arduino IDE bietet dir den kompletten Zugriff auf alle Funktionen, die die Programmiersprache Arduino bereithält. Über die Arduino IDE kannst du auch zusätzliche Sensoren und Bauteile, die nicht in Blockly für senseBox oder Open Roberta enthalten sind, programmieren. Die Arduino IDE muss auf dem Computer installiert werden. Zusätzlich muss ein Board Support Package für die senseBox MCU heruntergeladen werden. Wie genau das funktioniert, erfährst du [hier](/allgemein/board-support-package-installieren/).
