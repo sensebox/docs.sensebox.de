@@ -33,7 +33,7 @@ Sensoren und Aktoren werden über die bewährten Schnittstellen wie I2C, UART un
 
 ## Programmierung
 
-Die senseBox MCU kann über verschiedene Programmierumgebungen programmiert werde. Eine genaue Übersicht findest du [hier](/arduino/allgemein-sensebox-editoren/).
+Die senseBox MCU kann über verschiedene Programmierumgebungen programmiert werden. Eine genaue Übersicht findest du [hier](/arduino/allgemein-sensebox-editoren/).
 
 
 ## Revisionen der senseBox MCU
