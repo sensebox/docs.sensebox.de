@@ -43,6 +43,6 @@ Der Mikrocontroller bietet einen XBEE-Steckplatz zur Verwendung der Datenübertr
 
 ## Programmierung
 
-Die senseBox MCU:mini kann über verschiedene Programmierumgebungen programmiert werde. Eine genaue Übersicht findest du [hier](/arduino/allgemein-sensebox-editoren/).
+Die senseBox MCU:mini kann über verschiedene Programmierumgebungen programmiert werden. Eine genaue Übersicht findest du [hier](/arduino/allgemein-sensebox-editoren/).
 
 
