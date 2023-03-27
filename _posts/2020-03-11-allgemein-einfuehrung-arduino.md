@@ -13,7 +13,7 @@ image1: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-1.png
 image2: /images/2020-03-11-allgemein-einfuehrung-arduino/arduino-buttons-2.png
 ---
 
-Bevor du loslegen kannst, musst du die Arduino IDE installieren. Wie dies funktioniert findest du [hier](/allgemein/allgemein-arduino-ide-installieren//)
+Bevor du loslegen kannst, musst du die Arduino IDE installieren. Wie dies funktioniert findest du [hier](/arduino/allgemein-arduino-ide-installieren/)
 
 ## Grundlagen
 
